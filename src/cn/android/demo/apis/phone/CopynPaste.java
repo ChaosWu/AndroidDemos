@@ -10,6 +10,12 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
+/**
+ * 复制粘贴功能
+ * 
+ * @author Elroy
+ * 
+ */
 public class CopynPaste extends Activity {
 	private Button btCopyPaste;
 	private EditText etCopyPaste;
@@ -23,6 +29,7 @@ public class CopynPaste extends Activity {
 		btCopyPaste = (Button) findViewById(R.id.bt_copynpaste);
 		etCopyPaste = (EditText) findViewById(R.id.et_copy_paste);
 		tvCopyPaste = (TextView) findViewById(R.id.tv_copy_results);
+		//
 		final ClipboardManager clipboardManager = (ClipboardManager) getSystemService(CLIPBOARD_SERVICE);
 		btCopyPaste.setOnClickListener(new OnClickListener() {
 

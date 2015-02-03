@@ -10,11 +10,17 @@ import android.os.BatteryManager;
 import android.os.Bundle;
 import android.widget.TextView;
 
+/**
+ * 电池电量信息
+ * 
+ * @author Elroy
+ * 
+ */
 public class DetectBatteryInfo extends Activity {
 
 	private TextView batteryLevel;
-	private TextView batteryVoltage;//电压
-	private TextView batteryTemperature;//温度
+	private TextView batteryVoltage;// 电压
+	private TextView batteryTemperature;// 温度
 	private TextView batteryTechnology;//
 	private TextView batteryStatus;//
 	private TextView batteryHealth;//

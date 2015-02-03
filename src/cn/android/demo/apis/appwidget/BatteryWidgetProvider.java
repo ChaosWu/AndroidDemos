@@ -11,7 +11,6 @@ import android.content.Intent;
 import android.content.IntentFilter;
 import android.os.BatteryManager;
 import android.os.IBinder;
-import android.text.style.UpdateAppearance;
 import android.util.Log;
 import android.widget.RemoteViews;
 
