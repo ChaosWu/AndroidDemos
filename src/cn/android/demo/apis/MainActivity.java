@@ -19,11 +19,12 @@ import android.widget.ListView;
 import android.widget.SimpleAdapter;
 
 public class MainActivity extends ListActivity {
+	public  final static String TAG = MainActivity.class.getSimpleName();
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		Log.v("DDD", "onCreate   ******   ");
+		Log.v(TAG, "onCreate   ******   ");
 		Intent intent = getIntent();
 		String path = intent.getStringExtra(Config.PATH);
 
@@ -75,8 +76,8 @@ public class MainActivity extends ListActivity {
 		for (int i = 0; i < len; i++) {
 			ResolveInfo info = list.get(i);
 			CharSequence labelSeq = info.loadLabel(pm);
-			Log.v("DDD", "labelSqe:    " + labelSeq.toString());
-			Log.v("DDD", "info.name:   " + info.activityInfo.name);
+			Log.v(TAG, "labelSqe:    " + labelSeq.toString());
+			Log.v(TAG, "info.name:   " + info.activityInfo.name);
 			String label = labelSeq != null ? labelSeq.toString()
 					: info.activityInfo.name;
 
@@ -133,8 +134,8 @@ public class MainActivity extends ListActivity {
 
 	protected void addItem(List<Map<String, Object>> data, String name,
 			Intent intent) {
-		Log.v("DDD", "name:    " + name);
-		Log.v("DDD", "intent:    " + intent.getPackage());
+		Log.v(TAG, "name:    " + name);
+		Log.v(TAG, "intent:    " + intent.getPackage());
 		Map<String, Object> temp = new HashMap<String, Object>();
 		temp.put("title", name);
 		temp.put("intent", intent);
