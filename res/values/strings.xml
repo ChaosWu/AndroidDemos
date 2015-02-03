@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Android开发大全</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <!-- Phone -->
+    <string name="phone_detect_battery_level">Phone/Detect Battery Level</string>
+    <string name="phone_detect_battery_info">Phone/Detect Battery Info</string>
+    <string name="phone_copyn_paste">Phone/Copy\'n Paste</string>
+    <string name="phone_enable_gps">Phone/Enable GPS</string>
+
+</resources>
