@@ -10,5 +10,7 @@
     <string name="phone_copyn_paste">Phone/Copy\'n Paste</string>
     <string name="phone_enable_gps">Phone/Enable GPS</string>
     <string name="app_service">App/Android Service</string>
+    <string name="location_intent_action_view">Location/Intent ActionView</string>
+    <string name="thread_async_task">Thread/Async Task</string>
 
 </resources>
