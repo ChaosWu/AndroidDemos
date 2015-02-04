@@ -82,6 +82,25 @@
                 <category android:name="cn.android.demo.apis.SAMPLE_CODE" />
             </intent-filter>
         </activity>
+        <!-- *************** **UI Resources** *************** -->
+        <activity
+            android:name="cn.android.demo.apis.ui.resources.StringSpinner"
+            android:label="@string/ui_resources_spinner" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="cn.android.demo.apis.SAMPLE_CODE" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="cn.android.demo.apis.ui.resources.RawMediaPlayer2SoundPool"
+            android:label="@string/ui_resources_raw_media_player" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="cn.android.demo.apis.SAMPLE_CODE" />
+            </intent-filter>
+        </activity>
         <!-- *************** **APP** *************** -->
         <activity
             android:name="cn.android.demo.apis.app.AndroidService"

@@ -44,9 +44,9 @@ public class IntentActionView extends Activity {
 				if (x.equals("") || x == null || y.equals("") || y == null) {
 					return;
 				}
-				uriStr = String.format("geo:%d, %d", x, y);
-				Log.v(TAG, "结果为：" + uriStr);
 
+				tvResult.setText("x :" + x + " ,y :" + y);
+				// String.format
 				// Uri uri = Uri.parse(uriStr);
 				//
 				// Intent intent = new Intent();

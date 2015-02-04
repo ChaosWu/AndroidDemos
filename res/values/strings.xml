@@ -9,8 +9,30 @@
     <string name="phone_detect_battery_info">Phone/Detect Battery Info</string>
     <string name="phone_copyn_paste">Phone/Copy\'n Paste</string>
     <string name="phone_enable_gps">Phone/Enable GPS</string>
+    <!-- App -->
     <string name="app_service">App/Android Service</string>
+    <!-- Location -->
     <string name="location_intent_action_view">Location/Intent ActionView</string>
+    <!-- Thread -->
     <string name="thread_async_task">Thread/Async Task</string>
+    <!-- Resources Spinner -->
+    <string name="ui_resources_spinner">UI/Resources/String Spinner</string>
+
+    <string-array name="DayofWeek">
+        <item>星期一</item>
+        <item>星期二</item>
+        <item>星期三</item>
+        <item>星期四</item>
+        <item>星期五</item>
+        <item>星期六</item>
+        <item>星期日</item>
+    </string-array>
+
+    <plurals name="NumberOfMan">
+        <item quantity="one">one</item>
+        <item quantity="other">two</item>
+    </plurals>
+
+    <string name="ui_resources_raw_media_player">UI/Resources/Raw MediaPlayer</string>
 
 </resources>
