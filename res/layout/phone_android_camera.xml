@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <Button
+        android:id="@+id/bt_start_camera_preview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="- Start Camera Preview-" />
+
+    <Button
+        android:id="@+id/bt_stop_camera_preview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="- Stop Camera Preview-" />
+
+    <SurfaceView
+        android:id="@+id/sv_camera"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+</LinearLayout>

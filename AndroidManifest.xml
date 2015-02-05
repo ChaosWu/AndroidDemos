@@ -4,6 +4,13 @@
     android:versionCode="1"
     android:versionName="1.0" >
 
+    <!-- 使用相机 -->
+    <uses-permission android:name="android.permission.CAMERA" />
+    <!-- 应用程序用到设备的摄像头。如果设备支持多个摄像头，程序使用背朝屏幕的那个。 -->
+    <uses-feature android:name="android.hardware.camera" />
+    <!-- 子特性。应用程序用到设备摄像头的自动对焦功能。 -->
+    <uses-feature android:name="android.hardware.camera.autofocus" />
+
     <uses-sdk
         android:minSdkVersion="8"
         android:targetSdkVersion="21" />
@@ -25,9 +32,36 @@
         </activity>
         <!-- ********************Phone*********************** -->
 
+       <!--  <activity
+            android:name="cn.android.demo.apis.phone.CameraPictureSizes"
+            android:label="@string/phone_camera_picture_size" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="cn.android.demo.apis.SAMPLE_CODE" />
+            </intent-filter>
+        </activity> -->
+        <activity
+            android:name="cn.android.demo.apis.phone.LightSensor"
+            android:label="@string/phone_light_sensor" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="cn.android.demo.apis.SAMPLE_CODE" />
+            </intent-filter>
+        </activity>
         <activity
             android:name="cn.android.demo.apis.phone.DetectBatteryLevel"
             android:label="@string/phone_detect_battery_level" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="cn.android.demo.apis.SAMPLE_CODE" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="cn.android.demo.apis.phone.AndroidCamera"
+            android:label="@string/phone_camera_preview" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

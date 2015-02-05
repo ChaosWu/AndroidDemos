@@ -5,6 +5,8 @@
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
     <!-- Phone -->
+    <string name="phone_camera_preview">Phone/Camera Preview</string>
+    <string name="phone_light_sensor">Phone/Light Sensor</string>
     <string name="phone_detect_battery_level">Phone/Detect Battery Level</string>
     <string name="phone_detect_battery_info">Phone/Detect Battery Info</string>
     <string name="phone_copyn_paste">Phone/Copy\'n Paste</string>
