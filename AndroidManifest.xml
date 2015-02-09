@@ -30,9 +30,23 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <!-- ********************Other*********************** -->
+
+        <activity
+            android:name="cn.android.demo.apis.other.TrafficStatsActivity"
+            android:label="@string/other_trfficstats" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="cn.android.demo.apis.SAMPLE_CODE" />
+            </intent-filter>
+        </activity>
+
         <!-- ********************Phone*********************** -->
 
-       <!--  <activity
+
+        <!--
+        <activity
             android:name="cn.android.demo.apis.phone.CameraPictureSizes"
             android:label="@string/phone_camera_picture_size" >
             <intent-filter>
@@ -40,7 +54,8 @@
 
                 <category android:name="cn.android.demo.apis.SAMPLE_CODE" />
             </intent-filter>
-        </activity> -->
+        </activity>
+        -->
         <activity
             android:name="cn.android.demo.apis.phone.LightSensor"
             android:label="@string/phone_light_sensor" >
@@ -136,6 +151,15 @@
             </intent-filter>
         </activity>
         <!-- *************** **APP** *************** -->
+        <activity
+            android:name="cn.android.demo.apis.app.SharedPreferencesEditor"
+            android:label="@string/app_shared_preferences_editor" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="cn.android.demo.apis.SAMPLE_CODE" />
+            </intent-filter>
+        </activity>
         <activity
             android:name="cn.android.demo.apis.app.AndroidService"
             android:label="@string/app_service" >

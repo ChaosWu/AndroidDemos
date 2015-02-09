@@ -1,8 +1,49 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
     android:orientation="vertical" >
-    
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="Saved Mem 1:" />
+
+    <TextView
+        android:id="@+id/tv_save_1"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="Saved Mem 2:" />
+
+    <TextView
+        android:id="@+id/tv_save_2"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" />
+
+    <EditText
+        android:id="@+id/et_get_mem_1"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" />
+
+    <Button
+        android:id="@+id/bt_save_mem1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Save Mem 1" />
+
+    <EditText
+        android:id="@+id/et_get_mem_2"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" />
+
+    <Button
+        android:id="@+id/bt_save_mem2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Save Mem 2" />
 
 </LinearLayout>

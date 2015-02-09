@@ -19,7 +19,7 @@ import android.widget.ListView;
 import android.widget.SimpleAdapter;
 
 public class MainActivity extends ListActivity {
-	public  final static String TAG = MainActivity.class.getSimpleName();
+	public final static String TAG = MainActivity.class.getSimpleName();
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -142,6 +142,9 @@ public class MainActivity extends ListActivity {
 		data.add(temp);
 	}
 
+	/**
+	 * l：列表视图，单击发生 v:点击列表视图 position：在列表中查看的位置 id:点击的行id
+	 */
 	@Override
 	protected void onListItemClick(ListView l, View v, int position, long id) {
 		Map<String, Object> map = (HashMap<String, Object>) l

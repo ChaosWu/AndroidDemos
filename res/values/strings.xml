@@ -13,6 +13,7 @@
     <string name="phone_enable_gps">Phone/Enable GPS</string>
     <!-- App -->
     <string name="app_service">App/Android Service</string>
+    <string name="app_shared_preferences_editor">App/SharedPreferences Editor</string>
     <!-- Location -->
     <string name="location_intent_action_view">Location/Intent ActionView</string>
     <!-- Thread -->
@@ -36,5 +37,7 @@
     </plurals>
 
     <string name="ui_resources_raw_media_player">UI/Resources/Raw MediaPlayer</string>
+    <!-- Other -->
+    <string name="other_trfficstats">Other/TrafficStats</string>
 
 </resources>
