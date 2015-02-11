@@ -10,12 +10,15 @@
     <uses-feature android:name="android.hardware.camera" />
     <!-- 子特性。应用程序用到设备摄像头的自动对焦功能。 -->
     <uses-feature android:name="android.hardware.camera.autofocus" />
+    <!-- 读取SDCard中文件 -->
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
 
     <uses-sdk
         android:minSdkVersion="8"
         android:targetSdkVersion="21" />
 
     <application
+        android:name="cn.android.demo.AppContext"
         android:allowBackup="true"
         android:icon="@drawable/ic_launcher"
         android:label="@string/app_name"
@@ -30,11 +33,11 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <!-- ********************Other*********************** -->
+        <!-- ********************Net*********************** -->
 
         <activity
-            android:name="cn.android.demo.apis.other.TrafficStatsActivity"
-            android:label="@string/other_trfficstats" >
+            android:name="cn.android.demo.apis.net.TrafficStatsActivity"
+            android:label="@string/net_trfficstats" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -44,7 +47,15 @@
 
         <!-- ********************Phone*********************** -->
 
+        <activity
+            android:name="cn.android.demo.apis.phone.ExplorerFile"
+            android:label="@string/phone_explorer_file" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
 
+                <category android:name="cn.android.demo.apis.SAMPLE_CODE" />
+            </intent-filter>
+        </activity>
         <!--
         <activity
             android:name="cn.android.demo.apis.phone.CameraPictureSizes"
@@ -125,6 +136,17 @@
         <activity
             android:name="cn.android.demo.apis.thread.AndroidAsyncTask"
             android:label="@string/thread_async_task" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="cn.android.demo.apis.SAMPLE_CODE" />
+            </intent-filter>
+        </activity>
+        <!-- *************** **UI View** *************** -->
+
+        <activity
+            android:name="cn.android.demo.apis.ui.views.ViewOverlay"
+            android:label="@string/ui_view_viewoverlay" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

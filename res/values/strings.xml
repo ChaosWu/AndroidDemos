@@ -11,6 +11,8 @@
     <string name="phone_detect_battery_info">Phone/Detect Battery Info</string>
     <string name="phone_copyn_paste">Phone/Copy\'n Paste</string>
     <string name="phone_enable_gps">Phone/Enable GPS</string>
+    <string name="phone_explorer_file">Phone/Explorer File</string>
+
     <!-- App -->
     <string name="app_service">App/Android Service</string>
     <string name="app_shared_preferences_editor">App/SharedPreferences Editor</string>
@@ -20,6 +22,7 @@
     <string name="thread_async_task">Thread/Async Task</string>
     <!-- Resources Spinner -->
     <string name="ui_resources_spinner">UI/Resources/String Spinner</string>
+    <string name="ui_view_viewoverlay">UI/View/ViewOverlay</string>
 
     <string-array name="DayofWeek">
         <item>星期一</item>
@@ -38,6 +41,6 @@
 
     <string name="ui_resources_raw_media_player">UI/Resources/Raw MediaPlayer</string>
     <!-- Other -->
-    <string name="other_trfficstats">Other/TrafficStats</string>
+    <string name="net_trfficstats">Net/TrafficStats</string>
 
 </resources>

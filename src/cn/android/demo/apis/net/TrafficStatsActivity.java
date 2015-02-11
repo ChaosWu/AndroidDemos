@@ -1,4 +1,4 @@
-package cn.android.demo.apis.other;
+package cn.android.demo.apis.net;
 
 import cn.android.demo.apis.R;
 import android.app.Activity;
