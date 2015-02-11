@@ -12,6 +12,8 @@
     <uses-feature android:name="android.hardware.camera.autofocus" />
     <!-- 读取SDCard中文件 -->
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <!-- 使用网络权限 -->
+    <uses-permission android:name="android.permission.INTERNET" />
 
     <uses-sdk
         android:minSdkVersion="8"
@@ -31,6 +33,18 @@
 
                 <category android:name="android.intent.category.DEFAULT" />
                 <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <!-- ********************Pro*********************** -->
+        <activity android:name="cn.android.demo.apis.project.rss.ShowDetails" >
+        </activity>
+        <activity
+            android:name="cn.android.demo.apis.project.rss.AndroidRssReader"
+            android:label="@string/project_rssreader" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="cn.android.demo.apis.SAMPLE_CODE" />
             </intent-filter>
         </activity>
         <!-- ********************Net*********************** -->

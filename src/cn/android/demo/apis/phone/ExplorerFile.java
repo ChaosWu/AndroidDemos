@@ -65,7 +65,7 @@ public class ExplorerFile extends ListActivity {
 			}
 
 			ArrayAdapter<String> fileList = new ArrayAdapter<>(this,
-					R.layout.phone_explorer_file_item, item);
+					R.layout.listview_textview_item, item);
 			setListAdapter(fileList);
 		}
 
