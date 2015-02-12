@@ -156,6 +156,17 @@
                 <category android:name="cn.android.demo.apis.SAMPLE_CODE" />
             </intent-filter>
         </activity>
+        <!-- *************** **UI Widget** *************** -->
+
+        <activity
+            android:name="cn.android.demo.apis.ui.widget.CanvasBitmap"
+            android:label="@string/ui_widget_canvas_bitmap" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="cn.android.demo.apis.SAMPLE_CODE" />
+            </intent-filter>
+        </activity>
         <!-- *************** **UI View** *************** -->
 
         <activity

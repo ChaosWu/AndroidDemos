@@ -25,6 +25,12 @@ import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.TextView;
 
+/**
+ * RSS阅读器
+ * 
+ * @author Elroy
+ * 
+ */
 public class AndroidRssReader extends ListActivity {
 
 	private RSSFeed myRssFeed = null;
@@ -61,7 +67,7 @@ public class AndroidRssReader extends ListActivity {
 		feedDescribtion = (TextView) findViewById(R.id.feeddescribtion);
 		feedPubdate = (TextView) findViewById(R.id.feedpubdate);
 		feedLink = (TextView) findViewById(R.id.feedlink);
-		// 暴力在主线程中进行网络操作
+		// TODO 暴力在主线程中进行网络操作
 		// StrictMode.setThreadPolicy(new StrictMode.ThreadPolicy.Builder()
 		// .detectDiskReads().detectDiskWrites().detectNetwork()
 		// .penaltyLog().build());
