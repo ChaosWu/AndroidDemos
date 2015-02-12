@@ -44,5 +44,6 @@
     <string name="net_trfficstats">Net/TrafficStats</string>
     <string name="project_rssreader">Project/RssReader</string>
     <string name="ui_widget_canvas_bitmap">UI/Widget/Canvas Bitmap</string>
+    <string name="ui_widget_canvas_circle">UI/Widget/Canvas Circle</string>
 
 </resources>

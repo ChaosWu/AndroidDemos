@@ -167,6 +167,15 @@
                 <category android:name="cn.android.demo.apis.SAMPLE_CODE" />
             </intent-filter>
         </activity>
+        <activity
+            android:name="cn.android.demo.apis.ui.widget.TouchDrawCircle"
+            android:label="@string/ui_widget_canvas_circle" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="cn.android.demo.apis.SAMPLE_CODE" />
+            </intent-filter>
+        </activity>
         <!-- *************** **UI View** *************** -->
 
         <activity
