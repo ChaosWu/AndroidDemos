@@ -14,6 +14,7 @@
     <string name="phone_explorer_file">Phone/Explorer File</string>
 
     <!-- App -->
+    <string name="app_android_chronometer">App/Android Chronometer</string>
     <string name="app_service">App/Android Service</string>
     <string name="app_shared_preferences_editor">App/SharedPreferences Editor</string>
     <!-- Location -->
@@ -45,5 +46,8 @@
     <string name="project_rssreader">Project/RssReader</string>
     <string name="ui_widget_canvas_bitmap">UI/Widget/Canvas Bitmap</string>
     <string name="ui_widget_canvas_circle">UI/Widget/Canvas Circle</string>
+    <string name="ui_widget_surface_water">UI/Widget/Canvas Water</string>
+    <string name="bug_surface_water">BUG/IllegalThreadStateException 1</string>
+    <string name="net_android_web_image">Net/Web ImageView</string>
 
 </resources>

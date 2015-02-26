@@ -156,8 +156,29 @@
                 <category android:name="cn.android.demo.apis.SAMPLE_CODE" />
             </intent-filter>
         </activity>
+
+        <!--  -->
+
+        <activity
+            android:name="cn.android.demo.apis.bug.BUGSurfaceViewWater"
+            android:label="@string/bug_surface_water" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="cn.android.demo.apis.SAMPLE_CODE" />
+            </intent-filter>
+        </activity>
         <!-- *************** **UI Widget** *************** -->
 
+        <activity
+            android:name="cn.android.demo.apis.ui.widget.SurfaceViewWater"
+            android:label="@string/ui_widget_surface_water" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="cn.android.demo.apis.SAMPLE_CODE" />
+            </intent-filter>
+        </activity>
         <activity
             android:name="cn.android.demo.apis.ui.widget.CanvasBitmap"
             android:label="@string/ui_widget_canvas_bitmap" >
@@ -208,6 +229,15 @@
         </activity>
         <!-- *************** **APP** *************** -->
         <activity
+            android:name="cn.android.demo.apis.app.AndroidChronometer"
+            android:label="@string/app_android_chronometer" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="cn.android.demo.apis.SAMPLE_CODE" />
+            </intent-filter>
+        </activity>
+        <activity
             android:name="cn.android.demo.apis.app.SharedPreferencesEditor"
             android:label="@string/app_shared_preferences_editor" >
             <intent-filter>
@@ -219,6 +249,15 @@
         <activity
             android:name="cn.android.demo.apis.app.AndroidService"
             android:label="@string/app_service" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="cn.android.demo.apis.SAMPLE_CODE" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="cn.android.demo.apis.net.AndroidWebImage"
+            android:label="@string/net_android_web_image" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
