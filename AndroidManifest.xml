@@ -156,6 +156,15 @@
                 <category android:name="cn.android.demo.apis.SAMPLE_CODE" />
             </intent-filter>
         </activity>
+        <activity
+            android:name="cn.android.demo.apis.thread.AndroidBackgroundThread"
+            android:label="@string/thread_android_background" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="cn.android.demo.apis.SAMPLE_CODE" />
+            </intent-filter>
+        </activity>
 
         <!--  -->
 
@@ -199,6 +208,15 @@
         </activity>
         <!-- *************** **UI View** *************** -->
 
+        <activity
+            android:name="cn.android.demo.apis.ui.views.ListViewDemo"
+            android:label="@string/ui_view_list_view" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="cn.android.demo.apis.SAMPLE_CODE" />
+            </intent-filter>
+        </activity>
         <activity
             android:name="cn.android.demo.apis.ui.views.ViewOverlay"
             android:label="@string/ui_view_viewoverlay" >

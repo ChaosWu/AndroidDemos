@@ -7,6 +7,8 @@ import java.net.URL;
 import java.net.URLConnection;
 
 import cn.android.demo.apis.R;
+import cn.android.demo.utils.BitmapUtil;
+import cn.android.demo.utils.HttpUtil;
 import cn.android.demo.utils.ToastUtil;
 import android.app.Activity;
 import android.graphics.Bitmap;
@@ -44,38 +46,38 @@ public class AndroidWebImage extends Activity {
 
 	}
 
-	private Bitmap LoadImage(String URL, BitmapFactory.Options options) {
-		Bitmap bitmap = null;
-		InputStream inputStream = null;
+	// private Bitmap LoadImage(String URL, BitmapFactory.Options options) {
+	// Bitmap bitmap = null;
+	// InputStream inputStream = null;
+	//
+	// try {
+	// inputStream = HttpUtil.OpenHttpConnection(URL);
+	// bitmap = BitmapFactory.decodeStream(inputStream, null, options);
+	// inputStream.close();
+	// } catch (IOException e) {
+	// e.printStackTrace();
+	// }
+	//
+	// return bitmap;
+	//
+	// }
 
-		try {
-			inputStream = OpenHttpConnection(URL);
-			bitmap = BitmapFactory.decodeStream(inputStream, null, options);
-			inputStream.close();
-		} catch (IOException e) {
-			e.printStackTrace();
-		}
-
-		return bitmap;
-
-	}
-
-	private InputStream OpenHttpConnection(String strUrl) throws IOException {
-		InputStream inputStream = null;
-		URL url = new URL(strUrl);
-		URLConnection connection = url.openConnection();
-
-		HttpURLConnection httpURLConnection = (HttpURLConnection) connection;
-		httpURLConnection.setRequestMethod("GET");
-		httpURLConnection.connect();
-
-		if (httpURLConnection.getResponseCode() == HttpURLConnection.HTTP_OK) {
-			inputStream = httpURLConnection.getInputStream();
-		}
-
-		return inputStream;
-
-	}
+//	private InputStream OpenHttpConnection(String strUrl) throws IOException {
+//		InputStream inputStream = null;
+//		URL url = new URL(strUrl);
+//		URLConnection connection = url.openConnection();
+//
+//		HttpURLConnection httpURLConnection = (HttpURLConnection) connection;
+//		httpURLConnection.setRequestMethod("GET");
+//		httpURLConnection.connect();
+//
+//		if (httpURLConnection.getResponseCode() == HttpURLConnection.HTTP_OK) {
+//			inputStream = httpURLConnection.getInputStream();
+//		}
+//
+//		return inputStream;
+//
+//	}
 
 	public class MyAsyncTask extends AsyncTask<Void, Void, Bitmap> {
 		@Override
@@ -87,7 +89,7 @@ public class AndroidWebImage extends Activity {
 
 		@Override
 		protected Bitmap doInBackground(Void... params) {
-			Bitmap bitmap = LoadImage(imageUrl, options);
+			Bitmap bitmap = BitmapUtil.LoadImage(imageUrl, options);
 			return bitmap;
 		}
 

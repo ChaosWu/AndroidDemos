@@ -19,8 +19,11 @@
     <string name="app_shared_preferences_editor">App/SharedPreferences Editor</string>
     <!-- Location -->
     <string name="location_intent_action_view">Location/Intent ActionView</string>
+
     <!-- Thread -->
     <string name="thread_async_task">Thread/Async Task</string>
+    <string name="thread_android_background">Thread/Background Thread</string>
+
     <!-- Resources Spinner -->
     <string name="ui_resources_spinner">UI/Resources/String Spinner</string>
     <string name="ui_view_viewoverlay">UI/View/ViewOverlay</string>
@@ -49,5 +52,6 @@
     <string name="ui_widget_surface_water">UI/Widget/Canvas Water</string>
     <string name="bug_surface_water">BUG/IllegalThreadStateException 1</string>
     <string name="net_android_web_image">Net/Web ImageView</string>
+    <string name="ui_view_list_view">UI/View/ListView ArrayAdapter</string>
 
 </resources>
