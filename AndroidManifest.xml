@@ -209,6 +209,24 @@
         <!-- *************** **UI View** *************** -->
 
         <activity
+            android:name="cn.android.demo.apis.ui.views.AndroidVideoView"
+            android:label="@string/ui_view_video" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="cn.android.demo.apis.SAMPLE_CODE" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="cn.android.demo.apis.ui.views.AndroidAutoCompleteTextView"
+            android:label="@string/ui_view_auto_complete_textview" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="cn.android.demo.apis.SAMPLE_CODE" />
+            </intent-filter>
+        </activity>
+        <activity
             android:name="cn.android.demo.apis.ui.views.ListViewDemo"
             android:label="@string/ui_view_list_view" >
             <intent-filter>
@@ -220,6 +238,16 @@
         <activity
             android:name="cn.android.demo.apis.ui.views.ViewOverlay"
             android:label="@string/ui_view_viewoverlay" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="cn.android.demo.apis.SAMPLE_CODE" />
+            </intent-filter>
+        </activity>
+        <!-- *************** **UI Graphics** *************** -->
+        <activity
+            android:name="cn.android.demo.apis.ui.graphics.AndroidColor"
+            android:label="@string/ui_graphics_color" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

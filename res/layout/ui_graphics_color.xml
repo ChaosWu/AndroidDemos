@@ -5,21 +5,20 @@
     android:orientation="vertical" >
 
     <TextView
-        android:id="@+id/mytext"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:text="This Text will be Turn ON/OFF triggered by a background thread." />
+        android:text="hi,graphics color" />
 
-    <Button
-        android:id="@+id/bt_output_txt"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:text="开始" />
-
-    <TextView
-        android:id="@+id/tv_output_txt_data"
+    <LinearLayout
+        android:id="@+id/ll_background_color"
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
-        android:text="暂无数据" />
+        android:orientation="vertical" >
+
+        <Spinner
+            android:id="@+id/spinner_color"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
 
 </LinearLayout>

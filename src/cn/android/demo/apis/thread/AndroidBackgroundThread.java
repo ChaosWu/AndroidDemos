@@ -1,5 +1,9 @@
 package cn.android.demo.apis.thread;
 
+import java.io.ByteArrayOutputStream;
+import java.io.IOException;
+import java.io.InputStream;
+
 import cn.android.demo.apis.R;
 import cn.android.demo.utils.ToastUtil;
 import android.app.Activity;
@@ -8,13 +12,18 @@ import android.os.Handler;
 import android.os.Message;
 import android.util.Log;
 import android.view.View;
+import android.view.View.OnClickListener;
+import android.widget.Button;
 import android.widget.TextView;
 
 public class AndroidBackgroundThread extends Activity {
 	public BackgroundThread backgroundThread;
+	
 	public TextView mTv;
 	public boolean isTextOn = true;
 
+	public TextView tvTxt;
+	public Button btStart;
 	Handler handler = new Handler() {
 
 		@Override
@@ -42,7 +51,41 @@ public class AndroidBackgroundThread extends Activity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.thread_android_background);
 		mTv = (TextView) findViewById(R.id.mytext);
+
+		tvTxt = (TextView) findViewById(R.id.tv_output_txt_data);
+
+		btStart = (Button) findViewById(R.id.bt_output_txt);
+		btStart.setOnClickListener(new OnClickListener() {
+
+			@Override
+			public void onClick(View v) {
+				tvTxt.setText(readTxt());
+			}
+		});
+
 		ToastUtil.showToast(this, "onCreate!");
+	}
+
+	private String readTxt() {
+
+		InputStream is = getResources().openRawResource(R.raw.hello);
+		ByteArrayOutputStream arrayOutputStream = new ByteArrayOutputStream();
+
+		int i;
+
+		try {
+			i = is.read();
+
+			while (i != -1) {
+				arrayOutputStream.write(i);
+				i = is.read();
+			}
+			is.close();
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+
+		return arrayOutputStream.toString();
 	}
 
 	@Override

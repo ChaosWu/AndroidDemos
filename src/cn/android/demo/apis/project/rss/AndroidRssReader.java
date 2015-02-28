@@ -3,6 +3,7 @@ package cn.android.demo.apis.project.rss;
 import java.io.IOException;
 import java.net.MalformedURLException;
 import java.net.URL;
+import java.util.List;
 
 import javax.xml.parsers.ParserConfigurationException;
 import javax.xml.parsers.SAXParser;
@@ -16,11 +17,17 @@ import cn.android.demo.apis.R;
 
 import android.annotation.SuppressLint;
 import android.app.ListActivity;
+import android.content.Context;
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
+import android.view.LayoutInflater;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.TextView;
@@ -49,8 +56,12 @@ public class AndroidRssReader extends ListActivity {
 			feedPubdate.setText(myRssFeed.getPubdate());
 			feedLink.setText(myRssFeed.getLink());
 
-			ArrayAdapter<RSSItem> adapter = new ArrayAdapter<RSSItem>(
-					AndroidRssReader.this, android.R.layout.simple_list_item_1,
+			// ArrayAdapter<RSSItem> adapter = new ArrayAdapter<RSSItem>(
+			// AndroidRssReader.this, android.R.layout.simple_list_item_1,
+			// myRssFeed.getList());
+
+			MyCustomAdapter adapter = new MyCustomAdapter(
+					getApplicationContext(), R.layout.project_rss_row,
 					myRssFeed.getList());
 			setListAdapter(adapter);
 
@@ -74,6 +85,32 @@ public class AndroidRssReader extends ListActivity {
 		// StrictMode.setVmPolicy(new StrictMode.VmPolicy.Builder()
 		// .detectLeakedSqlLiteObjects().detectLeakedClosableObjects()
 		// .penaltyLog().penaltyDeath().build());
+
+	}
+
+	@Override
+	public boolean onCreateOptionsMenu(Menu menu) {
+
+		menu.add(0, 0, 0, "Reload");
+		return true;
+	}
+
+	@Override
+	public boolean onOptionsItemSelected(MenuItem item) {
+
+		switch (item.getItemId()) {
+		case 0:
+			readRss();
+			break;
+
+		default:
+			break;
+		}
+
+		return true;
+	}
+
+	private void readRss() {
 		new Thread(runnable).start();
 	}
 
@@ -133,5 +170,42 @@ public class AndroidRssReader extends ListActivity {
 			handler.sendMessage(msg);
 
 		}
+	}
+
+	public class MyCustomAdapter extends ArrayAdapter<RSSItem> {
+
+		public MyCustomAdapter(Context context, int textViewResourceId,
+				List<RSSItem> list) {
+			super(context, textViewResourceId, list);
+		}
+
+		@Override
+		public View getView(int position, View convertView, ViewGroup parent) {
+
+			View row = convertView;
+
+			if (row == null) {
+				LayoutInflater inflater = getLayoutInflater();
+				row = inflater.inflate(R.layout.project_rss_row, parent, false);
+			}
+
+			TextView tvTitle = (TextView) row.findViewById(R.id.tv_rss_title);
+			tvTitle.setText(myRssFeed.getList().get(position).getTitle());
+
+			TextView tvPubdate = (TextView) row
+					.findViewById(R.id.tv_rss_pubdate);
+			tvPubdate.setText(myRssFeed.getList().get(position).getPubdate());
+
+			if (position % 2 == 0) {
+				tvTitle.setBackgroundColor(Color.BLUE);
+				tvPubdate.setBackgroundColor(Color.BLUE);
+			} else {
+				tvTitle.setBackgroundColor(Color.GREEN);
+				tvPubdate.setBackgroundColor(Color.GREEN);
+			}
+
+			return row;
+		}
+
 	}
 }
