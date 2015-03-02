@@ -4,20 +4,14 @@
     android:layout_height="fill_parent"
     android:orientation="vertical" >
 
-    <Spinner
-        android:id="@+id/spinner_rtsp"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content" />
-
     <TextView
-        android:id="@+id/tv_rtsp"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:text="hi,VideoView" />
+        android:text="hi，test" />
 
-    <VideoView
-        android:id="@+id/vv_video_view"
+    <EditText
+        android:id="@+id/editfield"
         android:layout_width="fill_parent"
-        android:layout_height="fill_parent" />
+        android:layout_height="wrap_content" />
 
 </LinearLayout>

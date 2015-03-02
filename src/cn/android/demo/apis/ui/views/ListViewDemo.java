@@ -2,6 +2,7 @@ package cn.android.demo.apis.ui.views;
 
 import cn.android.demo.apis.R;
 import cn.android.demo.utils.BitmapUtil;
+import cn.android.demo.utils.ConfigUtil;
 import cn.android.demo.utils.ToastUtil;
 import android.app.ListActivity;
 import android.content.Context;
@@ -18,7 +19,7 @@ import android.widget.ListView;
 import android.widget.TextView;
 
 public class ListViewDemo extends ListActivity {
-	private String imageUrl = "https://avatars2.githubusercontent.com/u/4157575?v=3&s=460";
+	//private String imageUrl = "https://avatars2.githubusercontent.com/u/4157575?v=3&s=460";
 	//private String imageUrl = "http://a.hiphotos.baidu.com/image/pic/item/09fa513d269759ee7d56a5cdb1fb43166d22dfb6.jpg";
 	private String[] month = { "January", "February", "March", "April", "May",
 			"June", "July", "August", "September", "October", "November",
@@ -55,7 +56,7 @@ public class ListViewDemo extends ListActivity {
 					BitmapFactory.Options options;
 					options = new BitmapFactory.Options();
 					options.inSampleSize = 1;
-					bitmap = BitmapUtil.LoadImage(imageUrl, options);
+					bitmap = BitmapUtil.LoadImage(ConfigUtil.imageUrl, options);
 
 				}
 			}).start();

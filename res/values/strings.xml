@@ -58,5 +58,7 @@
     <string name="bug_surface_water">BUG/IllegalThreadStateException 1</string>
     <string name="net_android_web_image">Net/Web ImageView</string>
     <string name="ui_view_video">UI/View/VideoView</string>
+    <string name="thread_background_async_task">Thread/Background Async Task</string>
+    <string name="phone_sdcard">Phone/SDcard</string>
 
 </resources>

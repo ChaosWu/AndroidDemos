@@ -10,7 +10,9 @@ import java.util.Map;
 
 import android.app.ListActivity;
 import android.content.Intent;
+import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager;
+import android.content.pm.PackageManager.NameNotFoundException;
 import android.content.pm.ResolveInfo;
 import android.os.Bundle;
 import android.util.Log;
@@ -41,6 +43,20 @@ public class MainActivity extends ListActivity {
 	@Override
 	protected void onStart() {
 		super.onStart();
+		PackageInfo info;
+		String strVersion;
+		try {
+			info=getPackageManager().getPackageInfo(getPackageName(), 0);
+			strVersion="Version Name:"+info.versionName+"\n"+
+			"Version Code:"+String.valueOf(info.versionCode);
+			
+			Log.v("DDD", "******"+strVersion);
+			
+		} catch (NameNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
 		Log.v(TAG, "onStart   ******   ");
 	}
 

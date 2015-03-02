@@ -62,6 +62,15 @@
         <!-- ********************Phone*********************** -->
 
         <activity
+            android:name="cn.android.demo.apis.phone.SDcard"
+            android:label="@string/phone_sdcard" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="cn.android.demo.apis.SAMPLE_CODE" />
+            </intent-filter>
+        </activity>
+        <activity
             android:name="cn.android.demo.apis.phone.ExplorerFile"
             android:label="@string/phone_explorer_file" >
             <intent-filter>
@@ -147,6 +156,15 @@
             </intent-filter>
         </activity>
         <!-- *************** **THREAD** *************** -->
+        <activity
+            android:name="cn.android.demo.apis.thread.BackgroundAsyncTask"
+            android:label="@string/thread_background_async_task" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="cn.android.demo.apis.SAMPLE_CODE" />
+            </intent-filter>
+        </activity>
         <activity
             android:name="cn.android.demo.apis.thread.AndroidAsyncTask"
             android:label="@string/thread_async_task" >
