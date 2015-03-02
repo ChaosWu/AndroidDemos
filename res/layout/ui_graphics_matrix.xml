@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <Spinner
+        android:id="@+id/scale"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:id="@+id/tv_rotate"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="rotate: 0"
+        android:textSize="10dip" />
+
+    <SeekBar
+        android:id="@+id/rotate"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dip"
+        android:max="360"
+        android:progress="0" />
+
+    <TextView
+        android:id="@+id/tv_skewx"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="Skew-X: 0"
+        android:textSize="10dip" />
+
+    <SeekBar
+        android:id="@+id/sb_skewx"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dip"
+        android:max="200"
+        android:progress="100" />
+
+    <TextView
+        android:id="@+id/tv_skewy"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="Skew-Y: 0"
+        android:textSize="10dip" />
+
+    <SeekBar
+        android:id="@+id/sb_skewy"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dip"
+        android:max="200"
+        android:progress="100" />
+
+    <Button
+        android:id="@+id/bt_matrix_reset"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="坐标变换" />
+
+    <ImageView
+        android:id="@+id/imageview"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_gravity="center"
+        android:scaleType="center" />
+
+</LinearLayout>

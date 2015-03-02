@@ -1,21 +1,69 @@
 package cn.android.demo.apis.phone;
 
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.InputStream;
+import java.io.OutputStream;
+
 import cn.android.demo.apis.R;
+import cn.android.demo.utils.BitmapUtil;
 import cn.android.demo.utils.ConfigUtil;
 import android.app.Activity;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.os.Bundle;
 import android.os.Environment;
+import android.os.Handler;
+import android.os.Message;
+import android.util.Log;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
+import android.widget.ImageView;
+import android.widget.TextView;
 
 public class SDcard extends Activity implements OnClickListener {
 	private Button btDowload;
 	private Button btLoad;
+	private ImageView imageView;
+	private TextView textView;
 
-	private String imageUrl = ConfigUtil.imageUrl;
+	private String imageUrl = ConfigUtil.imageHeadUrl;
+	private String imageName = "MyHead.png";
+	private String extStorageDirectory = Environment
+			.getExternalStorageDirectory().toString();
 
-	private String extStorageDirectory;
+	private Bitmap bitmap;
+
+	private Handler handler = new Handler() {
+
+		@Override
+		public void handleMessage(Message msg) {
+			super.handleMessage(msg);
+
+			switch (msg.what) {
+			case 0:
+				textView.setText("下载完成");
+				break;
+			case 1:
+				textView.setText("正在下载");
+				break;
+			case 2:
+				imageView.setImageBitmap((Bitmap) msg.obj);
+				break;
+			case 3:
+				imageView.setBackgroundResource(R.drawable.demo_no_data_photo);
+				textView.setText("没有资源，请下载");
+				break;
+
+			default:
+				break;
+			}
+		}
+
+	};
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -24,6 +72,10 @@ public class SDcard extends Activity implements OnClickListener {
 
 		btDowload = (Button) findViewById(R.id.bt_download_image);
 		btLoad = (Button) findViewById(R.id.bt_load_image);
+		textView = (TextView) findViewById(R.id.tv_download_text);
+
+		imageView = (ImageView) findViewById(R.id.iv_load_dowload_image);
+		imageView.setBackgroundResource(R.drawable.demo_no_data_photo);
 
 		btDowload.setOnClickListener(this);
 		btLoad.setOnClickListener(this);
@@ -32,9 +84,17 @@ public class SDcard extends Activity implements OnClickListener {
 	@Override
 	public void onClick(View v) {
 		switch (v.getId()) {
-		// 下载图片 保存
+		// 保存
 		case R.id.bt_download_image:
-			downloadImage();
+			new Thread(new Runnable() {
+
+				@Override
+				public void run() {
+					saveSdCard();
+
+				}
+			}).start();
+
 			break;
 		// 读取 显示图片
 		case R.id.bt_load_image:
@@ -42,21 +102,49 @@ public class SDcard extends Activity implements OnClickListener {
 			break;
 
 		default:
-			break; 
+			break;
 		}
 	}
 
+	/** 读取 显示图片 */
 	private void loadImage() {
-		// TODO Auto-generated method stub
+		// File file = new File(extStorageDirectory, imageName);
+		String path = extStorageDirectory + "/" + imageName;
+		Bitmap bmp = BitmapFactory.decodeFile(path);
+		if (bmp != null) {
+			Message message = new Message();
+			message.obj = bmp;
+			message.what = 2;
+			handler.dispatchMessage(message);
 
+		} else {
+			handler.sendEmptyMessage(3);
+		}
 	}
 
-	private void downloadImage() {
-		// TODO Auto-generated method stub
-		extStorageDirectory = Environment.getExternalStorageDirectory()
-				.toString();
-		btDowload.setText("Save to  " + extStorageDirectory
-				+ "/"+  "MyHead.png");
+	/** 下载图片 并保存 */
+	private void saveSdCard() {
+		handler.sendEmptyMessage(1);
+		BitmapFactory.Options bmOptions;
+		bmOptions = new BitmapFactory.Options();
+		bmOptions.inSampleSize = 1;
+		bitmap = BitmapUtil.LoadImage(imageUrl, bmOptions);
+		// 保存sd代码
+		OutputStream outputStream = null;
+		try {
+			Log.v("DDD", extStorageDirectory);
+			File file = new File(extStorageDirectory, imageName);
+
+			outputStream = new FileOutputStream(file);
+			bitmap.compress(Bitmap.CompressFormat.PNG, 100, outputStream);
+
+			outputStream.flush();
+			outputStream.close();
+		} catch (Exception e) {
+			e.printStackTrace();
+		} finally {
+			handler.sendEmptyMessage(0);
+		}
 
 	}
 }

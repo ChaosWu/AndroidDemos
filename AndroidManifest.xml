@@ -12,6 +12,8 @@
     <uses-feature android:name="android.hardware.camera.autofocus" />
     <!-- 读取SDCard中文件 -->
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <!-- 写入SDCard中文件 -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <!-- 使用网络权限 -->
     <uses-permission android:name="android.permission.INTERNET" />
 
@@ -263,6 +265,15 @@
             </intent-filter>
         </activity>
         <!-- *************** **UI Graphics** *************** -->
+        <activity
+            android:name="cn.android.demo.apis.ui.graphics.AndroidMatrix"
+            android:label="@string/ui_graphics_matrix" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="cn.android.demo.apis.SAMPLE_CODE" />
+            </intent-filter>
+        </activity>
         <activity
             android:name="cn.android.demo.apis.ui.graphics.AndroidColor"
             android:label="@string/ui_graphics_color" >

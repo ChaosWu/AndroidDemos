@@ -56,7 +56,7 @@ public class ListViewDemo extends ListActivity {
 					BitmapFactory.Options options;
 					options = new BitmapFactory.Options();
 					options.inSampleSize = 1;
-					bitmap = BitmapUtil.LoadImage(ConfigUtil.imageUrl, options);
+					bitmap = BitmapUtil.LoadImage(ConfigUtil.imageHeadUrl, options);
 
 				}
 			}).start();

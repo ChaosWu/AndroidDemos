@@ -51,6 +51,7 @@
     <string name="ui_graphics_color">UI/Graphics/Spinner Color</string>
     <string name="ui_view_auto_complete_textview">UI/View/AutoCompleteTextView</string>
     <string name="ui_view_viewoverlay">UI/View/ViewOverlay</string>
+    <string name="ui_graphics_matrix">UI/Graphics/Matrix</string>
 
     <!-- Other -->
     <string name="net_trfficstats">Net/TrafficStats</string>
