@@ -42,7 +42,7 @@ public class SDcard extends Activity implements OnClickListener {
 			break;
 
 		default:
-			break;
+			break; 
 		}
 	}
 
@@ -56,7 +56,7 @@ public class SDcard extends Activity implements OnClickListener {
 		extStorageDirectory = Environment.getExternalStorageDirectory()
 				.toString();
 		btDowload.setText("Save to  " + extStorageDirectory
-				+ "/"+System.currentTimeMillis() + ".png");
+				+ "/"+  "MyHead.png");
 
 	}
 }
