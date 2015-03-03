@@ -1,5 +1,7 @@
 package cn.android.demo.apis.appwidget;
 
+import org.apache.http.util.EncodingUtils;
+
 import cn.android.demo.apis.R;
 import android.app.Service;
 import android.appwidget.AppWidgetManager;
@@ -11,6 +13,7 @@ import android.content.Intent;
 import android.content.IntentFilter;
 import android.os.BatteryManager;
 import android.os.IBinder;
+import android.os.SystemClock;
 import android.util.Log;
 import android.widget.RemoteViews;
 
@@ -36,7 +39,6 @@ public class BatteryWidgetProvider extends AppWidgetProvider {
 				.getInstance(context);
 
 		appWidgetManager.updateAppWidget(componentName, updateViews);
-
 	}
 
 	public class MyBatteryReceiver extends Service {

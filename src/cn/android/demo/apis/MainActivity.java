@@ -8,6 +8,8 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+import org.apache.http.util.EncodingUtils;
+
 import android.app.ListActivity;
 import android.content.Intent;
 import android.content.pm.PackageInfo;
@@ -27,6 +29,8 @@ public class MainActivity extends ListActivity {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		Log.v(TAG, "onCreate   ******   ");
+		Log.v("DDD", new String(EncodingUtils.getAsciiBytes("A")));
+
 		Intent intent = getIntent();
 		String path = intent.getStringExtra(Config.PATH);
 
@@ -46,17 +50,17 @@ public class MainActivity extends ListActivity {
 		PackageInfo info;
 		String strVersion;
 		try {
-			info=getPackageManager().getPackageInfo(getPackageName(), 0);
-			strVersion="Version Name:"+info.versionName+"\n"+
-			"Version Code:"+String.valueOf(info.versionCode);
-			
-			Log.v("DDD", "******"+strVersion);
-			
+			info = getPackageManager().getPackageInfo(getPackageName(), 0);
+			strVersion = "Version Name:" + info.versionName + "\n"
+					+ "Version Code:" + String.valueOf(info.versionCode);
+
+			Log.v("DDD", "******" + strVersion);
+
 		} catch (NameNotFoundException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		
+
 		Log.v(TAG, "onStart   ******   ");
 	}
 

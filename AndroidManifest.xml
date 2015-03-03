@@ -64,6 +64,16 @@
         <!-- ********************Phone*********************** -->
 
         <activity
+            android:name="cn.android.demo.apis.phone.OrientationSensor"
+            android:label="@string/phone_orientation_sensor"
+            android:screenOrientation="portrait" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="cn.android.demo.apis.SAMPLE_CODE" />
+            </intent-filter>
+        </activity>
+        <activity
             android:name="cn.android.demo.apis.phone.SDcard"
             android:label="@string/phone_sdcard" >
             <intent-filter>
@@ -229,6 +239,16 @@
         <!-- *************** **UI View** *************** -->
 
         <activity
+            android:name="cn.android.demo.apis.ui.widget.Compass"
+            android:label="@string/ui_view_compass"
+            android:screenOrientation="portrait" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="cn.android.demo.apis.SAMPLE_CODE" />
+            </intent-filter>
+        </activity>
+        <activity
             android:name="cn.android.demo.apis.ui.views.AndroidVideoView"
             android:label="@string/ui_view_video" >
             <intent-filter>
@@ -303,6 +323,17 @@
             </intent-filter>
         </activity>
         <!-- *************** **APP** *************** -->
+        <activity android:name="cn.android.demo.apis.app.SetPreference" >
+        </activity>
+        <activity
+            android:name="cn.android.demo.apis.app.AndroidPreference"
+            android:label="@string/app_android_preference" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="cn.android.demo.apis.SAMPLE_CODE" />
+            </intent-filter>
+        </activity>
         <activity
             android:name="cn.android.demo.apis.app.AndroidChronometer"
             android:label="@string/app_android_chronometer" >

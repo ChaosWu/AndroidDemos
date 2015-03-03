@@ -14,6 +14,7 @@
     <string name="phone_explorer_file">Phone/Explorer File</string>
 
     <!-- App -->
+    <string name="app_android_preference">App/Android Perference</string>
     <string name="app_android_chronometer">App/Android Chronometer</string>
     <string name="app_service">App/Android Service</string>
     <string name="app_shared_preferences_editor">App/SharedPreferences Editor</string>
@@ -52,14 +53,15 @@
     <string name="ui_view_auto_complete_textview">UI/View/AutoCompleteTextView</string>
     <string name="ui_view_viewoverlay">UI/View/ViewOverlay</string>
     <string name="ui_graphics_matrix">UI/Graphics/Matrix</string>
-
+    <string name="ui_view_compass">UI/Widget/Compass</string>
+    <string name="ui_view_video">UI/View/VideoView</string>
     <!-- Other -->
     <string name="net_trfficstats">Net/TrafficStats</string>
     <string name="project_rssreader">Project/RssReader</string>
     <string name="bug_surface_water">BUG/IllegalThreadStateException 1</string>
     <string name="net_android_web_image">Net/Web ImageView</string>
-    <string name="ui_view_video">UI/View/VideoView</string>
     <string name="thread_background_async_task">Thread/Background Async Task</string>
     <string name="phone_sdcard">Phone/SDcard</string>
+    <string name="phone_orientation_sensor">Phone/Orientation Sensor</string>
 
 </resources>
