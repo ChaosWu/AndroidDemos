@@ -4,6 +4,12 @@
     android:layout_height="fill_parent"
     android:orientation="vertical" >
 
+    <Button
+        android:id="@+id/bt_show_dialog_rtsp"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="显示dialog" />
+
     <Spinner
         android:id="@+id/spinner_rtsp"
         android:layout_width="fill_parent"

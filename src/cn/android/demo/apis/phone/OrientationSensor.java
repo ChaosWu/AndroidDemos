@@ -37,7 +37,6 @@ public class OrientationSensor extends Activity {
 	private TextView tvRoll;
 
 	private OrientationEventListener myOrientationEventListener;
-
 	private boolean sersorrunning;
 
 	@Override

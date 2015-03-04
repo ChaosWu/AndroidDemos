@@ -12,6 +12,15 @@
     <cn.android.demo.apis.ui.widget.CompassView
         android:id="@+id/mycompassview"
         android:layout_width="fill_parent"
-        android:layout_height="fill_parent" />
+        android:layout_height="0dip"
+        android:layout_weight="1"
+        
+         />
+
+    <cn.android.demo.apis.ui.widget.HorizontalView
+        android:id="@+id/myhorizontalview"
+        android:layout_width="fill_parent"
+        android:layout_height="0dip"
+        android:layout_weight="1" />
 
 </LinearLayout>

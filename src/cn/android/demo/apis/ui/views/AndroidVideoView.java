@@ -2,13 +2,18 @@ package cn.android.demo.apis.ui.views;
 
 import cn.android.demo.apis.R;
 import android.app.Activity;
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.net.Uri;
 import android.os.Bundle;
+import android.text.SpannableString;
 import android.text.util.Linkify;
 import android.view.View;
+import android.view.View.OnClickListener;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemSelectedListener;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.MediaController;
 import android.widget.Spinner;
 import android.widget.TextView;
@@ -19,6 +24,7 @@ public class AndroidVideoView extends Activity {
 	private TextView textView;
 	private Spinner spinner;
 
+	private Button button;
 	String rtspUrl[] = {
 			"rtsp://211.154.7.106:3003/56.mp4",
 			"rtsp://218.204.223.237:554/live/1/0547424F573B085C/gsfp90ef4k0a6iap.sdp",
@@ -34,24 +40,46 @@ public class AndroidVideoView extends Activity {
 		videoView = (VideoView) findViewById(R.id.vv_video_view);
 		textView = (TextView) findViewById(R.id.tv_rtsp);
 		spinner = (Spinner) findViewById(R.id.spinner_rtsp);
+		button = (Button) findViewById(R.id.bt_show_dialog_rtsp);
 
 		ArrayAdapter<String> adapter = new ArrayAdapter<>(this,
 				android.R.layout.simple_spinner_item, rtspUrl);
 		adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
 
 		spinner.setAdapter(adapter);
+		button.setOnClickListener(new OnClickListener() {
 
+			@Override
+			public void onClick(View v) {
+				final SpannableString stMyWeb = new SpannableString(
+						"http://www.baidu.com");
+				Linkify.addLinks(stMyWeb, Linkify.ALL);
+
+				AlertDialog alertDialog = new AlertDialog.Builder(
+						AndroidVideoView.this)
+						.setMessage(stMyWeb)
+						.setPositiveButton("OK",
+								new DialogInterface.OnClickListener() {
+
+									@Override
+									public void onClick(DialogInterface dialog,
+											int which) {
+										// TODO Auto-generated method stub
+									}
+								}).create();
+				alertDialog.show();
+			}
+		});
 		spinner.setOnItemSelectedListener(new OnItemSelectedListener() {
 
 			@Override
 			public void onItemSelected(AdapterView<?> parent, View view,
 					int position, long id) {
-				textView.setText("地址："+rtspUrl[position]);
-				
-				Linkify.addLinks(textView,  Linkify.EMAIL_ADDRESSES|
-					      Linkify.MAP_ADDRESSES|
-					      Linkify.PHONE_NUMBERS|
-					      Linkify.WEB_URLS);
+				textView.setText("地址：" + rtspUrl[position]);
+
+				Linkify.addLinks(textView, Linkify.EMAIL_ADDRESSES
+						| Linkify.MAP_ADDRESSES | Linkify.PHONE_NUMBERS
+						| Linkify.WEB_URLS);
 				playVideo(position);
 
 			}

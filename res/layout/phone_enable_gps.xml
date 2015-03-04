@@ -11,6 +11,6 @@
         android:id="@+id/bt_alarm_service"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Copy&apos;n Paste" />
+        android:text="按钮" />
 
 </LinearLayout>

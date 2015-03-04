@@ -12,4 +12,11 @@
         android:summary="EditTextPreference"
         android:title="EditText" />
 
+    <ListPreference
+        android:entries="@array/listDisplayWord"
+        android:entryValues="@array/listReturnValue"
+        android:key="listPref"
+        android:summary="Select the option of the list"
+        android:title="List Preference" />
+
 </PreferenceScreen>

@@ -63,5 +63,6 @@
     <string name="thread_background_async_task">Thread/Background Async Task</string>
     <string name="phone_sdcard">Phone/SDcard</string>
     <string name="phone_orientation_sensor">Phone/Orientation Sensor</string>
+    <string name="phone_camera_picture_size">Phone/Camera Picture Sizes</string>
 
 </resources>

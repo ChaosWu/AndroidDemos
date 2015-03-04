@@ -26,9 +26,9 @@ public class EnableGPS extends Activity {
 			
 			@Override
 			public void onClick(View v) {
+				CheckEnableGPS();
 			}
 		});
-		CheckEnableGPS();
 	}
 
 	private void CheckEnableGPS() {

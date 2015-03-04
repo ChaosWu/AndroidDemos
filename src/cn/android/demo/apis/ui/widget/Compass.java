@@ -13,6 +13,7 @@ import android.hardware.SensorEvent;
 import android.hardware.SensorEventListener;
 import android.hardware.SensorManager;
 import android.os.Bundle;
+import android.text.SpannableString;
 import android.util.AttributeSet;
 import android.view.View;
 import android.widget.Toast;
@@ -22,6 +23,7 @@ public class Compass extends Activity {
 	private static SensorManager mySensorManager;
 	private boolean sersorrunning;
 	private CompassView myCompassView;
+	private HorizontalView horizontalView;
 
 	/** Called when the activity is first created. */
 	@Override
@@ -30,7 +32,7 @@ public class Compass extends Activity {
 		setContentView(R.layout.ui_view_compass);
 
 		myCompassView = (CompassView) findViewById(R.id.mycompassview);
-
+		horizontalView = (HorizontalView) findViewById(R.id.myhorizontalview);
 		mySensorManager = (SensorManager) getSystemService(Context.SENSOR_SERVICE);
 		List<Sensor> mySensors = mySensorManager
 				.getSensorList(Sensor.TYPE_ORIENTATION);
@@ -62,6 +64,8 @@ public class Compass extends Activity {
 		public void onSensorChanged(SensorEvent event) {
 			// TODO Auto-generated method stub
 			myCompassView.updateDirection((float) event.values[0]);
+			horizontalView.updateHorizontal((float) event.values[1],
+					(float) event.values[2]);
 		}
 	};
 

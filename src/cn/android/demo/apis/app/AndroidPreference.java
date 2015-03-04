@@ -17,14 +17,19 @@ public class AndroidPreference extends Activity {
 	private CheckBox checkBox;
 	private Button buttonSetPreference;
 	private TextView editTextStatus;
+	private TextView myListPref;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.app_android_preference);
+
 		buttonSetPreference = (Button) findViewById(R.id.setpreference);
 		checkBox = (CheckBox) findViewById(R.id.checkbox);
 		editTextStatus = (TextView) findViewById(R.id.edittextstatus);
+
+		myListPref = (TextView) findViewById(R.id.list_pref);
+
 		buttonSetPreference.setOnClickListener(new OnClickListener() {
 
 			@Override
@@ -44,7 +49,12 @@ public class AndroidPreference extends Activity {
 		SharedPreferences myPreference = PreferenceManager
 				.getDefaultSharedPreferences(this);
 		checkBox.setChecked(myPreference.getBoolean("checkbox", true));
+
 		editTextStatus.setText("EditText Status: "
 				+ myPreference.getString("edittexvalue", ""));
+
+		myListPref
+				.setText(myPreference.getString("listPref", "default choice"));
+
 	}
 }
