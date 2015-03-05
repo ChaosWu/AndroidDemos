@@ -59,10 +59,14 @@
     <string name="net_trfficstats">Net/TrafficStats</string>
     <string name="project_rssreader">Project/RssReader</string>
     <string name="bug_surface_water">BUG/IllegalThreadStateException 1</string>
+    <string name="net_socket_client">Net/Socket Client</string>
     <string name="net_android_web_image">Net/Web ImageView</string>
     <string name="thread_background_async_task">Thread/Background Async Task</string>
     <string name="phone_sdcard">Phone/SDcard</string>
     <string name="phone_orientation_sensor">Phone/Orientation Sensor</string>
     <string name="phone_camera_picture_size">Phone/Camera Picture Sizes</string>
+    <string name="phone_android_wifi_info">Phone/WIFI Info</string>
+    <string name="phone_android_screen_brightness">Phone/Screen Brightness</string>
+    <string name="phone_android_flash_light">Phone/Control Flash Light</string>
 
 </resources>

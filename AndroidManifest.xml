@@ -16,6 +16,14 @@
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <!-- 使用网络权限 -->
     <uses-permission android:name="android.permission.INTERNET" />
+    <!-- WIFI状态 -->
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <!-- 网络状态 -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <!-- 改变WIFI状态 -->
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <!-- 修改全局系统设置 -->
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
 
     <uses-sdk
         android:minSdkVersion="8"
@@ -52,6 +60,15 @@
         <!-- ********************Net*********************** -->
 
         <activity
+            android:name="cn.android.demo.apis.net.SocketClient"
+            android:label="@string/net_socket_client" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="cn.android.demo.apis.SAMPLE_CODE" />
+            </intent-filter>
+        </activity>
+        <activity
             android:name="cn.android.demo.apis.net.TrafficStatsActivity"
             android:label="@string/net_trfficstats" >
             <intent-filter>
@@ -63,6 +80,36 @@
 
         <!-- ********************Phone*********************** -->
 
+        <activity
+            android:name="cn.android.demo.apis.phone.ControlFlashLight"
+            android:label="@string/phone_android_flash_light"
+            android:screenOrientation="portrait" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="cn.android.demo.apis.SAMPLE_CODE" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="cn.android.demo.apis.phone.ScreenBrightness"
+            android:label="@string/phone_android_screen_brightness"
+            android:screenOrientation="portrait" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="cn.android.demo.apis.SAMPLE_CODE" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="cn.android.demo.apis.phone.WIFI"
+            android:label="@string/phone_android_wifi_info"
+            android:screenOrientation="portrait" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="cn.android.demo.apis.SAMPLE_CODE" />
+            </intent-filter>
+        </activity>
         <activity
             android:name="cn.android.demo.apis.phone.AndroidCameraPictureSizes"
             android:label="@string/phone_camera_picture_size"

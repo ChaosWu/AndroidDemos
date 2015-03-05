@@ -10,6 +10,12 @@
         android:layout_height="wrap_content" />
 
     <Button
+        android:id="@+id/bt_select_image"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="选择图片" />
+
+    <Button
         android:id="@+id/bt_download_image"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -25,11 +31,18 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent" >
 
+        <TextView
+            android:id="@+id/tv_target_uri"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:text="=====" />
+
         <ImageView
             android:id="@+id/iv_load_dowload_image"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_centerInParent="true" />
+            android:layout_below="@+id/tv_target_uri" />
     </RelativeLayout>
 
 </LinearLayout>

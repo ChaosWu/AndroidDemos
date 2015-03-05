@@ -11,8 +11,10 @@ import cn.android.demo.apis.R;
 import cn.android.demo.utils.BitmapUtil;
 import cn.android.demo.utils.ConfigUtil;
 import android.app.Activity;
+import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
+import android.net.Uri;
 import android.os.Bundle;
 import android.os.Environment;
 import android.os.Handler;
@@ -27,8 +29,11 @@ import android.widget.TextView;
 public class SDcard extends Activity implements OnClickListener {
 	private Button btDowload;
 	private Button btLoad;
+
+	private Button btSelectImage;
 	private ImageView imageView;
 	private TextView textView;
+	private TextView textView2;
 
 	private String imageUrl = ConfigUtil.imageHeadUrl;
 	private String imageName = "MyHead.png";
@@ -72,13 +77,41 @@ public class SDcard extends Activity implements OnClickListener {
 
 		btDowload = (Button) findViewById(R.id.bt_download_image);
 		btLoad = (Button) findViewById(R.id.bt_load_image);
-		textView = (TextView) findViewById(R.id.tv_download_text);
 
+		btSelectImage = (Button) findViewById(R.id.bt_select_image);
+
+		textView = (TextView) findViewById(R.id.tv_download_text);
+		textView2 = (TextView) findViewById(R.id.tv_target_uri);
 		imageView = (ImageView) findViewById(R.id.iv_load_dowload_image);
 		imageView.setBackgroundResource(R.drawable.demo_no_data_photo);
 
 		btDowload.setOnClickListener(this);
 		btLoad.setOnClickListener(this);
+		btSelectImage.setOnClickListener(this);
+	}
+
+	@Override
+	protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+		super.onActivityResult(requestCode, resultCode, data);
+
+		if (resultCode == RESULT_OK) {
+			Uri targetUri = data.getData();
+			textView2.setText(targetUri.toString());
+
+			Bitmap bitmap;
+
+			try {
+				bitmap = BitmapFactory.decodeStream(getContentResolver()
+						.openInputStream(targetUri));
+				imageView.setImageBitmap(bitmap);
+
+			} catch (FileNotFoundException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+
+		}
+
 	}
 
 	@Override
@@ -100,10 +133,20 @@ public class SDcard extends Activity implements OnClickListener {
 		case R.id.bt_load_image:
 			loadImage();
 			break;
+		// 选择图片
+		case R.id.bt_select_image:
+			selectImage();
+			break;
 
 		default:
 			break;
 		}
+	}
+
+	private void selectImage() {
+		Intent intent = new Intent(Intent.ACTION_PICK,
+				android.provider.MediaStore.Images.Media.EXTERNAL_CONTENT_URI);
+		startActivityForResult(intent, 0);
 	}
 
 	/** 读取 显示图片 */
