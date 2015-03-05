@@ -68,5 +68,8 @@
     <string name="phone_android_wifi_info">Phone/WIFI Info</string>
     <string name="phone_android_screen_brightness">Phone/Screen Brightness</string>
     <string name="phone_android_flash_light">Phone/Control Flash Light</string>
+    <string name="phone_android_sensor_list">Phone/Sensor List</string>
+    <string name="phone_android_accelerometer_sensors">Phone/Accelerometer</string>
+    <string name="ui_view_gridview">UI/View/GridView</string>
 
 </resources>

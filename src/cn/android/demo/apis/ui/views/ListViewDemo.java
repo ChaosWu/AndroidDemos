@@ -19,13 +19,24 @@ import android.widget.ListView;
 import android.widget.TextView;
 
 public class ListViewDemo extends ListActivity {
-	//private String imageUrl = "https://avatars2.githubusercontent.com/u/4157575?v=3&s=460";
-	//private String imageUrl = "http://a.hiphotos.baidu.com/image/pic/item/09fa513d269759ee7d56a5cdb1fb43166d22dfb6.jpg";
+	// private String imageUrl =
+	// "https://avatars2.githubusercontent.com/u/4157575?v=3&s=460";
+	// private String imageUrl =
+	// "http://a.hiphotos.baidu.com/image/pic/item/09fa513d269759ee7d56a5cdb1fb43166d22dfb6.jpg";
 	private String[] month = { "January", "February", "March", "April", "May",
 			"June", "July", "August", "September", "October", "November",
 			"December" };
 
+	String[] DayOfWeek = new String[] { "Sunday", "Monday", "Tuesday",
+			"Wednesday", "Thursday", "Friday", "Saturday" };
 	private Bitmap bitmap;
+
+	private ArrayAdapter<String> weekOfDayAdapter;
+	private MyCustomAdapter monthAdapter;
+
+	private String strMonth;
+
+	private String strDayOfWeek;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -34,14 +45,27 @@ public class ListViewDemo extends ListActivity {
 		// setListAdapter(new ArrayAdapter<String>(this,
 		// R.layout.ui_view_listview_row,R.id.weekofday, month));
 
-		setListAdapter(new MyCustomAdapter(this, R.layout.ui_view_listview_row,
-				month));
+		weekOfDayAdapter = new ArrayAdapter<String>(this,
+				android.R.layout.simple_list_item_1, DayOfWeek);
+		monthAdapter = new MyCustomAdapter(this, R.layout.ui_view_listview_row,
+				month);
+		setListAdapter(monthAdapter);
 	}
 
 	@Override
 	protected void onListItemClick(ListView l, View v, int position, long id) {
 		String selection = l.getItemAtPosition(position).toString();
 		ToastUtil.showToast(ListViewDemo.this, selection);
+		if (getListAdapter() == monthAdapter) {
+			strMonth = (String) getListView().getItemAtPosition(position);
+			setListAdapter(weekOfDayAdapter);
+			weekOfDayAdapter.notifyDataSetChanged();
+		} else {
+			strDayOfWeek = (String) getListView().getItemAtPosition(position);
+			ToastUtil.showToast(this, strMonth + ":" + strDayOfWeek);
+			setListAdapter(monthAdapter);
+			monthAdapter.notifyDataSetChanged();
+		}
 
 	}
 
@@ -56,7 +80,8 @@ public class ListViewDemo extends ListActivity {
 					BitmapFactory.Options options;
 					options = new BitmapFactory.Options();
 					options.inSampleSize = 1;
-					bitmap = BitmapUtil.LoadImage(ConfigUtil.imageHeadUrl, options);
+					bitmap = BitmapUtil.LoadImage(ConfigUtil.imageHeadUrl,
+							options);
 
 				}
 			}).start();

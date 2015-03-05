@@ -81,6 +81,26 @@
         <!-- ********************Phone*********************** -->
 
         <activity
+            android:name="cn.android.demo.apis.phone.Accelerometer"
+            android:label="@string/phone_android_accelerometer_sensors"
+            android:screenOrientation="portrait" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="cn.android.demo.apis.SAMPLE_CODE" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="cn.android.demo.apis.phone.SensorList"
+            android:label="@string/phone_android_sensor_list"
+            android:screenOrientation="portrait" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="cn.android.demo.apis.SAMPLE_CODE" />
+            </intent-filter>
+        </activity>
+        <activity
             android:name="cn.android.demo.apis.phone.ControlFlashLight"
             android:label="@string/phone_android_flash_light"
             android:screenOrientation="portrait" >
@@ -295,6 +315,16 @@
         </activity>
         <!-- *************** **UI View** *************** -->
 
+        <activity
+            android:name="cn.android.demo.apis.ui.views.CustomGridView"
+            android:label="@string/ui_view_gridview"
+            android:screenOrientation="portrait" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="cn.android.demo.apis.SAMPLE_CODE" />
+            </intent-filter>
+        </activity>
         <activity
             android:name="cn.android.demo.apis.ui.widget.Compass"
             android:label="@string/ui_view_compass"

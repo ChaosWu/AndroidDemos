@@ -1,5 +1,8 @@
 package cn.android.demo.apis.phone;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import cn.android.demo.apis.R;
 import android.app.Activity;
 import android.content.BroadcastReceiver;
@@ -15,7 +18,9 @@ import android.text.format.Formatter;
 import android.util.Log;
 import android.view.View;
 import android.view.View.OnClickListener;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.ListView;
 import android.widget.TextView;
 
 public class WIFI extends Activity {
@@ -24,6 +29,8 @@ public class WIFI extends Activity {
 	private TextView textWifiInfo;
 	private TextView textIp;
 	private TextView textState;
+
+	private ListView listView;
 
 	Button OnWifi;
 	Button OffWifi;
@@ -40,6 +47,8 @@ public class WIFI extends Activity {
 
 		textState = (TextView) findViewById(R.id.tv_wifi_state);
 
+		listView = (ListView) findViewById(R.id.networkinfo_list);
+
 		OnWifi = (Button) findViewById(R.id.onwifi);
 		OffWifi = (Button) findViewById(R.id.offwifi);
 
@@ -51,6 +60,21 @@ public class WIFI extends Activity {
 		WifiManager wifiManager = (WifiManager) getSystemService(Context.WIFI_SERVICE);
 
 		WifiInfo info = wifiManager.getConnectionInfo();
+
+		NetworkInfo[] networkInfos = connectivityManager.getAllNetworkInfo();
+
+		List<String> listNetworkInfo = new ArrayList<String>();
+		for (int i = 0; i < networkInfos.length; i++) {
+			String strNetworkState = networkInfos[i].getTypeName() + ":"
+					+ networkInfos[i].getDetailedState();
+
+			 listNetworkInfo.add(strNetworkState);
+		}
+
+		ArrayAdapter<String> adapter = new ArrayAdapter<>(this,
+				android.R.layout.simple_list_item_1, listNetworkInfo);
+		listView.setAdapter(adapter);
+		listView.setTextFilterEnabled(true);
 
 		if (networkInfo.isConnected()) {
 			int ip = info.getIpAddress();
