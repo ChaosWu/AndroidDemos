@@ -18,7 +18,7 @@ import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
 
-public class ListViewDemo extends ListActivity {
+public class AndroidListViewDemo extends ListActivity {
 	// private String imageUrl =
 	// "https://avatars2.githubusercontent.com/u/4157575?v=3&s=460";
 	// private String imageUrl =
@@ -55,7 +55,7 @@ public class ListViewDemo extends ListActivity {
 	@Override
 	protected void onListItemClick(ListView l, View v, int position, long id) {
 		String selection = l.getItemAtPosition(position).toString();
-		ToastUtil.showToast(ListViewDemo.this, selection);
+		ToastUtil.showToast(AndroidListViewDemo.this, selection);
 		if (getListAdapter() == monthAdapter) {
 			strMonth = (String) getListView().getItemAtPosition(position);
 			setListAdapter(weekOfDayAdapter);

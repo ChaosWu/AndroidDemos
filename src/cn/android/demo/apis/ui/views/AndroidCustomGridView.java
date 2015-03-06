@@ -12,7 +12,7 @@ import android.widget.GridView;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-public class CustomGridView extends Activity {
+public class AndroidCustomGridView extends Activity {
 	private Integer[] mThumbIds = { R.drawable.chaoswu, R.drawable.chaoswu,
 			R.drawable.chaoswu, R.drawable.chaoswu, R.drawable.chaoswu,
 			R.drawable.chaoswu, R.drawable.chaoswu, R.drawable.chaoswu,

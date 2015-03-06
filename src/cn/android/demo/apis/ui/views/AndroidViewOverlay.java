@@ -14,7 +14,7 @@ import android.view.ViewGroup;
 import android.view.animation.Animation;
 import android.widget.Button;
 
-public class ViewOverlay extends Activity {
+public class AndroidViewOverlay extends Activity {
 	private Button button1;
 	private Button button2;
 	private Button button3;

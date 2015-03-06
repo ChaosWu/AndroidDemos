@@ -71,5 +71,7 @@
     <string name="phone_android_sensor_list">Phone/Sensor List</string>
     <string name="phone_android_accelerometer_sensors">Phone/Accelerometer</string>
     <string name="ui_view_gridview">UI/View/GridView</string>
+    <string name="ui_view_viewflipper">UI/View/ViewFlipper</string>
+    <string name="phone_android_sms">Phone/Send SMS</string>
 
 </resources>

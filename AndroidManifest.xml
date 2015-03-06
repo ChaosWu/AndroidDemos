@@ -24,6 +24,9 @@
     <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
     <!-- 修改全局系统设置 -->
     <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+    <!-- 发送短信 -->
+    <uses-permission android:name="android.permission.SEND_SMS" >
+    </uses-permission>
 
     <uses-sdk
         android:minSdkVersion="8"
@@ -80,6 +83,16 @@
 
         <!-- ********************Phone*********************** -->
 
+        <activity
+            android:name="cn.android.demo.apis.phone.SMS"
+            android:label="@string/phone_android_sms"
+            android:screenOrientation="portrait" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="cn.android.demo.apis.SAMPLE_CODE" />
+            </intent-filter>
+        </activity>
         <activity
             android:name="cn.android.demo.apis.phone.Accelerometer"
             android:label="@string/phone_android_accelerometer_sensors"
@@ -316,7 +329,17 @@
         <!-- *************** **UI View** *************** -->
 
         <activity
-            android:name="cn.android.demo.apis.ui.views.CustomGridView"
+            android:name="cn.android.demo.apis.ui.views.AndroidViewFlipper"
+            android:label="@string/ui_view_viewflipper"
+            android:screenOrientation="portrait" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="cn.android.demo.apis.SAMPLE_CODE" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="cn.android.demo.apis.ui.views.AndroidCustomGridView"
             android:label="@string/ui_view_gridview"
             android:screenOrientation="portrait" >
             <intent-filter>
@@ -354,7 +377,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="cn.android.demo.apis.ui.views.ListViewDemo"
+            android:name="cn.android.demo.apis.ui.views.AndroidListViewDemo"
             android:label="@string/ui_view_list_view" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -363,7 +386,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="cn.android.demo.apis.ui.views.ViewOverlay"
+            android:name="cn.android.demo.apis.ui.views.AndroidViewOverlay"
             android:label="@string/ui_view_viewoverlay" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
