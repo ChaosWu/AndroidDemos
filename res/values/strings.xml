@@ -55,6 +55,9 @@
     <string name="ui_graphics_matrix">UI/Graphics/Matrix</string>
     <string name="ui_view_compass">UI/Widget/Compass</string>
     <string name="ui_view_video">UI/View/VideoView</string>
+    <string name="ui_view_gridview">UI/View/GridView</string>
+    <string name="ui_view_viewflipper">UI/View/ViewFlipper</string>
+    <string name="ui_view_sliding_drawer">UI/View/Sliding Drawer</string>
     <!-- Other -->
     <string name="net_trfficstats">Net/TrafficStats</string>
     <string name="project_rssreader">Project/RssReader</string>
@@ -70,8 +73,9 @@
     <string name="phone_android_flash_light">Phone/Control Flash Light</string>
     <string name="phone_android_sensor_list">Phone/Sensor List</string>
     <string name="phone_android_accelerometer_sensors">Phone/Accelerometer</string>
-    <string name="ui_view_gridview">UI/View/GridView</string>
-    <string name="ui_view_viewflipper">UI/View/ViewFlipper</string>
     <string name="phone_android_sms">Phone/Send SMS</string>
+    <string name="phone_android_email">Phone/Send Email</string>
+    <string name="phone_android_string_compare">Java/String Compare</string>
+    <string name="app_android_wallpaper">App/Set Wallpaper</string>
 
 </resources>

@@ -27,8 +27,10 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 public class SDcard extends Activity implements OnClickListener {
+	private static final int PICKFILE_RESULT_CODE = 1;
 	private Button btDowload;
 	private Button btLoad;
+	private Button btPick;
 
 	private Button btSelectImage;
 	private ImageView imageView;
@@ -77,6 +79,7 @@ public class SDcard extends Activity implements OnClickListener {
 
 		btDowload = (Button) findViewById(R.id.bt_download_image);
 		btLoad = (Button) findViewById(R.id.bt_load_image);
+		btPick = (Button) findViewById(R.id.bt_pick);
 
 		btSelectImage = (Button) findViewById(R.id.bt_select_image);
 
@@ -88,6 +91,7 @@ public class SDcard extends Activity implements OnClickListener {
 		btDowload.setOnClickListener(this);
 		btLoad.setOnClickListener(this);
 		btSelectImage.setOnClickListener(this);
+		btPick.setOnClickListener(this);
 	}
 
 	@Override
@@ -117,6 +121,11 @@ public class SDcard extends Activity implements OnClickListener {
 	@Override
 	public void onClick(View v) {
 		switch (v.getId()) {
+		case R.id.bt_pick:
+			Intent intent = new Intent(Intent.ACTION_GET_CONTENT);
+			intent.setType("file/*");
+			startActivityForResult(intent, PICKFILE_RESULT_CODE);
+			break;
 		// 保存
 		case R.id.bt_download_image:
 			new Thread(new Runnable() {

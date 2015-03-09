@@ -25,8 +25,11 @@
     <!-- 修改全局系统设置 -->
     <uses-permission android:name="android.permission.WRITE_SETTINGS" />
     <!-- 发送短信 -->
-    <uses-permission android:name="android.permission.SEND_SMS" >
-    </uses-permission>
+    <uses-permission android:name="android.permission.SEND_SMS" />
+    <!-- 设置桌面壁纸 -->
+    <uses-permission android:name="android.permission.SET_WALLPAPER" />
+    <!-- 允许程序在手机屏幕关闭后后台进程仍然运行 -->
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
 
     <uses-sdk
         android:minSdkVersion="8"
@@ -81,8 +84,30 @@
             </intent-filter>
         </activity>
 
+        <!-- ********************JAVA*********************** -->
+
+        <activity
+            android:name="cn.android.demo.apis.java.AndroidStringCompare"
+            android:label="@string/phone_android_string_compare"
+            android:screenOrientation="portrait" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="cn.android.demo.apis.SAMPLE_CODE" />
+            </intent-filter>
+        </activity>
         <!-- ********************Phone*********************** -->
 
+        <activity
+            android:name="cn.android.demo.apis.phone.EMail"
+            android:label="@string/phone_android_email"
+            android:screenOrientation="portrait" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="cn.android.demo.apis.SAMPLE_CODE" />
+            </intent-filter>
+        </activity>
         <activity
             android:name="cn.android.demo.apis.phone.SMS"
             android:label="@string/phone_android_sms"
@@ -329,6 +354,16 @@
         <!-- *************** **UI View** *************** -->
 
         <activity
+            android:name="cn.android.demo.apis.ui.views.AndroidSlidingDrawer"
+            android:label="@string/ui_view_sliding_drawer"
+            android:screenOrientation="portrait" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="cn.android.demo.apis.SAMPLE_CODE" />
+            </intent-filter>
+        </activity>
+        <activity
             android:name="cn.android.demo.apis.ui.views.AndroidViewFlipper"
             android:label="@string/ui_view_viewflipper"
             android:screenOrientation="portrait" >
@@ -434,6 +469,15 @@
         </activity>
         <!-- *************** **APP** *************** -->
         <activity android:name="cn.android.demo.apis.app.SetPreference" >
+        </activity>
+        <activity
+            android:name="cn.android.demo.apis.app.AndroidWallpaper"
+            android:label="@string/app_android_wallpaper" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="cn.android.demo.apis.SAMPLE_CODE" />
+            </intent-filter>
         </activity>
         <activity
             android:name="cn.android.demo.apis.app.AndroidPreference"

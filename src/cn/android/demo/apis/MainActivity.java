@@ -11,12 +11,16 @@ import java.util.Map;
 import org.apache.http.util.EncodingUtils;
 
 import android.app.ListActivity;
+import android.content.Context;
 import android.content.Intent;
 import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager;
 import android.content.pm.PackageManager.NameNotFoundException;
 import android.content.pm.ResolveInfo;
 import android.os.Bundle;
+import android.os.PowerManager;
+import android.os.PowerManager.WakeLock;
+import android.provider.Settings;
 import android.util.Log;
 import android.view.View;
 import android.widget.ListView;
@@ -24,11 +28,18 @@ import android.widget.SimpleAdapter;
 
 public class MainActivity extends ListActivity {
 	public final static String TAG = MainActivity.class.getSimpleName();
+	WakeLock wakeLock;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		Log.v(TAG, "onCreate   ******   ");
+		// http://android-developers.blogspot.com/2011/03/identifying-app-installations.html
+		// 获取唯一标识，在2.2不是100%正确
+		Log.v("DDD",
+				"Android ID:"
+						+ Settings.Secure.getString(getContentResolver(),
+								Settings.Secure.ANDROID_ID));
 		Log.v("DDD", new String(EncodingUtils.getAsciiBytes("A")));
 
 		Intent intent = getIntent();
@@ -42,6 +53,14 @@ public class MainActivity extends ListActivity {
 				android.R.layout.simple_list_item_1, new String[] { "title" },
 				new int[] { android.R.id.text1 }));
 		getListView().setTextFilterEnabled(true);
+
+		wakeLock();
+	}
+	
+	private void wakeLock() {
+		PowerManager powerManager = (PowerManager) getSystemService(Context.POWER_SERVICE);
+		wakeLock = powerManager.newWakeLock(PowerManager.FULL_WAKE_LOCK,
+				"Full Wake Lock");
 	}
 
 	@Override
@@ -74,12 +93,16 @@ public class MainActivity extends ListActivity {
 	protected void onResume() {
 		super.onResume();
 		Log.v(TAG, "onResume   ******   ");
+
+//		wakeLock.acquire();
+		wakeLock.acquire(1000);//持锁，timeout 自动释放
 	}
 
 	@Override
 	protected void onPause() {
 		super.onPause();
 		Log.v(TAG, "onPause   ******   ");
+		wakeLock.release();
 	}
 
 	@Override

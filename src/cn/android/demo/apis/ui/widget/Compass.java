@@ -5,17 +5,11 @@ import java.util.List;
 import cn.android.demo.apis.R;
 import android.app.Activity;
 import android.content.Context;
-import android.graphics.Canvas;
-import android.graphics.Color;
-import android.graphics.Paint;
 import android.hardware.Sensor;
 import android.hardware.SensorEvent;
 import android.hardware.SensorEventListener;
 import android.hardware.SensorManager;
 import android.os.Bundle;
-import android.text.SpannableString;
-import android.util.AttributeSet;
-import android.view.View;
 import android.widget.Toast;
 
 public class Compass extends Activity {
