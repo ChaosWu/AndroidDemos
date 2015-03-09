@@ -77,5 +77,6 @@
     <string name="phone_android_email">Phone/Send Email</string>
     <string name="phone_android_string_compare">Java/String Compare</string>
     <string name="app_android_wallpaper">App/Set Wallpaper</string>
+    <string name="app_android_notification">App/Notification</string>
 
 </resources>

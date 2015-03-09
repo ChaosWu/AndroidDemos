@@ -28,7 +28,8 @@ import android.widget.SimpleAdapter;
 
 public class MainActivity extends ListActivity {
 	public final static String TAG = MainActivity.class.getSimpleName();
-	WakeLock wakeLock;
+
+	// WakeLock wakeLock;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -54,13 +55,13 @@ public class MainActivity extends ListActivity {
 				new int[] { android.R.id.text1 }));
 		getListView().setTextFilterEnabled(true);
 
-		wakeLock();
+		// wakeLock();
 	}
-	
+
 	private void wakeLock() {
 		PowerManager powerManager = (PowerManager) getSystemService(Context.POWER_SERVICE);
-		wakeLock = powerManager.newWakeLock(PowerManager.FULL_WAKE_LOCK,
-				"Full Wake Lock");
+		// wakeLock =
+		// powerManager.newWakeLock(PowerManager.FULL_WAKE_LOCK,"Full Wake Lock");
 	}
 
 	@Override
@@ -94,15 +95,15 @@ public class MainActivity extends ListActivity {
 		super.onResume();
 		Log.v(TAG, "onResume   ******   ");
 
-//		wakeLock.acquire();
-		wakeLock.acquire(1000);//持锁，timeout 自动释放
+		// wakeLock.acquire();
+		// wakeLock.acquire(1000);//持锁，timeout 自动释放
 	}
 
 	@Override
 	protected void onPause() {
 		super.onPause();
 		Log.v(TAG, "onPause   ******   ");
-		wakeLock.release();
+		// wakeLock.release();
 	}
 
 	@Override

@@ -468,7 +468,15 @@
             </intent-filter>
         </activity>
         <!-- *************** **APP** *************** -->
-        <activity android:name="cn.android.demo.apis.app.SetPreference" >
+        <activity android:name="cn.android.demo.apis.app.SetPreference" />
+        <activity
+            android:name="cn.android.demo.apis.app.AndroidNotification"
+            android:label="@string/app_android_notification" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="cn.android.demo.apis.SAMPLE_CODE" />
+            </intent-filter>
         </activity>
         <activity
             android:name="cn.android.demo.apis.app.AndroidWallpaper"
@@ -558,6 +566,8 @@
                 android:name="android.appwidget.provider"
                 android:resource="@xml/hellowidgetproviderinfo" />
         </receiver>
+
+        <service android:name="cn.android.demo.apis.app.AndroidNotification.NotifyService" />
     </application>
 
 </manifest>
