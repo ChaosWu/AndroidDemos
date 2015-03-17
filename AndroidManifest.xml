@@ -96,6 +96,16 @@
                 <category android:name="cn.android.demo.apis.SAMPLE_CODE" />
             </intent-filter>
         </activity>
+        <activity
+            android:name="cn.android.demo.apis.java.BlackBoxPatterns"
+            android:label="@string/phone_android_black_box_patterns"
+            android:screenOrientation="portrait" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="cn.android.demo.apis.SAMPLE_CODE" />
+            </intent-filter>
+        </activity>
         <!-- ********************Phone*********************** -->
 
         <activity
@@ -324,6 +334,15 @@
         </activity>
         <!-- *************** **UI Widget** *************** -->
 
+        <activity
+            android:name="cn.android.demo.apis.ui.widget.DanceTimer"
+            android:label="@string/ui_widget_dance_timer" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="cn.android.demo.apis.SAMPLE_CODE" />
+            </intent-filter>
+        </activity>
         <activity
             android:name="cn.android.demo.apis.ui.widget.SurfaceViewWater"
             android:label="@string/ui_widget_surface_water" >

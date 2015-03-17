@@ -28,12 +28,14 @@ import android.widget.SimpleAdapter;
 
 public class MainActivity extends ListActivity {
 	public final static String TAG = MainActivity.class.getSimpleName();
-	WakeLock wakeLock;
+
+	// WakeLock wakeLock;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		Log.v(TAG, "onCreate   ******   ");
+
 		// http://android-developers.blogspot.com/2011/03/identifying-app-installations.html
 		// 获取唯一标识，在2.2不是100%正确
 		Log.v("DDD",
@@ -54,14 +56,17 @@ public class MainActivity extends ListActivity {
 				new int[] { android.R.id.text1 }));
 		getListView().setTextFilterEnabled(true);
 
-		wakeLock();
+		// wakeLock();
 	}
-	
-	private void wakeLock() {
-		PowerManager powerManager = (PowerManager) getSystemService(Context.POWER_SERVICE);
-		wakeLock = powerManager.newWakeLock(PowerManager.FULL_WAKE_LOCK,
-				"Full Wake Lock");
-	}
+
+	// TODO
+	// private void wakeLock() {
+	// //忧伤
+	// PowerManager powerManager = (PowerManager)
+	// getSystemService(Context.POWER_SERVICE);
+	// wakeLock = powerManager.newWakeLock(PowerManager.FULL_WAKE_LOCK,
+	// "Full Wake Lock");
+	// }
 
 	@Override
 	protected void onStart() {
@@ -94,15 +99,15 @@ public class MainActivity extends ListActivity {
 		super.onResume();
 		Log.v(TAG, "onResume   ******   ");
 
-//		wakeLock.acquire();
-		wakeLock.acquire(1000);//持锁，timeout 自动释放
+		// wakeLock.acquire();
+		// wakeLock.acquire(1000);//持锁，timeout 自动释放
 	}
 
 	@Override
 	protected void onPause() {
 		super.onPause();
 		Log.v(TAG, "onPause   ******   ");
-		wakeLock.release();
+		// wakeLock.release();
 	}
 
 	@Override

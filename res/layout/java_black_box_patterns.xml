@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/tv_student_tuition_a"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="学生A:" />
+
+    <TextView
+        android:id="@+id/tv_student_tuition_b"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="学生B:" />
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="\n\n\n学生、大学生、研究生。都有学费的计算标准，都有姓名这个属性。那么如何设计一套标准来定义他们，方便他们扩展使用呢？我们通用的做法，就是 定义基类。定义一个基类，这个基类有个抽象的方法，就是计算学费的方法。具体谁继承我，谁去实现学费是多少。那么这种设计模式就是白箱设计模式。如果用黑箱实现呢？（黑箱的实际意义我也不是很懂。就是控制翻转，好像有更大的灵活性，具体不是非常清楚）先定义一个接口就是计算学费的接口。" />
+
+</LinearLayout>

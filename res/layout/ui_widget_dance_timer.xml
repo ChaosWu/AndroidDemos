@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/red_500"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/layout_wage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/red_500" >
+
+        <TextView
+            android:id="@+id/wage_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="10dp"
+            android:text="你余额宝中的金额为70442.89元"
+            android:textColor="@color/grey_50"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/tvMoney"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/wage_title"
+            android:gravity="center"
+            android:includeFontPadding="false"
+            android:textColor="@color/grey_50"
+            android:textSize="80sp" />
+    </RelativeLayout>
+
+</LinearLayout>
