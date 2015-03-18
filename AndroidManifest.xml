@@ -225,7 +225,7 @@
 
                 <category android:name="cn.android.demo.apis.SAMPLE_CODE" />
             </intent-filter>
-        </activity>
+        </activity>
         -->
         <activity
             android:name="cn.android.demo.apis.phone.LightSensor"
@@ -293,6 +293,15 @@
             </intent-filter>
         </activity>
         <!-- *************** **THREAD** *************** -->
+        <activity
+            android:name="cn.android.demo.apis.thread.UseThreadLocal"
+            android:label="@string/thread_use_thread_local" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="cn.android.demo.apis.SAMPLE_CODE" />
+            </intent-filter>
+        </activity>
         <activity
             android:name="cn.android.demo.apis.thread.BackgroundAsyncTask"
             android:label="@string/thread_background_async_task" >
@@ -372,6 +381,16 @@
         </activity>
         <!-- *************** **UI View** *************** -->
 
+        <activity
+            android:name="cn.android.demo.apis.ui.views.AndroidWebView"
+            android:label="@string/ui_view_webview"
+            android:screenOrientation="portrait" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="cn.android.demo.apis.SAMPLE_CODE" />
+            </intent-filter>
+        </activity>
         <activity
             android:name="cn.android.demo.apis.ui.views.AndroidSlidingDrawer"
             android:label="@string/ui_view_sliding_drawer"
@@ -565,7 +584,7 @@
             <intent-filter>
                 <action android:name="android.intent.action.BATTERY_CHANGED" />
             </intent-filter>
-        </service>
+        </service>
         -->
 
         <receiver android:name="cn.android.demo.apis.appwidget.HelloWidgetProvider" >

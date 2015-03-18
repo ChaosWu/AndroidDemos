@@ -79,5 +79,7 @@
     <string name="app_android_wallpaper">App/Set Wallpaper</string>
     <string name="ui_widget_dance_timer">UI/Widget/Dance Timer</string>
     <string name="phone_android_black_box_patterns">Java/Black Box Patterns</string>
+    <string name="thread_use_thread_local">Thread/Use ThreadLocal</string>
+    <string name="ui_view_webview">UI/View/WebView</string>
 
 </resources>
