@@ -7,10 +7,9 @@ import java.net.Socket;
 import java.net.UnknownHostException;
 
 import cn.android.demo.apis.R;
+import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.os.Bundle;
-import android.os.Handler;
-import android.os.Message;
 import android.os.StrictMode;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -18,6 +17,14 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
+/**
+ * 
+ * Socket客户端代码
+ * 
+ * @see SocketServer
+ * @author Elroy
+ * 
+ */
 public class SocketClient extends Activity {
 	EditText textOut;
 	TextView textIn;
@@ -37,6 +44,7 @@ public class SocketClient extends Activity {
 	//
 	// };
 
+	@SuppressLint("NewApi")
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -45,7 +53,7 @@ public class SocketClient extends Activity {
 		textOut = (EditText) findViewById(R.id.textout);
 		Button buttonSend = (Button) findViewById(R.id.send);
 		textIn = (TextView) findViewById(R.id.textin);
-		
+
 		// TODO 暴力在主线程中进行网络操作
 		StrictMode.setThreadPolicy(new StrictMode.ThreadPolicy.Builder()
 				.detectDiskReads().detectDiskWrites().detectNetwork()
@@ -53,7 +61,7 @@ public class SocketClient extends Activity {
 		StrictMode.setVmPolicy(new StrictMode.VmPolicy.Builder()
 				.detectLeakedSqlLiteObjects().detectLeakedClosableObjects()
 				.penaltyLog().penaltyDeath().build());
-		
+
 		buttonSend.setOnClickListener(buttonSendOnClickListener);
 
 	}
