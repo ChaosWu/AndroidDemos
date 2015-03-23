@@ -32,6 +32,8 @@
     <uses-permission android:name="android.permission.WAKE_LOCK" />
     <!-- 录制声音通过手机或耳机的麦克 -->
     <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <!-- 允许程序连接配对过的蓝牙设备 -->
+    <uses-permission android:name="android.permission.BLUETOOTH" />
 
     <uses-sdk
         android:minSdkVersion="8"
@@ -109,7 +111,30 @@
             </intent-filter>
         </activity>
         <!-- ********************Phone*********************** -->
+        <activity
+            android:name="cn.android.demo.apis.phone.ListPairedDevicesActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="cn.android.demo.apis.phone.AndroidBluetooth"
+            android:label="@string/phone_android_bluetooth"
+            android:screenOrientation="portrait" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
 
+                <category android:name="cn.android.demo.apis.SAMPLE_CODE" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="cn.android.demo.apis.phone.AndroidBeatBox"
+            android:label="@string/phone_android_beatbox"
+            android:screenOrientation="portrait" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="cn.android.demo.apis.SAMPLE_CODE" />
+            </intent-filter>
+        </activity>
         <activity
             android:name="cn.android.demo.apis.phone.AndroidThumbnailUtils"
             android:label="@string/phone_android_thumbnail"
@@ -247,7 +272,7 @@
 
                 <category android:name="cn.android.demo.apis.SAMPLE_CODE" />
             </intent-filter>
-        </activity>
+        </activity>
         -->
         <activity
             android:name="cn.android.demo.apis.phone.LightSensor"
@@ -365,6 +390,15 @@
         </activity>
         <!-- *************** **UI Widget** *************** -->
 
+        <activity
+            android:name="cn.android.demo.apis.ui.widget.SingleTouchActivity"
+            android:label="@string/ui_widget_single_touch" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="cn.android.demo.apis.SAMPLE_CODE" />
+            </intent-filter>
+        </activity>
         <activity
             android:name="cn.android.demo.apis.ui.widget.DanceTimer"
             android:label="@string/ui_widget_dance_timer" >
@@ -617,7 +651,7 @@
             <intent-filter>
                 <action android:name="android.intent.action.BATTERY_CHANGED" />
             </intent-filter>
-        </service>
+        </service>
         -->
         <receiver
             android:name="cn.android.demo.apis.app.ScheduledReceiver"

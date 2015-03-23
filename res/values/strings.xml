@@ -85,5 +85,8 @@
     <string name="ui_view_gallery">UI/View/Gallery</string>
     <string name="phone_android_thumbnail">Phone/Thumbnail</string>
     <string name="app_alarm_manager">App/AlarmManager</string>
+    <string name="phone_android_beatbox">Phone/BeatBox</string>
+    <string name="ui_widget_single_touch">UI/Widget/Single Touch View</string>
+    <string name="phone_android_bluetooth">Phone/Bluetooth</string>
 
 </resources>
