@@ -24,12 +24,18 @@ public class AndroidVideoView extends Activity {
 	private TextView textView;
 	private Spinner spinner;
 
+	private String url_1 = "http://us.sinaimg.cn/003iWlrLjx06QBVWGP1501040100lXnU0k01.mp4";
+	private String url_2 = "http://us.sinaimg.cn/001N65zEjx06PA0XKpNd01040100G0pz0k01.mp4";
+
 	private Button button;
 	String rtspUrl[] = {
 			"rtsp://211.154.7.106:3003/56.mp4",
 			"rtsp://218.204.223.237:554/live/1/0547424F573B085C/gsfp90ef4k0a6iap.sdp",
 			"rtsp://58.215.87.48/test1.sdp",
-			"rtsp://211.139.194.251:554/live/2/13E6330A31193128/5iLd2iNl5nQ2s8r8.sdp" };
+			"rtsp://211.139.194.251:554/live/2/13E6330A31193128/5iLd2iNl5nQ2s8r8.sdp",
+			url_1, url_2
+
+	};
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {

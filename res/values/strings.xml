@@ -75,11 +75,15 @@
     <string name="phone_android_accelerometer_sensors">Phone/Accelerometer</string>
     <string name="phone_android_sms">Phone/Send SMS</string>
     <string name="phone_android_email">Phone/Send Email</string>
-    <string name="phone_android_string_compare">Java/String Compare</string>
+    <string name="java_android_string_compare">Java/String Compare</string>
     <string name="app_android_wallpaper">App/Set Wallpaper</string>
     <string name="ui_widget_dance_timer">UI/Widget/Dance Timer</string>
-    <string name="phone_android_black_box_patterns">Java/Black Box Patterns</string>
+    <string name="java_android_black_box_patterns">Java/Black Box Patterns</string>
     <string name="thread_use_thread_local">Thread/Use ThreadLocal</string>
     <string name="ui_view_webview">UI/View/WebView</string>
+    <string name="phone_android_video_capture">Phone/Video Capture</string>
+    <string name="ui_view_gallery">UI/View/Gallery</string>
+    <string name="phone_android_thumbnail">Phone/Thumbnail</string>
+    <string name="app_alarm_manager">App/AlarmManager</string>
 
 </resources>

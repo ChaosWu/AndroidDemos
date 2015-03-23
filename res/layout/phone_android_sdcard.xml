@@ -46,9 +46,15 @@
 
         <ImageView
             android:id="@+id/iv_load_dowload_image"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
             android:layout_below="@+id/tv_target_uri" />
+
+        <ImageView
+            android:id="@+id/iv_load_thumbnail_image"
+            android:layout_width="wrap_content"
+            android:background="@drawable/android_icon"
+            android:layout_height="wrap_content" />
     </RelativeLayout>
 
 </LinearLayout>

@@ -30,6 +30,8 @@
     <uses-permission android:name="android.permission.SET_WALLPAPER" />
     <!-- 允许程序在手机屏幕关闭后后台进程仍然运行 -->
     <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <!-- 录制声音通过手机或耳机的麦克 -->
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
 
     <uses-sdk
         android:minSdkVersion="8"
@@ -88,7 +90,7 @@
 
         <activity
             android:name="cn.android.demo.apis.java.AndroidStringCompare"
-            android:label="@string/phone_android_string_compare"
+            android:label="@string/java_android_string_compare"
             android:screenOrientation="portrait" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -98,7 +100,7 @@
         </activity>
         <activity
             android:name="cn.android.demo.apis.java.BlackBoxPatterns"
-            android:label="@string/phone_android_black_box_patterns"
+            android:label="@string/java_android_black_box_patterns"
             android:screenOrientation="portrait" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -108,6 +110,26 @@
         </activity>
         <!-- ********************Phone*********************** -->
 
+        <activity
+            android:name="cn.android.demo.apis.phone.AndroidThumbnailUtils"
+            android:label="@string/phone_android_thumbnail"
+            android:screenOrientation="portrait" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="cn.android.demo.apis.SAMPLE_CODE" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="cn.android.demo.apis.phone.AndroidVideoCapture"
+            android:label="@string/phone_android_video_capture"
+            android:screenOrientation="landscape" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="cn.android.demo.apis.SAMPLE_CODE" />
+            </intent-filter>
+        </activity>
         <activity
             android:name="cn.android.demo.apis.phone.EMail"
             android:label="@string/phone_android_email"
@@ -225,7 +247,7 @@
 
                 <category android:name="cn.android.demo.apis.SAMPLE_CODE" />
             </intent-filter>
-        </activity>
+        </activity>
         -->
         <activity
             android:name="cn.android.demo.apis.phone.LightSensor"
@@ -506,7 +528,18 @@
             </intent-filter>
         </activity>
         <!-- *************** **APP** *************** -->
+        <activity android:name="cn.android.demo.apis.app.ScheduledActivity" >
+        </activity>
         <activity android:name="cn.android.demo.apis.app.SetPreference" >
+        </activity>
+        <activity
+            android:name="cn.android.demo.apis.app.AlarmManagerActivity"
+            android:label="@string/app_alarm_manager" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="cn.android.demo.apis.SAMPLE_CODE" />
+            </intent-filter>
         </activity>
         <activity
             android:name="cn.android.demo.apis.app.AndroidWallpaper"
@@ -584,9 +617,12 @@
             <intent-filter>
                 <action android:name="android.intent.action.BATTERY_CHANGED" />
             </intent-filter>
-        </service>
+        </service>
         -->
-
+        <receiver
+            android:name="cn.android.demo.apis.app.ScheduledReceiver"
+            android:process=":remote" >
+        </receiver>
         <receiver android:name="cn.android.demo.apis.appwidget.HelloWidgetProvider" >
             <intent-filter>
                 <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />

@@ -4,6 +4,7 @@ import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
+import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
 
@@ -12,13 +13,17 @@ import cn.android.demo.utils.BitmapUtil;
 import cn.android.demo.utils.ConfigUtil;
 import android.app.Activity;
 import android.content.Intent;
+import android.database.Cursor;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
+import android.media.ExifInterface;
+import android.media.ThumbnailUtils;
 import android.net.Uri;
 import android.os.Bundle;
 import android.os.Environment;
 import android.os.Handler;
 import android.os.Message;
+import android.provider.MediaStore;
 import android.util.Log;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -34,15 +39,17 @@ public class SDcard extends Activity implements OnClickListener {
 
 	private Button btSelectImage;
 	private ImageView imageView;
+	private ImageView imageThumbnail;
 	private TextView textView;
 	private TextView textView2;
 
+	
+	Bitmap bmThumbnail;
 	private String imageUrl = ConfigUtil.imageHeadUrl;
 	private String imageName = "MyHead.png";
 	private String extStorageDirectory = Environment
 			.getExternalStorageDirectory().toString();
 
-	private Bitmap bitmap;
 
 	private Handler handler = new Handler() {
 
@@ -71,6 +78,7 @@ public class SDcard extends Activity implements OnClickListener {
 		}
 
 	};
+	private Bitmap bitmap;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -86,6 +94,7 @@ public class SDcard extends Activity implements OnClickListener {
 		textView = (TextView) findViewById(R.id.tv_download_text);
 		textView2 = (TextView) findViewById(R.id.tv_target_uri);
 		imageView = (ImageView) findViewById(R.id.iv_load_dowload_image);
+		imageThumbnail = (ImageView) findViewById(R.id.iv_load_thumbnail_image);
 		imageView.setBackgroundResource(R.drawable.demo_no_data_photo);
 
 		btDowload.setOnClickListener(this);
@@ -101,14 +110,25 @@ public class SDcard extends Activity implements OnClickListener {
 		if (resultCode == RESULT_OK) {
 			Uri targetUri = data.getData();
 			textView2.setText(targetUri.toString());
+			String exifFilePath = getRealPathFromURI(targetUri);
+			try {
+				// 读取图片信息
+				ExifInterface exifInterface = new ExifInterface(exifFilePath);
+				String exif_DATETIME = exifInterface
+						.getAttribute(ExifInterface.TAG_DATETIME);
+
+				textView2.setText(exif_DATETIME);
+			} catch (IOException e1) {
+				// TODO Auto-generated catch block
+				e1.printStackTrace();
+			}
 
 			Bitmap bitmap;
-
 			try {
 				bitmap = BitmapFactory.decodeStream(getContentResolver()
 						.openInputStream(targetUri));
 				imageView.setImageBitmap(bitmap);
-
+				
 			} catch (FileNotFoundException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
@@ -116,6 +136,16 @@ public class SDcard extends Activity implements OnClickListener {
 
 		}
 
+	}
+
+	// Uri转String
+	private String getRealPathFromURI(Uri contentUri) {
+		String[] proj = { MediaStore.Images.Media.DATA };
+		Cursor cursor = managedQuery(contentUri, proj, null, null, null);
+		int column_index = cursor
+				.getColumnIndexOrThrow(MediaStore.Images.Media.DATA);
+		cursor.moveToFirst();
+		return cursor.getString(column_index);
 	}
 
 	@Override
@@ -163,6 +193,8 @@ public class SDcard extends Activity implements OnClickListener {
 		// File file = new File(extStorageDirectory, imageName);
 		String path = extStorageDirectory + "/" + imageName;
 		Bitmap bmp = BitmapFactory.decodeFile(path);
+		bmThumbnail = ThumbnailUtils.extractThumbnail(bmp, 50,50);
+		imageThumbnail.setImageBitmap(bmThumbnail);
 		if (bmp != null) {
 			Message message = new Message();
 			message.obj = bmp;
