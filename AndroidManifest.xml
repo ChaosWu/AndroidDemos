@@ -55,6 +55,16 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <!-- ********************DB*********************** -->
+        <activity
+            android:name="cn.android.demo.apis.db.AndroidSQLite"
+            android:label="@string/db_android_sqlite" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="cn.android.demo.apis.SAMPLE_CODE" />
+            </intent-filter>
+        </activity>
         <!-- ********************Pro*********************** -->
         <activity android:name="cn.android.demo.apis.project.rss.ShowDetails" >
         </activity>
@@ -69,6 +79,15 @@
         </activity>
         <!-- ********************Net*********************** -->
 
+        <activity
+            android:name="cn.android.demo.apis.net.IP"
+            android:label="@string/net_android_ip" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="cn.android.demo.apis.SAMPLE_CODE" />
+            </intent-filter>
+        </activity>
         <activity
             android:name="cn.android.demo.apis.net.SocketClient"
             android:label="@string/net_socket_client" >

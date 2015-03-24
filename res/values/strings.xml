@@ -88,5 +88,7 @@
     <string name="phone_android_beatbox">Phone/BeatBox</string>
     <string name="ui_widget_single_touch">UI/Widget/Single Touch View</string>
     <string name="phone_android_bluetooth">Phone/Bluetooth</string>
+    <string name="db_android_sqlite">DB/SQLite</string>
+    <string name="net_android_ip">Net/IP</string>
 
 </resources>
