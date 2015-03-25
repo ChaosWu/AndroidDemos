@@ -94,4 +94,10 @@
     <string name="java_code_add_view">Java/Add View</string>
     <string name="debug_activity">BUG/Debug Actvity</string>
 
+    <!-- json测试数据 -->
+    <string name="dummy_json">"{\"results\":{\"myblog\":\"android-er\", \"myurl\":"\""http://android-er.blogspot.com/\",\"array\":[{\"element\":\"Element 1\"}, {\"element\":\"Element 2\"}, {\"element\":\"Element 3\"}]"}}"</string>
+    <string name="net_android_json">Net/Json</string>
+    <string name="net_flickr">Net/Flickr</string>
+    <string name="phone_android_dpi">Phone/Android DPI</string>
+
 </resources>

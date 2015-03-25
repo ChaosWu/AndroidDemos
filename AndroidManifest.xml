@@ -80,6 +80,24 @@
         <!-- ********************Net*********************** -->
 
         <activity
+            android:name="cn.android.demo.apis.net.AndroidFlickrActivity"
+            android:label="@string/net_flickr" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="cn.android.demo.apis.SAMPLE_CODE" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="cn.android.demo.apis.net.AndroidJSON"
+            android:label="@string/net_android_json" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="cn.android.demo.apis.SAMPLE_CODE" />
+            </intent-filter>
+        </activity>
+        <activity
             android:name="cn.android.demo.apis.net.IP"
             android:label="@string/net_android_ip" >
             <intent-filter>
@@ -143,6 +161,16 @@
         <activity
             android:name="cn.android.demo.apis.phone.ListPairedDevicesActivity"
             android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="cn.android.demo.apis.phone.AndroidDPIActivity"
+            android:label="@string/phone_android_dpi"
+            android:screenOrientation="portrait" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="cn.android.demo.apis.SAMPLE_CODE" />
+            </intent-filter>
         </activity>
         <activity
             android:name="cn.android.demo.apis.phone.AndroidBluetooth"

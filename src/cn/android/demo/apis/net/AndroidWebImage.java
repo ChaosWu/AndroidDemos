@@ -11,6 +11,7 @@ import cn.android.demo.utils.BitmapUtil;
 import cn.android.demo.utils.HttpUtil;
 import cn.android.demo.utils.ToastUtil;
 import android.app.Activity;
+import android.app.ProgressDialog;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.graphics.BitmapFactory.Options;
@@ -19,9 +20,12 @@ import android.os.Bundle;
 import android.widget.ImageView;
 
 public class AndroidWebImage extends Activity {
-	private String imageUrl = "https://avatars2.githubusercontent.com/u/4157575?v=3&s=460";
+	// private String imageUrl =
+	// "https://avatars2.githubusercontent.com/u/4157575?v=3&s=460";
+	private String imageUrl = "http://cdn.iciba.com/news/word/2015-03-25.jpg";
 	ImageView imageView;
 	BitmapFactory.Options options;
+	private ProgressDialog progressDialog;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -38,7 +42,7 @@ public class AndroidWebImage extends Activity {
 		// StrictMode.setVmPolicy(new StrictMode.VmPolicy.Builder()
 		// .detectLeakedSqlLiteObjects().detectLeakedClosableObjects()
 		// .penaltyLog().penaltyDeath().build());
-
+		// progressDialog = ProgressDialog.show(getBaseContext(), "", "进度条");
 		new MyAsyncTask().execute();
 
 		// Bitmap bitmap = LoadImage(imageUrl, options);
@@ -62,22 +66,23 @@ public class AndroidWebImage extends Activity {
 	//
 	// }
 
-//	private InputStream OpenHttpConnection(String strUrl) throws IOException {
-//		InputStream inputStream = null;
-//		URL url = new URL(strUrl);
-//		URLConnection connection = url.openConnection();
-//
-//		HttpURLConnection httpURLConnection = (HttpURLConnection) connection;
-//		httpURLConnection.setRequestMethod("GET");
-//		httpURLConnection.connect();
-//
-//		if (httpURLConnection.getResponseCode() == HttpURLConnection.HTTP_OK) {
-//			inputStream = httpURLConnection.getInputStream();
-//		}
-//
-//		return inputStream;
-//
-//	}
+	// private InputStream OpenHttpConnection(String strUrl) throws IOException
+	// {
+	// InputStream inputStream = null;
+	// URL url = new URL(strUrl);
+	// URLConnection connection = url.openConnection();
+	//
+	// HttpURLConnection httpURLConnection = (HttpURLConnection) connection;
+	// httpURLConnection.setRequestMethod("GET");
+	// httpURLConnection.connect();
+	//
+	// if (httpURLConnection.getResponseCode() == HttpURLConnection.HTTP_OK) {
+	// inputStream = httpURLConnection.getInputStream();
+	// }
+	//
+	// return inputStream;
+	//
+	// }
 
 	public class MyAsyncTask extends AsyncTask<Void, Void, Bitmap> {
 		@Override
