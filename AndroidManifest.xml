@@ -110,6 +110,16 @@
         <!-- ********************JAVA*********************** -->
 
         <activity
+            android:name="cn.android.demo.apis.java.JavaAddView"
+            android:label="@string/java_code_add_view"
+            android:screenOrientation="portrait" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="cn.android.demo.apis.SAMPLE_CODE" />
+            </intent-filter>
+        </activity>
+        <activity
             android:name="cn.android.demo.apis.java.AndroidStringCompare"
             android:label="@string/java_android_string_compare"
             android:screenOrientation="portrait" >
@@ -291,7 +301,7 @@
 
                 <category android:name="cn.android.demo.apis.SAMPLE_CODE" />
             </intent-filter>
-        </activity>
+        </activity>
         -->
         <activity
             android:name="cn.android.demo.apis.phone.LightSensor"
@@ -563,6 +573,15 @@
         </activity>
         <!-- *************** **UI Resources** *************** -->
         <activity
+            android:name="cn.android.demo.apis.ui.resources.DrawableLeft"
+            android:label="@string/ui_resources_drawableleft" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="cn.android.demo.apis.SAMPLE_CODE" />
+            </intent-filter>
+        </activity>
+        <activity
             android:name="cn.android.demo.apis.ui.resources.StringSpinner"
             android:label="@string/ui_resources_spinner" >
             <intent-filter>
@@ -653,7 +672,17 @@
             android:name="cn.android.demo.apis.app.MyService"
             android:enabled="true" >
         </service>
+        <!--  -->
 
+        <activity
+            android:name="cn.android.demo.apis.bug.DebugActivity"
+            android:label="@string/debug_activity" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="cn.android.demo.apis.SAMPLE_CODE" />
+            </intent-filter>
+        </activity>
         <!-- *************** **APPWIDGET***************** -->
         <!--
         <receiver android:name=".appwidget.BatteryWidgetProvider" >
@@ -670,7 +699,7 @@
             <intent-filter>
                 <action android:name="android.intent.action.BATTERY_CHANGED" />
             </intent-filter>
-        </service>
+        </service>
         -->
         <receiver
             android:name="cn.android.demo.apis.app.ScheduledReceiver"

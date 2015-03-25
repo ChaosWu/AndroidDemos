@@ -90,5 +90,8 @@
     <string name="phone_android_bluetooth">Phone/Bluetooth</string>
     <string name="db_android_sqlite">DB/SQLite</string>
     <string name="net_android_ip">Net/IP</string>
+    <string name="ui_resources_drawableleft">UI/Resources/Drawable Left</string>
+    <string name="java_code_add_view">Java/Add View</string>
+    <string name="debug_activity">BUG/Debug Actvity</string>
 
 </resources>
