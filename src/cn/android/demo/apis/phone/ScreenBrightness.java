@@ -2,6 +2,7 @@ package cn.android.demo.apis.phone;
 
 import cn.android.demo.apis.R;
 import android.app.Activity;
+import android.content.pm.ActivityInfo;
 import android.os.Bundle;
 import android.provider.Settings.SettingNotFoundException;
 import android.view.View;
@@ -28,9 +29,12 @@ public class ScreenBrightness extends Activity {
 	SeekBar BackLightControl;
 
 	Button updatesystemsetting;
+	Button screenOrientation;
 
 	int curBrightnessValue;// 系统亮度
 	float BackLightValue = 0.5f; // dummy default value
+
+	private boolean isOrientation = false;// 屏幕旋转方向
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -48,6 +52,9 @@ public class ScreenBrightness extends Activity {
 		BackLightControl = (SeekBar) findViewById(R.id.backlightcontrol);
 		BackLightSetting = (TextView) findViewById(R.id.backlightsetting);
 		updatesystemsetting = (Button) findViewById(R.id.updatesystemsetting);
+
+		// screenOrientation = (Button)
+		// findViewById(R.id.bt_screen_orientation);
 
 		systemBrightness = (TextView) findViewById(R.id.tv_system_screen_brightness);
 		systemBrightness.setText("系统亮度：" + curBrightnessValue);
@@ -91,5 +98,20 @@ public class ScreenBrightness extends Activity {
 
 					}
 				});
+
+		// screenOrientation.setOnClickListener(new OnClickListener() {
+		//
+		// @Override
+		// public void onClick(View v) {
+		// if (!isOrientation) {
+		// setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE);
+		// isOrientation = true;
+		// } else {
+		// setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
+		// isOrientation = false;
+		//
+		// }
+		// }
+		// });
 	}
 }

@@ -2,7 +2,9 @@ package cn.android.demo.apis.java;
 
 import cn.android.demo.apis.R;
 import android.app.Activity;
+import android.net.Uri;
 import android.os.Bundle;
+import android.text.TextUtils;
 import android.widget.TextView;
 
 /**
@@ -28,6 +30,8 @@ public class AndroidStringCompare extends Activity {
 		TextView Result8 = (TextView) findViewById(R.id.tv_result8);
 		TextView Result9 = (TextView) findViewById(R.id.tv_result9);
 		TextView Result10 = (TextView) findViewById(R.id.tv_result10);
+		TextView Result11 = (TextView) findViewById(R.id.tv_result11);
+		TextView Result12 = (TextView) findViewById(R.id.tv_result12);
 
 		String s1 = "hello";
 		String s2 = "hello";
@@ -50,15 +54,32 @@ public class AndroidStringCompare extends Activity {
 
 		);
 
-		Result1.setText("s1==s2: "+s1 + " == " + s2 + ": " + (s1 == s2));
-		Result2.setText("s1.equals(s2): "+s1 + " equals " + s2 + ": " + (s1.equals(s2)));
-		Result3.setText("s1==s3: "+s1 + " == " + s3 + ": " + (s1 == s3));
-		Result4.setText("s1.equals(s3): "+s1 + " equals " + s3 + ": " + (s1.equals(s3)));
-		Result5.setText("s1 == s4: "+s1 + " == " + s4 + ": " + (s1 == s4));
-		Result6.setText("s1.equals(s4): "+s1 + " equals " + s4 + ": " + (s1.equals(s4)));
-		Result7.setText("s1 == s5: "+s1 + " == " + s5 + ": " + (s1 == s5));
-		Result8.setText("s1.equals(s5): "+s1 + " equals " + s5 + ": " + (s1.equals(s5)));
-		Result9.setText("s1 == s6: "+s1 + " == " + s6 + ": " + (s1 == s6));
-		Result10.setText("s1.equals(s6): "+s1 + " equals " + s6 + ": " + (s1.equals(s6)));
+		String src = "ABC def";
+		String dest = Uri.encode(src);
+
+		String src1 = "example: <activity>";
+		String dest1 = TextUtils.htmlEncode(src1);
+
+		Result1.setText("s1==s2: " + s1 + " == " + s2 + ": " + (s1 == s2));
+		Result2.setText("s1.equals(s2): " + s1 + " equals " + s2 + ": "
+				+ (s1.equals(s2)));
+		Result3.setText("s1==s3: " + s1 + " == " + s3 + ": " + (s1 == s3));
+		Result4.setText("s1.equals(s3): " + s1 + " equals " + s3 + ": "
+				+ (s1.equals(s3)));
+		Result5.setText("s1 == s4: " + s1 + " == " + s4 + ": " + (s1 == s4));
+		Result6.setText("s1.equals(s4): " + s1 + " equals " + s4 + ": "
+				+ (s1.equals(s4)));
+		Result7.setText("s1 == s5: " + s1 + " == " + s5 + ": " + (s1 == s5));
+		Result8.setText("s1.equals(s5): " + s1 + " equals " + s5 + ": "
+				+ (s1.equals(s5)));
+		Result9.setText("s1 == s6: " + s1 + " == " + s6 + ": " + (s1 == s6));
+		Result10.setText("s1.equals(s6): " + s1 + " equals " + s6 + ": "
+				+ (s1.equals(s6)));
+
+		// **************************************************
+
+		Result11.setText("src=" + src + "\n" + "dest=" + dest);
+		Result12.setText("src1=" + src1 + "\n" + "dest1=" + dest1);
+
 	}
 }

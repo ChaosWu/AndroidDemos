@@ -99,5 +99,8 @@
     <string name="net_android_json">Net/Json</string>
     <string name="net_flickr">Net/Flickr</string>
     <string name="phone_android_dpi">Phone/Android DPI</string>
+    <string name="phone_android_screen_orientation">Phone/Screen Orientation</string>
+    <string name="ui_widget_test_mywidgetview">UI/Widget/Test WidgetViw</string>
+    <string name="ui_widget_draw_path_demo">UI/Widget/Draw Path Demo</string>
 
 </resources>

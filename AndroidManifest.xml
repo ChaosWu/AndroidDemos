@@ -163,6 +163,16 @@
             android:screenOrientation="portrait" >
         </activity>
         <activity
+            android:name="cn.android.demo.apis.phone.AndroidScreenOrientation"
+            android:label="@string/phone_android_screen_orientation"
+            android:screenOrientation="portrait" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="cn.android.demo.apis.SAMPLE_CODE" />
+            </intent-filter>
+        </activity>
+        <activity
             android:name="cn.android.demo.apis.phone.AndroidDPIActivity"
             android:label="@string/phone_android_dpi"
             android:screenOrientation="portrait" >
@@ -447,6 +457,24 @@
         </activity>
         <!-- *************** **UI Widget** *************** -->
 
+        <activity
+            android:name="cn.android.demo.apis.ui.widget.DrawPathDemo"
+            android:label="@string/ui_widget_draw_path_demo" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="cn.android.demo.apis.SAMPLE_CODE" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="cn.android.demo.apis.ui.widget.TestWidgetViwe"
+            android:label="@string/ui_widget_test_mywidgetview" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="cn.android.demo.apis.SAMPLE_CODE" />
+            </intent-filter>
+        </activity>
         <activity
             android:name="cn.android.demo.apis.ui.widget.SingleTouchActivity"
             android:label="@string/ui_widget_single_touch" >

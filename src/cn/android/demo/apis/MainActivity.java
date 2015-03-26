@@ -17,12 +17,14 @@ import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager;
 import android.content.pm.PackageManager.NameNotFoundException;
 import android.content.pm.ResolveInfo;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.os.PowerManager;
 import android.os.PowerManager.WakeLock;
 import android.provider.Settings;
 import android.util.Log;
 import android.view.View;
+import android.view.Window;
 import android.widget.ListView;
 import android.widget.SimpleAdapter;
 
@@ -34,6 +36,13 @@ public class MainActivity extends ListActivity {
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
+		// requestWindowFeature(Window.FEATURE_INDETERMINATE_PROGRESS);
+		// setProgressBarIndeterminateVisibility(true);
+
+		View title = getWindow().findViewById(android.R.id.title);
+		View titleBar = (View) title.getParent();
+		titleBar.setBackgroundColor(Color.GREEN);
+
 		Log.v(TAG, "onCreate   ******   ");
 
 		// http://android-developers.blogspot.com/2011/03/identifying-app-installations.html
@@ -67,6 +76,13 @@ public class MainActivity extends ListActivity {
 	// wakeLock = powerManager.newWakeLock(PowerManager.FULL_WAKE_LOCK,
 	// "Full Wake Lock");
 	// }
+	
+	//时调用活动检测到用户的按的键。默认实现简单地完成当前的活动,但您可以覆盖这个做任何你想要的。
+	@Override
+	public void onBackPressed() {
+		super.onBackPressed();
+		Log.v("DDD", "onBackPressed");
+	}
 
 	@Override
 	protected void onStart() {

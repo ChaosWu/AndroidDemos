@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+
+    <Button
+        android:id="@+id/setPortrait"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="Set Portrait" />
+
+    <Button
+        android:id="@+id/setLandscape"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="Set Landscape" />
+
+    <Button
+        android:id="@+id/setUnspecified"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="Auto Orientation" />
+
+    <Button
+        android:id="@+id/showMsg"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="Show msg" />
+
+</LinearLayout>
