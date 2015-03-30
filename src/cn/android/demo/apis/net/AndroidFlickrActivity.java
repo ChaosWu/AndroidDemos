@@ -83,7 +83,6 @@ public class AndroidFlickrActivity extends Activity {
 		searchText = (EditText) findViewById(R.id.searchtext);
 		searchButton = (Button) findViewById(R.id.searchbutton);
 		textQueryResult = (TextView) findViewById(R.id.queryresult);
-
 		searchButton.setOnClickListener(new OnClickListener() {
 
 			@Override

@@ -38,6 +38,22 @@
         <item>星期日</item>
     </string-array>
 
+    <!-- json测试数据 -->
+    <string name="dummy_json">"{\"results\":{\"myblog\":\"android-er\", \"myurl\":"\""http://android-er.blogspot.com/\",\"array\":[{\"element\":\"Element 1\"}, {\"element\":\"Element 2\"}, {\"element\":\"Element 3\"}]"}}"</string>
+
+     <string name="stylingtext">
+
+    Styling Text:\n
+
+    <i>Italic</i> <b>Bold</b> <monospace>Monospace</monospace>\n 
+
+    <strike>Strike</strike> <sup>Superscript</sup> <sub>Subscript</sub> <u>Underline</u>\n
+
+    <big><big><big>Big x 3 </big>Big x 2 </big>Big</big> <small>Small <small>Small x 2</small></small>
+
+    </string>
+    
+    
     <plurals name="NumberOfMan">
         <item quantity="one">one</item>
         <item quantity="other">two</item>
@@ -93,14 +109,16 @@
     <string name="ui_resources_drawableleft">UI/Resources/Drawable Left</string>
     <string name="java_code_add_view">Java/Add View</string>
     <string name="debug_activity">BUG/Debug Actvity</string>
-
-    <!-- json测试数据 -->
-    <string name="dummy_json">"{\"results\":{\"myblog\":\"android-er\", \"myurl\":"\""http://android-er.blogspot.com/\",\"array\":[{\"element\":\"Element 1\"}, {\"element\":\"Element 2\"}, {\"element\":\"Element 3\"}]"}}"</string>
     <string name="net_android_json">Net/Json</string>
     <string name="net_flickr">Net/Flickr</string>
     <string name="phone_android_dpi">Phone/Android DPI</string>
     <string name="phone_android_screen_orientation">Phone/Screen Orientation</string>
     <string name="ui_widget_test_mywidgetview">UI/Widget/Test WidgetViw</string>
     <string name="ui_widget_draw_path_demo">UI/Widget/Draw Path Demo</string>
+    <string name="java_bubble_sort">Java/Bubble Sort</string>
+    <string name="net_android_http_post">Net/Http Post</string>
+    <string name="ui_view_scrollview">UI/View/ScrollView</string>
+    <string name="phone_android_phone_proximity_sensor">Phone/Proximity Sensor</string>
+    <string name="ui_graphics_bitmap_pixels">UI/Graphics/Bitmap Pixels</string>
 
 </resources>

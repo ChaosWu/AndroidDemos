@@ -68,6 +68,20 @@ public class MainActivity extends ListActivity {
 		// wakeLock();
 	}
 
+	@Override
+	protected void onSaveInstanceState(Bundle outState) {
+		super.onSaveInstanceState(outState);
+		Log.v("DDD", "onSaveInstanceState");
+
+	}
+
+	@Override
+	protected void onRestoreInstanceState(Bundle state) {
+		super.onRestoreInstanceState(state);
+		Log.v("DDD", "onRestoreInstanceState");
+
+	}
+
 	// TODO
 	// private void wakeLock() {
 	// //忧伤
@@ -76,8 +90,8 @@ public class MainActivity extends ListActivity {
 	// wakeLock = powerManager.newWakeLock(PowerManager.FULL_WAKE_LOCK,
 	// "Full Wake Lock");
 	// }
-	
-	//时调用活动检测到用户的按的键。默认实现简单地完成当前的活动,但您可以覆盖这个做任何你想要的。
+
+	// 时调用活动检测到用户的按的键。默认实现简单地完成当前的活动,但您可以覆盖这个做任何你想要的。
 	@Override
 	public void onBackPressed() {
 		super.onBackPressed();

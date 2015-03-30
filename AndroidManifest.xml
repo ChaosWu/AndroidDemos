@@ -80,6 +80,15 @@
         <!-- ********************Net*********************** -->
 
         <activity
+            android:name="cn.android.demo.apis.net.AndroidHttpPostActivity"
+            android:label="@string/net_android_http_post" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="cn.android.demo.apis.SAMPLE_CODE" />
+            </intent-filter>
+        </activity>
+        <activity
             android:name="cn.android.demo.apis.net.AndroidFlickrActivity"
             android:label="@string/net_flickr" >
             <intent-filter>
@@ -128,6 +137,16 @@
         <!-- ********************JAVA*********************** -->
 
         <activity
+            android:name="cn.android.demo.apis.java.BubbleSort"
+            android:label="@string/java_bubble_sort"
+            android:screenOrientation="portrait" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="cn.android.demo.apis.SAMPLE_CODE" />
+            </intent-filter>
+        </activity>
+        <activity
             android:name="cn.android.demo.apis.java.JavaAddView"
             android:label="@string/java_code_add_view"
             android:screenOrientation="portrait" >
@@ -161,6 +180,16 @@
         <activity
             android:name="cn.android.demo.apis.phone.ListPairedDevicesActivity"
             android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="cn.android.demo.apis.phone.ProximitySensor"
+            android:label="@string/phone_android_phone_proximity_sensor"
+            android:screenOrientation="portrait" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="cn.android.demo.apis.SAMPLE_CODE" />
+            </intent-filter>
         </activity>
         <activity
             android:name="cn.android.demo.apis.phone.AndroidScreenOrientation"
@@ -339,7 +368,7 @@
 
                 <category android:name="cn.android.demo.apis.SAMPLE_CODE" />
             </intent-filter>
-        </activity>
+        </activity>
         -->
         <activity
             android:name="cn.android.demo.apis.phone.LightSensor"
@@ -523,6 +552,16 @@
         <!-- *************** **UI View** *************** -->
 
         <activity
+            android:name="cn.android.demo.apis.ui.views.AndroidScrollView"
+            android:label="@string/ui_view_scrollview"
+            android:screenOrientation="portrait" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="cn.android.demo.apis.SAMPLE_CODE" />
+            </intent-filter>
+        </activity>
+        <activity
             android:name="cn.android.demo.apis.ui.views.AndroidWebView"
             android:label="@string/ui_view_webview"
             android:screenOrientation="portrait" >
@@ -609,6 +648,15 @@
             </intent-filter>
         </activity>
         <!-- *************** **UI Graphics** *************** -->
+        <activity
+            android:name="cn.android.demo.apis.ui.graphics.BitmapPixels"
+            android:label="@string/ui_graphics_bitmap_pixels" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="cn.android.demo.apis.SAMPLE_CODE" />
+            </intent-filter>
+        </activity>
         <activity
             android:name="cn.android.demo.apis.ui.graphics.AndroidMatrix"
             android:label="@string/ui_graphics_matrix" >
@@ -755,7 +803,7 @@
             <intent-filter>
                 <action android:name="android.intent.action.BATTERY_CHANGED" />
             </intent-filter>
-        </service>
+        </service>
         -->
         <receiver
             android:name="cn.android.demo.apis.app.ScheduledReceiver"
