@@ -156,6 +156,17 @@
                 <category android:name="cn.android.demo.apis.SAMPLE_CODE" />
             </intent-filter>
         </activity>
+         <activity
+            android:name="cn.android.demo.apis.java.XmlParser"
+            android:label="@string/java_xml_parser"
+            android:screenOrientation="portrait" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="cn.android.demo.apis.SAMPLE_CODE" />
+            </intent-filter>
+        </activity>
+        
         <activity
             android:name="cn.android.demo.apis.java.AndroidStringCompare"
             android:label="@string/java_android_string_compare"
@@ -244,6 +255,16 @@
         <activity
             android:name="cn.android.demo.apis.phone.AndroidVideoCapture"
             android:label="@string/phone_android_video_capture"
+            android:screenOrientation="landscape" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="cn.android.demo.apis.SAMPLE_CODE" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="cn.android.demo.apis.phone.AndroidVideoCapture2"
+            android:label="@string/phone_android_video_capture2"
             android:screenOrientation="landscape" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -368,7 +389,7 @@
 
                 <category android:name="cn.android.demo.apis.SAMPLE_CODE" />
             </intent-filter>
-        </activity>
+        </activity>
         -->
         <activity
             android:name="cn.android.demo.apis.phone.LightSensor"
@@ -703,10 +724,22 @@
                 <category android:name="cn.android.demo.apis.SAMPLE_CODE" />
             </intent-filter>
         </activity>
+        <activity android:name="cn.android.demo.apis.ui.graphics.SecondBitmapPixels" >
+        </activity>
         <!-- *************** **APP** *************** -->
         <activity android:name="cn.android.demo.apis.app.ScheduledActivity" >
         </activity>
         <activity android:name="cn.android.demo.apis.app.SetPreference" >
+        </activity>
+        
+        <activity
+            android:name="cn.android.demo.apis.app.GestureActivity"
+            android:label="@string/app_gesture_event" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="cn.android.demo.apis.SAMPLE_CODE" />
+            </intent-filter>
         </activity>
         <activity
             android:name="cn.android.demo.apis.app.AlarmManagerActivity"
@@ -803,7 +836,7 @@
             <intent-filter>
                 <action android:name="android.intent.action.BATTERY_CHANGED" />
             </intent-filter>
-        </service>
+        </service>
         -->
         <receiver
             android:name="cn.android.demo.apis.app.ScheduledReceiver"

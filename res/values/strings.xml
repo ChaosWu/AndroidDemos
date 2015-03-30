@@ -120,5 +120,8 @@
     <string name="ui_view_scrollview">UI/View/ScrollView</string>
     <string name="phone_android_phone_proximity_sensor">Phone/Proximity Sensor</string>
     <string name="ui_graphics_bitmap_pixels">UI/Graphics/Bitmap Pixels</string>
+    <string name="phone_android_video_capture2">Phone/Video Capture2</string>
+    <string name="java_xml_parser">Java/Xml Parser</string>
+    <string name="app_gesture_event">App/Gesture </string>
 
 </resources>
