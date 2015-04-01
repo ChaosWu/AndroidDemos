@@ -2,6 +2,7 @@ package cn.android.demo.apis.app;
 
 import cn.android.demo.apis.R;
 import cn.android.demo.utils.ToastUtil;
+import android.app.ActionBar;
 import android.app.Activity;
 import android.os.Bundle;
 import android.os.SystemClock;
@@ -25,7 +26,6 @@ import android.widget.Chronometer.OnChronometerTickListener;
  * 
  */
 public class AndroidChronometer extends Activity implements OnClickListener {
-
 	private Button btStart;
 	private Button btStop;
 	private Button btReset;

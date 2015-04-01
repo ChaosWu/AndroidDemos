@@ -109,6 +109,8 @@ public class MainActivity extends ListActivity {
 					+ "Version Code:" + String.valueOf(info.versionCode);
 
 			Log.v("DDD", "******" + strVersion);
+			//操作系统的名称：操作系统的版本
+			Log.v("DDD", "******" + System.getProperty("os.name")+":"+System.getProperty("os.version"));
 
 		} catch (NameNotFoundException e) {
 			// TODO Auto-generated catch block

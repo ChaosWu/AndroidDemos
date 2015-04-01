@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     package="cn.android.demo.apis"
     android:versionCode="1"
     android:versionName="1.0" >
@@ -55,6 +56,39 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        
+        <!-- ANIM -->
+        cn.android.demo.apis.anim.AndroidViewFlipperActivity
+        
+        <activity
+            android:name="cn.android.demo.apis.anim.AndroidViewFlipperActivity"
+            android:label="@string/anim_java_code_viewflipper_anim" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="cn.android.demo.apis.SAMPLE_CODE" />
+            </intent-filter>
+        </activity>
+        
+        <activity
+            android:name="cn.android.demo.apis.anim.AndroidAnimInterpolatorActivity"
+            android:label="@string/anim_android_interpolator" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="cn.android.demo.apis.SAMPLE_CODE" />
+            </intent-filter>
+        </activity>
+         <activity
+            android:name="cn.android.demo.apis.anim.AndroidAnimButtonTASR"
+            android:label="@string/anim_android_tasr" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="cn.android.demo.apis.SAMPLE_CODE" />
+            </intent-filter>
+        </activity>
+        
         <!-- ********************DB*********************** -->
         <activity
             android:name="cn.android.demo.apis.db.AndroidSQLite"
@@ -187,6 +221,16 @@
             </intent-filter>
         </activity>
         <!-- ********************Phone*********************** -->
+        <activity
+            android:name="cn.android.demo.apis.phone.RunLinuxCMD"
+            android:label="@string/phone_run_linux_cmd"
+            android:screenOrientation="portrait" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="cn.android.demo.apis.SAMPLE_CODE" />
+            </intent-filter>
+        </activity>
         <activity
             android:name="cn.android.demo.apis.phone.ListPairedDevicesActivity"
             android:screenOrientation="portrait" >
@@ -398,7 +442,7 @@
 
                 <category android:name="cn.android.demo.apis.SAMPLE_CODE" />
             </intent-filter>
-        </activity>
+        </activity>
         -->
         <activity
             android:name="cn.android.demo.apis.phone.LightSensor"
@@ -762,6 +806,26 @@
         <activity android:name="cn.android.demo.apis.app.SetPreference" >
         </activity>
         <activity
+            android:name="cn.android.demo.apis.app.AndroidActionBar"
+            android:label="@string/app_android_actionbar"
+            android:theme="@android:style/Theme.DeviceDefault.Light.DarkActionBar"
+            tools:ignore="NewApi" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="cn.android.demo.apis.SAMPLE_CODE" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="cn.android.demo.apis.app.AndroidCountDownTimer"
+            android:label="@string/app_android_countdown_timer" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="cn.android.demo.apis.SAMPLE_CODE" />
+            </intent-filter>
+        </activity>
+        <activity
             android:name="cn.android.demo.apis.app.TouchPinchZoomActivity"
             android:label="@string/app_touch_pinch_zoom" >
             <intent-filter>
@@ -874,7 +938,7 @@
             <intent-filter>
                 <action android:name="android.intent.action.BATTERY_CHANGED" />
             </intent-filter>
-        </service>
+        </service>
         -->
         <receiver
             android:name="cn.android.demo.apis.app.ScheduledReceiver"

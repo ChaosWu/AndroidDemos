@@ -127,5 +127,11 @@
     <string name="phone_android_play_rtttl">Phone/Play RTTTL</string>
     <string name="ui_fragment_test">UI/Fragment/TestFragment</string>
     <string name="ui_widget_multis_touch">UI/Widget/Multis Touch</string>
+    <string name="app_android_countdown_timer">App/CountDownTimer</string>
+    <string name="app_android_actionbar">App/ActionBar</string>
+    <string name="phone_run_linux_cmd">Phone/RunLinuxCmd</string>
+    <string name="anim_android_tasr">Anim/ButtonTASR</string>
+    <string name="anim_android_interpolator">Anim/Interpolator</string>
+    <string name="anim_java_code_viewflipper_anim">Anim/ViewFlipper Anim JavaCode</string>
 
 </resources>
