@@ -1,0 +1,18 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="horizontal" >
+
+    <TextView
+        android:layout_width="0dip"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:background="#555555"
+        android:text="It&apos;s TextView in main Activity" />
+
+    <DatePicker
+        android:layout_width="0dip"
+        android:layout_height="match_parent"
+        android:layout_weight="4" />
+
+</LinearLayout>

@@ -156,7 +156,7 @@
                 <category android:name="cn.android.demo.apis.SAMPLE_CODE" />
             </intent-filter>
         </activity>
-         <activity
+        <activity
             android:name="cn.android.demo.apis.java.XmlParser"
             android:label="@string/java_xml_parser"
             android:screenOrientation="portrait" >
@@ -166,7 +166,6 @@
                 <category android:name="cn.android.demo.apis.SAMPLE_CODE" />
             </intent-filter>
         </activity>
-        
         <activity
             android:name="cn.android.demo.apis.java.AndroidStringCompare"
             android:label="@string/java_android_string_compare"
@@ -195,6 +194,16 @@
         <activity
             android:name="cn.android.demo.apis.phone.ProximitySensor"
             android:label="@string/phone_android_phone_proximity_sensor"
+            android:screenOrientation="portrait" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="cn.android.demo.apis.SAMPLE_CODE" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="cn.android.demo.apis.phone.PalyRTTL"
+            android:label="@string/phone_android_play_rtttl"
             android:screenOrientation="portrait" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -389,7 +398,7 @@
 
                 <category android:name="cn.android.demo.apis.SAMPLE_CODE" />
             </intent-filter>
-        </activity>
+        </activity>
         -->
         <activity
             android:name="cn.android.demo.apis.phone.LightSensor"
@@ -505,8 +514,29 @@
                 <category android:name="cn.android.demo.apis.SAMPLE_CODE" />
             </intent-filter>
         </activity>
+
+        <!-- UI Fragment -->
+        <activity
+            android:name="cn.android.demo.apis.ui.fragment.FragmentTestActivity"
+            android:label="@string/ui_fragment_test" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="cn.android.demo.apis.SAMPLE_CODE" />
+            </intent-filter>
+        </activity>
+
         <!-- *************** **UI Widget** *************** -->
 
+        <activity
+            android:name="cn.android.demo.apis.ui.widget.MultisTouch"
+            android:label="@string/ui_widget_multis_touch" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="cn.android.demo.apis.SAMPLE_CODE" />
+            </intent-filter>
+        </activity>
         <activity
             android:name="cn.android.demo.apis.ui.widget.DrawPathDemo"
             android:label="@string/ui_widget_draw_path_demo" >
@@ -731,7 +761,15 @@
         </activity>
         <activity android:name="cn.android.demo.apis.app.SetPreference" >
         </activity>
-        
+        <activity
+            android:name="cn.android.demo.apis.app.TouchPinchZoomActivity"
+            android:label="@string/app_touch_pinch_zoom" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="cn.android.demo.apis.SAMPLE_CODE" />
+            </intent-filter>
+        </activity>
         <activity
             android:name="cn.android.demo.apis.app.GestureActivity"
             android:label="@string/app_gesture_event" >
@@ -836,7 +874,7 @@
             <intent-filter>
                 <action android:name="android.intent.action.BATTERY_CHANGED" />
             </intent-filter>
-        </service>
+        </service>
         -->
         <receiver
             android:name="cn.android.demo.apis.app.ScheduledReceiver"

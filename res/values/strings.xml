@@ -123,5 +123,9 @@
     <string name="phone_android_video_capture2">Phone/Video Capture2</string>
     <string name="java_xml_parser">Java/Xml Parser</string>
     <string name="app_gesture_event">App/Gesture </string>
+    <string name="app_touch_pinch_zoom">App/Touch Pinch Zoom</string>
+    <string name="phone_android_play_rtttl">Phone/Play RTTTL</string>
+    <string name="ui_fragment_test">UI/Fragment/TestFragment</string>
+    <string name="ui_widget_multis_touch">UI/Widget/Multis Touch</string>
 
 </resources>

@@ -5,6 +5,7 @@ import java.util.Random;
 
 import cn.android.demo.apis.R;
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.speech.tts.TextToSpeech;
 import android.speech.tts.TextToSpeech.OnInitListener;
@@ -31,7 +32,6 @@ public class AndroidBeatBox extends Activity implements OnInitListener {
 
 	private Button btRandomTv;
 	private Button btPlay;
-
 	private EditText et;
 
 	@Override
@@ -45,6 +45,7 @@ public class AndroidBeatBox extends Activity implements OnInitListener {
 		btPlay.setEnabled(false);
 		et = (EditText) findViewById(R.id.et_beatbox);
 
+		
 		random = new Random();
 		speech = new TextToSpeech(this, this);
 		speech.setLanguage(Locale.GERMANY);
