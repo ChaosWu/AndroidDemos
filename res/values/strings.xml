@@ -133,5 +133,15 @@
     <string name="anim_android_tasr">Anim/ButtonTASR</string>
     <string name="anim_android_interpolator">Anim/Interpolator</string>
     <string name="anim_java_code_viewflipper_anim">Anim/ViewFlipper Anim JavaCode</string>
+    <string name="anim_object_animator_animation">Anim/ObjectAnim</string>
+    <string name="phone_android_list_media_uri">Phone/List Media</string>
+    <string name="net_android_yahoo_weather_dom">Net/Yahoo Weather Dom</string>
+    <string name="net_android_google_weather_dom">Net/Google Weather Dom</string>
+    <string name="ui_view_popup_menu">UI/View/PopupMenu</string>
+    <string name="ui_view_popup_window">UI/View/PopupWindow</string>
+    <string name="phone_android_drag_drop">Phone/DragDrop</string>
+    <string name="phone_android_drag_drop2">Phone/DragDrop2</string>
+    <string name="ui_widget_detech_touch">UI/Widget/DetechTouch</string>
+    <string name="other_open_street_mapview">Other/OpenStreetMap</string>
 
 </resources>

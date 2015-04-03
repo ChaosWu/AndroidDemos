@@ -56,10 +56,29 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        
+        <!-- OTHER -->
+
+        <activity
+            android:name="cn.android.demo.apis.other.OpenStreetMapViewActivity"
+            android:label="@string/other_open_street_mapview" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="cn.android.demo.apis.SAMPLE_CODE" />
+            </intent-filter>
+        </activity>
+
         <!-- ANIM -->
-        cn.android.demo.apis.anim.AndroidViewFlipperActivity
-        
+
+        <activity
+            android:name="cn.android.demo.apis.anim.AndroidObjectAnimation"
+            android:label="@string/anim_object_animator_animation" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="cn.android.demo.apis.SAMPLE_CODE" />
+            </intent-filter>
+        </activity>
         <activity
             android:name="cn.android.demo.apis.anim.AndroidViewFlipperActivity"
             android:label="@string/anim_java_code_viewflipper_anim" >
@@ -69,7 +88,6 @@
                 <category android:name="cn.android.demo.apis.SAMPLE_CODE" />
             </intent-filter>
         </activity>
-        
         <activity
             android:name="cn.android.demo.apis.anim.AndroidAnimInterpolatorActivity"
             android:label="@string/anim_android_interpolator" >
@@ -79,7 +97,7 @@
                 <category android:name="cn.android.demo.apis.SAMPLE_CODE" />
             </intent-filter>
         </activity>
-         <activity
+        <activity
             android:name="cn.android.demo.apis.anim.AndroidAnimButtonTASR"
             android:label="@string/anim_android_tasr" >
             <intent-filter>
@@ -88,7 +106,7 @@
                 <category android:name="cn.android.demo.apis.SAMPLE_CODE" />
             </intent-filter>
         </activity>
-        
+
         <!-- ********************DB*********************** -->
         <activity
             android:name="cn.android.demo.apis.db.AndroidSQLite"
@@ -112,7 +130,25 @@
             </intent-filter>
         </activity>
         <!-- ********************Net*********************** -->
+        cn.android.demo.apis.net.AndroidGoogleWeatherActivity
+        <activity
+            android:name="cn.android.demo.apis.bug.AndroidGoogleWeatherActivity"
+            android:label="@string/net_android_google_weather_dom" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
 
+                <category android:name="cn.android.demo.apis.SAMPLE_CODE" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="cn.android.demo.apis.net.AndroidYahooWeatherDOMActivity"
+            android:label="@string/net_android_yahoo_weather_dom" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="cn.android.demo.apis.SAMPLE_CODE" />
+            </intent-filter>
+        </activity>
         <activity
             android:name="cn.android.demo.apis.net.AndroidHttpPostActivity"
             android:label="@string/net_android_http_post" >
@@ -221,6 +257,38 @@
             </intent-filter>
         </activity>
         <!-- ********************Phone*********************** -->
+cn.android.demo.apis.phone.AndroidDragAndDrop
+cn.android.demo.apis.phone.AndroidDragAndDrop2
+        <activity
+            android:name="cn.android.demo.apis.phone.AndroidDragAndDrop2"
+            android:label="@string/phone_android_drag_drop2"
+            android:screenOrientation="portrait" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="cn.android.demo.apis.SAMPLE_CODE" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="cn.android.demo.apis.phone.AndroidDragAndDrop"
+            android:label="@string/phone_android_drag_drop"
+            android:screenOrientation="portrait" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="cn.android.demo.apis.SAMPLE_CODE" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="cn.android.demo.apis.phone.AndroidListMediaActivity"
+            android:label="@string/phone_android_list_media_uri"
+            android:screenOrientation="portrait" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="cn.android.demo.apis.SAMPLE_CODE" />
+            </intent-filter>
+        </activity>
         <activity
             android:name="cn.android.demo.apis.phone.RunLinuxCMD"
             android:label="@string/phone_run_linux_cmd"
@@ -442,7 +510,7 @@
 
                 <category android:name="cn.android.demo.apis.SAMPLE_CODE" />
             </intent-filter>
-        </activity>
+        </activity>
         -->
         <activity
             android:name="cn.android.demo.apis.phone.LightSensor"
@@ -573,6 +641,15 @@
         <!-- *************** **UI Widget** *************** -->
 
         <activity
+            android:name="cn.android.demo.apis.ui.widget.DetechTouchActivity"
+            android:label="@string/ui_widget_detech_touch" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="cn.android.demo.apis.SAMPLE_CODE" />
+            </intent-filter>
+        </activity>
+        <activity
             android:name="cn.android.demo.apis.ui.widget.MultisTouch"
             android:label="@string/ui_widget_multis_touch" >
             <intent-filter>
@@ -646,6 +723,26 @@
         </activity>
         <!-- *************** **UI View** *************** -->
 
+        <activity
+            android:name="cn.android.demo.apis.ui.views.AndroidPopupWindow"
+            android:label="@string/ui_view_popup_window"
+            android:screenOrientation="portrait" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="cn.android.demo.apis.SAMPLE_CODE" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="cn.android.demo.apis.ui.views.AndroidPopupMenu"
+            android:label="@string/ui_view_popup_menu"
+            android:screenOrientation="portrait" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="cn.android.demo.apis.SAMPLE_CODE" />
+            </intent-filter>
+        </activity>
         <activity
             android:name="cn.android.demo.apis.ui.views.AndroidScrollView"
             android:label="@string/ui_view_scrollview"
@@ -938,7 +1035,7 @@
             <intent-filter>
                 <action android:name="android.intent.action.BATTERY_CHANGED" />
             </intent-filter>
-        </service>
+        </service>
         -->
         <receiver
             android:name="cn.android.demo.apis.app.ScheduledReceiver"
