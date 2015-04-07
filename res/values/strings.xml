@@ -40,20 +40,8 @@
 
     <!-- json测试数据 -->
     <string name="dummy_json">"{\"results\":{\"myblog\":\"android-er\", \"myurl\":"\""http://android-er.blogspot.com/\",\"array\":[{\"element\":\"Element 1\"}, {\"element\":\"Element 2\"}, {\"element\":\"Element 3\"}]"}}"</string>
+    <string name="stylingtext">    Styling Text:\n <i>Italic</i> <b>Bold</b> <monospace>Monospace</monospace>\n  <strike>Strike</strike> <sup>Superscript</sup> <sub>Subscript</sub> <u>Underline</u>\n <big><big><big>Big x 3 </big>Big x 2 </big>Big</big> <small>Small <small>Small x 2</small></small></string>
 
-     <string name="stylingtext">
-
-    Styling Text:\n
-
-    <i>Italic</i> <b>Bold</b> <monospace>Monospace</monospace>\n 
-
-    <strike>Strike</strike> <sup>Superscript</sup> <sub>Subscript</sub> <u>Underline</u>\n
-
-    <big><big><big>Big x 3 </big>Big x 2 </big>Big</big> <small>Small <small>Small x 2</small></small>
-
-    </string>
-    
-    
     <plurals name="NumberOfMan">
         <item quantity="one">one</item>
         <item quantity="other">two</item>
@@ -146,5 +134,7 @@
     <string name="location_activity">Location/Location</string>
     <string name="phone_android_calendar">Phone/Calendar</string>
     <string name="phone_android_vibrator">Phone/Vibrator</string>
+    <string name="phone_android_timepicker">Phone/TimePicker</string>
+    <string name="java_set_view_id">Java/Set Id</string>
 
 </resources>

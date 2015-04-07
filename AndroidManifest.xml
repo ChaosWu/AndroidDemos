@@ -134,7 +134,7 @@
             </intent-filter>
         </activity>
         <!-- ********************Net*********************** -->
-        cn.android.demo.apis.net.AndroidGoogleWeatherActivity
+        cn.android.demo.apis.net.AndroidGoogleWeatherActivity
         <activity
             android:name="cn.android.demo.apis.bug.AndroidGoogleWeatherActivity"
             android:label="@string/net_android_google_weather_dom" >
@@ -210,6 +210,18 @@
 
         <!-- ********************JAVA*********************** -->
 
+
+cn.android.demo.apis.java.AndroidSetId
+<activity
+            android:name="cn.android.demo.apis.java.AndroidSetId"
+            android:label="@string/java_set_view_id"
+            android:screenOrientation="portrait" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="cn.android.demo.apis.SAMPLE_CODE" />
+            </intent-filter>
+        </activity>
         <activity
             android:name="cn.android.demo.apis.java.BubbleSort"
             android:label="@string/java_bubble_sort"
@@ -262,6 +274,16 @@
         </activity>
         <!-- ********************Phone*********************** -->
 
+        <activity
+            android:name="cn.android.demo.apis.ui.views.AndroidTimePicker"
+            android:label="@string/phone_android_timepicker"
+            android:screenOrientation="portrait" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="cn.android.demo.apis.SAMPLE_CODE" />
+            </intent-filter>
+        </activity>
         <activity
             android:name="cn.android.demo.apis.phone.VibratorActivity"
             android:label="@string/phone_android_vibrator"
@@ -533,7 +555,7 @@
 
                 <category android:name="cn.android.demo.apis.SAMPLE_CODE" />
             </intent-filter>
-        </activity>
+        </activity>
         -->
         <activity
             android:name="cn.android.demo.apis.phone.LightSensor"
@@ -1068,7 +1090,7 @@
             <intent-filter>
                 <action android:name="android.intent.action.BATTERY_CHANGED" />
             </intent-filter>
-        </service>
+        </service>
         -->
         <receiver
             android:name="cn.android.demo.apis.app.ScheduledReceiver"
@@ -1082,6 +1104,12 @@
             <meta-data
                 android:name="android.appwidget.provider"
                 android:resource="@xml/hellowidgetproviderinfo" />
+        </receiver>
+
+        <!-- 闹钟广播 -->
+        <receiver
+            android:name="cn.android.demo.apis.app.AlarmReceiver"
+            android:process=":remote" >
         </receiver>
     </application>
 
