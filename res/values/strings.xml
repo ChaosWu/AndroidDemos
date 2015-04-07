@@ -143,5 +143,8 @@
     <string name="phone_android_drag_drop2">Phone/DragDrop2</string>
     <string name="ui_widget_detech_touch">UI/Widget/DetechTouch</string>
     <string name="other_open_street_mapview">Other/OpenStreetMap</string>
+    <string name="location_activity">Location/Location</string>
+    <string name="phone_android_calendar">Phone/Calendar</string>
+    <string name="phone_android_vibrator">Phone/Vibrator</string>
 
 </resources>

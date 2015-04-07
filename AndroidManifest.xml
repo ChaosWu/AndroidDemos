@@ -35,6 +35,10 @@
     <uses-permission android:name="android.permission.RECORD_AUDIO" />
     <!-- 允许程序连接配对过的蓝牙设备 -->
     <uses-permission android:name="android.permission.BLUETOOTH" />
+    <!-- 获取精确位置 -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <!-- 震动 -->
+    <uses-permission android:name="android.permission.VIBRATE" />
 
     <uses-sdk
         android:minSdkVersion="8"
@@ -130,7 +134,7 @@
             </intent-filter>
         </activity>
         <!-- ********************Net*********************** -->
-        cn.android.demo.apis.net.AndroidGoogleWeatherActivity
+        cn.android.demo.apis.net.AndroidGoogleWeatherActivity
         <activity
             android:name="cn.android.demo.apis.bug.AndroidGoogleWeatherActivity"
             android:label="@string/net_android_google_weather_dom" >
@@ -257,8 +261,27 @@
             </intent-filter>
         </activity>
         <!-- ********************Phone*********************** -->
-cn.android.demo.apis.phone.AndroidDragAndDrop
-cn.android.demo.apis.phone.AndroidDragAndDrop2
+
+        <activity
+            android:name="cn.android.demo.apis.phone.VibratorActivity"
+            android:label="@string/phone_android_vibrator"
+            android:screenOrientation="portrait" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="cn.android.demo.apis.SAMPLE_CODE" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="cn.android.demo.apis.phone.CalendarActivity"
+            android:label="@string/phone_android_calendar"
+            android:screenOrientation="portrait" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="cn.android.demo.apis.SAMPLE_CODE" />
+            </intent-filter>
+        </activity>
         <activity
             android:name="cn.android.demo.apis.phone.AndroidDragAndDrop2"
             android:label="@string/phone_android_drag_drop2"
@@ -510,7 +533,7 @@ cn.android.demo.apis.phone.AndroidDragAndDrop2
 
                 <category android:name="cn.android.demo.apis.SAMPLE_CODE" />
             </intent-filter>
-        </activity>
+        </activity>
         -->
         <activity
             android:name="cn.android.demo.apis.phone.LightSensor"
@@ -568,6 +591,16 @@ cn.android.demo.apis.phone.AndroidDragAndDrop2
         </activity>
 
         <!-- *************** **LOCATION** *************** -->
+
+        <activity
+            android:name="cn.android.demo.apis.location.AndroidLocationActivity"
+            android:label="@string/location_activity" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="cn.android.demo.apis.SAMPLE_CODE" />
+            </intent-filter>
+        </activity>
         <activity
             android:name="cn.android.demo.apis.location.IntentActionView"
             android:label="@string/location_intent_action_view" >
@@ -1035,7 +1068,7 @@ cn.android.demo.apis.phone.AndroidDragAndDrop2
             <intent-filter>
                 <action android:name="android.intent.action.BATTERY_CHANGED" />
             </intent-filter>
-        </service>
+        </service>
         -->
         <receiver
             android:name="cn.android.demo.apis.app.ScheduledReceiver"
