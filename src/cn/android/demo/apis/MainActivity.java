@@ -10,6 +10,7 @@ import java.util.Map;
 
 import org.apache.http.util.EncodingUtils;
 
+import android.app.ActivityManager;
 import android.app.ListActivity;
 import android.content.Context;
 import android.content.Intent;
@@ -52,13 +53,16 @@ public class MainActivity extends ListActivity {
 						+ Settings.Secure.getString(getContentResolver(),
 								Settings.Secure.ANDROID_ID));
 		Log.v("DDD", new String(EncodingUtils.getAsciiBytes("A")));
-
+		
+		int memClass= ((ActivityManager)getSystemService(Context.ACTIVITY_SERVICE)).getMemoryClass();
+		Log.v("DDD", "memClass:"+memClass);
 		Intent intent = getIntent();
 		String path = intent.getStringExtra(Config.PATH);
 
 		if (path == null) {
 			path = "";
 		}
+
 
 		setListAdapter(new SimpleAdapter(this, getData(path),
 				android.R.layout.simple_list_item_1, new String[] { "title" },

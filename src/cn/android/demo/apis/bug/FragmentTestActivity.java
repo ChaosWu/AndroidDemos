@@ -1,4 +1,4 @@
-package cn.android.demo.apis.ui.fragment;
+package cn.android.demo.apis.bug;
 
 import cn.android.demo.apis.R;
 import android.app.Activity;

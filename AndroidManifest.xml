@@ -134,7 +134,7 @@
             </intent-filter>
         </activity>
         <!-- ********************Net*********************** -->
-        cn.android.demo.apis.net.AndroidGoogleWeatherActivity
+        cn.android.demo.apis.net.AndroidGoogleWeatherActivity
         <activity
             android:name="cn.android.demo.apis.bug.AndroidGoogleWeatherActivity"
             android:label="@string/net_android_google_weather_dom" >
@@ -210,9 +210,8 @@
 
         <!-- ********************JAVA*********************** -->
 
-
-cn.android.demo.apis.java.AndroidSetId
-<activity
+cn.android.demo.apis.java.AndroidSetId
+        <activity
             android:name="cn.android.demo.apis.java.AndroidSetId"
             android:label="@string/java_set_view_id"
             android:screenOrientation="portrait" >
@@ -555,7 +554,7 @@ cn.android.demo.apis.java.AndroidSetId
 
                 <category android:name="cn.android.demo.apis.SAMPLE_CODE" />
             </intent-filter>
-        </activity>
+        </activity>
         -->
         <activity
             android:name="cn.android.demo.apis.phone.LightSensor"
@@ -683,8 +682,19 @@ cn.android.demo.apis.java.AndroidSetId
         </activity>
 
         <!-- UI Fragment -->
+        
+        cn.android.demo.apis.ui.fragment.AndroidExFragmentActivity
+         <activity
+            android:name="cn.android.demo.apis.bug.AndroidExFragmentActivity"
+            android:label="@string/ui_fragment_ex_fragment" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="cn.android.demo.apis.SAMPLE_CODE" />
+            </intent-filter>
+        </activity>
         <activity
-            android:name="cn.android.demo.apis.ui.fragment.FragmentTestActivity"
+            android:name="cn.android.demo.apis.bug.FragmentTestActivity"
             android:label="@string/ui_fragment_test" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -777,10 +787,30 @@ cn.android.demo.apis.java.AndroidSetId
             </intent-filter>
         </activity>
         <!-- *************** **UI View** *************** -->
+        
+        <activity
+            android:name="cn.android.demo.apis.ui.views.AndroidGallery"
+            android:label="@string/ui_view_gallery"
+            android:screenOrientation="portrait" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
 
+                <category android:name="cn.android.demo.apis.SAMPLE_CODE" />
+            </intent-filter>
+        </activity>
         <activity
             android:name="cn.android.demo.apis.ui.views.AndroidPopupWindow"
             android:label="@string/ui_view_popup_window"
+            android:screenOrientation="portrait" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="cn.android.demo.apis.SAMPLE_CODE" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="cn.android.demo.apis.ui.views.AndroidViewPagerActivity"
+            android:label="@string/ui_view_view_pager"
             android:screenOrientation="portrait" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -1090,7 +1120,7 @@ cn.android.demo.apis.java.AndroidSetId
             <intent-filter>
                 <action android:name="android.intent.action.BATTERY_CHANGED" />
             </intent-filter>
-        </service>
+        </service>
         -->
         <receiver
             android:name="cn.android.demo.apis.app.ScheduledReceiver"
@@ -1106,6 +1136,15 @@ cn.android.demo.apis.java.AndroidSetId
                 android:resource="@xml/hellowidgetproviderinfo" />
         </receiver>
 
+        <!-- 电池状态 -->
+        <receiver android:name="cn.android.demo.apis.app.AndroidBatteryReceiver" >
+            <intent-filter>
+                <action android:name="android.intent.action.ACTION_POWER_CONNECTED" />
+                <action android:name="android.intent.action.ACTION_POWER_DISCONNECTED" />
+                <action android:name="android.intent.action.ACTION_BATTERY_LOW" />
+                <action android:name="android.intent.action.ACTION_BATTERY_OKAY" />
+            </intent-filter>
+        </receiver>
         <!-- 闹钟广播 -->
         <receiver
             android:name="cn.android.demo.apis.app.AlarmReceiver"

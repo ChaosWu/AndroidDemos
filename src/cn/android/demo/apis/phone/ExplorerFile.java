@@ -3,6 +3,8 @@ package cn.android.demo.apis.phone;
 import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Comparator;
 import java.util.List;
 
 import cn.android.demo.apis.R;
@@ -53,6 +55,11 @@ public class ExplorerFile extends ListActivity {
 			path.add(file.getParent());
 
 		}
+		// 按照文件名排序
+		// Arrays.sort(files, filecomparator);
+
+		// 按照时间排序
+		Arrays.sort(files, filecomparatorByLastModified);
 		for (int i = 0; i < files.length; i++) {
 			File f = files[i];
 			path.add(f.getPath());
@@ -70,6 +77,57 @@ public class ExplorerFile extends ListActivity {
 		}
 
 	}
+
+	// 排序方法
+	Comparator<? super File> filecomparator = new Comparator<File>() {
+
+		@Override
+		public int compare(File lhs, File rhs) {
+
+			if (lhs.isDirectory()) {
+				if (rhs.isDirectory()) {
+					return String.valueOf(lhs.getName().toLowerCase())
+							.compareTo(rhs.getName().toLowerCase());
+
+				} else {
+					return -1;
+				}
+			} else {
+				if (rhs.isDirectory()) {
+					return 1;
+
+				} else {
+					return String.valueOf(lhs.getName().toLowerCase())
+							.compareTo(rhs.getName().toLowerCase());
+				}
+
+			}
+
+		}
+
+	};
+	Comparator<? super File> filecomparatorByLastModified = new Comparator<File>() {
+
+		public int compare(File file1, File file2) {
+
+			if (file1.isDirectory()) {
+				if (file2.isDirectory()) {
+					return Long.valueOf(file1.lastModified()).compareTo(
+							file2.lastModified());
+				} else {
+					return -1;
+				}
+			} else {
+				if (file2.isDirectory()) {
+					return 1;
+				} else {
+					return Long.valueOf(file1.lastModified()).compareTo(
+							file2.lastModified());
+				}
+			}
+
+		}
+	};
 
 	@Override
 	protected void onListItemClick(ListView l, View v, int position, long id) {

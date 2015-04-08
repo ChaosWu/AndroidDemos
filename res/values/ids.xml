@@ -3,5 +3,5 @@
 
     <item name="layout_id" type="id"/>
     <item name="image_id" type="id"/>
-
+<item name="view_pager" type="id"/>
 </resources>

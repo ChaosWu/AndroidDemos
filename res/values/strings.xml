@@ -136,5 +136,7 @@
     <string name="phone_android_vibrator">Phone/Vibrator</string>
     <string name="phone_android_timepicker">Phone/TimePicker</string>
     <string name="java_set_view_id">Java/Set Id</string>
+    <string name="ui_view_view_pager">UI/View/ViewPager</string>
+    <string name="ui_fragment_ex_fragment">UI/Fragment/ExFragment</string>
 
 </resources>
