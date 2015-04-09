@@ -138,5 +138,9 @@
     <string name="java_set_view_id">Java/Set Id</string>
     <string name="ui_view_view_pager">UI/View/ViewPager</string>
     <string name="ui_fragment_ex_fragment">UI/Fragment/ExFragment</string>
+    <string name="other_get_location">Other/GetLocation</string>
+    <string name="anim_object_animator_gestrue">Anim/Gesture ObjectAnim</string>
+    <string name="ui_view_dialog">UI/View/Dialog Anim</string>
+    <string name="ui_view_horizontal_scroll_view">UI/View/HorizontalScrollView</string>
 
 </resources>

@@ -1,0 +1,20 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/gestrue_anim_mainscreen"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <TextView
+        android:id="@+id/gestrue_anim_info"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <ImageView
+        android:id="@+id/gestrue_anim_flingobject"
+        android:layout_width="100dip"
+        android:layout_height="100dip"
+        android:padding="5dip"
+        android:src="@drawable/ic_launcher"
+        tools:context=".MainActivity" />
+
+</FrameLayout>

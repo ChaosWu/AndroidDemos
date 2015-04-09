@@ -86,7 +86,7 @@ public class GestureActivity extends Activity {
 		public boolean onScale(ScaleGestureDetector detector) {
 			Log.v("DDD", "onScale");
 			scale.setText(String.valueOf(detector.getScaleFactor()));
-			curScale=detector.getScaleFactor();
+			curScale = detector.getScaleFactor();
 			drawMatrix();
 			return true;
 		}

@@ -61,7 +61,15 @@
             </intent-filter>
         </activity>
         <!-- OTHER -->
+        <activity
+            android:name="cn.android.demo.apis.other.GetLocation"
+            android:label="@string/other_get_location" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
 
+                <category android:name="cn.android.demo.apis.SAMPLE_CODE" />
+            </intent-filter>
+        </activity>
         <activity
             android:name="cn.android.demo.apis.other.OpenStreetMapViewActivity"
             android:label="@string/other_open_street_mapview" >
@@ -73,7 +81,16 @@
         </activity>
 
         <!-- ANIM -->
+cn.android.demo.apis.anim.AndroidGestureObjectAnim
+        <activity
+            android:name="cn.android.demo.apis.anim.AndroidGestureObjectAnim"
+            android:label="@string/anim_object_animator_gestrue" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
 
+                <category android:name="cn.android.demo.apis.SAMPLE_CODE" />
+            </intent-filter>
+        </activity>
         <activity
             android:name="cn.android.demo.apis.anim.AndroidObjectAnimation"
             android:label="@string/anim_object_animator_animation" >
@@ -134,7 +151,7 @@
             </intent-filter>
         </activity>
         <!-- ********************Net*********************** -->
-        cn.android.demo.apis.net.AndroidGoogleWeatherActivity
+        cn.android.demo.apis.net.AndroidGoogleWeatherActivity
         <activity
             android:name="cn.android.demo.apis.bug.AndroidGoogleWeatherActivity"
             android:label="@string/net_android_google_weather_dom" >
@@ -210,7 +227,7 @@
 
         <!-- ********************JAVA*********************** -->
 
-cn.android.demo.apis.java.AndroidSetId
+cn.android.demo.apis.java.AndroidSetId
         <activity
             android:name="cn.android.demo.apis.java.AndroidSetId"
             android:label="@string/java_set_view_id"
@@ -554,7 +571,7 @@ cn.android.demo.apis.java.AndroidSetId
 
                 <category android:name="cn.android.demo.apis.SAMPLE_CODE" />
             </intent-filter>
-        </activity>
+        </activity>
         -->
         <activity
             android:name="cn.android.demo.apis.phone.LightSensor"
@@ -682,9 +699,9 @@ cn.android.demo.apis.java.AndroidSetId
         </activity>
 
         <!-- UI Fragment -->
-        
-        cn.android.demo.apis.ui.fragment.AndroidExFragmentActivity
-         <activity
+
+        cn.android.demo.apis.ui.fragment.AndroidExFragmentActivity
+        <activity
             android:name="cn.android.demo.apis.bug.AndroidExFragmentActivity"
             android:label="@string/ui_fragment_ex_fragment" >
             <intent-filter>
@@ -787,7 +804,30 @@ cn.android.demo.apis.java.AndroidSetId
             </intent-filter>
         </activity>
         <!-- *************** **UI View** *************** -->
-        
+cn.android.demo.apis.ui.views.AndroidHorizontalScrollView
+
+
+ <activity
+            android:name="cn.android.demo.apis.ui.views.AndroidHorizontalScrollView"
+            android:label="@string/ui_view_horizontal_scroll_view"
+            android:screenOrientation="portrait" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="cn.android.demo.apis.SAMPLE_CODE" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name="cn.android.demo.apis.ui.views.AndroidDialog"
+            android:label="@string/ui_view_dialog"
+            android:screenOrientation="portrait" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="cn.android.demo.apis.SAMPLE_CODE" />
+            </intent-filter>
+        </activity>
         <activity
             android:name="cn.android.demo.apis.ui.views.AndroidGallery"
             android:label="@string/ui_view_gallery"
@@ -1120,7 +1160,7 @@ cn.android.demo.apis.java.AndroidSetId
             <intent-filter>
                 <action android:name="android.intent.action.BATTERY_CHANGED" />
             </intent-filter>
-        </service>
+        </service>
         -->
         <receiver
             android:name="cn.android.demo.apis.app.ScheduledReceiver"
