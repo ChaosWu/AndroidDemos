@@ -41,6 +41,17 @@
         android:layout_width="fill_parent"
         android:layout_height="wrap_content" />
 
+    <TextView
+        android:id="@+id/tv_email_imagepath"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" />
+
+    <Button
+        android:id="@+id/bt_email_selectimage"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="Select image" />
+
     <Button
         android:id="@+id/bt_sendemail_intent"
         android:layout_width="fill_parent"

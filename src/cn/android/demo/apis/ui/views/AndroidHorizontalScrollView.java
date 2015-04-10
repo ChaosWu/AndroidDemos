@@ -3,6 +3,7 @@ package cn.android.demo.apis.ui.views;
 import java.io.File;
 
 import cn.android.demo.apis.R;
+import cn.android.demo.apis.ui.widget.MyHorizontalLayout;
 import android.app.Activity;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
@@ -23,6 +24,9 @@ import android.widget.LinearLayout;
  */
 public class AndroidHorizontalScrollView extends Activity {
 	LinearLayout linearLayout;
+	MyHorizontalLayout horizontalLayout;
+	MyHorizontalLayout vertical;
+
 	String path = Environment.getExternalStorageDirectory().getPath();
 
 	@Override
@@ -30,6 +34,8 @@ public class AndroidHorizontalScrollView extends Activity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.ui_view_horizontal_scroll_view);
 		linearLayout = (LinearLayout) findViewById(R.id.ll_gallery);
+		horizontalLayout = (MyHorizontalLayout) findViewById(R.id.my_widget_linearlayout);
+		vertical = (MyHorizontalLayout) findViewById(R.id.my_widget_linearlayout_vertical);
 
 		String targetPath = path + "/DCIM/";
 		File file = new File(targetPath);
@@ -38,6 +44,8 @@ public class AndroidHorizontalScrollView extends Activity {
 
 		for (File f : files) {
 			linearLayout.addView(insertPhoto(f.getAbsolutePath()));
+			horizontalLayout.add(f.getAbsolutePath());
+			vertical.add(f.getAbsolutePath());
 
 		}
 	}

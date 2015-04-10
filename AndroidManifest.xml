@@ -81,10 +81,19 @@
         </activity>
 
         <!-- ANIM -->
-cn.android.demo.apis.anim.AndroidGestureObjectAnim
+
         <activity
             android:name="cn.android.demo.apis.anim.AndroidGestureObjectAnim"
             android:label="@string/anim_object_animator_gestrue" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="cn.android.demo.apis.SAMPLE_CODE" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="cn.android.demo.apis.anim.AndroidImageViewSlidedown"
+            android:label="@string/anim_imageview_slidedown" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -151,7 +160,7 @@ cn.android.demo.apis.anim.AndroidGestureObjectAnim
             </intent-filter>
         </activity>
         <!-- ********************Net*********************** -->
-        cn.android.demo.apis.net.AndroidGoogleWeatherActivity
+        cn.android.demo.apis.net.AndroidGoogleWeatherActivity
         <activity
             android:name="cn.android.demo.apis.bug.AndroidGoogleWeatherActivity"
             android:label="@string/net_android_google_weather_dom" >
@@ -227,7 +236,7 @@ cn.android.demo.apis.anim.AndroidGestureObjectAnim
 
         <!-- ********************JAVA*********************** -->
 
-cn.android.demo.apis.java.AndroidSetId
+cn.android.demo.apis.java.AndroidSetId
         <activity
             android:name="cn.android.demo.apis.java.AndroidSetId"
             android:label="@string/java_set_view_id"
@@ -289,6 +298,18 @@ cn.android.demo.apis.java.AndroidSetId
             </intent-filter>
         </activity>
         <!-- ********************Phone*********************** -->
+cn.android.demo.apis.phone.AndroidBestCameraPreviewSize
+
+<activity
+            android:name="cn.android.demo.apis.phone.AndroidBestCameraPreviewSize"
+            android:label="@string/phone_android_best_camera_preview_size"
+            android:screenOrientation="portrait" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="cn.android.demo.apis.SAMPLE_CODE" />
+            </intent-filter>
+        </activity>
 
         <activity
             android:name="cn.android.demo.apis.ui.views.AndroidTimePicker"
@@ -571,7 +592,7 @@ cn.android.demo.apis.java.AndroidSetId
 
                 <category android:name="cn.android.demo.apis.SAMPLE_CODE" />
             </intent-filter>
-        </activity>
+        </activity>
         -->
         <activity
             android:name="cn.android.demo.apis.phone.LightSensor"
@@ -700,7 +721,7 @@ cn.android.demo.apis.java.AndroidSetId
 
         <!-- UI Fragment -->
 
-        cn.android.demo.apis.ui.fragment.AndroidExFragmentActivity
+        cn.android.demo.apis.ui.fragment.AndroidExFragmentActivity
         <activity
             android:name="cn.android.demo.apis.bug.AndroidExFragmentActivity"
             android:label="@string/ui_fragment_ex_fragment" >
@@ -804,10 +825,17 @@ cn.android.demo.apis.java.AndroidSetId
             </intent-filter>
         </activity>
         <!-- *************** **UI View** *************** -->
-cn.android.demo.apis.ui.views.AndroidHorizontalScrollView
+        <activity
+            android:name="cn.android.demo.apis.ui.views.AndroidEditText"
+            android:label="@string/ui_view_edittext"
+            android:screenOrientation="portrait" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
 
-
- <activity
+                <category android:name="cn.android.demo.apis.SAMPLE_CODE" />
+            </intent-filter>
+        </activity>
+        <activity
             android:name="cn.android.demo.apis.ui.views.AndroidHorizontalScrollView"
             android:label="@string/ui_view_horizontal_scroll_view"
             android:screenOrientation="portrait" >
@@ -817,7 +845,6 @@ cn.android.demo.apis.ui.views.AndroidHorizontalScrollView
                 <category android:name="cn.android.demo.apis.SAMPLE_CODE" />
             </intent-filter>
         </activity>
-
         <activity
             android:name="cn.android.demo.apis.ui.views.AndroidDialog"
             android:label="@string/ui_view_dialog"
@@ -909,7 +936,7 @@ cn.android.demo.apis.ui.views.AndroidHorizontalScrollView
             </intent-filter>
         </activity>
         <activity
-            android:name="cn.android.demo.apis.ui.views.AndroidCustomGridView"
+            android:name="cn.android.demo.apis.bug.AndroidCustomGridView"
             android:label="@string/ui_view_gridview"
             android:screenOrientation="portrait" >
             <intent-filter>
@@ -965,6 +992,17 @@ cn.android.demo.apis.ui.views.AndroidHorizontalScrollView
             </intent-filter>
         </activity>
         <!-- *************** **UI Graphics** *************** -->
+
+        cn.android.demo.apis.ui.graphics.AndroidShape
+        <activity
+            android:name="cn.android.demo.apis.ui.graphics.AndroidShape"
+            android:label="@string/ui_graphics_shape" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="cn.android.demo.apis.SAMPLE_CODE" />
+            </intent-filter>
+        </activity>
         <activity
             android:name="cn.android.demo.apis.ui.graphics.BitmapPixels"
             android:label="@string/ui_graphics_bitmap_pixels" >
@@ -1160,7 +1198,7 @@ cn.android.demo.apis.ui.views.AndroidHorizontalScrollView
             <intent-filter>
                 <action android:name="android.intent.action.BATTERY_CHANGED" />
             </intent-filter>
-        </service>
+        </service>
         -->
         <receiver
             android:name="cn.android.demo.apis.app.ScheduledReceiver"

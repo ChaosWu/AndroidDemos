@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:drawable="@drawable/test_state_button_pressed" android:state_pressed="true"></item>
+    <!-- 触屏意义不大，鼠标 ，摇杆，键盘 上使用 获取焦点，没有点击 -->
+    <item android:drawable="@drawable/test_state_button_focused" android:state_focused="true"></item>
+    <item android:drawable="@drawable/test_button"></item>
+
+</selector>

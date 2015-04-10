@@ -142,5 +142,9 @@
     <string name="anim_object_animator_gestrue">Anim/Gesture ObjectAnim</string>
     <string name="ui_view_dialog">UI/View/Dialog Anim</string>
     <string name="ui_view_horizontal_scroll_view">UI/View/HorizontalScrollView</string>
+    <string name="ui_graphics_shape">UI/Graphics/Shape</string>
+    <string name="anim_imageview_slidedown">Anim/ImageView Slidedown</string>
+    <string name="ui_view_edittext">UI/View/EditText TextWatcher</string>
+    <string name="phone_android_best_camera_preview_size">Phone/BestCameraPreviewSize</string>
 
 </resources>
