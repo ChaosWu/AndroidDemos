@@ -5,6 +5,7 @@ import java.net.MalformedURLException;
 import java.net.URL;
 
 import cn.android.demo.apis.R;
+import cn.android.demo.utils.BitmapUtil;
 import cn.android.demo.utils.ToastUtil;
 import android.app.Activity;
 import android.graphics.Bitmap;
@@ -134,9 +135,10 @@ public class AndroidAsyncTask extends Activity {
 	public class DowloadImageAsyncTask extends AsyncTask<URL, Void, Bitmap> {
 		Bitmap bitmap = null;
 		ImageView imageView;
-
 		public DowloadImageAsyncTask(ImageView iv) {
 			imageView = iv;
+			
+			
 		}
 
 		@Override
@@ -149,7 +151,7 @@ public class AndroidAsyncTask extends Activity {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
-			return bitmap;
+			return BitmapUtil.converColorHSVColor(bitmap);
 		}
 
 		@Override

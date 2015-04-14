@@ -8,6 +8,7 @@ import cn.android.demo.apis.R;
 import android.app.Activity;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
+import android.graphics.Color;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.os.SystemClock;
@@ -29,7 +30,6 @@ public class MultiAsyncTask extends Activity {
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-
 		setContentView(R.layout.thread_android_multi_asynctask);
 		targetImage[0] = (ImageView) findViewById(R.id.multi_async_target0);
 		targetImage[1] = (ImageView) findViewById(R.id.multi_async_target1);
