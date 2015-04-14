@@ -146,5 +146,18 @@
     <string name="anim_imageview_slidedown">Anim/ImageView Slidedown</string>
     <string name="ui_view_edittext">UI/View/EditText TextWatcher</string>
     <string name="phone_android_best_camera_preview_size">Phone/BestCameraPreviewSize</string>
+    <string name="ui_view_not_extends_listactivity">UI/View/Not Extends ListActivity</string>
+    <string name="phone_android_access_temperature_sensor">Phone/Access Temperature Sensor</string>
+    <string name="net_android_json_parse_result">Net/Json Parse Result</string>
+    <string name="ui_graphics_shader_sweep_gradient">UI/Graphics/GweepGradient</string>
+    <string name="ui_graphics_shader_linear_gradient">UI/Graphics/LinearGradient</string>
+    <string name="ui_graphics_shader_radial_gradient">UI/Graphics/RadialGradient</string>
+    <string name="ui_graphics_color_matrix_filter">UI/Graphics/ColorMatrixFilter</string>
+    <string name="ui_graphics_swap_color_using_colorfilter">UI/Graphics/Swap UseColorFilter</string>
+    <string name="thread_multi_asynctask">Thread/MultiAsyncTask</string>
+    
+    
+    <!-- 错误 -->
+    <string name="ui_fragment_test_viewpager_activity">UI/Fragment/ViewPagerActivity</string>
 
 </resources>

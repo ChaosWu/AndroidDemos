@@ -38,4 +38,15 @@
         android:layout_height="wrap_content"
         android:text="start" />
 
+    <ImageView
+        android:id="@+id/iv_dowload_async"
+        android:layout_width="200dip"
+        android:layout_height="200dip" />
+
+    <Button
+        android:id="@+id/bt_dowload_async_image"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="下载图片" />
+
 </LinearLayout>
