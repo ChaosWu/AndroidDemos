@@ -92,6 +92,15 @@
             </intent-filter>
         </activity>
         <activity
+            android:name="cn.android.demo.apis.anim.AndroidAnimMatrix"
+            android:label="@string/anim_matrix" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="cn.android.demo.apis.SAMPLE_CODE" />
+            </intent-filter>
+        </activity>
+        <activity
             android:name="cn.android.demo.apis.anim.AndroidImageViewSlidedown"
             android:label="@string/anim_imageview_slidedown" >
             <intent-filter>
@@ -147,7 +156,19 @@
                 <category android:name="cn.android.demo.apis.SAMPLE_CODE" />
             </intent-filter>
         </activity>
+        
+        
         <!-- ********************Pro*********************** -->
+        
+        <activity
+            android:name="cn.android.demo.apis.project.mediastore.ListImage"
+            android:label="@string/project_listimage" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="cn.android.demo.apis.SAMPLE_CODE" />
+            </intent-filter>
+        </activity>
         <activity android:name="cn.android.demo.apis.project.rss.ShowDetails" >
         </activity>
         <activity
@@ -245,7 +266,7 @@
 
         <!-- ********************JAVA*********************** -->
 
-cn.android.demo.apis.java.AndroidSetId
+cn.android.demo.apis.java.AndroidSetId
         <activity
             android:name="cn.android.demo.apis.java.AndroidSetId"
             android:label="@string/java_set_view_id"
@@ -608,7 +629,7 @@ cn.android.demo.apis.java.AndroidSetId
 
                 <category android:name="cn.android.demo.apis.SAMPLE_CODE" />
             </intent-filter>
-        </activity>
+        </activity>
         -->
         <activity
             android:name="cn.android.demo.apis.phone.LightSensor"
@@ -686,7 +707,7 @@ cn.android.demo.apis.java.AndroidSetId
             </intent-filter>
         </activity>
         <!-- *************** **THREAD** *************** -->
-        cn.android.demo.apis.thread.MultiAsyncTask
+        cn.android.demo.apis.thread.MultiAsyncTask
         <activity
             android:name="cn.android.demo.apis.thread.MultiAsyncTask"
             android:label="@string/thread_multi_asynctask" >
@@ -1048,6 +1069,24 @@ cn.android.demo.apis.java.AndroidSetId
             </intent-filter>
         </activity>
         <activity
+            android:name="cn.android.demo.apis.ui.graphics.GetPixelImageView"
+            android:label="@string/ui_graphics_get_pixel_image_view" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="cn.android.demo.apis.SAMPLE_CODE" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="cn.android.demo.apis.ui.graphics.ChangeHSV"
+            android:label="@string/ui_graphics_change_hsv" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="cn.android.demo.apis.SAMPLE_CODE" />
+            </intent-filter>
+        </activity>
+        <activity
             android:name="cn.android.demo.apis.ui.graphics.SwapColorUsingColorFilter"
             android:label="@string/ui_graphics_swap_color_using_colorfilter" >
             <intent-filter>
@@ -1287,7 +1326,7 @@ cn.android.demo.apis.java.AndroidSetId
             <intent-filter>
                 <action android:name="android.intent.action.BATTERY_CHANGED" />
             </intent-filter>
-        </service>
+        </service>
         -->
         <receiver
             android:name="cn.android.demo.apis.app.ScheduledReceiver"

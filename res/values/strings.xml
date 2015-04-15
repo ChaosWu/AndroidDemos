@@ -155,9 +155,13 @@
     <string name="ui_graphics_color_matrix_filter">UI/Graphics/ColorMatrixFilter</string>
     <string name="ui_graphics_swap_color_using_colorfilter">UI/Graphics/Swap UseColorFilter</string>
     <string name="thread_multi_asynctask">Thread/MultiAsyncTask</string>
+    <string name="ui_graphics_change_hsv">UI/Graphics/Change HSV</string>
+    <string name="anim_matrix">Anim/Matrix Anim</string>
+    <string name="project_listimage">Project/ListImage</string>
     
     
     <!-- 错误 -->
     <string name="ui_fragment_test_viewpager_activity">UI/Fragment/ViewPagerActivity</string>
+    <string name="ui_graphics_get_pixel_image_view">UI/Graphics/GetPixelImage</string>
 
 </resources>

@@ -9,6 +9,20 @@
         android:layout_width="fill_parent"
         android:layout_height="wrap_content" />
 
+    <SeekBar
+        android:id="@+id/sb_xbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:max="400"
+        android:progress="100" />
+
+    <SeekBar
+        android:id="@+id/sb_ybar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:max="400"
+        android:progress="100" />
+
     <TextView
         android:id="@+id/tv_rotate"
         android:layout_width="fill_parent"
@@ -62,8 +76,8 @@
 
     <ImageView
         android:id="@+id/imageview"
-        android:layout_width="fill_parent"
-        android:layout_height="fill_parent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
         android:layout_gravity="center"
         android:scaleType="center" />
 

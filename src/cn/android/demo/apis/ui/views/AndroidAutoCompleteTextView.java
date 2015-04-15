@@ -46,8 +46,7 @@ public class AndroidAutoCompleteTextView extends Activity implements
 
 		multiAutoCompleteTextView = (MultiAutoCompleteTextView) findViewById(R.id.android_view_mact);
 		multiAutoCompleteTextView.setAdapter(adapter);
-		multiAutoCompleteTextView
-				.setTokenizer(new MultiAutoCompleteTextView.CommaTokenizer());
+		multiAutoCompleteTextView.setTokenizer(new MultiAutoCompleteTextView.CommaTokenizer());
 
 	}
 

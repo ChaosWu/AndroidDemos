@@ -34,9 +34,9 @@ public class BitmapUtil {
 
 		float[] pixelHSV = new float[3];
 		/*
-		 * pixelHSV[0] : Hue (0 .. 360)
+		 * pixelHSV[0] : Hue (0 .. 360)色调
 		 * 
-		 * pixelHSV[1] : Saturation (0...1)
+		 * pixelHSV[1] : Saturation (0...1) 饱和
 		 * 
 		 * pixelHSV[2] : Value (0...1)
 		 */
