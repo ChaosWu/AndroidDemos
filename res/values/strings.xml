@@ -158,10 +158,12 @@
     <string name="ui_graphics_change_hsv">UI/Graphics/Change HSV</string>
     <string name="anim_matrix">Anim/Matrix Anim</string>
     <string name="project_listimage">Project/ListImage</string>
-    
-    
+
     <!-- 错误 -->
     <string name="ui_fragment_test_viewpager_activity">UI/Fragment/ViewPagerActivity</string>
     <string name="ui_graphics_get_pixel_image_view">UI/Graphics/GetPixelImage</string>
+    <string name="ui_view_multi_choice_listview">UI/View/MultiChoiceListView</string>
+    <string name="phone_android_get_phone_number_from_contactsdb">Phone/GetPhoneNumber</string>
+    <string name="db_android_query_contacts">DB/Query Contacts</string>
 
 </resources>

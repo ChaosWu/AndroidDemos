@@ -39,6 +39,8 @@
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
     <!-- 震动 -->
     <uses-permission android:name="android.permission.VIBRATE" />
+    <!-- 获取联系人 -->
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
 
     <uses-sdk
         android:minSdkVersion="8"
@@ -148,6 +150,15 @@
 
         <!-- ********************DB*********************** -->
         <activity
+            android:name="cn.android.demo.apis.db.QueryContactsDB"
+            android:label="@string/db_android_query_contacts" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="cn.android.demo.apis.SAMPLE_CODE" />
+            </intent-filter>
+        </activity>
+        <activity
             android:name="cn.android.demo.apis.db.AndroidSQLite"
             android:label="@string/db_android_sqlite" >
             <intent-filter>
@@ -156,10 +167,9 @@
                 <category android:name="cn.android.demo.apis.SAMPLE_CODE" />
             </intent-filter>
         </activity>
-        
-        
+
         <!-- ********************Pro*********************** -->
-        
+
         <activity
             android:name="cn.android.demo.apis.project.mediastore.ListImage"
             android:label="@string/project_listimage" >
@@ -266,7 +276,7 @@
 
         <!-- ********************JAVA*********************** -->
 
-cn.android.demo.apis.java.AndroidSetId
+cn.android.demo.apis.java.AndroidSetId
         <activity
             android:name="cn.android.demo.apis.java.AndroidSetId"
             android:label="@string/java_set_view_id"
@@ -331,6 +341,16 @@ cn.android.demo.apis.java.AndroidSetId
         <activity
             android:name="cn.android.demo.apis.phone.AccessTemperatureSensor"
             android:label="@string/phone_android_access_temperature_sensor"
+            android:screenOrientation="portrait" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="cn.android.demo.apis.SAMPLE_CODE" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="cn.android.demo.apis.phone.GetPhoneNumberFromContactsDB"
+            android:label="@string/phone_android_get_phone_number_from_contactsdb"
             android:screenOrientation="portrait" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -629,7 +649,7 @@ cn.android.demo.apis.java.AndroidSetId
 
                 <category android:name="cn.android.demo.apis.SAMPLE_CODE" />
             </intent-filter>
-        </activity>
+        </activity>
         -->
         <activity
             android:name="cn.android.demo.apis.phone.LightSensor"
@@ -707,7 +727,7 @@ cn.android.demo.apis.java.AndroidSetId
             </intent-filter>
         </activity>
         <!-- *************** **THREAD** *************** -->
-        cn.android.demo.apis.thread.MultiAsyncTask
+        cn.android.demo.apis.thread.MultiAsyncTask
         <activity
             android:name="cn.android.demo.apis.thread.MultiAsyncTask"
             android:label="@string/thread_multi_asynctask" >
@@ -880,10 +900,19 @@ cn.android.demo.apis.java.AndroidSetId
             </intent-filter>
         </activity>
         <!-- *************** **UI View** *************** -->
-
         <activity
             android:name="cn.android.demo.apis.ui.views.AndroidListNotExtendsListActivity"
             android:label="@string/ui_view_not_extends_listactivity"
+            android:screenOrientation="portrait" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="cn.android.demo.apis.SAMPLE_CODE" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="cn.android.demo.apis.ui.views.MultiChoiceListView"
+            android:label="@string/ui_view_multi_choice_listview"
             android:screenOrientation="portrait" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -1326,7 +1355,7 @@ cn.android.demo.apis.java.AndroidSetId
             <intent-filter>
                 <action android:name="android.intent.action.BATTERY_CHANGED" />
             </intent-filter>
-        </service>
+        </service>
         -->
         <receiver
             android:name="cn.android.demo.apis.app.ScheduledReceiver"

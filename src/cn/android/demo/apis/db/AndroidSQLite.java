@@ -35,7 +35,8 @@ public class AndroidSQLite extends Activity {
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
-		super.onCreate(savedInstanceState);
+		super.
+		onCreate(savedInstanceState);
 		setContentView(R.layout.db_android_sqlite);
 		// tv = (TextView) findViewById(R.id.tv_contentlist);
 		listView = (ListView) findViewById(R.id.lv_contentlist);
