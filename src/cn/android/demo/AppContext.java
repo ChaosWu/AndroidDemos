@@ -4,7 +4,8 @@ import android.app.Application;
 
 /**
  * Created by Elroy on 2014/11/7.
- */
+ */ 
+//
 public class AppContext extends Application {
 	 
 	private static AppContext context;
