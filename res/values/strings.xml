@@ -165,5 +165,7 @@
     <string name="ui_view_multi_choice_listview">UI/View/MultiChoiceListView</string>
     <string name="phone_android_get_phone_number_from_contactsdb">Phone/GetPhoneNumber</string>
     <string name="db_android_query_contacts">DB/Query Contacts</string>
+    <string name="db_android_query_contacts2">DB/Query Contacts2</string>
+    <string name="other_open_other_app">Other/Open Other APP</string>
 
 </resources>

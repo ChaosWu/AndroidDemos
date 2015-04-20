@@ -63,9 +63,19 @@
             </intent-filter>
         </activity>
         <!-- OTHER -->
-        <activity
+        
+         <activity
             android:name="cn.android.demo.apis.other.GetLocation"
             android:label="@string/other_get_location" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="cn.android.demo.apis.SAMPLE_CODE" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="cn.android.demo.apis.other.OpenOtherApp"
+            android:label="@string/other_open_other_app" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -158,6 +168,19 @@
                 <category android:name="cn.android.demo.apis.SAMPLE_CODE" />
             </intent-filter>
         </activity>
+        
+        
+        <activity
+            android:name="cn.android.demo.apis.db.QueryContactsDB2"
+            android:label="@string/db_android_query_contacts2" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="cn.android.demo.apis.SAMPLE_CODE" />
+            </intent-filter>
+        </activity>
+        
+        
         <activity
             android:name="cn.android.demo.apis.db.AndroidSQLite"
             android:label="@string/db_android_sqlite" >
