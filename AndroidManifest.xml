@@ -63,8 +63,8 @@
             </intent-filter>
         </activity>
         <!-- OTHER -->
-        
-         <activity
+
+        <activity
             android:name="cn.android.demo.apis.other.GetLocation"
             android:label="@string/other_get_location" >
             <intent-filter>
@@ -168,8 +168,6 @@
                 <category android:name="cn.android.demo.apis.SAMPLE_CODE" />
             </intent-filter>
         </activity>
-        
-        
         <activity
             android:name="cn.android.demo.apis.db.QueryContactsDB2"
             android:label="@string/db_android_query_contacts2" >
@@ -179,8 +177,6 @@
                 <category android:name="cn.android.demo.apis.SAMPLE_CODE" />
             </intent-filter>
         </activity>
-        
-        
         <activity
             android:name="cn.android.demo.apis.db.AndroidSQLite"
             android:label="@string/db_android_sqlite" >
@@ -298,11 +294,21 @@
         </activity>
 
         <!-- ********************JAVA*********************** -->
-
-cn.android.demo.apis.java.AndroidSetId
+cn.android.demo.apis.java.GetRuntime
         <activity
             android:name="cn.android.demo.apis.java.AndroidSetId"
             android:label="@string/java_set_view_id"
+            android:screenOrientation="portrait" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="cn.android.demo.apis.SAMPLE_CODE" />
+            </intent-filter>
+        </activity>
+        
+        <activity
+            android:name="cn.android.demo.apis.java.GetRuntimeMemory"
+            android:label="@string/java_get_runtime_memory"
             android:screenOrientation="portrait" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -672,7 +678,7 @@ cn.android.demo.apis.java.AndroidSetId
 
                 <category android:name="cn.android.demo.apis.SAMPLE_CODE" />
             </intent-filter>
-        </activity>
+        </activity>
         -->
         <activity
             android:name="cn.android.demo.apis.phone.LightSensor"
@@ -750,7 +756,7 @@ cn.android.demo.apis.java.AndroidSetId
             </intent-filter>
         </activity>
         <!-- *************** **THREAD** *************** -->
-        cn.android.demo.apis.thread.MultiAsyncTask
+        cn.android.demo.apis.thread.MultiAsyncTask
         <activity
             android:name="cn.android.demo.apis.thread.MultiAsyncTask"
             android:label="@string/thread_multi_asynctask" >
@@ -923,9 +929,21 @@ cn.android.demo.apis.java.AndroidSetId
             </intent-filter>
         </activity>
         <!-- *************** **UI View** *************** -->
+
+        cn.android.demo.apis.ui.views.AndroidGradioGroup
         <activity
             android:name="cn.android.demo.apis.ui.views.AndroidListNotExtendsListActivity"
             android:label="@string/ui_view_not_extends_listactivity"
+            android:screenOrientation="portrait" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="cn.android.demo.apis.SAMPLE_CODE" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="cn.android.demo.apis.ui.views.AndroidRadioGroup"
+            android:label="@string/ui_view_android_radio_group"
             android:screenOrientation="portrait" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -1246,6 +1264,28 @@ cn.android.demo.apis.java.AndroidSetId
         <activity android:name="cn.android.demo.apis.app.SetPreference" >
         </activity>
         <activity
+            android:name="cn.android.demo.apis.app.AndroidPackageManager"
+            android:label="@string/app_android_package_manager_info"
+            android:theme="@android:style/Theme.DeviceDefault.Light.DarkActionBar"
+            tools:ignore="NewApi" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="cn.android.demo.apis.SAMPLE_CODE" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="cn.android.demo.apis.app.GetLastLocation"
+            android:label="@string/app_android_get_last_location"
+            android:theme="@android:style/Theme.DeviceDefault.Light.DarkActionBar"
+            tools:ignore="NewApi" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="cn.android.demo.apis.SAMPLE_CODE" />
+            </intent-filter>
+        </activity>
+        <activity
             android:name="cn.android.demo.apis.app.AndroidActionBar"
             android:label="@string/app_android_actionbar"
             android:theme="@android:style/Theme.DeviceDefault.Light.DarkActionBar"
@@ -1378,7 +1418,7 @@ cn.android.demo.apis.java.AndroidSetId
             <intent-filter>
                 <action android:name="android.intent.action.BATTERY_CHANGED" />
             </intent-filter>
-        </service>
+        </service>
         -->
         <receiver
             android:name="cn.android.demo.apis.app.ScheduledReceiver"

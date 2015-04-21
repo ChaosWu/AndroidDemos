@@ -167,5 +167,9 @@
     <string name="db_android_query_contacts">DB/Query Contacts</string>
     <string name="db_android_query_contacts2">DB/Query Contacts2</string>
     <string name="other_open_other_app">Other/Open Other APP</string>
+    <string name="app_android_package_manager_info">App/PackageManager Info</string>
+    <string name="app_android_get_last_location">App/Get Last Location</string>
+    <string name="ui_view_android_radio_group">UI/View/RadioGroup</string>
+    <string name="java_get_runtime_memory">Java/GetRuntime Memory</string>
 
 </resources>
