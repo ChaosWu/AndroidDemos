@@ -304,7 +304,6 @@
                 <category android:name="cn.android.demo.apis.SAMPLE_CODE" />
             </intent-filter>
         </activity>
-
         <activity
             android:name="cn.android.demo.apis.java.JavaIterable"
             android:label="@string/java_iterable_demo"
@@ -687,7 +686,7 @@
 
                 <category android:name="cn.android.demo.apis.SAMPLE_CODE" />
             </intent-filter>
-        </activity>
+        </activity>
         -->
         <activity
             android:name="cn.android.demo.apis.phone.LightSensor"
@@ -765,7 +764,7 @@
             </intent-filter>
         </activity>
         <!-- *************** **THREAD** *************** -->
-        cn.android.demo.apis.thread.MultiAsyncTask
+
         <activity
             android:name="cn.android.demo.apis.thread.MultiAsyncTask"
             android:label="@string/thread_multi_asynctask" >
@@ -939,7 +938,7 @@
         </activity>
         <!-- *************** **UI View** *************** -->
 
-        cn.android.demo.apis.ui.views.AndroidGradioGroup
+        cn.android.demo.apis.ui.views.AndroidGradioGroup
         <activity
             android:name="cn.android.demo.apis.ui.views.AndroidListNotExtendsListActivity"
             android:label="@string/ui_view_not_extends_listactivity"
@@ -1272,6 +1271,29 @@
         </activity>
         <activity android:name="cn.android.demo.apis.app.SetPreference" >
         </activity>
+        
+        <activity
+            android:name="cn.android.demo.apis.app.AndroidIntentService"
+            android:label="@string/app_android_intent_service"
+            android:theme="@android:style/Theme.DeviceDefault.Light.DarkActionBar"
+            tools:ignore="NewApi" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="cn.android.demo.apis.SAMPLE_CODE" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="cn.android.demo.apis.app.AndroidParcelable"
+            android:label="@string/app_android_parcelable"
+            android:theme="@android:style/Theme.DeviceDefault.Light.DarkActionBar"
+            tools:ignore="NewApi" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="cn.android.demo.apis.SAMPLE_CODE" />
+            </intent-filter>
+        </activity>
         <activity
             android:name="cn.android.demo.apis.app.AndroidPackageManager"
             android:label="@string/app_android_package_manager_info"
@@ -1427,7 +1449,7 @@
             <intent-filter>
                 <action android:name="android.intent.action.BATTERY_CHANGED" />
             </intent-filter>
-        </service>
+        </service>
         -->
         <receiver
             android:name="cn.android.demo.apis.app.ScheduledReceiver"
@@ -1457,6 +1479,10 @@
             android:name="cn.android.demo.apis.app.AlarmReceiver"
             android:process=":remote" >
         </receiver>
+        
+        <!-- 注册服务IntentService -->
+        <service android:name="cn.android.demo.apis.app.MyIntentService" >
+        </service>
     </application>
 
 </manifest>

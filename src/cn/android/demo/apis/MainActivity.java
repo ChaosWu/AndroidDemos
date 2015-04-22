@@ -20,12 +20,9 @@ import android.content.pm.PackageManager.NameNotFoundException;
 import android.content.pm.ResolveInfo;
 import android.graphics.Color;
 import android.os.Bundle;
-import android.os.PowerManager;
-import android.os.PowerManager.WakeLock;
 import android.provider.Settings;
 import android.util.Log;
 import android.view.View;
-import android.view.Window;
 import android.widget.ListView;
 import android.widget.SimpleAdapter;
 
@@ -86,15 +83,22 @@ public class MainActivity extends ListActivity {
 
 	}
 
-	// TODO 获取数据
+	// ****************************************************
+	// TODO 横竖屏切换 == 获取数据
 	// final MyData data=(MyData)getLastNonConfigurationInstance();
 
-	// TODO 保存数据
+	// TODO 横竖屏切换 ==保存数据
 	// @Override
 	// public Object onRetainNonConfigurationInstance() {
 	// MyData data=数据;
 	// return data;
 	// }
+
+	// Fragment 用 setRetainInstance 代替
+	// onActivityCreated 判断是否存在数据
+	// onCreate() 加上 setRetainInstance(true)，故而可以在横竖屏切换时不被重新创建和重复执行异步任务
+
+	// ****************************************************
 
 	// TODO
 	// private void wakeLock() {
