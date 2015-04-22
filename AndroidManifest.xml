@@ -294,7 +294,6 @@
         </activity>
 
         <!-- ********************JAVA*********************** -->
-cn.android.demo.apis.java.GetRuntime
         <activity
             android:name="cn.android.demo.apis.java.AndroidSetId"
             android:label="@string/java_set_view_id"
@@ -305,7 +304,17 @@ cn.android.demo.apis.java.GetRuntime
                 <category android:name="cn.android.demo.apis.SAMPLE_CODE" />
             </intent-filter>
         </activity>
-        
+
+        <activity
+            android:name="cn.android.demo.apis.java.JavaIterable"
+            android:label="@string/java_iterable_demo"
+            android:screenOrientation="portrait" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="cn.android.demo.apis.SAMPLE_CODE" />
+            </intent-filter>
+        </activity>
         <activity
             android:name="cn.android.demo.apis.java.GetRuntimeMemory"
             android:label="@string/java_get_runtime_memory"
@@ -678,7 +687,7 @@ cn.android.demo.apis.java.GetRuntime
 
                 <category android:name="cn.android.demo.apis.SAMPLE_CODE" />
             </intent-filter>
-        </activity>
+        </activity>
         -->
         <activity
             android:name="cn.android.demo.apis.phone.LightSensor"
@@ -756,7 +765,7 @@ cn.android.demo.apis.java.GetRuntime
             </intent-filter>
         </activity>
         <!-- *************** **THREAD** *************** -->
-        cn.android.demo.apis.thread.MultiAsyncTask
+        cn.android.demo.apis.thread.MultiAsyncTask
         <activity
             android:name="cn.android.demo.apis.thread.MultiAsyncTask"
             android:label="@string/thread_multi_asynctask" >
@@ -930,7 +939,7 @@ cn.android.demo.apis.java.GetRuntime
         </activity>
         <!-- *************** **UI View** *************** -->
 
-        cn.android.demo.apis.ui.views.AndroidGradioGroup
+        cn.android.demo.apis.ui.views.AndroidGradioGroup
         <activity
             android:name="cn.android.demo.apis.ui.views.AndroidListNotExtendsListActivity"
             android:label="@string/ui_view_not_extends_listactivity"
@@ -1418,7 +1427,7 @@ cn.android.demo.apis.java.GetRuntime
             <intent-filter>
                 <action android:name="android.intent.action.BATTERY_CHANGED" />
             </intent-filter>
-        </service>
+        </service>
         -->
         <receiver
             android:name="cn.android.demo.apis.app.ScheduledReceiver"

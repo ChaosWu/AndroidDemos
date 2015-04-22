@@ -53,16 +53,16 @@ public class MainActivity extends ListActivity {
 						+ Settings.Secure.getString(getContentResolver(),
 								Settings.Secure.ANDROID_ID));
 		Log.v("DDD", new String(EncodingUtils.getAsciiBytes("A")));
-		
-		int memClass= ((ActivityManager)getSystemService(Context.ACTIVITY_SERVICE)).getMemoryClass();
-		Log.v("DDD", "memClass:"+memClass);
+
+		int memClass = ((ActivityManager) getSystemService(Context.ACTIVITY_SERVICE))
+				.getMemoryClass();
+		Log.v("DDD", "memClass:" + memClass);
 		Intent intent = getIntent();
 		String path = intent.getStringExtra(Config.PATH);
 
 		if (path == null) {
 			path = "";
 		}
-
 
 		setListAdapter(new SimpleAdapter(this, getData(path),
 				android.R.layout.simple_list_item_1, new String[] { "title" },
@@ -85,6 +85,16 @@ public class MainActivity extends ListActivity {
 		Log.v("DDD", "onRestoreInstanceState");
 
 	}
+
+	// TODO 获取数据
+	// final MyData data=(MyData)getLastNonConfigurationInstance();
+
+	// TODO 保存数据
+	// @Override
+	// public Object onRetainNonConfigurationInstance() {
+	// MyData data=数据;
+	// return data;
+	// }
 
 	// TODO
 	// private void wakeLock() {
@@ -113,8 +123,9 @@ public class MainActivity extends ListActivity {
 					+ "Version Code:" + String.valueOf(info.versionCode);
 
 			Log.v("DDD", "******" + strVersion);
-			//操作系统的名称：操作系统的版本
-			Log.v("DDD", "******" + System.getProperty("os.name")+":"+System.getProperty("os.version"));
+			// 操作系统的名称：操作系统的版本
+			Log.v("DDD", "******" + System.getProperty("os.name") + ":"
+					+ System.getProperty("os.version"));
 
 		} catch (NameNotFoundException e) {
 			// TODO Auto-generated catch block

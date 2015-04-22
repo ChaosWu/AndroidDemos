@@ -171,5 +171,6 @@
     <string name="app_android_get_last_location">App/Get Last Location</string>
     <string name="ui_view_android_radio_group">UI/View/RadioGroup</string>
     <string name="java_get_runtime_memory">Java/GetRuntime Memory</string>
+    <string name="java_iterable_demo">Java/Iterable</string>
 
 </resources>
