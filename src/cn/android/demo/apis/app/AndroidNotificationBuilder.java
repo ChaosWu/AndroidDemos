@@ -33,7 +33,8 @@ public class AndroidNotificationBuilder extends Activity {
 	Button bt1;
 
 	Context context;
-	Intent intent;
+	Intent intent1;
+	Intent intent2;
 	PendingIntent pendingIntent;
 
 	@Override
@@ -43,11 +44,8 @@ public class AndroidNotificationBuilder extends Activity {
 		notificationManager = (NotificationManager) getSystemService(Context.NOTIFICATION_SERVICE);
 
 		context = getApplicationContext();
-		intent = new Intent(Intent.ACTION_VIEW, Uri.parse(blog));
-
-		pendingIntent = PendingIntent.getActivity(
-				AndroidNotificationBuilder.this, 0, intent,
-				Intent.FLAG_ACTIVITY_NEW_TASK);
+		intent1 = new Intent(Intent.ACTION_VIEW, Uri.parse(blog));
+		intent2 = new Intent(Intent.ACTION_VIEW, Uri.parse("http://android-er.blogspot.com/"));
 
 		setContentView(R.layout.app_android_notification_builder);
 		bt = (Button) findViewById(R.id.bt_notification_builder_send);
@@ -56,6 +54,12 @@ public class AndroidNotificationBuilder extends Activity {
 			@SuppressLint("NewApi")
 			@Override
 			public void onClick(View v) {
+				
+				pendingIntent = PendingIntent.getActivity(
+						AndroidNotificationBuilder.this, 0, intent1,
+						Intent.FLAG_ACTIVITY_NEW_TASK);
+
+				
 				// min sdk 16
 				notification = new Notification.Builder(context)
 						.setContentTitle("Exercise of Notification")
@@ -75,6 +79,10 @@ public class AndroidNotificationBuilder extends Activity {
 
 			@Override
 			public void onClick(View v) {
+				pendingIntent = PendingIntent.getActivity(
+						AndroidNotificationBuilder.this, 0, intent2,
+						Intent.FLAG_ACTIVITY_NEW_TASK);
+
 				// min sdk 4
 				notification = new NotificationCompat.Builder(context)
 						.setContentTitle("Exercise of Notification!")

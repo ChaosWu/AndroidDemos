@@ -11,9 +11,17 @@
     tools:context=".MainActivity" >
 
     <TextView
-        android:text="。。。"
         android:id="@+id/tv_intent_service_result"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:text="。。。" />
+
+    <ProgressBar
+        android:id="@+id/pb_intent_service"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:max="10"
+        android:progress="0" />
 
 </LinearLayout>

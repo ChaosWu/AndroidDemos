@@ -1,7 +1,6 @@
 package cn.android.demo.apis.app;
 
 import cn.android.demo.apis.R;
-import cn.android.demo.apis.app.AndroidIntentService.MyBroadcastReceiver;
 import android.app.Activity;
 import android.content.BroadcastReceiver;
 import android.content.Context;
