@@ -172,7 +172,8 @@
     <string name="ui_view_android_radio_group">UI/View/RadioGroup</string>
     <string name="java_get_runtime_memory">Java/GetRuntime Memory</string>
     <string name="java_iterable_demo">Java/Iterable</string>
-    <string name="app_android_intent_service">App/IntentService</string>
+    <string name="app_android_intent_service">App/IntentService</string>    <string name="app_android_notification_builder">App/NotificationBuilder</string>
+
     <string name="app_android_parcelable">App/Parcelable</string>
     
     <string name="my_qq_blog_address">http://287754511.qzone.qq.com</string>

@@ -1283,6 +1283,18 @@
                 <category android:name="cn.android.demo.apis.SAMPLE_CODE" />
             </intent-filter>
         </activity>
+        
+        <activity
+            android:name="cn.android.demo.apis.app.AndroidNotificationBuilder"
+            android:label="@string/app_android_notification_builder"
+            android:theme="@android:style/Theme.DeviceDefault.Light.DarkActionBar"
+            tools:ignore="NewApi" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="cn.android.demo.apis.SAMPLE_CODE" />
+            </intent-filter>
+        </activity>
         <activity
             android:name="cn.android.demo.apis.app.AndroidParcelable"
             android:label="@string/app_android_parcelable"
