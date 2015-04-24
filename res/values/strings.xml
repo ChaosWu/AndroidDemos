@@ -177,5 +177,8 @@
     <string name="app_android_parcelable">App/Parcelable</string>
     <string name="my_qq_blog_address">http://287754511.qzone.qq.com</string>
     <string name="ui_widget_stars_view">UI/Widget/StarsView</string>
+    <string name="phone_android_search_address_by_name_with_geocoder">Phone/SearchAddressGeocoder</string>
+    <string name="ui_fragment_listfragment_test">UI/Fragment/ListFragmentTest</string>
+    <string name="ui_fragment_v4_fragmentactivity">UI/Fragment/V4FragmentActivity</string>
 
 </resources>

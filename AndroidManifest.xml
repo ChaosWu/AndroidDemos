@@ -386,6 +386,16 @@
             </intent-filter>
         </activity>
         <activity
+            android:name="cn.android.demo.apis.phone.SearchAddressByNameWithGeocoder"
+            android:label="@string/phone_android_search_address_by_name_with_geocoder"
+            android:screenOrientation="portrait" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="cn.android.demo.apis.SAMPLE_CODE" />
+            </intent-filter>
+        </activity>
+        <activity
             android:name="cn.android.demo.apis.phone.GetPhoneNumberFromContactsDB"
             android:label="@string/phone_android_get_phone_number_from_contactsdb"
             android:screenOrientation="portrait" >
@@ -824,7 +834,9 @@
         </activity>
 
         <!-- UI Fragment -->
-
+        
+        
+        
         <activity
             android:name="cn.android.demo.apis.ui.fragment.AndroidViewPagerActivity"
             android:label="@string/ui_fragment_test_viewpager_activity" >
@@ -834,6 +846,26 @@
                 <category android:name="cn.android.demo.apis.SAMPLE_CODE" />
             </intent-filter>
         </activity>
+        
+        <activity
+            android:name="cn.android.demo.apis.ui.fragment.AndroidV4FragmentActivity"
+            android:label="@string/ui_fragment_v4_fragmentactivity" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="cn.android.demo.apis.SAMPLE_CODE" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="cn.android.demo.apis.ui.fragment.ListFragmentActivity"
+            android:label="@string/ui_fragment_listfragment_test" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="cn.android.demo.apis.SAMPLE_CODE" />
+            </intent-filter>
+        </activity>
+        
         <activity
             android:name="cn.android.demo.apis.bug.AndroidExFragmentActivity"
             android:label="@string/ui_fragment_ex_fragment" >

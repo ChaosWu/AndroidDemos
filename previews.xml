@@ -3,7 +3,6 @@
 
     <preview
         name="Config1"
-        activity="cn.android.demo.apis.ui.views.AndroidTimePicker"
         config="layout-ldltr-sw320dp-w320dp-h533dp-normal-long-port-notnight-hdpi-finger-keyssoft-nokeys-navexposed-trackball-800x480-v21"
         device="3.7&quot; WVGA (Nexus One)"
         devicestate="Portrait"
@@ -12,7 +11,6 @@
     </preview>
     <preview
         name="Config2"
-        activity="cn.android.demo.apis.ui.views.AndroidTimePicker"
         config="layout-ldltr-sw320dp-w320dp-h533dp-normal-long-port-notnight-hdpi-finger-keyssoft-nokeys-navexposed-trackball-800x480-v21"
         device="3.7&quot; WVGA (Nexus One)"
         devicestate="Portrait"

@@ -286,6 +286,12 @@ public class MainActivity extends ListActivity {
 				.getItemAtPosition(position);
 		Intent intent = (Intent) map.get("intent");
 		startActivity(intent);
+
+		// TODO Activity 直接切换动画
+		overridePendingTransition(R.anim.flip_in, R.anim.flip_out);
+
+		// Fragment切换动画
+		// fragmentTransaction.setCustomAnimations(R.anim.flip_in, R.anim.flip_out)
 	}
 
 }

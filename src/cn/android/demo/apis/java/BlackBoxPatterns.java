@@ -3,7 +3,9 @@ package cn.android.demo.apis.java;
 import cn.android.demo.apis.R;
 import android.app.Activity;
 import android.os.Bundle;
+import android.util.Log;
 import android.widget.TextView;
+import android.widget.Toast;
 
 /**
  * 黑箱简单设计模式
@@ -81,5 +83,6 @@ public class BlackBoxPatterns extends Activity {
 		}
 
 	}
+	
 
 }
