@@ -8,6 +8,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
+import android.widget.ImageView;
 import android.widget.Spinner;
 import android.widget.TextView;
 
@@ -27,11 +28,10 @@ public class StringSpinner extends Activity {
 		ArrayAdapter<String> adapter = new ArrayAdapter<String>(this,
 				R.layout.simple_spinner_dropdown_item, R.id.weekofday,
 				dayofWeek);
-		
+
 		MyCustomAdapter adapter2 = new MyCustomAdapter(this,
 				R.layout.simple_spinner_dropdown_item, dayofWeek);
 		spinner.setAdapter(adapter2);
-
 
 	}
 
@@ -74,6 +74,19 @@ public class StringSpinner extends Activity {
 			// } else {
 			// icon.setImageResource(R.drawable.icongray);
 			// }
+//			ImageView icon = (ImageView) row.findViewById(R.id.icon);
+//			if (dayofWeek[position] == "星期一") {
+//				icon.setImageResource(R.drawable.android_icon);
+//			}
+//			if (dayofWeek[position] == "星期") {
+//				icon.setImageResource(R.drawable.android_icon);
+//			}
+//			if (dayofWeek[position] == "星期一") {
+//				icon.setImageResource(R.drawable.android_icon);
+//			}
+//			if (dayofWeek[position] == "星期一") {
+//				icon.setImageResource(R.drawable.android_icon);
+//			}
 
 			return row;
 		}

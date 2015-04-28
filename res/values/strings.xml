@@ -180,5 +180,8 @@
     <string name="phone_android_search_address_by_name_with_geocoder">Phone/SearchAddressGeocoder</string>
     <string name="ui_fragment_listfragment_test">UI/Fragment/ListFragmentTest</string>
     <string name="ui_fragment_v4_fragmentactivity">UI/Fragment/V4FragmentActivity</string>
+    <string name="other_add_remove_view">Other/AddRemoveView</string>
+    <string name="ui_view_android_date_picker">UI/View/DatePicker</string>
+    <string name="phone_android_select_image_uri">Phone/SelectImageUri</string>
 
 </resources>

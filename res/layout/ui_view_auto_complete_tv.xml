@@ -4,6 +4,25 @@
     android:layout_height="match_parent"
     android:orientation="vertical" >
 
+    
+     <!--android:ellipsize=marquee跑马灯显示
+    	跑马灯必须获取焦点   android:focusable=true -->
+
+    <TextView
+        android:id="@+id/shadowtext"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ellipsize="marquee"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:marqueeRepeatLimit="marquee_forever"
+        android:scrollHorizontally="true"
+        android:singleLine="true"
+        android:text="ElroyWu Android demo ，跑马灯效果演示"
+        android:textColor="#0000ff"
+        android:textSize="50sp"
+        android:textStyle="bold" />
+    
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

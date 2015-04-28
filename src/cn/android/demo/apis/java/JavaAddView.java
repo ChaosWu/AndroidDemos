@@ -1,6 +1,7 @@
 package cn.android.demo.apis.java;
 
 import cn.android.demo.apis.R;
+import android.annotation.SuppressLint;
 import android.annotation.TargetApi;
 import android.app.Activity;
 import android.content.Context;
@@ -27,6 +28,7 @@ import android.widget.TextView;
  * @author Elroy
  * 
  */
+@SuppressLint("NewApi")
 public class JavaAddView extends Activity {
 	LinearLayout layout;
 
@@ -41,6 +43,7 @@ public class JavaAddView extends Activity {
 		TextView textView = new TextView(this);
 		textView.setText("这是java代码添加的阴影");
 
+		
 		LayoutParams layoutParams = new LayoutParams(LayoutParams.WRAP_CONTENT,
 				LayoutParams.WRAP_CONTENT);
 
@@ -52,6 +55,9 @@ public class JavaAddView extends Activity {
 		layout.addView(imageView);
 		layout.addView(textView);
 		layout.addView(myView);
+
+//		textView1.setRotation(90);
+
 	}
 
 	private class MyView extends View {

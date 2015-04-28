@@ -8,6 +8,7 @@ import android.view.View.OnClickListener;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.Button;
+import android.widget.TextView;
 
 /**
  * TASR: translate alpha scale rotate
@@ -30,10 +31,21 @@ public class AndroidAnimButtonTASR extends Activity {
 		final Animation animRotate = AnimationUtils.loadAnimation(this,
 				R.anim.anim_rotate);
 
+		final Animation scaleXY = AnimationUtils.loadAnimation(this, R.anim.scale_xy);
+
 		Button btT = (Button) findViewById(R.id.bt_translate);
 		Button btA = (Button) findViewById(R.id.bt_alpha);
 		Button btS = (Button) findViewById(R.id.bt_scale);
 		Button btR = (Button) findViewById(R.id.bt_rotate);
+
+		final TextView tvScaleXy = (TextView) findViewById(R.id.tv_anim_scale_xy);
+		tvScaleXy.setOnClickListener(new OnClickListener() {
+
+			@Override
+			public void onClick(View v) {
+				tvScaleXy.startAnimation(scaleXY);
+			}
+		});
 
 		btT.setOnClickListener(new OnClickListener() {
 

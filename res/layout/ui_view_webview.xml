@@ -9,10 +9,15 @@
         android:layout_height="wrap_content"
         android:text="hi，Html open App" />
 
+    <Button
+        android:id="@+id/bt_load_with_over_view_mode"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="LoadWithOverViewMOde" />
+
     <WebView
         android:id="@+id/wv_open_app"
         android:layout_width="match_parent"
         android:layout_height="match_parent" />
-
 
 </LinearLayout>
