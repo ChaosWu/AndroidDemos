@@ -74,6 +74,15 @@
             </intent-filter>
         </activity>
         <activity
+            android:name="cn.android.demo.apis.other.UsbDevices"
+            android:label="@string/other_usb_devices" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="cn.android.demo.apis.SAMPLE_CODE" />
+            </intent-filter>
+        </activity>
+        <activity
             android:name="cn.android.demo.apis.other.GetLocation"
             android:label="@string/other_get_location" >
             <intent-filter>
@@ -314,6 +323,16 @@
             </intent-filter>
         </activity>
         <activity
+            android:name="cn.android.demo.apis.java.JavaCallBack"
+            android:label="@string/java_call_back"
+            android:screenOrientation="portrait" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="cn.android.demo.apis.SAMPLE_CODE" />
+            </intent-filter>
+        </activity>
+        <activity
             android:name="cn.android.demo.apis.java.JavaIterable"
             android:label="@string/java_iterable_demo"
             android:screenOrientation="portrait" >
@@ -385,10 +404,19 @@
         </activity>
         <!-- ********************Phone*********************** -->
 
-        cn.android.demo.apis.phone.SelectImageUri
         <activity
             android:name="cn.android.demo.apis.phone.AccessTemperatureSensor"
             android:label="@string/phone_android_access_temperature_sensor"
+            android:screenOrientation="portrait" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="cn.android.demo.apis.SAMPLE_CODE" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="cn.android.demo.apis.phone.AndroidGetLocaleLocales"
+            android:label="@string/phone_android_get_locale_locales"
             android:screenOrientation="portrait" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -717,7 +745,7 @@
 
                 <category android:name="cn.android.demo.apis.SAMPLE_CODE" />
             </intent-filter>
-        </activity>
+        </activity>
         -->
         <activity
             android:name="cn.android.demo.apis.phone.LightSensor"
@@ -799,6 +827,15 @@
         <activity
             android:name="cn.android.demo.apis.thread.MultiAsyncTask"
             android:label="@string/thread_multi_asynctask" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="cn.android.demo.apis.SAMPLE_CODE" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="cn.android.demo.apis.bug.LoadImageAsync"
+            android:label="@string/thread_load_image_async" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -990,6 +1027,16 @@
         <activity
             android:name="cn.android.demo.apis.ui.views.AndroidListNotExtendsListActivity"
             android:label="@string/ui_view_not_extends_listactivity"
+            android:screenOrientation="portrait" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="cn.android.demo.apis.SAMPLE_CODE" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="cn.android.demo.apis.ui.views.AndroidButtonStyle"
+            android:label="@string/ui_view_android_button_style"
             android:screenOrientation="portrait" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -1208,6 +1255,15 @@
         <activity
             android:name="cn.android.demo.apis.ui.graphics.AndroidShape"
             android:label="@string/ui_graphics_shape" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="cn.android.demo.apis.SAMPLE_CODE" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="cn.android.demo.apis.ui.graphics.MergeTwoImage"
+            android:label="@string/ui_graphics_merge_two_image" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -1527,7 +1583,7 @@
             <intent-filter>
                 <action android:name="android.intent.action.BATTERY_CHANGED" />
             </intent-filter>
-        </service>
+        </service>
         -->
         <receiver
             android:name="cn.android.demo.apis.app.ScheduledReceiver"

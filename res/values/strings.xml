@@ -183,5 +183,11 @@
     <string name="other_add_remove_view">Other/AddRemoveView</string>
     <string name="ui_view_android_date_picker">UI/View/DatePicker</string>
     <string name="phone_android_select_image_uri">Phone/SelectImageUri</string>
+    <string name="ui_graphics_merge_two_image">UI/Graphics/Merge Two Image</string>
+    <string name="java_call_back">Java/CallBack</string>
+    <string name="phone_android_get_locale_locales">Phone/GetLocales</string>
+    <string name="thread_load_image_async">Thread/LoadImageAsync</string>
+    <string name="ui_view_android_button_style">UI/View/Button Style</string>
+    <string name="other_usb_devices">Other/Usb Devices</string>
 
 </resources>

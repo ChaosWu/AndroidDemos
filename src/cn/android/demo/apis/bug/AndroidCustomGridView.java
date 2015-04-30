@@ -4,9 +4,7 @@ import java.io.File;
 import java.lang.ref.WeakReference;
 import java.util.ArrayList;
 
-import org.osmdroid.tileprovider.modules.IArchiveFile;
 
-import cn.android.demo.apis.MainActivity;
 import cn.android.demo.apis.R;
 import android.annotation.SuppressLint;
 import android.app.Activity;
@@ -17,7 +15,6 @@ import android.graphics.BitmapFactory;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.os.Environment;
-import android.util.Log;
 import android.util.LruCache;
 import android.view.View;
 import android.view.ViewGroup;
