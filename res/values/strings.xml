@@ -189,5 +189,10 @@
     <string name="thread_load_image_async">Thread/LoadImageAsync</string>
     <string name="ui_view_android_button_style">UI/View/Button Style</string>
     <string name="other_usb_devices">Other/Usb Devices</string>
+    <string name="ui_view_viewanimator">UI/View/ViewAnimator</string>
+    <string name="ui_view_android_view_switcher">UI/View/ViewSwitcher</string>
+    <string name="ui_view_android_image_switcher">UI/View/ImageSwitcher</string>
+    <string name="ui_view_android_text_switcher">UI/View/TextSwitcher</string>
+    <string name="java_use_timer_task">Java/Use TimerTask</string>
 
 </resources>

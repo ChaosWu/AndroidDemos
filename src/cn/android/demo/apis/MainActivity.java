@@ -19,15 +19,46 @@ import android.content.pm.PackageManager;
 import android.content.pm.PackageManager.NameNotFoundException;
 import android.content.pm.ResolveInfo;
 import android.graphics.Color;
+import android.os.Build;
+import android.os.Build.VERSION_CODES;
 import android.os.Bundle;
 import android.provider.Settings;
 import android.util.Log;
+import android.util.SparseArray;
 import android.view.View;
 import android.widget.ListView;
 import android.widget.SimpleAdapter;
 
 public class MainActivity extends ListActivity {
 	public final static String TAG = MainActivity.class.getSimpleName();
+	public static SparseArray<String> sparseArray = new SparseArray<>();
+	static {
+		sparseArray.append(VERSION_CODES.BASE,
+				"The original, first, version of Android.");
+		sparseArray.append(VERSION_CODES.BASE_1_1,
+				"First Android update, officially called 1.1");
+		sparseArray.append(VERSION_CODES.CUPCAKE, "Android 1.5");
+		sparseArray.append(VERSION_CODES.CUR_DEVELOPMENT,
+				"Magic version number...");
+		sparseArray.append(VERSION_CODES.DONUT, "Android 1.6");
+		sparseArray.append(VERSION_CODES.ECLAIR, "Android 2.0");
+		sparseArray.append(VERSION_CODES.ECLAIR_0_1, "Android 2.0.1");
+		sparseArray.append(VERSION_CODES.ECLAIR_MR1, "Android 2.1");
+		sparseArray.append(VERSION_CODES.FROYO, "Android 2.2");
+		sparseArray.append(VERSION_CODES.GINGERBREAD, "Android 2.3");
+		sparseArray.append(VERSION_CODES.GINGERBREAD_MR1, "Android 2.3.3");
+		sparseArray.append(VERSION_CODES.HONEYCOMB, "Android 3.0");
+		sparseArray.append(VERSION_CODES.HONEYCOMB_MR1, "Android 3.1");
+		sparseArray.append(VERSION_CODES.HONEYCOMB_MR2, "Android 3.2");
+		sparseArray.append(VERSION_CODES.ICE_CREAM_SANDWICH, "Android 4.0");
+		sparseArray.append(VERSION_CODES.ICE_CREAM_SANDWICH_MR1,
+				"Android 4.0.3");
+		sparseArray.append(VERSION_CODES.JELLY_BEAN, "Android 4.1");
+		sparseArray.append(VERSION_CODES.JELLY_BEAN_MR1, "Android 4.2");
+		sparseArray.append(VERSION_CODES.JELLY_BEAN_MR2, "Android 4.3");
+		sparseArray.append(VERSION_CODES.KITKAT, "Android 4.4");
+
+	}
 
 	// WakeLock wakeLock;
 
@@ -40,8 +71,8 @@ public class MainActivity extends ListActivity {
 		View title = getWindow().findViewById(android.R.id.title);
 		View titleBar = (View) title.getParent();
 		titleBar.setBackgroundColor(Color.GREEN);
-
-		Log.v(TAG, "onCreate   ******   ");
+		int version = Build.VERSION.SDK_INT;
+		Log.v(TAG, "onCreate   ******   Version:" + sparseArray.get(version));
 
 		// http://android-developers.blogspot.com/2011/03/identifying-app-installations.html
 		// 获取唯一标识，在2.2不是100%正确
@@ -291,7 +322,8 @@ public class MainActivity extends ListActivity {
 		overridePendingTransition(R.anim.flip_in, R.anim.flip_out);
 
 		// Fragment切换动画
-		// fragmentTransaction.setCustomAnimations(R.anim.flip_in, R.anim.flip_out)
+		// fragmentTransaction.setCustomAnimations(R.anim.flip_in,
+		// R.anim.flip_out)
 	}
 
 }

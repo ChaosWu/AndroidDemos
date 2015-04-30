@@ -4,12 +4,13 @@ import java.util.HashMap;
 import java.util.Iterator;
 
 import cn.android.demo.apis.R;
-import android.annotation.SuppressLint;
+import android.annotation.TargetApi;
 import android.app.Activity;
 import android.content.Context;
 import android.hardware.usb.UsbConstants;
 import android.hardware.usb.UsbDevice;
 import android.hardware.usb.UsbManager;
+import android.os.Build;
 import android.os.Bundle;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -22,6 +23,7 @@ import android.widget.TextView;
  * @author Elroy
  * 
  */
+@TargetApi(Build.VERSION_CODES.HONEYCOMB_MR1)
 public class UsbDevices extends Activity {
 	TextView textView;
 	Button button;
@@ -37,32 +39,27 @@ public class UsbDevices extends Activity {
 
 			@Override
 			public void onClick(View v) {
-				checkInfo();
+				UsbManager manager = (UsbManager) getSystemService(Context.USB_SERVICE);
+				HashMap<String, UsbDevice> deviceList = manager.getDeviceList();
+				Iterator<UsbDevice> deviceIterator = deviceList.values()
+						.iterator();
+
+				String i = "";
+				while (deviceIterator.hasNext()) {
+					UsbDevice device = deviceIterator.next();
+					i += "\n" + "DeviceID: " + device.getDeviceId() + "\n"
+							+ "DeviceName: " + device.getDeviceName() + "\n"
+							+ "DeviceClass: " + device.getDeviceClass() + " - "
+							+ translateDeviceClass(device.getDeviceClass())
+							+ "\n" + "DeviceSubClass: "
+							+ device.getDeviceSubclass() + "\n" + "VendorID: "
+							+ device.getVendorId() + "\n" + "ProductID: "
+							+ device.getProductId() + "\n";
+				}
+
+				textView.setText(i);
 			}
 		});
-	}
-
-	@SuppressLint("NewApi")
-	protected void checkInfo() {
-		UsbManager manager = (UsbManager) getSystemService(Context.USB_SERVICE);
-
-		HashMap<String, UsbDevice> deviceList = manager.getDeviceList();
-		Iterator<UsbDevice> deviceIterator = deviceList.values().iterator();
-
-		String i = "";
-		while (deviceIterator.hasNext()) {
-			UsbDevice device = deviceIterator.next();
-			i += "\n" + "DeviceID: " + device.getDeviceId() + "\n"
-					+ "DeviceName: " + device.getDeviceName() + "\n"
-					+ "DeviceClass: " + device.getDeviceClass() + " - "
-					+ translateDeviceClass(device.getDeviceClass()) + "\n"
-					+ "DeviceSubClass: " + device.getDeviceSubclass() + "\n"
-					+ "VendorID: " + device.getVendorId() + "\n"
-					+ "ProductID: " + device.getProductId() + "\n";
-
-		}
-		textView.setText(i);
-
 	}
 
 	private String translateDeviceClass(int deviceClass) {
