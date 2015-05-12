@@ -4,11 +4,14 @@ import java.text.Collator;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
+import java.util.Date;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
 import org.apache.http.util.EncodingUtils;
+
+import cn.android.demo.utils.TimeUtil;
 
 import android.app.ActivityManager;
 import android.app.ListActivity;
@@ -60,6 +63,7 @@ public class MainActivity extends ListActivity {
 
 	}
 
+
 	// WakeLock wakeLock;
 
 	@Override
@@ -67,7 +71,8 @@ public class MainActivity extends ListActivity {
 		super.onCreate(savedInstanceState);
 		// requestWindowFeature(Window.FEATURE_INDETERMINATE_PROGRESS);
 		// setProgressBarIndeterminateVisibility(true);
-
+		String weekDate = TimeUtil.getWeekOfDate(new Date());
+		Log.v("DDD", "今天" + weekDate);
 		View title = getWindow().findViewById(android.R.id.title);
 		View titleBar = (View) title.getParent();
 		titleBar.setBackgroundColor(Color.GREEN);
@@ -85,6 +90,7 @@ public class MainActivity extends ListActivity {
 		int memClass = ((ActivityManager) getSystemService(Context.ACTIVITY_SERVICE))
 				.getMemoryClass();
 		Log.v("DDD", "memClass:" + memClass);
+
 		Intent intent = getIntent();
 		String path = intent.getStringExtra(Config.PATH);
 

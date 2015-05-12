@@ -1,4 +1,4 @@
-package cn.android.demo;
+package cn.android.demo.utils;
 
 public interface TermList {
 

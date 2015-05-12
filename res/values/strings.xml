@@ -37,7 +37,17 @@
         <item>星期六</item>
         <item>星期日</item>
     </string-array>
-
+    <string-array name="vegetable_array">
+        <item>苹果</item>
+        <item>香蕉</item>
+        <item>黄瓜</item>
+        <item>西红柿</item>
+        <item>芒果</item>
+        <item>西瓜</item>
+        <item>橘子</item>
+        <item>柚子</item>
+        <item>李子</item>
+    </string-array>
     <!-- json测试数据 -->
     <string name="dummy_json">"{\"results\":{\"myblog\":\"android-er\", \"myurl\":"\""http://android-er.blogspot.com/\",\"array\":[{\"element\":\"Element 1\"}, {\"element\":\"Element 2\"}, {\"element\":\"Element 3\"}]"}}"</string>
     <string name="stylingtext">    Styling Text:\n <i>Italic</i> <b>Bold</b> <monospace>Monospace</monospace>\n  <strike>Strike</strike> <sup>Superscript</sup> <sub>Subscript</sub> <u>Underline</u>\n <big><big><big>Big x 3 </big>Big x 2 </big>Big</big> <small>Small <small>Small x 2</small></small></string>
@@ -194,5 +204,11 @@
     <string name="ui_view_android_image_switcher">UI/View/ImageSwitcher</string>
     <string name="ui_view_android_text_switcher">UI/View/TextSwitcher</string>
     <string name="java_use_timer_task">Java/Use TimerTask</string>
+    <string name="java_reflect_test">Java/Reflect Test</string>
+    <string name="phone_android_keyboard">Phone/KeyBoard</string>
+    <string name="other_app_is_run_background">Other/RunBackground?</string>
+    <string name="ui_widget_compound_view">UI/Widget/CompoundView</string>
+    <string name="ui_view_android_gridlayout">UI/View/GridLayout</string>
+    <string name="java_binary_tree">Java/BinaryTree</string>
 
 </resources>

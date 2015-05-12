@@ -32,18 +32,23 @@ import android.widget.TextView;
 public class JavaAddView extends Activity {
 	LinearLayout layout;
 
+	// 用泛型来提高效率
+	@SuppressWarnings("unchecked")
+	public <T extends View> T $id(int id) {
+		return ((T) findViewById(id));
+	}
+
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.java_code_add_view);
-		layout = (LinearLayout) findViewById(R.id.ll_java_code_add_view);
+		layout = $id(R.id.ll_java_code_add_view);
 		ImageView imageView = new ImageView(this);
 		imageView.setImageResource(R.drawable.chaoswu);
 
 		TextView textView = new TextView(this);
 		textView.setText("这是java代码添加的阴影");
 
-		
 		LayoutParams layoutParams = new LayoutParams(LayoutParams.WRAP_CONTENT,
 				LayoutParams.WRAP_CONTENT);
 
@@ -56,7 +61,7 @@ public class JavaAddView extends Activity {
 		layout.addView(textView);
 		layout.addView(myView);
 
-//		textView1.setRotation(90);
+		// textView1.setRotation(90);
 
 	}
 

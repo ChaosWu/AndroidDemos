@@ -10,51 +10,62 @@ public class RSSFeed {
 	private String pubdate = null;
 	private List<RSSItem> itemList;
 
-	RSSFeed() {
+	// 测试反射用
+	public RSSFeed(String title, String description) {
+		this.title = title;
+		this.description = description;
+	}
+
+	public String getTitleAndDes() {
+		return "标题：" + title + "\n" + "详情：" + description;
+
+	}
+
+	public RSSFeed() {
 		itemList = new Vector<RSSItem>(0);
 	}
 
-	void addItem(RSSItem item) {
+	public void addItem(RSSItem item) {
 		itemList.add(item);
 	}
 
-	RSSItem getItem(int location) {
+	public RSSItem getItem(int location) {
 		return itemList.get(location);
 	}
 
-	List<RSSItem> getList() {
+	public List<RSSItem> getList() {
 		return itemList;
 	}
 
-	void setTitle(String value) {
+	public void setTitle(String value) {
 		title = value;
 	}
 
-	void setDescription(String value) {
+	public void setDescription(String value) {
 		description = value;
 	}
 
-	void setLink(String value) {
+	public void setLink(String value) {
 		link = value;
 	}
 
-	void setPubdate(String value) {
+	public void setPubdate(String value) {
 		pubdate = value;
 	}
 
-	String getTitle() {
+	public String getTitle() {
 		return title;
 	}
 
-	String getDescription() {
+	public String getDescription() {
 		return description;
 	}
 
-	String getLink() {
+	public String getLink() {
 		return link;
 	}
 
-	String getPubdate() {
+	public String getPubdate() {
 		return pubdate;
 	}
 

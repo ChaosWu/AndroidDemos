@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <Button
+        android:id="@+id/bt_show_hide_keyboard"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="关闭/显示  KeyBoard" />
+
+    <Button
+        android:id="@+id/bt_close_keyboard"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="关闭软键盘" />
+    
+    
+    <Button
+        android:id="@+id/bt_comments_keyboard"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="评论" />
+
+</LinearLayout>

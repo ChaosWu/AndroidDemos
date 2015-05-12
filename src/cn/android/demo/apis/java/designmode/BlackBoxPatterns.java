@@ -1,4 +1,4 @@
-package cn.android.demo.apis.java;
+package cn.android.demo.apis.java.designmode;
 
 import cn.android.demo.apis.R;
 import android.app.Activity;
@@ -14,7 +14,7 @@ import android.widget.Toast;
  * 
  */
 public class BlackBoxPatterns extends Activity {
-
+	 
 	private TextView tvStuA;
 	private TextView tvStuB;
 
@@ -22,13 +22,13 @@ public class BlackBoxPatterns extends Activity {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.java_black_box_patterns);
-
+		 
 		tvStuA = (TextView) findViewById(R.id.tv_student_tuition_a);
 		tvStuB = (TextView) findViewById(R.id.tv_student_tuition_b);
 
 		Student stu1 = new Student();
 		Student stu2 = new Student();
-		
+
 		ITuition da = new DaXueTuition();
 		ITuition xiao = new XiaoXueTuition();
 
@@ -37,6 +37,10 @@ public class BlackBoxPatterns extends Activity {
 
 		tvStuA.append(stu1.computerTuition() + "RMB");
 		tvStuB.append(stu2.computerTuition() + "RMB");
+		
+		
+		Thread t=new Thread();
+		t.isInterrupted();
 
 	}
 
@@ -83,6 +87,5 @@ public class BlackBoxPatterns extends Activity {
 		}
 
 	}
-	
 
 }

@@ -1,4 +1,4 @@
-package cn.android.demo.apis.java;
+package cn.android.demo.apis.java.algorithm;
 
 import java.util.Random;
 
@@ -8,6 +8,12 @@ import android.app.Activity;
 import android.os.Bundle;
 import android.widget.TextView;
 
+/**
+ * 冒泡排序
+ * 
+ * @author Elroy
+ * 
+ */
 public class BubbleSort extends Activity {
 	int[] data = new int[10];
 

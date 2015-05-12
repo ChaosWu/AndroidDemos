@@ -44,4 +44,5 @@ public class AlarmManagerActivity extends Activity {
 		});
 
 	}
+
 }

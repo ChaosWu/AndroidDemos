@@ -45,6 +45,11 @@
     <!-- 获取联系人 -->
     <uses-permission android:name="android.permission.READ_CONTACTS" />
 
+    <!-- TODO -->
+    <permission
+        android:name="oem.permission.SENDMAIL"
+        android:protectionLevel="normal" />
+
     <uses-sdk
         android:minSdkVersion="8"
         android:targetSdkVersion="21" />
@@ -66,10 +71,18 @@
             </intent-filter>
         </activity>
         <!-- OTHER -->
-
         <activity
             android:name="cn.android.demo.apis.other.AddRemveView"
             android:label="@string/other_add_remove_view" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="cn.android.demo.apis.SAMPLE_CODE" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="cn.android.demo.apis.other.AppIsRunBackground"
+            android:label="@string/other_app_is_run_background" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -315,9 +328,30 @@
         </activity>
 
         <!-- ********************JAVA*********************** -->
+
         <activity
             android:name="cn.android.demo.apis.java.AndroidSetId"
             android:label="@string/java_set_view_id"
+            android:screenOrientation="portrait" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="cn.android.demo.apis.SAMPLE_CODE" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="cn.android.demo.apis.java.algorithm.BinaryTreeActivity"
+            android:label="@string/java_binary_tree"
+            android:screenOrientation="portrait" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="cn.android.demo.apis.SAMPLE_CODE" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="cn.android.demo.apis.java.JavaReflect"
+            android:label="@string/java_reflect_test"
             android:screenOrientation="portrait" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -366,7 +400,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="cn.android.demo.apis.java.BubbleSort"
+            android:name="cn.android.demo.apis.java.algorithm.BubbleSort"
             android:label="@string/java_bubble_sort"
             android:screenOrientation="portrait" >
             <intent-filter>
@@ -406,7 +440,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="cn.android.demo.apis.java.BlackBoxPatterns"
+            android:name="cn.android.demo.apis.java.designmode.BlackBoxPatterns"
             android:label="@string/java_android_black_box_patterns"
             android:screenOrientation="portrait" >
             <intent-filter>
@@ -416,10 +450,19 @@
             </intent-filter>
         </activity>
         <!-- ********************Phone*********************** -->
-
         <activity
             android:name="cn.android.demo.apis.phone.AccessTemperatureSensor"
             android:label="@string/phone_android_access_temperature_sensor"
+            android:screenOrientation="portrait" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="cn.android.demo.apis.SAMPLE_CODE" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="cn.android.demo.apis.phone.AndroidKeyBoard"
+            android:label="@string/phone_android_keyboard"
             android:screenOrientation="portrait" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -758,8 +801,9 @@
 
                 <category android:name="cn.android.demo.apis.SAMPLE_CODE" />
             </intent-filter>
-        </activity>
+        </activity>
         -->
+
         <activity
             android:name="cn.android.demo.apis.phone.LightSensor"
             android:label="@string/phone_light_sensor" >
@@ -964,6 +1008,15 @@
             </intent-filter>
         </activity>
         <activity
+            android:name="cn.android.demo.apis.ui.widget.CompoundView"
+            android:label="@string/ui_widget_compound_view" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="cn.android.demo.apis.SAMPLE_CODE" />
+            </intent-filter>
+        </activity>
+        <activity
             android:name="cn.android.demo.apis.ui.widget.MultisTouch"
             android:label="@string/ui_widget_multis_touch" >
             <intent-filter>
@@ -1037,10 +1090,19 @@
         </activity>
         <!-- *************** **UI View** *************** -->
 
-        cn.android.demo.apis.ui.views.AndroidTextSwitcher
         <activity
             android:name="cn.android.demo.apis.ui.views.AndroidListNotExtendsListActivity"
             android:label="@string/ui_view_not_extends_listactivity"
+            android:screenOrientation="portrait" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="cn.android.demo.apis.SAMPLE_CODE" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="cn.android.demo.apis.ui.views.AndroidGridlayout"
+            android:label="@string/ui_view_android_gridlayout"
             android:screenOrientation="portrait" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -1637,7 +1699,7 @@
             <intent-filter>
                 <action android:name="android.intent.action.BATTERY_CHANGED" />
             </intent-filter>
-        </service>
+        </service>
         -->
         <receiver
             android:name="cn.android.demo.apis.app.ScheduledReceiver"
@@ -1670,6 +1732,20 @@
 
         <!-- 注册服务IntentService -->
         <service android:name="cn.android.demo.apis.app.MyIntentService" >
+        </service>
+
+        <!-- 自定义软键盘 -->
+        <service
+            android:name="cn.android.demo.apis.other.keyboard.SimpleIME"
+            android:label="SIMPLE_IME"
+            android:permission="android.permission.BIND_INPUT_METHOD" >
+            <meta-data
+                android:name="android.view.im"
+                android:resource="@xml/keyboard_method" />
+
+            <intent-filter>
+                <action android:name="android.view.InputMethod" />
+            </intent-filter>
         </service>
     </application>
 
