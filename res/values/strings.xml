@@ -49,7 +49,7 @@
         <item>李子</item>
     </string-array>
     <!-- json测试数据 -->
-    <string name="dummy_json">"{\"results\":{\"myblog\":\"android-er\", \"myurl\":"\""http://android-er.blogspot.com/\",\"array\":[{\"element\":\"Element 1\"}, {\"element\":\"Element 2\"}, {\"element\":\"Element 3\"}]"}}"</string>
+    <string name="dummy_json">"{\"results\":{\"myblog\":\"android\", \"myurl\":"\""http://elroywu.cn/\",\"array\":[{\"element\":\"Element 1\"}, {\"element\":\"Element 2\"}, {\"element\":\"Element 3\"}]"}}"</string>
     <string name="stylingtext">    Styling Text:\n <i>Italic</i> <b>Bold</b> <monospace>Monospace</monospace>\n  <strike>Strike</strike> <sup>Superscript</sup> <sub>Subscript</sub> <u>Underline</u>\n <big><big><big>Big x 3 </big>Big x 2 </big>Big</big> <small>Small <small>Small x 2</small></small></string>
 
     <plurals name="NumberOfMan">
@@ -217,5 +217,8 @@
     <string name="ui_graphics_blur_mask_filter">UI/Graphics/Blur Mask Filter</string>
     <string name="ui_graphics_blur_bitmap">UI/Graphics/BlurBitmap</string>
     <string name="phone_android_velocity_tracker">Phone/VelocityTracker</string>
+    <string name="ui_view_horizontal_vertical_scrollable">UI/View/HorizontalVerticalScroll</string>
+    <string name="java_child_view_at_runtime">Java/Get childView at runtime</string>
+    <string name="ui_view_android_drawer_layout">UI/View/AndroidDrawerLayout</string>
 
 </resources>

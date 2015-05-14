@@ -1,20 +1,28 @@
 package cn.android.demo.apis.other;
 
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Iterator;
 
 import cn.android.demo.apis.R;
+import android.annotation.SuppressLint;
 import android.annotation.TargetApi;
 import android.app.Activity;
 import android.content.Context;
 import android.hardware.usb.UsbConstants;
 import android.hardware.usb.UsbDevice;
+import android.hardware.usb.UsbEndpoint;
+import android.hardware.usb.UsbInterface;
 import android.hardware.usb.UsbManager;
 import android.os.Build;
 import android.os.Bundle;
 import android.view.View;
 import android.view.View.OnClickListener;
+import android.widget.AdapterView;
+import android.widget.AdapterView.OnItemSelectedListener;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.Spinner;
 import android.widget.TextView;
 
 /**
@@ -25,41 +33,202 @@ import android.widget.TextView;
  */
 @TargetApi(Build.VERSION_CODES.HONEYCOMB_MR1)
 public class UsbDevices extends Activity {
-	TextView textView;
-	Button button;
+
+	Button btnCheck;
+	TextView textInfo;
+	TextView textInfoInterface;
+	TextView textEndPoint;
+
+	Spinner spDeviceName;
+	ArrayList<String> listDeviceName;
+	ArrayList<UsbDevice> listUsbDevice;
+	ArrayAdapter<String> adapterDevice;
+
+	Spinner spInterface;
+	ArrayList<String> listInterface;
+	ArrayList<UsbInterface> listUsbInterface;
+	ArrayAdapter<String> adapterInterface;
+
+	Spinner spEndPoint;
+	ArrayList<String> listEndPoint;
+	ArrayList<UsbEndpoint> listUsbEndpoint;
+	ArrayAdapter<String> adapterEndpoint;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-
 		setContentView(R.layout.other_usb_devices);
-		button = (Button) findViewById(R.id.bt_usb_devices_check);
-		textView = (TextView) findViewById(R.id.tv_usb_devices_info);
-		button.setOnClickListener(new OnClickListener() {
+
+		spDeviceName = (Spinner) findViewById(R.id.usb_devices_spinnerdevicename);
+		spInterface = (Spinner) findViewById(R.id.usb_devices_spinnerinterface);
+		spEndPoint = (Spinner) findViewById(R.id.usb_devices_spinnerendpoint);
+		textInfo = (TextView) findViewById(R.id.usb_devices_info);
+		textInfoInterface = (TextView) findViewById(R.id.usb_devices_infointerface);
+		textEndPoint = (TextView) findViewById(R.id.usb_devices_infoendpoint);
+
+		btnCheck = (Button) findViewById(R.id.usb_devices_check);
+		btnCheck.setOnClickListener(new OnClickListener() {
 
 			@Override
-			public void onClick(View v) {
-				UsbManager manager = (UsbManager) getSystemService(Context.USB_SERVICE);
-				HashMap<String, UsbDevice> deviceList = manager.getDeviceList();
-				Iterator<UsbDevice> deviceIterator = deviceList.values()
-						.iterator();
-
-				String i = "";
-				while (deviceIterator.hasNext()) {
-					UsbDevice device = deviceIterator.next();
-					i += "\n" + "DeviceID: " + device.getDeviceId() + "\n"
-							+ "DeviceName: " + device.getDeviceName() + "\n"
-							+ "DeviceClass: " + device.getDeviceClass() + " - "
-							+ translateDeviceClass(device.getDeviceClass())
-							+ "\n" + "DeviceSubClass: "
-							+ device.getDeviceSubclass() + "\n" + "VendorID: "
-							+ device.getVendorId() + "\n" + "ProductID: "
-							+ device.getProductId() + "\n";
-				}
-
-				textView.setText(i);
+			public void onClick(View arg0) {
+				checkDeviceInfo();
 			}
 		});
+	}
+
+	private void checkDeviceInfo() {
+
+		listDeviceName = new ArrayList<String>();
+		listUsbDevice = new ArrayList<UsbDevice>();
+
+		UsbManager manager = (UsbManager) getSystemService(Context.USB_SERVICE);
+		HashMap<String, UsbDevice> deviceList = manager.getDeviceList();
+		Iterator<UsbDevice> deviceIterator = deviceList.values().iterator();
+
+		while (deviceIterator.hasNext()) {
+			UsbDevice device = deviceIterator.next();
+			listDeviceName.add(device.getDeviceName());
+			listUsbDevice.add(device);
+
+		}
+
+		textInfo.setText("");
+		textInfoInterface.setText("");
+		textEndPoint.setText("");
+
+		adapterDevice = new ArrayAdapter<String>(this,
+				android.R.layout.simple_spinner_item, listDeviceName);
+		adapterDevice
+				.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+		spDeviceName.setAdapter(adapterDevice);
+		spDeviceName.setOnItemSelectedListener(deviceOnItemSelectedListener);
+	}
+
+	@SuppressLint("NewApi")
+	OnItemSelectedListener deviceOnItemSelectedListener = new OnItemSelectedListener() {
+
+		@Override
+		public void onItemSelected(AdapterView<?> parent, View view,
+				int position, long id) {
+			UsbDevice device = listUsbDevice.get(position);
+
+			String i = device.toString() + "\n" + "DeviceID: "
+					+ device.getDeviceId() + "\n" + "DeviceName: "
+					+ device.getDeviceName() + "\n" + "DeviceClass: "
+					+ device.getDeviceClass() + " - "
+					+ translateDeviceClass(device.getDeviceClass()) + "\n"
+					+ "DeviceSubClass: " + device.getDeviceSubclass() + "\n"
+					+ "VendorID: " + device.getVendorId() + "\n"
+					+ "ProductID: " + device.getProductId() + "\n"
+					+ "InterfaceCount: " + device.getInterfaceCount();
+			textInfo.setText(i);
+
+			checkUsbDevicve(device);
+		}
+
+		@Override
+		public void onNothingSelected(AdapterView<?> parent) {
+		}
+
+	};
+
+	private void checkUsbDevicve(UsbDevice d) {
+		listInterface = new ArrayList<String>();
+		listUsbInterface = new ArrayList<UsbInterface>();
+
+		for (int i = 0; i < d.getInterfaceCount(); i++) {
+			UsbInterface usbif = d.getInterface(i);
+			listInterface.add(usbif.toString());
+			listUsbInterface.add(usbif);
+		}
+
+		adapterInterface = new ArrayAdapter<String>(this,
+				android.R.layout.simple_spinner_item, listInterface);
+		adapterDevice
+				.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+		spInterface.setAdapter(adapterInterface);
+		spInterface.setOnItemSelectedListener(interfaceOnItemSelectedListener);
+	}
+
+	@SuppressLint("NewApi")
+	OnItemSelectedListener interfaceOnItemSelectedListener = new OnItemSelectedListener() {
+
+		@Override
+		public void onItemSelected(AdapterView<?> parent, View view,
+				int position, long id) {
+
+			UsbInterface selectedUsbIf = listUsbInterface.get(position);
+
+			String sUsbIf = "\n" + selectedUsbIf.toString() + "\n" + "Id: "
+					+ selectedUsbIf.getId() + "\n" + "InterfaceClass: "
+					+ selectedUsbIf.getInterfaceClass() + "\n"
+					+ "InterfaceProtocol: "
+					+ selectedUsbIf.getInterfaceProtocol() + "\n"
+					+ "InterfaceSubclass: "
+					+ selectedUsbIf.getInterfaceSubclass() + "\n"
+					+ "EndpointCount: " + selectedUsbIf.getEndpointCount();
+
+			textInfoInterface.setText(sUsbIf);
+			checkUsbInterface(selectedUsbIf);
+		}
+
+		@Override
+		public void onNothingSelected(AdapterView<?> parent) {
+		}
+
+	};
+
+	private void checkUsbInterface(UsbInterface uif) {
+		listEndPoint = new ArrayList<String>();
+		listUsbEndpoint = new ArrayList<UsbEndpoint>();
+
+		for (int i = 0; i < uif.getEndpointCount(); i++) {
+			UsbEndpoint usbEndpoint = uif.getEndpoint(i);
+			listEndPoint.add(usbEndpoint.toString());
+			listUsbEndpoint.add(usbEndpoint);
+		}
+
+		adapterEndpoint = new ArrayAdapter<String>(this,
+				android.R.layout.simple_spinner_item, listEndPoint);
+		adapterEndpoint
+				.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+		spEndPoint.setAdapter(adapterEndpoint);
+		spEndPoint.setOnItemSelectedListener(endpointOnItemSelectedListener);
+	}
+
+	OnItemSelectedListener endpointOnItemSelectedListener = new OnItemSelectedListener() {
+
+		@Override
+		public void onItemSelected(AdapterView<?> parent, View view,
+				int position, long id) {
+
+			UsbEndpoint selectedEndpoint = listUsbEndpoint.get(position);
+
+			String sEndpoint = "\n" + selectedEndpoint.toString() + "\n"
+					+ translateEndpointType(selectedEndpoint.getType());
+
+			textEndPoint.setText(sEndpoint);
+		}
+
+		@Override
+		public void onNothingSelected(AdapterView<?> parent) {
+		}
+
+	};
+
+	private String translateEndpointType(int type) {
+		switch (type) {
+		case UsbConstants.USB_ENDPOINT_XFER_CONTROL:
+			return "USB_ENDPOINT_XFER_CONTROL (endpoint zero)";
+		case UsbConstants.USB_ENDPOINT_XFER_ISOC:
+			return "USB_ENDPOINT_XFER_ISOC (isochronous endpoint)";
+		case UsbConstants.USB_ENDPOINT_XFER_BULK:
+			return "USB_ENDPOINT_XFER_BULK (bulk endpoint)";
+		case UsbConstants.USB_ENDPOINT_XFER_INT:
+			return "USB_ENDPOINT_XFER_INT (interrupt endpoint)";
+		default:
+			return "unknown";
+		}
 	}
 
 	private String translateDeviceClass(int deviceClass) {
@@ -103,4 +272,5 @@ public class UsbDevices extends Activity {
 
 		}
 	}
+
 }

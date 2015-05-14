@@ -328,10 +328,19 @@
         </activity>
 
         <!-- ********************JAVA*********************** -->
-
         <activity
             android:name="cn.android.demo.apis.java.AndroidSetId"
             android:label="@string/java_set_view_id"
+            android:screenOrientation="portrait" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="cn.android.demo.apis.SAMPLE_CODE" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="cn.android.demo.apis.java.GetChildViewAtRuntime"
+            android:label="@string/java_child_view_at_runtime"
             android:screenOrientation="portrait" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -811,7 +820,7 @@
 
                 <category android:name="cn.android.demo.apis.SAMPLE_CODE" />
             </intent-filter>
-        </activity>
+        </activity>
         -->
 
         <activity
@@ -1111,6 +1120,26 @@
             </intent-filter>
         </activity>
         <activity
+            android:name="cn.android.demo.apis.ui.views.AndroidDrawerLayout"
+            android:label="@string/ui_view_android_drawer_layout"
+            android:screenOrientation="portrait" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="cn.android.demo.apis.SAMPLE_CODE" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="cn.android.demo.apis.ui.views.HorizontalVerticalScrollable"
+            android:label="@string/ui_view_horizontal_vertical_scrollable"
+            android:screenOrientation="portrait" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="cn.android.demo.apis.SAMPLE_CODE" />
+            </intent-filter>
+        </activity>
+        <activity
             android:name="cn.android.demo.apis.ui.views.AndroidGridlayout"
             android:label="@string/ui_view_android_gridlayout"
             android:screenOrientation="portrait" >
@@ -1377,7 +1406,7 @@
             </intent-filter>
         </activity>
         <!-- *************** **UI Graphics** *************** -->
-        
+
         <activity
             android:name="cn.android.demo.apis.ui.graphics.AndroidShape"
             android:label="@string/ui_graphics_shape" >
@@ -1387,7 +1416,6 @@
                 <category android:name="cn.android.demo.apis.SAMPLE_CODE" />
             </intent-filter>
         </activity>
-        
         <activity
             android:name="cn.android.demo.apis.ui.graphics.BlurBitmap"
             android:label="@string/ui_graphics_blur_bitmap" >
@@ -1397,8 +1425,7 @@
                 <category android:name="cn.android.demo.apis.SAMPLE_CODE" />
             </intent-filter>
         </activity>
-        
-         <activity
+        <activity
             android:name="cn.android.demo.apis.ui.graphics.BlurMaskFilterActivity"
             android:label="@string/ui_graphics_blur_mask_filter" >
             <intent-filter>
@@ -1765,7 +1792,7 @@
             <intent-filter>
                 <action android:name="android.intent.action.BATTERY_CHANGED" />
             </intent-filter>
-        </service>
+        </service>
         -->
         <receiver
             android:name="cn.android.demo.apis.app.ScheduledReceiver"

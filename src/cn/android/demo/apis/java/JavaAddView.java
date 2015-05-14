@@ -90,7 +90,7 @@ public class JavaAddView extends Activity {
 			shadowPaint.setStyle(Paint.Style.STROKE);
 			shadowPaint.setShadowLayer(5.0f, 10.0f, 10.0f, Color.BLACK);
 
-			canvas.drawText("http://android-er.blogspot.com/", 50, 200,
+			canvas.drawText("http://www.baidu.com/", 50, 200,
 					shadowPaint);
 			// android:minSdkVersion="11"
 			setLayerType(LAYER_TYPE_SOFTWARE, shadowPaint);

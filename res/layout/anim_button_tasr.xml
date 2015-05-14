@@ -36,7 +36,7 @@
         android:id="@+id/tv_anim_scale_xy"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="http://android-er.blogspot.com/"
+        android:text="www.elroywu.cn"
         android:textColor="#0000ff"
         android:textSize="30sp"
         android:textStyle="bold" />

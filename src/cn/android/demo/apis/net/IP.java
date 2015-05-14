@@ -1,7 +1,10 @@
 package cn.android.demo.apis.net;
 
 import java.net.InetAddress;
+import java.net.NetworkInterface;
+import java.net.SocketException;
 import java.net.UnknownHostException;
+import java.util.Enumeration;
 
 import cn.android.demo.apis.R;
 import android.app.Activity;
@@ -24,6 +27,7 @@ public class IP extends Activity {
 		public void handleMessage(Message msg) {
 			super.handleMessage(msg);
 			textView.setText(msg.obj.toString());
+			textView.append("\n\n" + getIpAddress());
 		}
 
 	};
@@ -69,5 +73,42 @@ public class IP extends Activity {
 			}
 		});
 
+	}
+
+	private String getIpAddress() {
+		String ip = "";
+		try {
+			Enumeration<NetworkInterface> enumNetworkInterfaces = NetworkInterface
+					.getNetworkInterfaces();
+			while (enumNetworkInterfaces.hasMoreElements()) {
+				NetworkInterface networkInterface = enumNetworkInterfaces
+						.nextElement();
+				Enumeration<InetAddress> enumInetAddress = networkInterface
+						.getInetAddresses();
+				while (enumInetAddress.hasMoreElements()) {
+					InetAddress inetAddress = enumInetAddress.nextElement();
+
+					String ipAddress = "";
+					if (inetAddress.isLoopbackAddress()) {
+						ipAddress = "LoopbackAddress: ";
+					} else if (inetAddress.isSiteLocalAddress()) {
+						ipAddress = "SiteLocalAddress: ";
+					} else if (inetAddress.isLinkLocalAddress()) {
+						ipAddress = "LinkLocalAddress: ";
+					} else if (inetAddress.isMulticastAddress()) {
+						ipAddress = "MulticastAddress: ";
+					}
+					ip += ipAddress + inetAddress.getHostAddress() + "\n";
+				}
+
+			}
+
+		} catch (SocketException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+			ip += "Something Wrong! " + e.toString() + "\n";
+		}
+
+		return ip;
 	}
 }

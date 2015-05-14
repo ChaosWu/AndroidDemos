@@ -45,7 +45,7 @@ public class AndroidNotificationBuilder extends Activity {
 
 		context = getApplicationContext();
 		intent1 = new Intent(Intent.ACTION_VIEW, Uri.parse(blog));
-		intent2 = new Intent(Intent.ACTION_VIEW, Uri.parse("http://android-er.blogspot.com/"));
+		intent2 = new Intent(Intent.ACTION_VIEW, Uri.parse("http://www.baidu.com/"));
 
 		setContentView(R.layout.app_android_notification_builder);
 		bt = (Button) findViewById(R.id.bt_notification_builder_send);
@@ -86,7 +86,7 @@ public class AndroidNotificationBuilder extends Activity {
 				// min sdk 4
 				notification = new NotificationCompat.Builder(context)
 						.setContentTitle("Exercise of Notification!")
-						.setContentText("http://android-er.blogspot.com/")
+						.setContentText("http://www.baidu.com/")
 						.setTicker("Notification!")
 						.setWhen(System.currentTimeMillis())
 						.setContentIntent(pendingIntent)

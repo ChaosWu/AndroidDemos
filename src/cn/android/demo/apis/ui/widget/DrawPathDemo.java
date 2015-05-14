@@ -53,7 +53,7 @@ public class DrawPathDemo extends Activity {
 			paint.setStyle(Style.STROKE);
 			paint.setTextSize(88);
 
-			canvas.drawTextOnPath("Android-er http://android-er.blogspot.com/",
+			canvas.drawTextOnPath("Android-er http://elroywu.cn/",
 					path, 0, 0, paint);
 			
 			paint.setColor(Color.GREEN);
