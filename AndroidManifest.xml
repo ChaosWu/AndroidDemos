@@ -451,6 +451,16 @@
         </activity>
         <!-- ********************Phone*********************** -->
         <activity
+            android:name="cn.android.demo.apis.phone.AndroidVelocityTracker"
+            android:label="@string/phone_android_velocity_tracker"
+            android:screenOrientation="portrait" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="cn.android.demo.apis.SAMPLE_CODE" />
+            </intent-filter>
+        </activity>
+        <activity
             android:name="cn.android.demo.apis.phone.AccessTemperatureSensor"
             android:label="@string/phone_android_access_temperature_sensor"
             android:screenOrientation="portrait" >
@@ -801,7 +811,7 @@
 
                 <category android:name="cn.android.demo.apis.SAMPLE_CODE" />
             </intent-filter>
-        </activity>
+        </activity>
         -->
 
         <activity
@@ -1367,10 +1377,66 @@
             </intent-filter>
         </activity>
         <!-- *************** **UI Graphics** *************** -->
-
+        
         <activity
             android:name="cn.android.demo.apis.ui.graphics.AndroidShape"
             android:label="@string/ui_graphics_shape" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="cn.android.demo.apis.SAMPLE_CODE" />
+            </intent-filter>
+        </activity>
+        
+        <activity
+            android:name="cn.android.demo.apis.ui.graphics.BlurBitmap"
+            android:label="@string/ui_graphics_blur_bitmap" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="cn.android.demo.apis.SAMPLE_CODE" />
+            </intent-filter>
+        </activity>
+        
+         <activity
+            android:name="cn.android.demo.apis.ui.graphics.BlurMaskFilterActivity"
+            android:label="@string/ui_graphics_blur_mask_filter" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="cn.android.demo.apis.SAMPLE_CODE" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="cn.android.demo.apis.ui.graphics.AndroidScaleBitmapWithInDitherAndInPreferQualityOverSpeed"
+            android:label="@string/ui_graphics_sss_scale_bitmap" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="cn.android.demo.apis.SAMPLE_CODE" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="cn.android.demo.apis.ui.graphics.MirrorBitmapWithMatrix"
+            android:label="@string/ui_graphics_mirror_bitmap_with_matrix" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="cn.android.demo.apis.SAMPLE_CODE" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="cn.android.demo.apis.ui.graphics.DetectTouchFreeDrawBitmap"
+            android:label="@string/ui_graphics_touch_free_draw_bitmap" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="cn.android.demo.apis.SAMPLE_CODE" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="cn.android.demo.apis.ui.graphics.ShadowForImage"
+            android:label="@string/ui_graphics_shadow_for_image" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -1699,7 +1765,7 @@
             <intent-filter>
                 <action android:name="android.intent.action.BATTERY_CHANGED" />
             </intent-filter>
-        </service>
+        </service>
         -->
         <receiver
             android:name="cn.android.demo.apis.app.ScheduledReceiver"

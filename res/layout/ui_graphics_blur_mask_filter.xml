@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+
+    <Button
+        android:id="@+id/blur_mask_filter_loadimage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Load Image 1" />
+
+    <ImageView
+        android:id="@+id/blur_mask_filter_result"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:adjustViewBounds="true"
+        android:scaleType="centerInside" />
+
+</LinearLayout>

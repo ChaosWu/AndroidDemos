@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <Button
+        android:id="@+id/free_draw_loadimage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Load Image 1" />
+
+    <TextView
+        android:id="@+id/free_draw_sourceuri"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <ImageView
+            android:id="@+id/free_draw_result"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:adjustViewBounds="true"
+            android:background="@android:color/background_dark"
+            android:scaleType="centerInside" />
+
+        <ImageView
+            android:id="@+id/free_draw_drawingpane"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/free_draw_result"
+            android:layout_alignLeft="@id/free_draw_result"
+            android:layout_alignRight="@id/free_draw_result"
+            android:layout_alignTop="@id/free_draw_result"
+            android:adjustViewBounds="true"
+            android:scaleType="centerInside" />
+    </RelativeLayout>
+
+</LinearLayout>

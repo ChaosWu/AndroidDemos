@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+
+    <Button
+        android:id="@+id/sss_scale_bitmap_loadimage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Load Image 1" />
+
+    <ToggleButton
+        android:id="@+id/sss_scale_bitmap_optInDither"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:checked="false"
+        android:textOff="inDither OFF"
+        android:textOn="inDither ON" />
+
+    <ToggleButton
+        android:id="@+id/sss_scale_bitmap_optInPreferQualityOverSpeed"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:checked="false"
+        android:textOff="inPreferQualityOverSpeed OFF"
+        android:textOn="inPreferQualityOverSpeed ON" />
+
+    <TextView
+        android:id="@+id/sss_scale_bitmap_info"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <ImageView
+        android:id="@+id/sss_scale_bitmap_result"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:adjustViewBounds="true"
+        android:background="@android:color/background_dark"
+        android:scaleType="center" />
+
+</LinearLayout>

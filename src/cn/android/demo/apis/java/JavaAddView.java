@@ -21,7 +21,7 @@ import android.widget.TextView;
 /**
  * Code add View
  * 
- * 阴影效果
+ * 阴影效果   文字/图片
  * 
  * 对于API等级11 ，你必须调用setLayerType （ INT layerType ，油漆涂料）来指定层支持的视图类型
  * 

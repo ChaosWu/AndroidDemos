@@ -210,5 +210,12 @@
     <string name="ui_widget_compound_view">UI/Widget/CompoundView</string>
     <string name="ui_view_android_gridlayout">UI/View/GridLayout</string>
     <string name="java_binary_tree">Java/BinaryTree</string>
+    <string name="ui_graphics_shadow_for_image">UI/Graphics/ShadowForImage</string>
+    <string name="ui_graphics_touch_free_draw_bitmap">UI/Graphics/Touch free drawBitmap</string>
+    <string name="ui_graphics_mirror_bitmap_with_matrix">UI/Graphics/Mirror Bitmap With Matrix</string>
+    <string name="ui_graphics_sss_scale_bitmap">UI/Graphics/SSS ScaleBitmap</string>
+    <string name="ui_graphics_blur_mask_filter">UI/Graphics/Blur Mask Filter</string>
+    <string name="ui_graphics_blur_bitmap">UI/Graphics/BlurBitmap</string>
+    <string name="phone_android_velocity_tracker">Phone/VelocityTracker</string>
 
 </resources>
