@@ -146,7 +146,7 @@
     <string name="phone_android_vibrator">Phone/Vibrator</string>
     <string name="phone_android_timepicker">Phone/TimePicker</string>
     <string name="java_set_view_id">Java/Set Id</string>
-    <string name="ui_view_view_pager">UI/View/ViewPager</string>
+    <string name="ui_view_view_pager">UI/View/V4 ViewPager</string>
     <string name="ui_fragment_ex_fragment">UI/Fragment/ExFragment</string>
     <string name="other_get_location">Other/GetLocation</string>
     <string name="anim_object_animator_gestrue">Anim/Gesture ObjectAnim</string>
@@ -220,5 +220,11 @@
     <string name="ui_view_horizontal_vertical_scrollable">UI/View/HorizontalVerticalScroll</string>
     <string name="java_child_view_at_runtime">Java/Get childView at runtime</string>
     <string name="ui_view_android_drawer_layout">UI/View/AndroidDrawerLayout</string>
+    <string name="java_run_linux">Java/Run Linux</string>
+    <string name="net_android_server_socket">Net/ServerSocket2</string>
+    <string name="net_android_client_socket">Net/ClientSocket2</string>
+    <string name="thread_background_thread_run_start">Thread/Thread Run Start</string>
+    <string name="thread_synchronized_methods">Thread/Synchronized Methods</string>
+    <string name="thread_wait_notify">Thread/ThreadWaitNotify</string>
 
 </resources>

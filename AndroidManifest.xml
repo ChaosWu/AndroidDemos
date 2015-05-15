@@ -245,9 +245,29 @@
         </activity>
         <!-- ********************Net*********************** -->
         <!-- cn.android.demo.apis.net.JsonParseResult -->
+cn.android.demo.apis.net.AndroidClientSocket
+        cn.android.demo.apis.net.AndroidServerSocket
         <activity
             android:name="cn.android.demo.apis.bug.AndroidGoogleWeatherActivity"
             android:label="@string/net_android_google_weather_dom" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="cn.android.demo.apis.SAMPLE_CODE" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="cn.android.demo.apis.net.AndroidClientSocket"
+            android:label="@string/net_android_client_socket" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="cn.android.demo.apis.SAMPLE_CODE" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="cn.android.demo.apis.net.AndroidServerSocket"
+            android:label="@string/net_android_server_socket" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -328,9 +348,21 @@
         </activity>
 
         <!-- ********************JAVA*********************** -->
+
+        cn.android.demo.apis.java.RunLinux
         <activity
             android:name="cn.android.demo.apis.java.AndroidSetId"
             android:label="@string/java_set_view_id"
+            android:screenOrientation="portrait" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="cn.android.demo.apis.SAMPLE_CODE" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="cn.android.demo.apis.java.RunLinux"
+            android:label="@string/java_run_linux"
             android:screenOrientation="portrait" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -820,7 +852,7 @@
 
                 <category android:name="cn.android.demo.apis.SAMPLE_CODE" />
             </intent-filter>
-        </activity>
+        </activity>
         -->
 
         <activity
@@ -899,10 +931,36 @@
             </intent-filter>
         </activity>
         <!-- *************** **THREAD** *************** -->
-
         <activity
             android:name="cn.android.demo.apis.thread.MultiAsyncTask"
             android:label="@string/thread_multi_asynctask" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="cn.android.demo.apis.SAMPLE_CODE" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="cn.android.demo.apis.thread.ThreadWaitNotify"
+            android:label="@string/thread_wait_notify" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="cn.android.demo.apis.SAMPLE_CODE" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="cn.android.demo.apis.thread.ThreadSynchronizedMethods"
+            android:label="@string/thread_synchronized_methods" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="cn.android.demo.apis.SAMPLE_CODE" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="cn.android.demo.apis.thread.BackgroundThreadRunStart"
+            android:label="@string/thread_background_thread_run_start" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -1290,7 +1348,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="cn.android.demo.apis.ui.views.AndroidViewPagerActivity"
+            android:name="cn.android.demo.apis.ui.views.ViewPagerActivity"
             android:label="@string/ui_view_view_pager"
             android:screenOrientation="portrait" >
             <intent-filter>
@@ -1792,7 +1850,7 @@
             <intent-filter>
                 <action android:name="android.intent.action.BATTERY_CHANGED" />
             </intent-filter>
-        </service>
+        </service>
         -->
         <receiver
             android:name="cn.android.demo.apis.app.ScheduledReceiver"
