@@ -226,5 +226,13 @@
     <string name="thread_background_thread_run_start">Thread/Thread Run Start</string>
     <string name="thread_synchronized_methods">Thread/Synchronized Methods</string>
     <string name="thread_wait_notify">Thread/ThreadWaitNotify</string>
+    <string name="other_system_available_features">Other/SystemAvailableFeatures</string>
+    <string name="ui_view_android_surfaceview">UI/View/SurfaceView</string>
+    <string name="ui_view_surfaceview_draw_bitmap">UI/View/Surface DrawBitmap</string>
+    <string name="ui_view_android_surfaceview_motion_aftereffect">UI/View/Surface MAE</string>
+    <string name="ui_view_widget_gif_view">UI/Widget/GIF View</string>
+    <string name="ui_view_webview2">UI/View/WebView2 JavaJs</string>
+    <string name="other_between_contexts_this_and_getApplicationContext">Other/Between Contexts </string>
+    <string name="ui_view_android_spinner_view">UI/View/SpinnerView</string>
 
 </resources>

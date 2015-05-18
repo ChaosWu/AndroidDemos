@@ -7,21 +7,20 @@ import cn.android.demo.apis.ui.fragment.FragmentA;
 import cn.android.demo.apis.ui.fragment.FragmentB;
 import cn.android.demo.apis.ui.fragment.FragmentC;
 import android.annotation.SuppressLint;
-import android.app.ActionBar;
-import android.app.ActionBar.Tab;
-import android.app.ActionBar.TabListener;
-import android.app.FragmentTransaction;
 import android.content.Context;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.support.v4.view.ViewPager.OnPageChangeListener;
+import android.support.v7.app.ActionBar;
+import android.support.v7.app.ActionBar.Tab;
+import android.support.v7.app.ActionBar.TabListener;
+import android.support.v7.app.ActionBarActivity;
 
 //Null
 @SuppressLint("NewApi")
-public class ViewPagerActivity extends FragmentActivity {
+public class ViewPagerActivity extends ActionBarActivity {
 
 	ViewPager viewPager;
 	TabsAdapter mTabsAdapter;
@@ -33,7 +32,7 @@ public class ViewPagerActivity extends FragmentActivity {
 		viewPager.setId(R.id.view_pager);
 		setContentView(viewPager);
 
-		final ActionBar bar = getActionBar();
+		final ActionBar bar = getSupportActionBar();
 		bar.setNavigationMode(ActionBar.NAVIGATION_MODE_TABS);
 		bar.setDisplayOptions(0, ActionBar.DISPLAY_SHOW_TITLE);
 
@@ -81,10 +80,10 @@ public class ViewPagerActivity extends FragmentActivity {
 			}
 		}
 
-		public TabsAdapter(FragmentActivity activity, ViewPager viewPager) {
+		public TabsAdapter(ActionBarActivity activity, ViewPager viewPager) {
 			super(activity.getSupportFragmentManager());
 			mContext = activity;
-			mActionBar = activity.getActionBar();
+			mActionBar = activity.getSupportActionBar();
 			mPager = viewPager;
 			mPager.setAdapter(this);
 			mPager.setOnPageChangeListener(this);
@@ -119,21 +118,6 @@ public class ViewPagerActivity extends FragmentActivity {
 		}
 
 		@Override
-		public void onTabSelected(Tab tab, FragmentTransaction ft) {
-
-		}
-
-		@Override
-		public void onTabUnselected(Tab tab, FragmentTransaction ft) {
-
-		}
-
-		@Override
-		public void onTabReselected(Tab tab, FragmentTransaction ft) {
-
-		}
-
-		@Override
 		public Fragment getItem(int position) {
 
 			TabInfo info = mTabs.get(position);
@@ -145,6 +129,27 @@ public class ViewPagerActivity extends FragmentActivity {
 		@Override
 		public int getCount() {
 			return mTabs.size();
+		}
+
+		@Override
+		public void onTabReselected(Tab arg0,
+				android.support.v4.app.FragmentTransaction arg1) {
+			// TODO Auto-generated method stub
+
+		}
+
+		@Override
+		public void onTabSelected(Tab arg0,
+				android.support.v4.app.FragmentTransaction arg1) {
+			// TODO Auto-generated method stub
+
+		}
+
+		@Override
+		public void onTabUnselected(Tab arg0,
+				android.support.v4.app.FragmentTransaction arg1) {
+			// TODO Auto-generated method stub
+
 		}
 
 	}

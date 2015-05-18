@@ -81,6 +81,24 @@
             </intent-filter>
         </activity>
         <activity
+            android:name="cn.android.demo.apis.other.BetweenContexts"
+            android:label="@string/other_between_contexts_this_and_getApplicationContext" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="cn.android.demo.apis.SAMPLE_CODE" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="cn.android.demo.apis.other.SystemAvailableFeatures"
+            android:label="@string/other_system_available_features" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="cn.android.demo.apis.SAMPLE_CODE" />
+            </intent-filter>
+        </activity>
+        <activity
             android:name="cn.android.demo.apis.other.AppIsRunBackground"
             android:label="@string/other_app_is_run_background" >
             <intent-filter>
@@ -246,7 +264,7 @@
         <!-- ********************Net*********************** -->
         <!-- cn.android.demo.apis.net.JsonParseResult -->
 cn.android.demo.apis.net.AndroidClientSocket
-        cn.android.demo.apis.net.AndroidServerSocket
+        cn.android.demo.apis.net.AndroidServerSocket
         <activity
             android:name="cn.android.demo.apis.bug.AndroidGoogleWeatherActivity"
             android:label="@string/net_android_google_weather_dom" >
@@ -349,7 +367,7 @@ cn.android.demo.apis.net.AndroidClientSocket
 
         <!-- ********************JAVA*********************** -->
 
-        cn.android.demo.apis.java.RunLinux
+        cn.android.demo.apis.java.RunLinux
         <activity
             android:name="cn.android.demo.apis.java.AndroidSetId"
             android:label="@string/java_set_view_id"
@@ -852,7 +870,7 @@ cn.android.demo.apis.net.AndroidClientSocket
 
                 <category android:name="cn.android.demo.apis.SAMPLE_CODE" />
             </intent-filter>
-        </activity>
+        </activity>
         -->
 
         <activity
@@ -1075,6 +1093,19 @@ cn.android.demo.apis.net.AndroidClientSocket
 
         <!-- *************** **UI Widget** *************** -->
 
+
+        <!-- TODO  GIF播放 低版本无问题，高版本需要关闭硬件加速    android:hardwareAccelerated="false" -->
+        <activity
+            android:name="cn.android.demo.apis.ui.widget.GifViewActivity"
+            android:hardwareAccelerated="false"
+            android:label="@string/ui_view_widget_gif_view"
+            android:screenOrientation="portrait" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="cn.android.demo.apis.SAMPLE_CODE" />
+            </intent-filter>
+        </activity>
         <activity
             android:name="cn.android.demo.apis.ui.widget.DetechTouchActivity"
             android:label="@string/ui_widget_detech_touch" >
@@ -1166,10 +1197,50 @@ cn.android.demo.apis.net.AndroidClientSocket
             </intent-filter>
         </activity>
         <!-- *************** **UI View** *************** -->
-
+		cn.android.demo.apis.ui.views.AndroidSpinnerView
         <activity
             android:name="cn.android.demo.apis.ui.views.AndroidListNotExtendsListActivity"
             android:label="@string/ui_view_not_extends_listactivity"
+            android:screenOrientation="portrait" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="cn.android.demo.apis.SAMPLE_CODE" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="cn.android.demo.apis.ui.views.AndroidSpinnerView"
+            android:label="@string/ui_view_android_spinner_view"
+            android:screenOrientation="portrait" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="cn.android.demo.apis.SAMPLE_CODE" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="cn.android.demo.apis.ui.views.SurfaceViewMotionAftereffect"
+            android:label="@string/ui_view_android_surfaceview_motion_aftereffect"
+            android:screenOrientation="portrait" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="cn.android.demo.apis.SAMPLE_CODE" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="cn.android.demo.apis.ui.views.SurfaceView2DrawBitmap"
+            android:label="@string/ui_view_surfaceview_draw_bitmap"
+            android:screenOrientation="portrait" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="cn.android.demo.apis.SAMPLE_CODE" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="cn.android.demo.apis.ui.views.AndroidSurfaceView"
+            android:label="@string/ui_view_android_surfaceview"
             android:screenOrientation="portrait" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -1380,6 +1451,16 @@ cn.android.demo.apis.net.AndroidClientSocket
         <activity
             android:name="cn.android.demo.apis.ui.views.AndroidWebView"
             android:label="@string/ui_view_webview"
+            android:screenOrientation="portrait" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="cn.android.demo.apis.SAMPLE_CODE" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="cn.android.demo.apis.ui.views.AndroidWebView2"
+            android:label="@string/ui_view_webview2"
             android:screenOrientation="portrait" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -1850,7 +1931,7 @@ cn.android.demo.apis.net.AndroidClientSocket
             <intent-filter>
                 <action android:name="android.intent.action.BATTERY_CHANGED" />
             </intent-filter>
-        </service>
+        </service>
         -->
         <receiver
             android:name="cn.android.demo.apis.app.ScheduledReceiver"

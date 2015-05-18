@@ -45,7 +45,9 @@ public class AndroidWebView extends Activity {
 		wv.getSettings().setLoadWithOverviewMode(true);
 
 		wv.setWebViewClient(new MyWebViewClient());
-		wv.loadUrl(urlPath);
+		// wv.loadUrl(urlPath);
+		//得翻墙
+		wv.loadUrl("file:///android_asset/panoramiomap.html");
 
 		bt = (Button) findViewById(R.id.bt_load_with_over_view_mode);
 		// wv.loadUrl(url);
