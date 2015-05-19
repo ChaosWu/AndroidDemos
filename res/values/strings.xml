@@ -237,5 +237,6 @@
     <string name="thread_asynctask_pool">Thread/Asynctask Pool</string>
     <string name="other_android_audio_record">Other/Audio Record</string>
     <string name="app_android_media_player">App/MediaPlayer</string>
+    <string name="other_android_lifecycle">Other/Android Lifecycle</string>
 
 </resources>
