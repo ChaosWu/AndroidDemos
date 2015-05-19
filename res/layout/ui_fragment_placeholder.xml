@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <Button
+        android:id="@+id/ui_fragment_placeholder_start"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Start" />
+
+    <Button
+        android:id="@+id/ui_fragment_placeholder_pause"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Pause" />
+
+    <Button
+        android:id="@+id/ui_fragment_placeholder_stop"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Stop" />
+
+    <Button
+        android:id="@+id/ui_fragment_placeholder_seekto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Seek To Beginning" />
+
+    <TextView
+        android:id="@+id/ui_fragment_placeholder_state"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:id="@+id/ui_fragment_placeholder_duration"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:id="@+id/ui_fragment_placeholder_position"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+</LinearLayout>
