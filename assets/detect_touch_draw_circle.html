@@ -1,0 +1,109 @@
+<!DOCTYPE HTML>
+<HTML>
+<HEAD>
+<script>
+
+var p1;
+var p2;
+var canvas;
+var context;
+var cx;
+var cy;
+var x;
+var y;
+var canvasOffsetX;
+var canvasOffsetY;
+
+function init(){
+ p1 = document.getElementById('p1');
+ p2 = document.getElementById('p2');
+ p1.innerHTML=navigator.userAgent;
+ 
+ canvas = document.getElementById('myCanvas');
+ context = canvas.getContext('2d');
+ canvasOffsetX = canvas.getBoundingClientRect().left;
+ canvasOffsetY = canvas.getBoundingClientRect().top;
+ 
+ canvas.width = window.innerWidth - (2 * canvasOffsetX);
+ canvas.height = window.innerHeight - canvasOffsetY - 100;
+ canvas.fillStyle="#a0a0a0";
+
+ canvas.addEventListener('touchstart', touchstartListener, false);
+ canvas.addEventListener('touchmove', touchmoveListener, false);
+ canvas.addEventListener('touchend', touchendListener, false);
+ canvas.addEventListener('touchenter', touchenterListener, false);
+ canvas.addEventListener('touchleave', touchleaveListener, false);
+ canvas.addEventListener('touchcancel', touchcancelListener, false);
+ 
+}
+
+function touchstartListener(event){
+ cx = event.changedTouches[0].pageX - canvasOffsetX;
+ cy = event.changedTouches[0].pageY - canvasOffsetY;
+ p2.innerHTML= "touchstart - <br/>" 
+  + cx + ":" + cy;
+ event.preventDefault();
+ 
+ context.rect(0, 0, canvas.width, canvas.height);
+ context.fillStyle="white";
+ context.fill();
+}
+
+function touchmoveListener(event){
+
+ x = event.changedTouches[0].pageX - canvasOffsetX;
+ y = event.changedTouches[0].pageY - canvasOffsetY;
+ var deltax = x-cx;
+ var deltay = y-cy;
+ var radius = Math.sqrt(deltax*deltax + deltay*deltay);
+ context.beginPath();
+ context.arc(cx, cy, radius, 0, 2 * Math.PI, false);
+ context.fillStyle = 'green';
+ context.fill();
+ context.lineWidth = 1;
+ context.strokeStyle = '#003300';
+ context.stroke();
+
+ p2.innerHTML= "touchmove - <br/>" 
+  + x + ":" + y;
+ event.preventDefault();
+}
+
+function touchendListener(event){
+ p2.innerHTML= "touchend - <br/>" 
+  + event.changedTouches[0].pageX + ":" + event.changedTouches[0].pageY;
+ event.preventDefault();
+}
+
+function touchenterListener(event){
+ p2.innerHTML= "touchenter - <br/>" 
+  + event.changedTouches[0].pageX + ":" + event.changedTouches[0].pageY;
+ event.preventDefault();
+}
+
+function touchleaveListener(event){
+ p2.innerHTML= "touchleave - <br/>" 
+  + event.changedTouches[0].pageX + ":" + event.changedTouches[0].pageY;
+ event.preventDefault();
+}
+
+function touchcancelListener(event){
+ p2.innerHTML= "touchcancel - <br/>" 
+  + event.changedTouches[0].pageX + ":" + event.changedTouches[0].pageY;
+ event.preventDefault();
+}
+
+</script>
+</HEAD>
+<BODY onload="init()" style="border:5px solid #000000;">
+
+<p id='p1'>un-init</p>
+
+<canvas id='myCanvas' style="border:1px solid #FF0000;">
+Canvas not support!
+</canvas>
+
+<p id='p2'></p>
+
+</BODY>
+</HTML>

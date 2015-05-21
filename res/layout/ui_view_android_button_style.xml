@@ -67,6 +67,19 @@
             android:shadowColor="#000000"
             android:text="Button with Styled Text"
             android:textStyle="bold|italic" />
+<!-- 左边图片，右边文字
+        <Button
+            android:id="@+id/delete"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/common_button"
+            android:drawableLeft="@drawable/common_save_button"
+            android:paddingLeft="20dp"
+            android:text="@string/delete"
+            android:textColor="@drawable/text_color_selector" />
+            
+            
+ -->            
     </LinearLayout>
 
 </ScrollView>

@@ -1,0 +1,50 @@
+<!DOCTYPE HTML>
+<HTML>
+<HEAD>
+<script>
+
+var p1;
+var p2;
+var canvas;
+var context;
+var cx;
+var cy;
+var x;
+var y;
+var canvasOffsetX;
+var canvasOffsetY;
+
+var imgSVG = new Image();
+imgSVG.src = "test.svg";
+
+function init(){
+ p1 = document.getElementById('p1');
+ p2 = document.getElementById('p2');
+ p1.innerHTML=navigator.userAgent;
+ 
+ canvas = document.getElementById('myCanvas');
+ context = canvas.getContext('2d');
+ canvasOffsetX = canvas.getBoundingClientRect().left;
+ canvasOffsetY = canvas.getBoundingClientRect().top;
+ 
+ canvas.width = window.innerWidth - (2 * canvasOffsetX);
+ canvas.height = window.innerHeight - canvasOffsetY - 100;
+ 
+ context.drawImage(imgSVG, 0, 0);
+ 
+}
+
+</script>
+</HEAD>
+<BODY onload="init()" style="border:5px solid #000000;">
+
+<p id='p1'>un-init</p>
+
+<canvas id='myCanvas' style="border:1px solid #FF0000;">
+Canvas not support!
+</canvas>
+
+<p id='p2'></p>
+
+</BODY>
+</HTML>

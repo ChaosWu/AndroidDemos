@@ -173,7 +173,17 @@
         </activity>
 
         <!-- ANIM -->
+		
+		<activity
+            android:name="cn.android.demo.apis.anim.AnimMovingBitmapAlongPath"
+            android:label="@string/anim_object_anim_moving_bm_along_path" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
 
+                <category android:name="cn.android.demo.apis.SAMPLE_CODE" />
+            </intent-filter>
+        </activity>
+		
         <activity
             android:name="cn.android.demo.apis.anim.AndroidGestureObjectAnim"
             android:label="@string/anim_object_animator_gestrue" >
@@ -393,10 +403,19 @@
         </activity>
 
         <!-- ********************JAVA*********************** -->
-
         <activity
             android:name="cn.android.demo.apis.java.AndroidSetId"
             android:label="@string/java_set_view_id"
+            android:screenOrientation="portrait" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="cn.android.demo.apis.SAMPLE_CODE" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="cn.android.demo.apis.java.JavaCurrency"
+            android:label="@string/java_currency"
             android:screenOrientation="portrait" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -535,9 +554,30 @@
             </intent-filter>
         </activity>
         <!-- ********************Phone*********************** -->
+
         <activity
             android:name="cn.android.demo.apis.phone.AndroidVelocityTracker"
             android:label="@string/phone_android_velocity_tracker"
+            android:screenOrientation="portrait" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="cn.android.demo.apis.SAMPLE_CODE" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="cn.android.demo.apis.phone.AndroidSoundPoolOGG"
+            android:label="@string/phone_android_soundpool_ogg"
+            android:screenOrientation="portrait" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="cn.android.demo.apis.SAMPLE_CODE" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="cn.android.demo.apis.phone.IntentActionOpenDocument"
+            android:label="@string/phone_android_intent_action_open_document"
             android:screenOrientation="portrait" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -896,7 +936,7 @@
 
                 <category android:name="cn.android.demo.apis.SAMPLE_CODE" />
             </intent-filter>
-        </activity>
+        </activity>
         -->
 
         <activity
@@ -1129,7 +1169,15 @@
 
         <!-- *************** **UI Widget** *************** -->
 
+		 <activity
+            android:name="cn.android.demo.apis.ui.widget.DrawPathCustomView"
+            android:label="@string/ui_widget_draw_path_custom_view" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
 
+                <category android:name="cn.android.demo.apis.SAMPLE_CODE" />
+            </intent-filter>
+        </activity>
         <!-- TODO  GIF播放 低版本无问题，高版本需要关闭硬件加速    android:hardwareAccelerated="false" -->
         <activity
             android:name="cn.android.demo.apis.ui.widget.GifViewActivity"
@@ -1145,6 +1193,15 @@
         <activity
             android:name="cn.android.demo.apis.ui.widget.DetechTouchActivity"
             android:label="@string/ui_widget_detech_touch" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="cn.android.demo.apis.SAMPLE_CODE" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="cn.android.demo.apis.ui.widget.TouchOnCustomViewDrawIcon"
+            android:label="@string/ui_widget_touch_on_custom_view_draw_icon" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -1233,6 +1290,17 @@
             </intent-filter>
         </activity>
         <!-- *************** **UI View** *************** -->
+
+        <activity
+            android:name="cn.android.demo.apis.ui.views.AndroidWebView3"
+            android:label="@string/ui_view_android_webview3"
+            android:screenOrientation="portrait" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="cn.android.demo.apis.SAMPLE_CODE" />
+            </intent-filter>
+        </activity>
         <activity
             android:name="cn.android.demo.apis.ui.views.AndroidListNotExtendsListActivity"
             android:label="@string/ui_view_not_extends_listactivity"
@@ -1774,6 +1842,18 @@
         <activity android:name="cn.android.demo.apis.ui.graphics.SecondBitmapPixels" >
         </activity>
         <!-- *************** **APP** *************** -->
+        
+        <activity
+            android:name="cn.android.demo.apis.app.AndroidRootSudo"
+            android:label="@string/app_android_root_su"
+            android:theme="@android:style/Theme.DeviceDefault.Light.DarkActionBar"
+            tools:ignore="NewApi" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="cn.android.demo.apis.SAMPLE_CODE" />
+            </intent-filter>
+        </activity>
         <activity android:name="cn.android.demo.apis.app.ScheduledActivity" >
         </activity>
         <activity android:name="cn.android.demo.apis.app.SetPreference" >
@@ -1977,7 +2057,7 @@
             <intent-filter>
                 <action android:name="android.intent.action.BATTERY_CHANGED" />
             </intent-filter>
-        </service>
+        </service>
         -->
         <receiver
             android:name="cn.android.demo.apis.app.ScheduledReceiver"

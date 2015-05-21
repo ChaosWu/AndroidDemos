@@ -238,5 +238,13 @@
     <string name="other_android_audio_record">Other/Audio Record</string>
     <string name="app_android_media_player">App/MediaPlayer</string>
     <string name="other_android_lifecycle">Other/Android Lifecycle</string>
+    <string name="phone_android_intent_action_open_document">Phone/IntentActionOpenDocument</string>
+    <string name="ui_widget_touch_on_custom_view_draw_icon">UI/Widget/TouchOnCustomView DrawICON</string>
+    <string name="phone_android_soundpool_ogg">Phone/SoundPool OGG</string>
+    <string name="ui_view_android_webview3">UI/View/WebView3</string>
+    <string name="java_currency">Java/Currency</string>
+    <string name="ui_widget_draw_path_custom_view">UI/Widget/DrawPathCustomView</string>
+    <string name="app_android_root_su">App/RootSu</string>
+    <string name="anim_object_anim_moving_bm_along_path">Anim/Moving Bm Along Path</string>
 
 </resources>

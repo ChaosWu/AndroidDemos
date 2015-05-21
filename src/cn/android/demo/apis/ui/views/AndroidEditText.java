@@ -5,12 +5,15 @@ import android.app.Activity;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
+import android.view.KeyEvent;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.TextView.OnEditorActionListener;
 
 public class AndroidEditText extends Activity {
 	TextView textView;
 	EditText editText;
+
 	@Override
 	public Object onRetainNonConfigurationInstance() {
 		// TODO Auto-generated method stub
@@ -43,6 +46,20 @@ public class AndroidEditText extends Activity {
 			public void afterTextChanged(Editable s) {
 				// TODO Auto-generated method stub
 
+			}
+		});
+		/**
+		 * 禁止换行
+		 * 通过监听：
+		 * 
+		 * 或者配置android:singleLine="true"把虚拟键盘上的enter键禁止掉
+		 */
+		editText.setOnEditorActionListener(new OnEditorActionListener() {
+
+			@Override
+			public boolean onEditorAction(TextView v, int actionId,
+					KeyEvent event) {
+				return (event.getKeyCode() == KeyEvent.KEYCODE_ENTER);
 			}
 		});
 	}
