@@ -29,6 +29,19 @@
         android:progress="25" />
 
     <TextView
+        android:id="@+id/srrv_rottext"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="rotate :" />
+
+    <SeekBar
+        android:id="@+id/srrv_rotatebar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:max="360"
+        android:progress="180" />
+
+    <TextView
         android:id="@+id/srrv_pttext"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

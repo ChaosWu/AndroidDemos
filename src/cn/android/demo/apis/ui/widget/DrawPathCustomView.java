@@ -30,11 +30,14 @@ public class DrawPathCustomView extends Activity {
 	SeekBar sb;// radius
 	SeekBar sb1;// numb
 	SeekBar sb2;// innerRadius
+	SeekBar sb3;// rotate
+
 	TextView ptTV;
+	TextView tvLayerInfo;
+	TextView tvRotateInfo;
 	final static int MIN_PT = 3;
 
 	RadioButton optLayerTypeNone, optLayerTypeSoftware, optLayerTypeHardware;
-	TextView tvLayerInfo;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -44,12 +47,14 @@ public class DrawPathCustomView extends Activity {
 		sb = (SeekBar) findViewById(R.id.srrv_radiusbar);
 		sb1 = (SeekBar) findViewById(R.id.srrv_ptbar);
 		sb2 = (SeekBar) findViewById(R.id.srrv_innerradiusbar);
+		sb3 = (SeekBar) findViewById(R.id.srrv_rotatebar);
 
 		optLayerTypeNone = (RadioButton) findViewById(R.id.srrv_typeNone);
 		optLayerTypeSoftware = (RadioButton) findViewById(R.id.srrv_typeSoftware);
 		optLayerTypeHardware = (RadioButton) findViewById(R.id.srrv_typeHardware);
 
 		tvLayerInfo = (TextView) findViewById(R.id.srrv_typeinfo);
+		tvRotateInfo = (TextView) findViewById(R.id.srrv_rottext);
 		ptTV = (TextView) findViewById(R.id.srrv_pttext);
 
 		srrv.passElements(tvLayerInfo);
@@ -137,6 +142,30 @@ public class DrawPathCustomView extends Activity {
 						/ (float) (sb2.getMax());
 				srrv.setShapeInnerRadiusRatio(ratio);
 				srrv.invalidate();
+			}
+		});
+		sb3.setOnSeekBarChangeListener(new OnSeekBarChangeListener() {
+
+			@Override
+			public void onStopTrackingTouch(SeekBar seekBar) {
+				// TODO Auto-generated method stub
+
+			}
+
+			@Override
+			public void onStartTrackingTouch(SeekBar seekBar) {
+				// TODO Auto-generated method stub
+
+			}
+
+			@Override
+			public void onProgressChanged(SeekBar seekBar, int progress,
+					boolean fromUser) {
+				int degree = progress - 180;
+				tvRotateInfo.setText("rotate:" + degree + "  degree");
+				srrv.setShapeRotate(degree);
+				srrv.invalidate();
+
 			}
 		});
 

@@ -1,11 +1,12 @@
 package cn.android.demo.apis.net;
 
 import java.io.ByteArrayOutputStream;
+import java.io.DataInputStream;
+import java.io.DataOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.net.Socket;
 import java.net.UnknownHostException;
-
 
 import cn.android.demo.apis.R;
 import android.app.Activity;
@@ -50,9 +51,11 @@ public class AndroidClientSocket extends Activity {
 
 			@Override
 			public void onClick(View v) {
+				String tMsg = "welcomeMsg";
+
 				MyClientTask clientTask = new MyClientTask(address.getText()
 						.toString(), Integer
-						.parseInt(port.getText().toString()));
+						.parseInt(port.getText().toString()), tMsg);
 
 				clientTask.execute();
 			}
@@ -73,29 +76,48 @@ public class AndroidClientSocket extends Activity {
 		int dstPort;
 		String response = "";
 
-		public MyClientTask(String address, int port) {
+		String msgToServer;
+
+		public MyClientTask(String address, int port, String msgTo) {
 			this.dstAddress = address;
 			this.dstPort = port;
+			this.msgToServer = msgTo;
 
 		}
 
 		@Override
 		protected Void doInBackground(Void... params) {
 			Socket socket = null;
+
+			DataOutputStream dataOutputStream = null;
+			DataInputStream dataInputStream = null;
 			try {
 
 				socket = new Socket(dstAddress, dstPort);
-				ByteArrayOutputStream baos = new ByteArrayOutputStream(1024);
-				byte[] buffer = new byte[1024];
+				// add >>>2015/05/25
+				dataOutputStream = new DataOutputStream(
+						socket.getOutputStream());
+				dataInputStream = new DataInputStream(socket.getInputStream());
 
-				int bytesRead;
-				InputStream is = socket.getInputStream();
-
-				while ((bytesRead = is.read(buffer)) != -1) {
-					baos.write(buffer, 0, bytesRead);
-					response += baos.toString("UTF-8");
-
+				if (msgToServer != null) {
+					dataOutputStream.writeUTF(msgToServer);
 				}
+
+				response = dataInputStream.readUTF();
+				// add >>>2015/05/25
+
+				// del >>>2015/05/25
+				// ByteArrayOutputStream baos = new ByteArrayOutputStream(1024);
+				// byte[] buffer = new byte[1024];
+				//
+				// int bytesRead;
+				// InputStream is = socket.getInputStream();
+				// while ((bytesRead = is.read(buffer)) != -1) {
+				// baos.write(buffer, 0, bytesRead);
+				// response += baos.toString("UTF-8");
+				//
+				// }
+				// del >>>2015/05/25
 
 			} catch (UnknownHostException e) {
 				// TODO Auto-generated catch block
@@ -115,6 +137,22 @@ public class AndroidClientSocket extends Activity {
 						e.printStackTrace();
 					}
 
+				}
+				if (dataOutputStream != null) {
+					try {
+						dataOutputStream.close();
+					} catch (IOException e) {
+						// TODO Auto-generated catch block
+						e.printStackTrace();
+					}
+				}
+				if (dataInputStream != null) {
+					try {
+						dataInputStream.close();
+					} catch (IOException e) {
+						// TODO Auto-generated catch block
+						e.printStackTrace();
+					}
 				}
 			}
 

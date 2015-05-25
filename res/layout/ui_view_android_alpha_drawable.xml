@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <SeekBar
+        android:id="@+id/alpha_drawable_opacitybutton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:max="100"
+        android:progress="100" />
+
+    <SeekBar
+        android:id="@+id/alpha_drawable_opacitydrawableleft"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:max="255"
+        android:progress="255" />
+
+    <SeekBar
+        android:id="@+id/alpha_drawable_opacitydrawabletop"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:max="255"
+        android:progress="255" />
+
+    <SeekBar
+        android:id="@+id/alpha_drawable_opacitydrawableright"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:max="255"
+        android:progress="255" />
+
+    <SeekBar
+        android:id="@+id/alpha_drawable_opacitydrawablebottom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:max="255"
+        android:progress="255" />
+
+    <TextView
+        android:id="@+id/alpha_drawable_opacitysetting"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <Button
+        android:id="@+id/alpha_drawable_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Opacity Button" />
+
+</LinearLayout>

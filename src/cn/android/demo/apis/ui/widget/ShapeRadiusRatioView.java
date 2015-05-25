@@ -5,9 +5,13 @@ import android.content.Context;
 import android.graphics.Canvas;
 import android.graphics.Color;
 import android.graphics.CornerPathEffect;
+import android.graphics.DashPathEffect;
+import android.graphics.Matrix;
 import android.graphics.Paint;
 import android.graphics.Path;
 import android.graphics.Paint.Style;
+import android.graphics.Path.Direction;
+import android.graphics.PathDashPathEffect;
 import android.util.AttributeSet;
 import android.view.View;
 import android.widget.TextView;
@@ -16,9 +20,18 @@ public class ShapeRadiusRatioView extends View {
 	MyShape myShape;
 	float ratioRadius;
 	float ratioInnerRadius;
+	float rotate;
 
 	int numberOfPoint = 3;// 默认
 	TextView textLayerInfo;
+	private Matrix matrix;
+	// 虚线效果
+	DashPathEffect dashPathEffect;
+	// 动态线效果
+	PathDashPathEffect pathDashPathEffect;
+
+	Path dashPath;
+	float phase;
 
 	public ShapeRadiusRatioView(Context context) {
 		super(context);
@@ -38,6 +51,15 @@ public class ShapeRadiusRatioView extends View {
 
 	private void init() {
 		myShape = new MyShape();
+		matrix = new Matrix();
+
+		// TODO init DashPathEffect
+		dashPathEffect = new DashPathEffect(new float[] { 10.0f, 5.0f }, // interval
+				0); // phase
+
+		dashPath = new Path();
+		dashPath.addCircle(0, 0, 3, Direction.CCW);
+		phase = 0.0f;
 	}
 
 	@SuppressLint("NewApi")
@@ -65,8 +87,42 @@ public class ShapeRadiusRatioView extends View {
 		}
 		myShape.setStar(x, y, radius, innerRadius, numberOfPoint);
 		// myShape.setCircle(x, y, radius, Direction.CCW);
+
+		// TODO 1 旋转使用Matrix
+		// Rotate the path by angle in degree
+		// Path path = myShape.getPath();
+		// matrix.reset();
+		// matrix.postRotate(rotate, x, y);
+		// path.transform(matrix);
+
+		// TODO 2 旋转使用画布
+		// Save and rotate canvas
+		canvas.save();
+		canvas.rotate(rotate, x, y);
+
+		Paint paintDash = myShape.getPaint();
+		paintDash.setPathEffect(dashPathEffect);
+
+		// 动态效果
+		// phase++;
+		// pathDashPathEffect = new PathDashPathEffect(dashPath, 15.0f, phase,
+		// PathDashPathEffect.Style.MORPH);
+
+		// Paint paintDash2 = myShape.getPaint();
+		// paintDash2.setPathEffect(pathDashPathEffect);
+
+		//
+		// phase++;
+		// PathDashPathEffect pathDashPathEffect = new PathDashPathEffect(
+		// dashPath, advance, phase, PathDashPathEffect.Style.MORPH);
+		//
+		// Paint paintDash = myShape.getPaint();
+		// paintDash.setPathEffect(pathDashPathEffect);
+
 		canvas.drawPath(myShape.getPath(), myShape.getPaint());
 
+		// restore canvas
+		canvas.restore();
 		long end = System.nanoTime();
 
 		String info = "myView.isHardwareAccelerated() = "
@@ -92,6 +148,10 @@ public class ShapeRadiusRatioView extends View {
 
 	public void passElements(TextView tvLayerInfo) {
 		this.textLayerInfo = tvLayerInfo;
+	}
+
+	public void setShapeRotate(int rot) {
+		rotate = (float) rot;
 	}
 
 	public class MyShape {

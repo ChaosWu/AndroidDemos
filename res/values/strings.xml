@@ -246,5 +246,13 @@
     <string name="ui_widget_draw_path_custom_view">UI/Widget/DrawPathCustomView</string>
     <string name="app_android_root_su">App/RootSu</string>
     <string name="anim_object_anim_moving_bm_along_path">Anim/Moving Bm Along Path</string>
+    <string name="ui_view_android_swiperefreshlayout">UI/View/SwipeRefreshLayout</string>
+    <string name="java_locale_string_format">Java/Locale StringFormat</string>
+    <string name="java_random">Java/Random</string>
+    <string name="ui_view_android_alpha_drawable">UI/View/Alpha Drawable</string>
+    <string name="ui_widget_touch_to_toggle_view">UI/Widget/Touch Toggle View</string>
+    <string name="java_ascii_code_listview">Java/Ascii Code</string>
+    <string name="ui_view_android_expandable_listview">UI/View/ExpandableListView</string>
+    <string name="thread_asynctask_files">Thread/AsyncTask Files</string>
 
 </resources>

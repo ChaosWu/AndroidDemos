@@ -1,5 +1,7 @@
 package cn.android.demo.apis.net;
 
+import java.io.DataInputStream;
+import java.io.DataOutputStream;
 import java.io.IOException;
 import java.io.OutputStream;
 import java.io.PrintStream;
@@ -140,6 +142,11 @@ public class AndroidServerSocket extends Activity {
 
 		@Override
 		public void run() {
+			// add >>> 2015/05/25
+			Socket socket = null;
+			DataInputStream dataInputStream = null;
+			DataOutputStream dataOutputStream = null;
+			// add >>> 2015/05/25
 			try {
 				serverSocket = new ServerSocket(SOCKET_SERVER_PORT);
 				AndroidServerSocket.this.runOnUiThread(new Runnable() {
@@ -152,10 +159,27 @@ public class AndroidServerSocket extends Activity {
 				});
 
 				while (true) {
-					Socket socket = serverSocket.accept();
+					socket = serverSocket.accept();
+					// add >>> 2015/05/25
+					dataInputStream = new DataInputStream(
+							socket.getInputStream());
+					dataOutputStream = new DataOutputStream(
+							socket.getOutputStream());
+
+					String messageFromClient = "";
+					// If no message sent from client, this code will block the
+					// program
+					// 防止程序被阻止，如果DataInputStream以是空的
+					if (dataInputStream.available() > 0) {
+						messageFromClient = dataInputStream.readUTF();
+					}
+
+					// add >>> 2015/05/25
+
 					count++;
 					message += "#" + count + " from " + socket.getInetAddress()
-							+ ":" + socket.getPort() + "\n";
+							+ ":" + socket.getPort() + "\n"
+							+ "Msg from client: " + messageFromClient + "\n";
 
 					AndroidServerSocket.this.runOnUiThread(new Runnable() {
 
@@ -164,6 +188,9 @@ public class AndroidServerSocket extends Activity {
 							msg.setText(message);
 						}
 					});
+
+					String msgReply = "Hello from Android, you are #" + count;
+					dataOutputStream.writeUTF(msgReply);
 
 					SocketServerReplyThread replyThread = new SocketServerReplyThread(
 							socket, count);
@@ -174,7 +201,35 @@ public class AndroidServerSocket extends Activity {
 			} catch (Exception e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
+			} finally {
+				if (socket != null) {
+					try {
+						socket.close();
+					} catch (IOException e) {
+						// TODO Auto-generated catch block
+						e.printStackTrace();
+					}
+				}
+
+				if (dataInputStream != null) {
+					try {
+						dataInputStream.close();
+					} catch (IOException e) {
+						// TODO Auto-generated catch block
+						e.printStackTrace();
+					}
+				}
+
+				if (dataOutputStream != null) {
+					try {
+						dataOutputStream.close();
+					} catch (IOException e) {
+						// TODO Auto-generated catch block
+						e.printStackTrace();
+					}
+				}
 			}
+
 		}
 	}
 }

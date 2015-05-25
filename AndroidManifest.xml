@@ -173,8 +173,8 @@
         </activity>
 
         <!-- ANIM -->
-		
-		<activity
+
+        <activity
             android:name="cn.android.demo.apis.anim.AnimMovingBitmapAlongPath"
             android:label="@string/anim_object_anim_moving_bm_along_path" >
             <intent-filter>
@@ -183,7 +183,6 @@
                 <category android:name="cn.android.demo.apis.SAMPLE_CODE" />
             </intent-filter>
         </activity>
-		
         <activity
             android:name="cn.android.demo.apis.anim.AndroidGestureObjectAnim"
             android:label="@string/anim_object_animator_gestrue" >
@@ -403,6 +402,36 @@
         </activity>
 
         <!-- ********************JAVA*********************** -->
+<activity
+            android:name="cn.android.demo.apis.java.ASCIIListView"
+            android:label="@string/java_ascii_code_listview"
+            android:screenOrientation="portrait" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="cn.android.demo.apis.SAMPLE_CODE" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="cn.android.demo.apis.java.LocaleStringFormat"
+            android:label="@string/java_locale_string_format"
+            android:screenOrientation="portrait" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="cn.android.demo.apis.SAMPLE_CODE" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="cn.android.demo.apis.java.JavaRandom"
+            android:label="@string/java_random"
+            android:screenOrientation="portrait" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="cn.android.demo.apis.SAMPLE_CODE" />
+            </intent-filter>
+        </activity>
         <activity
             android:name="cn.android.demo.apis.java.AndroidSetId"
             android:label="@string/java_set_view_id"
@@ -936,7 +965,7 @@
 
                 <category android:name="cn.android.demo.apis.SAMPLE_CODE" />
             </intent-filter>
-        </activity>
+        </activity>
         -->
 
         <activity
@@ -1015,7 +1044,16 @@
             </intent-filter>
         </activity>
         <!-- *************** **THREAD** *************** -->
+		<activity
+            android:name="cn.android.demo.apis.thread.AsyncTaskFiles"
+            android:label="@string/thread_asynctask_files" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
 
+                <category android:name="cn.android.demo.apis.SAMPLE_CODE" />
+            </intent-filter>
+        </activity>
+		
         <activity
             android:name="cn.android.demo.apis.thread.MultiAsyncTask"
             android:label="@string/thread_multi_asynctask" >
@@ -1168,8 +1206,18 @@
         </activity>
 
         <!-- *************** **UI Widget** *************** -->
+		
+		<activity
+            android:name="cn.android.demo.apis.ui.widget.TouchToToggleViewActivity"
+            android:label="@string/ui_widget_touch_to_toggle_view" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
 
-		 <activity
+                <category android:name="cn.android.demo.apis.SAMPLE_CODE" />
+            </intent-filter>
+        </activity>
+		
+        <activity
             android:name="cn.android.demo.apis.ui.widget.DrawPathCustomView"
             android:label="@string/ui_widget_draw_path_custom_view" >
             <intent-filter>
@@ -1290,7 +1338,37 @@
             </intent-filter>
         </activity>
         <!-- *************** **UI View** *************** -->
+		cn.android.demo.apis.ui.views.AndroidExpandableListView
+        <activity
+            android:name="cn.android.demo.apis.ui.views.AndroidExpandableListView"
+            android:label="@string/ui_view_android_expandable_listview"
+            android:screenOrientation="portrait" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
 
+                <category android:name="cn.android.demo.apis.SAMPLE_CODE" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="cn.android.demo.apis.ui.views.AndroidSwipeRefreshLayout"
+            android:label="@string/ui_view_android_swiperefreshlayout"
+            android:screenOrientation="portrait" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="cn.android.demo.apis.SAMPLE_CODE" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="cn.android.demo.apis.ui.views.AndroidAlphaDrawable"
+            android:label="@string/ui_view_android_alpha_drawable"
+            android:screenOrientation="portrait" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="cn.android.demo.apis.SAMPLE_CODE" />
+            </intent-filter>
+        </activity>
         <activity
             android:name="cn.android.demo.apis.ui.views.AndroidWebView3"
             android:label="@string/ui_view_android_webview3"
@@ -1842,7 +1920,7 @@
         <activity android:name="cn.android.demo.apis.ui.graphics.SecondBitmapPixels" >
         </activity>
         <!-- *************** **APP** *************** -->
-        
+
         <activity
             android:name="cn.android.demo.apis.app.AndroidRootSudo"
             android:label="@string/app_android_root_su"
@@ -2057,7 +2135,7 @@
             <intent-filter>
                 <action android:name="android.intent.action.BATTERY_CHANGED" />
             </intent-filter>
-        </service>
+        </service>
         -->
         <receiver
             android:name="cn.android.demo.apis.app.ScheduledReceiver"
