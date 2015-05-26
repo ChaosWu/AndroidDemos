@@ -44,6 +44,8 @@
     <uses-permission android:name="android.permission.VIBRATE" />
     <!-- 获取联系人 -->
     <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <!-- 允许程序连接配对过的蓝牙设备 -->
+    <uses-permission android:name="android.permission.BLUETOOTH"/>
 
     <!-- TODO -->
     <permission
@@ -71,9 +73,19 @@
             </intent-filter>
         </activity>
         <!-- OTHER -->
+        
         <activity
             android:name="cn.android.demo.apis.other.AddRemveView"
             android:label="@string/other_add_remove_view" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="cn.android.demo.apis.SAMPLE_CODE" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="cn.android.demo.apis.other.BluetoothLowEnergy"
+            android:label="@string/other_bluetooth_low_energy" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -583,10 +595,29 @@
             </intent-filter>
         </activity>
         <!-- ********************Phone*********************** -->
-
         <activity
             android:name="cn.android.demo.apis.phone.AndroidVelocityTracker"
             android:label="@string/phone_android_velocity_tracker"
+            android:screenOrientation="portrait" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="cn.android.demo.apis.SAMPLE_CODE" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="cn.android.demo.apis.phone.AndroidToneGenerator"
+            android:label="@string/phone_android_tonegenerator"
+            android:screenOrientation="portrait" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="cn.android.demo.apis.SAMPLE_CODE" />
+            </intent-filter>
+        </activity>
+         <activity
+            android:name="cn.android.demo.apis.phone.AndroidToneGenerator2"
+            android:label="@string/phone_android_tonegenerator2"
             android:screenOrientation="portrait" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

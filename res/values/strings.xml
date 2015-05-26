@@ -254,5 +254,8 @@
     <string name="java_ascii_code_listview">Java/Ascii Code</string>
     <string name="ui_view_android_expandable_listview">UI/View/ExpandableListView</string>
     <string name="thread_asynctask_files">Thread/AsyncTask Files</string>
+    <string name="phone_android_tonegenerator">Phone/ToneGenerator</string>
+    <string name="phone_android_tonegenerator2">Phone/ToneGenerator2</string>
+    <string name="other_bluetooth_low_energy">Other/BluetoothLow</string>
 
 </resources>
