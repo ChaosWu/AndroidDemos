@@ -45,7 +45,7 @@
     <!-- 获取联系人 -->
     <uses-permission android:name="android.permission.READ_CONTACTS" />
     <!-- 允许程序连接配对过的蓝牙设备 -->
-    <uses-permission android:name="android.permission.BLUETOOTH"/>
+    <uses-permission android:name="android.permission.BLUETOOTH" />
 
     <!-- TODO -->
     <permission
@@ -73,10 +73,55 @@
             </intent-filter>
         </activity>
         <!-- OTHER -->
+        <activity
+            android:name="cn.android.demo.apis.other.GetPhoneNumberFromContactsDatabase"
+            android:label="@string/other_get_phone_number" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="cn.android.demo.apis.SAMPLE_CODE" />
+            </intent-filter>
+        </activity>
         
+        <activity
+            android:name="cn.android.demo.apis.other.ApacheHttpService"
+            android:label="@string/other_apache_http_service" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="cn.android.demo.apis.SAMPLE_CODE" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="cn.android.demo.apis.other.BlueToothBeServer"
+            android:label="@string/other_bluetooth_be_connected" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="cn.android.demo.apis.SAMPLE_CODE" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="cn.android.demo.apis.other.BluetoothBeClient"
+            android:label="@string/other_bluetooth_be_client" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="cn.android.demo.apis.SAMPLE_CODE" />
+            </intent-filter>
+        </activity>
         <activity
             android:name="cn.android.demo.apis.other.AddRemveView"
             android:label="@string/other_add_remove_view" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="cn.android.demo.apis.SAMPLE_CODE" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="cn.android.demo.apis.other.ReadSystemInfo"
+            android:label="@string/other_read_system_info" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -312,7 +357,16 @@
         </activity>
         <!-- ********************Net*********************** -->
         <!-- cn.android.demo.apis.net.JsonParseResult -->
+		<activity
+            android:name="cn.android.demo.apis.net.ServerSide"
+            android:label="@string/net_android_serverside" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
 
+                <category android:name="cn.android.demo.apis.SAMPLE_CODE" />
+            </intent-filter>
+        </activity>
+		
         <activity
             android:name="cn.android.demo.apis.bug.AndroidGoogleWeatherActivity"
             android:label="@string/net_android_google_weather_dom" >
@@ -414,7 +468,7 @@
         </activity>
 
         <!-- ********************JAVA*********************** -->
-<activity
+        <activity
             android:name="cn.android.demo.apis.java.ASCIIListView"
             android:label="@string/java_ascii_code_listview"
             android:screenOrientation="portrait" >
@@ -596,6 +650,16 @@
         </activity>
         <!-- ********************Phone*********************** -->
         <activity
+            android:name="cn.android.demo.apis.phone.AndroidMediaMetadataRetriever"
+            android:label="@string/phone_android_media_metadata_retriever"
+            android:screenOrientation="portrait" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="cn.android.demo.apis.SAMPLE_CODE" />
+            </intent-filter>
+        </activity>
+        <activity
             android:name="cn.android.demo.apis.phone.AndroidVelocityTracker"
             android:label="@string/phone_android_velocity_tracker"
             android:screenOrientation="portrait" >
@@ -615,7 +679,7 @@
                 <category android:name="cn.android.demo.apis.SAMPLE_CODE" />
             </intent-filter>
         </activity>
-         <activity
+        <activity
             android:name="cn.android.demo.apis.phone.AndroidToneGenerator2"
             android:label="@string/phone_android_tonegenerator2"
             android:screenOrientation="portrait" >
@@ -738,6 +802,16 @@
         <activity
             android:name="cn.android.demo.apis.phone.CalendarActivity"
             android:label="@string/phone_android_calendar"
+            android:screenOrientation="portrait" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="cn.android.demo.apis.SAMPLE_CODE" />
+            </intent-filter>
+        </activity>
+         <activity
+            android:name="cn.android.demo.apis.phone.AndroidDragAndDrop3"
+            android:label="@string/phone_android_drag_drop3"
             android:screenOrientation="portrait" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -996,7 +1070,7 @@
 
                 <category android:name="cn.android.demo.apis.SAMPLE_CODE" />
             </intent-filter>
-        </activity>
+        </activity>
         -->
 
         <activity
@@ -1075,7 +1149,7 @@
             </intent-filter>
         </activity>
         <!-- *************** **THREAD** *************** -->
-		<activity
+        <activity
             android:name="cn.android.demo.apis.thread.AsyncTaskFiles"
             android:label="@string/thread_asynctask_files" >
             <intent-filter>
@@ -1084,7 +1158,6 @@
                 <category android:name="cn.android.demo.apis.SAMPLE_CODE" />
             </intent-filter>
         </activity>
-		
         <activity
             android:name="cn.android.demo.apis.thread.MultiAsyncTask"
             android:label="@string/thread_multi_asynctask" >
@@ -1237,8 +1310,8 @@
         </activity>
 
         <!-- *************** **UI Widget** *************** -->
-		
-		<activity
+
+        <activity
             android:name="cn.android.demo.apis.ui.widget.TouchToToggleViewActivity"
             android:label="@string/ui_widget_touch_to_toggle_view" >
             <intent-filter>
@@ -1247,7 +1320,6 @@
                 <category android:name="cn.android.demo.apis.SAMPLE_CODE" />
             </intent-filter>
         </activity>
-		
         <activity
             android:name="cn.android.demo.apis.ui.widget.DrawPathCustomView"
             android:label="@string/ui_widget_draw_path_custom_view" >
@@ -1369,10 +1441,20 @@
             </intent-filter>
         </activity>
         <!-- *************** **UI View** *************** -->
-		cn.android.demo.apis.ui.views.AndroidExpandableListView
         <activity
             android:name="cn.android.demo.apis.ui.views.AndroidExpandableListView"
             android:label="@string/ui_view_android_expandable_listview"
+            android:screenOrientation="portrait" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="cn.android.demo.apis.SAMPLE_CODE" />
+            </intent-filter>
+        </activity>
+        
+        <activity
+            android:name="cn.android.demo.apis.ui.views.AndroidProgressDialog"
+            android:label="@string/ui_view_android_progressdialog"
             android:screenOrientation="portrait" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -1921,9 +2003,19 @@
             </intent-filter>
         </activity>
         <!-- *************** **UI Resources** *************** -->
+        
         <activity
             android:name="cn.android.demo.apis.ui.resources.DrawableLeft"
             android:label="@string/ui_resources_drawableleft" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="cn.android.demo.apis.SAMPLE_CODE" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="cn.android.demo.apis.ui.resources.LoadResourcesFromXML"
+            android:label="@string/ui_resources_load_resources_from_xml" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -1955,6 +2047,17 @@
         <activity
             android:name="cn.android.demo.apis.app.AndroidRootSudo"
             android:label="@string/app_android_root_su"
+            android:theme="@android:style/Theme.DeviceDefault.Light.DarkActionBar"
+            tools:ignore="NewApi" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="cn.android.demo.apis.SAMPLE_CODE" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="cn.android.demo.apis.app.AndroidContentResolver"
+            android:label="@string/app_android_contentresolver"
             android:theme="@android:style/Theme.DeviceDefault.Light.DarkActionBar"
             tools:ignore="NewApi" >
             <intent-filter>
@@ -2166,7 +2269,7 @@
             <intent-filter>
                 <action android:name="android.intent.action.BATTERY_CHANGED" />
             </intent-filter>
-        </service>
+        </service>
         -->
         <receiver
             android:name="cn.android.demo.apis.app.ScheduledReceiver"

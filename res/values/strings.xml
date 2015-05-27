@@ -257,5 +257,16 @@
     <string name="phone_android_tonegenerator">Phone/ToneGenerator</string>
     <string name="phone_android_tonegenerator2">Phone/ToneGenerator2</string>
     <string name="other_bluetooth_low_energy">Other/BluetoothLow</string>
+    <string name="other_read_system_info">Other/Read System Info</string>
+    <string name="other_bluetooth_be_connected">Other/Bluetooth Server</string>
+    <string name="other_bluetooth_be_client">Other/Bluetooth Client</string>
+    <string name="app_android_contentresolver">App/ContentResolver</string>
+    <string name="phone_android_media_metadata_retriever">Phone/MediaMetadataRetriever</string>
+    <string name="other_get_phone_number">Other/Get Phone Number</string>
+    <string name="ui_resources_load_resources_from_xml">UI/Resources/Load Resources From XML</string>
+    <string name="phone_android_drag_drop3">Phone/DragDrop3</string>
+    <string name="net_android_serverside">Net/ServerSide</string>
+    <string name="other_apache_http_service">Other/Apache HttpService</string>
+    <string name="ui_view_android_progressdialog">UI/View/ProgressDialog</string>
 
 </resources>

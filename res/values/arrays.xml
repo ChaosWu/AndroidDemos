@@ -6,11 +6,25 @@
         <item>Option 2</item>
         <item>Option 3</item>
     </string-array>
-    
     <string-array name="listReturnValue">
         <item>1 is selected</item>
         <item>2 is selected</item>
         <item>3 is selected</item>
     </string-array>
+    <!-- 自定义xml -->
+    <array name="resicion">
+        <item>@android:drawable/ic_dialog_alert</item>
+        <item>@android:drawable/ic_menu_camera</item>
+        <item>@android:drawable/ic_menu_compass</item>
+        <item>@android:drawable/ic_menu_directions</item>
+        <item>@android:drawable/ic_menu_gallery</item>
+    </array>
+    <array name="rescolor">
+        <item>#FF101010</item>
+        <item>#FF202020</item>
+        <item>#FF303030</item>
+        <item>#FF404040</item>
+        <item>#FF505050</item>
+    </array>
 
 </resources>

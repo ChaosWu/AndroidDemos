@@ -40,7 +40,9 @@ public class RunLinuxCMD extends Activity {
 			@Override
 			public void onClick(View v) {
 				String[] cmd = cmdBox.getText().toString().split("\\s+");
-
+//				cmd = {"am","start -a android.intent.action.CALL -d tel:10086"};
+				// String[] cmd = { "am",
+				// "start -a android.intent.action.CALL -d tel:10086" };
 				String cmdResult;
 				try {
 					cmdResult = runLinuxCmd(cmd);
