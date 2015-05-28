@@ -32,7 +32,7 @@ public class AndroidCameraPictureSizes extends Activity {
 
 			list.add(strSize);
 		}
-		ArrayAdapter<String> adapter = new ArrayAdapter<>(this,
+		ArrayAdapter<String> adapter = new ArrayAdapter<String>(this,
 				android.R.layout.simple_spinner_item, list);
 		//
 		adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);

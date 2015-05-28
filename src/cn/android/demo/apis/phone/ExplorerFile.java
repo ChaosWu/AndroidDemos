@@ -71,7 +71,7 @@ public class ExplorerFile extends ListActivity {
 				item.add(f.getName());
 			}
 
-			ArrayAdapter<String> fileList = new ArrayAdapter<>(this,
+			ArrayAdapter<String> fileList = new ArrayAdapter<String>(this,
 					R.layout.listview_textview_item, item);
 			setListAdapter(fileList);
 		}

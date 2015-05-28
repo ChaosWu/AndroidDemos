@@ -29,7 +29,7 @@ public class AndroidListNotExtendsListActivity extends Activity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.ui_view_not_extends_listview);
 		listView = (ListView) findViewById(R.id.lv_not_extends_listactivity);
-		ListAdapter adapter = new ArrayAdapter<>(getApplicationContext(),
+		ListAdapter adapter = new ArrayAdapter<String>(getApplicationContext(),
 				R.layout.listview_textview_item, month);
 
 		listView.setAdapter(adapter);
@@ -39,12 +39,11 @@ public class AndroidListNotExtendsListActivity extends Activity {
 			@Override
 			public void onItemClick(AdapterView<?> parent, View view,
 					int position, long id) {
-//				Toast.makeText(getApplicationContext(),
-//						parent.getItemAtPosition(position).toString(),
-//						Toast.LENGTH_LONG).show();
-				
-				
-				Log.v("DDD", "position:"+position);
+				// Toast.makeText(getApplicationContext(),
+				// parent.getItemAtPosition(position).toString(),
+				// Toast.LENGTH_LONG).show();
+
+				Log.v("DDD", "position:" + position);
 			}
 		});
 

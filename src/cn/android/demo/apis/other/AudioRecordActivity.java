@@ -69,7 +69,7 @@ public class AudioRecordActivity extends Activity {
 		playBack.setOnClickListener(playBackOnClickListener);
 
 		spinner = $id(R.id.audio_record_frequency);
-		adapter = new ArrayAdapter<>(this,
+		adapter = new ArrayAdapter<String>(this,
 				android.R.layout.simple_spinner_item, freqText);
 		adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
 		spinner.setAdapter(adapter);

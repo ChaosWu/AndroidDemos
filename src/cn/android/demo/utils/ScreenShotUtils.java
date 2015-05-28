@@ -1,5 +1,15 @@
 package cn.android.demo.utils;
 
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.IOException;
+
+import android.app.Activity;
+import android.graphics.Bitmap;
+import android.graphics.Rect;
+import android.util.Log;
+import android.view.View;
+
 /**
  * 进行截屏工具类
  * 
