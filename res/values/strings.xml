@@ -4,6 +4,10 @@
     <string name="app_name">Android开发大全</string>
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
+    <string name="prompt">提示</string>
+    <string name="exit_app">你确定要退出应用吗?</string>
+    <string name="confirm">确定</string>
+    <string name="cancel">取消</string>
     <!-- Phone -->
     <string name="phone_camera_preview">Phone/Camera Preview</string>
     <string name="phone_light_sensor">Phone/Light Sensor</string>
@@ -268,5 +272,7 @@
     <string name="net_android_serverside">Net/ServerSide</string>
     <string name="other_apache_http_service">Other/Apache HttpService</string>
     <string name="ui_view_android_progressdialog">UI/View/ProgressDialog</string>
+    <string name="project_skin_change_skin">Project/Chage Skin</string>
+    <string name="ui_widget_dialog_activity">UI/Widget/IOS Dialog</string>
 
 </resources>

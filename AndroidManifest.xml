@@ -82,7 +82,6 @@
                 <category android:name="cn.android.demo.apis.SAMPLE_CODE" />
             </intent-filter>
         </activity>
-        
         <activity
             android:name="cn.android.demo.apis.other.ApacheHttpService"
             android:label="@string/other_apache_http_service" >
@@ -334,10 +333,19 @@
         </activity>
 
         <!-- ********************Pro*********************** -->
-
+		cn.android.demo.apis.project.skin.ChangeSkin
         <activity
             android:name="cn.android.demo.apis.project.mediastore.ListImage"
             android:label="@string/project_listimage" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="cn.android.demo.apis.SAMPLE_CODE" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="cn.android.demo.apis.project.skin.ChangeSkin"
+            android:label="@string/project_skin_change_skin" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -357,7 +365,7 @@
         </activity>
         <!-- ********************Net*********************** -->
         <!-- cn.android.demo.apis.net.JsonParseResult -->
-		<activity
+        <activity
             android:name="cn.android.demo.apis.net.ServerSide"
             android:label="@string/net_android_serverside" >
             <intent-filter>
@@ -366,7 +374,6 @@
                 <category android:name="cn.android.demo.apis.SAMPLE_CODE" />
             </intent-filter>
         </activity>
-		
         <activity
             android:name="cn.android.demo.apis.bug.AndroidGoogleWeatherActivity"
             android:label="@string/net_android_google_weather_dom" >
@@ -809,7 +816,7 @@
                 <category android:name="cn.android.demo.apis.SAMPLE_CODE" />
             </intent-filter>
         </activity>
-         <activity
+        <activity
             android:name="cn.android.demo.apis.phone.AndroidDragAndDrop3"
             android:label="@string/phone_android_drag_drop3"
             android:screenOrientation="portrait" >
@@ -1070,7 +1077,7 @@
 
                 <category android:name="cn.android.demo.apis.SAMPLE_CODE" />
             </intent-filter>
-        </activity>
+        </activity>
         -->
 
         <activity
@@ -1321,6 +1328,15 @@
             </intent-filter>
         </activity>
         <activity
+            android:name="cn.android.demo.apis.ui.widget.DialogActivity"
+            android:label="@string/ui_widget_dialog_activity" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="cn.android.demo.apis.SAMPLE_CODE" />
+            </intent-filter>
+        </activity>
+        <activity
             android:name="cn.android.demo.apis.ui.widget.DrawPathCustomView"
             android:label="@string/ui_widget_draw_path_custom_view" >
             <intent-filter>
@@ -1451,7 +1467,6 @@
                 <category android:name="cn.android.demo.apis.SAMPLE_CODE" />
             </intent-filter>
         </activity>
-        
         <activity
             android:name="cn.android.demo.apis.ui.views.AndroidProgressDialog"
             android:label="@string/ui_view_android_progressdialog"
@@ -2003,7 +2018,7 @@
             </intent-filter>
         </activity>
         <!-- *************** **UI Resources** *************** -->
-        
+
         <activity
             android:name="cn.android.demo.apis.ui.resources.DrawableLeft"
             android:label="@string/ui_resources_drawableleft" >
@@ -2269,7 +2284,7 @@
             <intent-filter>
                 <action android:name="android.intent.action.BATTERY_CHANGED" />
             </intent-filter>
-        </service>
+        </service>
         -->
         <receiver
             android:name="cn.android.demo.apis.app.ScheduledReceiver"

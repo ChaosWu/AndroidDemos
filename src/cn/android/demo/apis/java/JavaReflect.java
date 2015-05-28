@@ -7,7 +7,6 @@ import java.lang.reflect.Method;
 import android.app.Activity;
 import android.os.Bundle;
 import android.text.method.ScrollingMovementMethod;
-import android.util.Log;
 import android.widget.TextView;
 
 /**
@@ -35,6 +34,7 @@ public class JavaReflect extends Activity {
 		getDeclaredFields(tv);
 		getDeclaredMethods(tv);
 		setContentView(tv);
+		
 	}
 
 	// private void changeRSSFeed(TextView tv) {
