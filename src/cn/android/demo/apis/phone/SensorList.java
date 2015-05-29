@@ -24,7 +24,7 @@ public class SensorList extends ListActivity {
 			listSensorType.add(sensors.get(i).getName());
 
 		}
-		ArrayAdapter<String> adapter = new ArrayAdapter<>(this,
+		ArrayAdapter<String> adapter = new ArrayAdapter<String>(this,
 				android.R.layout.simple_list_item_1, listSensorType);
 
 		setListAdapter(adapter);

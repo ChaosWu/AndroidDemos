@@ -48,7 +48,7 @@ public class AndroidVideoView extends Activity {
 		spinner = (Spinner) findViewById(R.id.spinner_rtsp);
 		button = (Button) findViewById(R.id.bt_show_dialog_rtsp);
 
-		ArrayAdapter<String> adapter = new ArrayAdapter<>(this,
+		ArrayAdapter<String> adapter = new ArrayAdapter<String>(this,
 				android.R.layout.simple_spinner_item, rtspUrl);
 		adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
 

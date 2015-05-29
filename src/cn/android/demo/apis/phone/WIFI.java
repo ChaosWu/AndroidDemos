@@ -71,7 +71,7 @@ public class WIFI extends Activity {
 			 listNetworkInfo.add(strNetworkState);
 		}
 
-		ArrayAdapter<String> adapter = new ArrayAdapter<>(this,
+		ArrayAdapter<String> adapter = new ArrayAdapter<String>(this,
 				android.R.layout.simple_list_item_1, listNetworkInfo);
 		listView.setAdapter(adapter);
 		listView.setTextFilterEnabled(true);

@@ -47,7 +47,7 @@ public class AndroidColor extends Activity {
 		spinner = (Spinner) findViewById(R.id.spinner_color);
 		background = (LinearLayout) findViewById(R.id.ll_background_color);
 
-		adapter = new ArrayAdapter<>(this,
+		adapter = new ArrayAdapter<String>(this,
 				android.R.layout.simple_spinner_item, color);
 		adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
 

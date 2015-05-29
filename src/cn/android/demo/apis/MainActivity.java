@@ -34,7 +34,7 @@ import android.widget.SimpleAdapter;
 
 public class MainActivity extends ListActivity {
 	public final static String TAG = MainActivity.class.getSimpleName();
-	public static SparseArray<String> sparseArray = new SparseArray<>();
+	public static SparseArray<String> sparseArray = new SparseArray<String>();
 	static {
 		sparseArray.append(VERSION_CODES.BASE,
 				"The original, first, version of Android.");

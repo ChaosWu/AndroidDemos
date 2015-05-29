@@ -38,7 +38,7 @@ public class AndroidExpandableListView extends Activity {
 
 	private void init() {
 		groupList = new ArrayList<String>();
-		childMap = new HashMap<>();
+		childMap = new HashMap<String, List<String>>();
 
 		List<String> groupList0 = new ArrayList<String>();
 		groupList0.add("groupList0 - 1");
