@@ -1,7 +1,6 @@
 package cn.android.demo.apis.ui.views;
 
 import cn.android.demo.apis.R;
-import cn.android.demo.utils.ToastUtil;
 import android.app.Activity;
 import android.os.Bundle;
 import android.util.Log;
@@ -11,7 +10,6 @@ import android.widget.AdapterView.OnItemClickListener;
 import android.widget.ArrayAdapter;
 import android.widget.ListAdapter;
 import android.widget.ListView;
-import android.widget.Toast;
 
 /**
  * Not extends ListActivity
