@@ -333,7 +333,7 @@
         </activity>
 
         <!-- ********************Pro*********************** -->
-		cn.android.demo.apis.project.skin.ChangeSkin
+		cn.android.demo.apis.project.skin.ChangeSkin
         <activity
             android:name="cn.android.demo.apis.project.mediastore.ListImage"
             android:label="@string/project_listimage" >
@@ -1077,7 +1077,7 @@
 
                 <category android:name="cn.android.demo.apis.SAMPLE_CODE" />
             </intent-filter>
-        </activity>
+        </activity>
         -->
 
         <activity
@@ -2058,10 +2058,20 @@
         <activity android:name="cn.android.demo.apis.ui.graphics.SecondBitmapPixels" >
         </activity>
         <!-- *************** **APP** *************** -->
-
         <activity
             android:name="cn.android.demo.apis.app.AndroidRootSudo"
             android:label="@string/app_android_root_su"
+            android:theme="@android:style/Theme.DeviceDefault.Light.DarkActionBar"
+            tools:ignore="NewApi" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="cn.android.demo.apis.SAMPLE_CODE" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="cn.android.demo.apis.app.BroadCastActivity2SMS"
+            android:label="@string/app_android_broadcast_activity2_sms"
             android:theme="@android:style/Theme.DeviceDefault.Light.DarkActionBar"
             tools:ignore="NewApi" >
             <intent-filter>
@@ -2284,7 +2294,7 @@
             <intent-filter>
                 <action android:name="android.intent.action.BATTERY_CHANGED" />
             </intent-filter>
-        </service>
+        </service>
         -->
         <receiver
             android:name="cn.android.demo.apis.app.ScheduledReceiver"
@@ -2299,7 +2309,12 @@
                 android:name="android.appwidget.provider"
                 android:resource="@xml/hellowidgetproviderinfo" />
         </receiver>
-
+        <!-- 短信监听 -->
+        <receiver android:name="cn.android.demo.apis.app.AndroidBroadcastReceiverSMS" >
+            <intent-filter>
+                <action android:name="android.provider.Telephony.SMS_RECEIVED" />
+            </intent-filter>
+        </receiver>
         <!-- 电池状态 -->
         <receiver android:name="cn.android.demo.apis.app.AndroidBatteryReceiver" >
             <intent-filter>

@@ -274,5 +274,6 @@
     <string name="ui_view_android_progressdialog">UI/View/ProgressDialog</string>
     <string name="project_skin_change_skin">Project/Chage Skin</string>
     <string name="ui_widget_dialog_activity">UI/Widget/IOS Dialog</string>
+    <string name="app_android_broadcast_activity2_sms">App/Broadcast SMS</string>
 
 </resources>
