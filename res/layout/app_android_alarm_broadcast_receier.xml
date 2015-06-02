@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+    <!-- 
+    app_android_alarm_broadcast_receier
+     -->
+  <Chronometer
+        android:id="@+id/alarm_broadcast_receier_chronometer"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal" />
+
+    <Button
+        android:id="@+id/alarm_broadcast_receier_setnocheck"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Set Alarm 10 sec later - alarmManager.set()" />
+    
+    <Button
+        android:id="@+id/alarm_broadcast_receier_setwithversioncheck"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Set Alarm 10 sec later - with SDK Version check" />
+</LinearLayout>

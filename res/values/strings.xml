@@ -278,5 +278,8 @@
     <string name="phone_android_drag_drop4">Phone/DragDrop4</string>
     <string name="ui_graphics_android_blur">UI/Graphics/Android Blur</string>
     <string name="ui_graphics_android_blur2">UI/Graphics/Android Blur2</string>
+    <string name="phone_android_save_bitmap_storage">Phone/SaveBitmapStorage</string>
+    <string name="thread_asynctask_load_image_list_view">Thread/AsyncLoadImage ListView</string>
+    <string name="app_android_alarm_broadcast_receier">App/AlarmBroadcastReceiver</string>
 
 </resources>

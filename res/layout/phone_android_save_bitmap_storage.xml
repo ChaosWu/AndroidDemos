@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <ImageView
+        android:id="@+id/save_bitmap_storage_image"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/chaoswu" />
+
+    <Button
+        android:id="@+id/save_bitmap_storage_saveExternalStorageDirectory"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Save to ExternalStorageDirectory" />
+
+    <Button
+        android:id="@+id/save_bitmap_storage_saveMediaStore"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Save to MediaStore" />
+
+    <Button
+        android:id="@+id/save_bitmap_storage_saveExternalStorageDirectoryMediaStore"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Save to ExternalStorageDirectory and insert to MediaStore" />
+
+</LinearLayout>
