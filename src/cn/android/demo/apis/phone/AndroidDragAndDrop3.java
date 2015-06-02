@@ -53,7 +53,7 @@ public class AndroidDragAndDrop3 extends Activity {
 		});
 
 		TypedArray arrayResources = getResources().obtainTypedArray(
-				R.array.resicion);
+				R.array.resicon);
 
 		for (int i = 0; i < arrayResources.length(); i++) {
 			ImageView imageView = new ImageView(this);

@@ -15,6 +15,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.ImageView;
+import android.widget.ListAdapter;
 import android.widget.ListView;
 import android.widget.TextView;
 
@@ -105,5 +106,35 @@ public class AndroidListViewDemo extends ListActivity {
 			return row;
 		}
 
+	}
+}
+
+// TODO
+// 在设置完ListView的Adapter后，根据
+// ListView的子项目重新计算ListView的
+// 高度，然后把高度再作为LayoutParams设置给ListView，这样它的高度就正确了
+
+// 注意事项：
+// ListView中嵌套一个ListView 会出现结果父View的OnItemClick事件不触发了。
+
+// 1.在子ListView的XML配置中，最顶层的Layout中增加属性：android:descendantFocusability="blocksDescendants"
+
+// 2. 设置ListView的setFocusable为false就行了。
+class LvHeightUtil {
+	public static void setListViewHeightBasedOnChildren(ListView listView) {
+		ListAdapter listAdapter = listView.getAdapter();
+		if (listAdapter == null) {
+			return;
+		}
+		int totalHeight = 0;
+		for (int i = 0; i < listAdapter.getCount(); i++) {
+			View listItem = listAdapter.getView(i, null, listView);
+			listItem.measure(0, 0);
+			totalHeight += listItem.getMeasuredHeight();
+		}
+		ViewGroup.LayoutParams params = listView.getLayoutParams();
+		params.height = totalHeight
+				+ (listView.getDividerHeight() * (listAdapter.getCount() - 1));
+		listView.setLayoutParams(params);
 	}
 }

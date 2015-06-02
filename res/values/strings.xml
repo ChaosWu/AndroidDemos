@@ -275,5 +275,8 @@
     <string name="project_skin_change_skin">Project/Chage Skin</string>
     <string name="ui_widget_dialog_activity">UI/Widget/IOS Dialog</string>
     <string name="app_android_broadcast_activity2_sms">App/Broadcast SMS</string>
+    <string name="phone_android_drag_drop4">Phone/DragDrop4</string>
+    <string name="ui_graphics_android_blur">UI/Graphics/Android Blur</string>
+    <string name="ui_graphics_android_blur2">UI/Graphics/Android Blur2</string>
 
 </resources>

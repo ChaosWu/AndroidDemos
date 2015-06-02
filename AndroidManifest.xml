@@ -8,6 +8,10 @@
     <!-- 这个元素用于声明一个单独的被应用程序使用的硬件或软件功能。 -->
     <uses-feature android:name="android.hardware.usb.host" />
 
+    <!-- 录音 -->
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <!-- 修改声音设置 -->
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
     <!-- 使用相机 -->
     <uses-permission android:name="android.permission.CAMERA" />
     <!-- 应用程序用到设备的摄像头。如果设备支持多个摄像头，程序使用背朝屏幕的那个。 -->
@@ -333,7 +337,7 @@
         </activity>
 
         <!-- ********************Pro*********************** -->
-		cn.android.demo.apis.project.skin.ChangeSkin
+		cn.android.demo.apis.project.skin.ChangeSkin
         <activity
             android:name="cn.android.demo.apis.project.mediastore.ListImage"
             android:label="@string/project_listimage" >
@@ -817,6 +821,16 @@
             </intent-filter>
         </activity>
         <activity
+            android:name="cn.android.demo.apis.phone.AndroidDragAndDrop4"
+            android:label="@string/phone_android_drag_drop4"
+            android:screenOrientation="portrait" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="cn.android.demo.apis.SAMPLE_CODE" />
+            </intent-filter>
+        </activity>
+        <activity
             android:name="cn.android.demo.apis.phone.AndroidDragAndDrop3"
             android:label="@string/phone_android_drag_drop3"
             android:screenOrientation="portrait" >
@@ -1077,7 +1091,7 @@
 
                 <category android:name="cn.android.demo.apis.SAMPLE_CODE" />
             </intent-filter>
-        </activity>
+        </activity>
         -->
 
         <activity
@@ -1854,7 +1868,24 @@
             </intent-filter>
         </activity>
         <!-- *************** **UI Graphics** *************** -->
+		<activity
+            android:name="cn.android.demo.apis.ui.graphics.AndroidBlur2"
+            android:label="@string/ui_graphics_android_blur2" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
 
+                <category android:name="cn.android.demo.apis.SAMPLE_CODE" />
+            </intent-filter>
+        </activity>
+		<activity
+            android:name="cn.android.demo.apis.ui.graphics.AndroidBlur"
+            android:label="@string/ui_graphics_android_blur" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="cn.android.demo.apis.SAMPLE_CODE" />
+            </intent-filter>
+        </activity>
         <activity
             android:name="cn.android.demo.apis.ui.graphics.AndroidShape"
             android:label="@string/ui_graphics_shape" >
@@ -2294,7 +2325,7 @@
             <intent-filter>
                 <action android:name="android.intent.action.BATTERY_CHANGED" />
             </intent-filter>
-        </service>
+        </service>
         -->
         <receiver
             android:name="cn.android.demo.apis.app.ScheduledReceiver"

@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+    
+   <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="2"
+        android:background="@android:color/background_dark"
+        android:orientation="horizontal" >
+
+        <cn.android.demo.apis.ui.widget.LinearLayoutListView
+            android:id="@+id/drag_drop_4_pane1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_margin="4dp"
+            android:layout_weight="1"
+            android:background="@android:color/background_light"
+            android:orientation="vertical" >
+
+            <ListView
+                android:id="@+id/drag_drop_4_listview1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </cn.android.demo.apis.ui.widget.LinearLayoutListView>
+
+        <cn.android.demo.apis.ui.widget.LinearLayoutListView
+            android:id="@+id/drag_drop_4_pane2"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_margin="4dp"
+            android:layout_weight="1"
+            android:background="@android:color/background_light"
+            android:orientation="vertical" >
+
+            <ListView
+                android:id="@+id/drag_drop_4_listview2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </cn.android.demo.apis.ui.widget.LinearLayoutListView>
+        
+        <cn.android.demo.apis.ui.widget.LinearLayoutListView
+            android:id="@+id/drag_drop_4_pane3"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_margin="4dp"
+            android:layout_weight="1"
+            android:background="@android:color/background_light"
+            android:orientation="vertical" >
+
+            <ListView
+                android:id="@+id/drag_drop_4_listview3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </cn.android.demo.apis.ui.widget.LinearLayoutListView>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:id="@+id/drag_drop_4_prompt"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@android:color/black"
+            android:gravity="bottom"
+            android:textColor="@android:color/white" />
+    </LinearLayout>
+
+</LinearLayout>

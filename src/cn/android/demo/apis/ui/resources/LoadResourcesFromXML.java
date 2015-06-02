@@ -12,7 +12,7 @@ public class LoadResourcesFromXML extends Activity {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		TypedArray arrayResource = getResources().obtainTypedArray(
-				R.array.resicion);
+				R.array.resicon);
 		TypedArray arrayColors = getResources().obtainTypedArray(
 				R.array.rescolor);
 

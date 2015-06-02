@@ -14,7 +14,17 @@ import android.widget.SeekBar;
 import android.widget.SeekBar.OnSeekBarChangeListener;
 import android.widget.Spinner;
 import android.widget.TextView;
-
+/**
+ * TODO  修改颜色方法
+ * 
+ *   //default color
+     int defaultColor = barAlpha.getProgress() * 0x1000000
+    + barR.getProgress() * 0x10000
+    + barG.getProgress() * 0x100
+    + barB.getProgress();
+ * @author Elroy
+ *
+ */
 public class SwapColorUsingColorFilter extends Activity {
 
 	ImageView imageView;

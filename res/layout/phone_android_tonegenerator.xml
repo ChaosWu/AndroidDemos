@@ -4,10 +4,18 @@
     android:layout_height="match_parent"
     android:orientation="vertical" >
 
+    <cn.android.demo.apis.ui.widget.VisualizerView
+        android:id="@+id/myvisualizerview"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" >
+    </cn.android.demo.apis.ui.widget.VisualizerView>
+
     <GridView
         android:id="@+id/phone_tonegenerator_gridView"
         android:layout_width="fill_parent"
-        android:layout_height="fill_parent"
+        android:layout_height="0dip"
+        android:layout_weight="1"
         android:columnWidth="50dp"
         android:gravity="center"
         android:numColumns="3"

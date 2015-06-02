@@ -4,19 +4,20 @@
     android:layout_height="fill_parent"
     android:orientation="vertical" >
 
-    <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"
-        android:background="@drawable/chaoswu"
-        android:scaleType="fitXY" />
-
     <SeekBar
-        android:id="@+id/sb_blur"
+        android:id="@+id/ui_graphics_sb_blur"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:layout_margin="5dip"
         android:max="100"
         android:progress="0" />
+
+    <ImageView
+        android:id="@+id/ui_graphics_imageview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:background="@drawable/chaoswu"
+        android:scaleType="fitXY" />
 
 </LinearLayout>

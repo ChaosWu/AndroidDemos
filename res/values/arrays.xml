@@ -12,12 +12,27 @@
         <item>3 is selected</item>
     </string-array>
     <!-- 自定义xml -->
-    <array name="resicion">
+    <array name="resicon">
         <item>@android:drawable/ic_dialog_alert</item>
         <item>@android:drawable/ic_menu_camera</item>
         <item>@android:drawable/ic_menu_compass</item>
         <item>@android:drawable/ic_menu_directions</item>
         <item>@android:drawable/ic_menu_gallery</item>
+        <item>@android:drawable/sym_def_app_icon</item>
+        <item>@android:drawable/ic_menu_help</item>
+        <item>@android:drawable/ic_menu_save</item>
+        <item>@android:drawable/ic_menu_call</item>
+    </array>
+    <array name="restext">
+        <item>alert</item>
+        <item>camera</item>
+        <item>compass</item>
+        <item>directions</item>
+        <item>gallery</item>
+        <item> app_icon</item>
+        <item> help</item>
+        <item> save</item>
+        <item> call</item>
     </array>
     <array name="rescolor">
         <item>#FF101010</item>

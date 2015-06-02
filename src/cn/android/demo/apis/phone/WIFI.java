@@ -29,11 +29,14 @@ public class WIFI extends Activity {
 	private TextView textWifiInfo;
 	private TextView textIp;
 	private TextView textState;
+	private TextView textInfo;
 
 	private ListView listView;
 
 	Button OnWifi;
 	Button OffWifi;
+
+	WifiInfo info;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -44,7 +47,7 @@ public class WIFI extends Activity {
 		textWifiManager = (TextView) findViewById(R.id.WifiManager);
 		textWifiInfo = (TextView) findViewById(R.id.WifiInfo);
 		textIp = (TextView) findViewById(R.id.Ip);
-
+		textInfo = (TextView) findViewById(R.id.tv_wifi_info);
 		textState = (TextView) findViewById(R.id.tv_wifi_state);
 
 		listView = (ListView) findViewById(R.id.networkinfo_list);
@@ -59,7 +62,9 @@ public class WIFI extends Activity {
 
 		WifiManager wifiManager = (WifiManager) getSystemService(Context.WIFI_SERVICE);
 
-		WifiInfo info = wifiManager.getConnectionInfo();
+		info = wifiManager.getConnectionInfo();
+
+		myMethod();
 
 		NetworkInfo[] networkInfos = connectivityManager.getAllNetworkInfo();
 
@@ -68,7 +73,7 @@ public class WIFI extends Activity {
 			String strNetworkState = networkInfos[i].getTypeName() + ":"
 					+ networkInfos[i].getDetailedState();
 
-			 listNetworkInfo.add(strNetworkState);
+			listNetworkInfo.add(strNetworkState);
 		}
 
 		ArrayAdapter<String> adapter = new ArrayAdapter<String>(this,
@@ -112,6 +117,46 @@ public class WIFI extends Activity {
 				wifiManager.setWifiEnabled(false);
 			}
 		});
+	}
+
+	private void myMethod() {
+		String strWifiInfo = "";
+		int ipAddress = info.getIpAddress();
+
+		String ipString = String.format("%d.%d.%d.%d", (ipAddress & 0xff),
+				(ipAddress >> 8 & 0xff), (ipAddress >> 16 & 0xff),
+				(ipAddress >> 24 & 0xff));
+		final int NumOfRSSILevels = 5;
+
+		strWifiInfo += "SSID: "
+				+ info.getSSID()
+				+ "\n"
+				+ "BSSID: "
+				+ info.getBSSID()
+				+ "\n"
+				+ "IP Address: "
+				+ ipString
+				+ "\n"
+				+ "MAC Address: "
+				+ info.getMacAddress()
+				+ "\n"
+//				+ "Frequency: "
+//				+ info.getFrequency()
+//				+ WifiInfo.FREQUENCY_UNITS
+//				+ "\n"
+				+ "LinkSpeed: "
+				+ info.getLinkSpeed()
+				+ WifiInfo.LINK_SPEED_UNITS
+				+ "\n"
+				+ "Rssi: "
+				+ info.getRssi()
+				+ "dBm"
+				+ "\n"
+				+ "Rssi Level: "
+				+ WifiManager.calculateSignalLevel(info.getRssi(),
+						NumOfRSSILevels) + " of " + NumOfRSSILevels;
+
+		// textInfo
 	}
 
 	private BroadcastReceiver wifiStateChangedReceiver = new BroadcastReceiver() {
