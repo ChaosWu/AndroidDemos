@@ -281,5 +281,8 @@
     <string name="phone_android_save_bitmap_storage">Phone/SaveBitmapStorage</string>
     <string name="thread_asynctask_load_image_list_view">Thread/AsyncLoadImage ListView</string>
     <string name="app_android_alarm_broadcast_receier">App/AlarmBroadcastReceiver</string>
+    <string name="ui_view_android_v4_viewpage2">UI/View/V4 Viewpage2</string>
+    <string name="java_adb_read_cpu">Java/AdbRead CPU</string>
+    <string name="other_show_uninstall_apk_icon">Other/show un apk icon</string>
 
 </resources>

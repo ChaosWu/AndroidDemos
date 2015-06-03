@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Fetch by sodino is thre real icon of apk:" />
+
+    <ImageView
+        android:id="@+id/apkIconBySodino"
+        android:layout_width="100dip"
+        android:layout_height="100dip"
+        android:background="@drawable/demo_no_data_photo" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Fetch by hearsay is a default android icon:" />
+
+    <ImageView
+        android:id="@+id/apkIconByTradition"
+        android:layout_width="100dip"
+        android:layout_height="100dip"
+        android:background="@drawable/demo_no_data_photo" />
+
+</LinearLayout>

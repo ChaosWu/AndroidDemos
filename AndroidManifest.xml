@@ -77,6 +77,16 @@
             </intent-filter>
         </activity>
         <!-- OTHER -->
+
+        <activity
+            android:name="cn.android.demo.apis.other.ShowUninstallAPKIcon"
+            android:label="@string/other_show_uninstall_apk_icon" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="cn.android.demo.apis.SAMPLE_CODE" />
+            </intent-filter>
+        </activity>
         <activity
             android:name="cn.android.demo.apis.other.GetPhoneNumberFromContactsDatabase"
             android:label="@string/other_get_phone_number" >
@@ -337,7 +347,7 @@
         </activity>
 
         <!-- ********************Pro*********************** -->
-		cn.android.demo.apis.project.skin.ChangeSkin
+		cn.android.demo.apis.project.skin.ChangeSkin
         <activity
             android:name="cn.android.demo.apis.project.mediastore.ListImage"
             android:label="@string/project_listimage" >
@@ -479,6 +489,16 @@
         </activity>
 
         <!-- ********************JAVA*********************** -->
+        <activity
+            android:name="cn.android.demo.apis.java.AdbReadCPU"
+            android:label="@string/java_adb_read_cpu"
+            android:screenOrientation="portrait" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="cn.android.demo.apis.SAMPLE_CODE" />
+            </intent-filter>
+        </activity>
         <activity
             android:name="cn.android.demo.apis.java.ASCIIListView"
             android:label="@string/java_ascii_code_listview"
@@ -1101,7 +1121,7 @@
 
                 <category android:name="cn.android.demo.apis.SAMPLE_CODE" />
             </intent-filter>
-        </activity>
+        </activity>
         -->
 
         <activity
@@ -1491,6 +1511,16 @@
             </intent-filter>
         </activity>
         <!-- *************** **UI View** *************** -->
+        <activity
+            android:name="cn.android.demo.apis.ui.views.AndroidV4ViewPager2"
+            android:label="@string/ui_view_android_v4_viewpage2"
+            android:screenOrientation="portrait" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="cn.android.demo.apis.SAMPLE_CODE" />
+            </intent-filter>
+        </activity>
         <activity
             android:name="cn.android.demo.apis.ui.views.AndroidExpandableListView"
             android:label="@string/ui_view_android_expandable_listview"
@@ -2356,7 +2386,7 @@
             <intent-filter>
                 <action android:name="android.intent.action.BATTERY_CHANGED" />
             </intent-filter>
-        </service>
+        </service>
         -->
         <receiver
             android:name="cn.android.demo.apis.app.ScheduledReceiver"
@@ -2391,7 +2421,6 @@
         <receiver
             android:name="cn.android.demo.apis.app.AlarmBroadcastReceier"
             android:process=":remote" />
-        
         <receiver
             android:name="cn.android.demo.apis.app.AlarmReceiver"
             android:process=":remote" >
