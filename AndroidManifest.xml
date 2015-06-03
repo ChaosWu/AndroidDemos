@@ -490,6 +490,16 @@
 
         <!-- ********************JAVA*********************** -->
         <activity
+            android:name="cn.android.demo.apis.java.AdbAM"
+            android:label="@string/java_adb_am_call_phone"
+            android:screenOrientation="portrait" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="cn.android.demo.apis.SAMPLE_CODE" />
+            </intent-filter>
+        </activity>
+        <activity
             android:name="cn.android.demo.apis.java.AdbReadCPU"
             android:label="@string/java_adb_read_cpu"
             android:screenOrientation="portrait" >
@@ -1200,7 +1210,16 @@
             </intent-filter>
         </activity>
         <!-- *************** **THREAD** *************** -->
+		 <activity
+            android:name="cn.android.demo.apis.thread.ThreadHandlerLooper"
+            android:label="@string/thread_asynctask_handler_looper" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
 
+                <category android:name="cn.android.demo.apis.SAMPLE_CODE" />
+            </intent-filter>
+        </activity>
+		
         <activity
             android:name="cn.android.demo.apis.thread.AsyncLoadImageListView"
             android:label="@string/thread_asynctask_load_image_list_view" >
@@ -1371,7 +1390,24 @@
         </activity>
 
         <!-- *************** **UI Widget** *************** -->
+        <activity
+            android:name="cn.android.demo.apis.ui.widget.FllowerAnimationViewActivity"
+            android:label="@string/ui_widget_fllower_anim_view" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
 
+                <category android:name="cn.android.demo.apis.SAMPLE_CODE" />
+            </intent-filter>
+        </activity>
+		<activity
+            android:name="cn.android.demo.apis.ui.widget.TouchAreaActivity"
+            android:label="@string/ui_widget_touch_area_activity" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="cn.android.demo.apis.SAMPLE_CODE" />
+            </intent-filter>
+        </activity>
         <activity
             android:name="cn.android.demo.apis.ui.widget.TouchToToggleViewActivity"
             android:label="@string/ui_widget_touch_to_toggle_view" >

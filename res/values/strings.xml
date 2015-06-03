@@ -284,5 +284,9 @@
     <string name="ui_view_android_v4_viewpage2">UI/View/V4 Viewpage2</string>
     <string name="java_adb_read_cpu">Java/AdbRead CPU</string>
     <string name="other_show_uninstall_apk_icon">Other/show un apk icon</string>
+    <string name="java_adb_am_call_phone">Java/AM call Phone</string>
+    <string name="ui_widget_touch_area_activity">UI/Widget/TouchArea</string>
+    <string name="thread_asynctask_handler_looper">Thread/Handler Looper</string>
+    <string name="ui_widget_fllower_anim_view">UI/Widget/FllowerView Anim </string>
 
 </resources>
