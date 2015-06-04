@@ -347,7 +347,16 @@
         </activity>
 
         <!-- ********************Pro*********************** -->
-		cn.android.demo.apis.project.skin.ChangeSkin
+		<activity
+            android:name="cn.android.demo.apis.project.mvp.view.MainActivity"
+            android:label="@string/project_mvp_mainactivity" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="cn.android.demo.apis.SAMPLE_CODE" />
+            </intent-filter>
+        </activity>
+		
         <activity
             android:name="cn.android.demo.apis.project.mediastore.ListImage"
             android:label="@string/project_listimage" >

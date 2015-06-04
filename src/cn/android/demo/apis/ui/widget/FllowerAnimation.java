@@ -27,15 +27,13 @@ import com.nineoldandroids.animation.ValueAnimator.AnimatorUpdateListener;
  * @author yd
  * 
  * 
- *         用到的知识点： 1、android属性动画 2、Path路径绘制 3、贝塞尔曲线
+ *         用到的知识点：
  * 
+ *         1、android属性动画
  * 
+ *         2、Path路径绘制
  * 
- * 
- * 
- * 
- * 
- * 
+ *         3、贝塞尔曲线
  */
 public class FllowerAnimation extends View implements AnimatorUpdateListener {
 

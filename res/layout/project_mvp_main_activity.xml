@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:padding="16dp" >
+
+    <TextView
+        android:id="@+id/pro_mvp_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:gravity="center_horizontal"
+        android:text="Android MVP框架 Demo"
+        android:textColor="@android:color/black"
+        android:textSize="24sp"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/pro_mvp_id_input"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/pro_mvp_title"
+        android:layout_marginTop="10dp"
+        android:hint="请输入身份证号" />
+
+    <EditText
+        android:id="@+id/pro_mvp_name_input"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/pro_mvp_id_input"
+        android:layout_marginTop="5dp"
+        android:hint="请输入姓名" />
+
+    <EditText
+        android:id="@+id/pro_mvp_addr_input"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/pro_mvp_name_input"
+        android:layout_marginTop="5dp"
+        android:hint="请输入身份证住址" />
+
+    <Button
+        android:id="@+id/pro_mvp_input_confirm"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/pro_mvp_addr_input"
+        android:text="保存个人信息" />
+
+    <TextView
+        android:id="@+id/pro_mvp_show"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_below="@+id/pro_mvp_input_confirm"
+        android:layout_marginTop="10dp"
+        android:background="@color/cyan_500"
+        android:padding="10dp"
+        android:text="暂无数据信息" />
+
+    <Button
+        android:id="@+id/pro_mvp_get_confirm"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/pro_mvp_show"
+        android:text="获取个人信息" />
+
+</RelativeLayout>
