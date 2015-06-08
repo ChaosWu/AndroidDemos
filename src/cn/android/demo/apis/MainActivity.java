@@ -22,6 +22,7 @@ import android.content.pm.PackageManager;
 import android.content.pm.PackageManager.NameNotFoundException;
 import android.content.pm.ResolveInfo;
 import android.graphics.Color;
+import android.graphics.Rect;
 import android.os.Build;
 import android.os.Build.VERSION_CODES;
 import android.os.Bundle;
@@ -63,7 +64,6 @@ public class MainActivity extends ListActivity {
 
 	}
 
-
 	// WakeLock wakeLock;
 
 	@Override
@@ -104,6 +104,14 @@ public class MainActivity extends ListActivity {
 		getListView().setTextFilterEnabled(true);
 
 		// wakeLock();
+		
+		
+		// // TODO 获取icon坐标位置 无效
+		// Rect rect =this.getIntent().getSourceBounds();
+		// Log.v("DDD", "top:" + rect.top + "\n" + "right:" + rect.right + "\n"
+		// + "bottom:" + rect.bottom + "\n" + "left:" + rect.left + "\n"
+		//
+		// );
 	}
 
 	@Override

@@ -12,7 +12,6 @@ import android.util.Log;
  */
 public class BinaryTree {
 	public TreeNode root = null;
-
 	public BinaryTree() {
 		root = new TreeNode(1, "rootNode(A)");
 	}

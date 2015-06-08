@@ -347,7 +347,7 @@
         </activity>
 
         <!-- ********************Pro*********************** -->
-		<activity
+        <activity
             android:name="cn.android.demo.apis.project.mvp.view.MainActivity"
             android:label="@string/project_mvp_mainactivity" >
             <intent-filter>
@@ -356,7 +356,6 @@
                 <category android:name="cn.android.demo.apis.SAMPLE_CODE" />
             </intent-filter>
         </activity>
-		
         <activity
             android:name="cn.android.demo.apis.project.mediastore.ListImage"
             android:label="@string/project_listimage" >
@@ -498,6 +497,28 @@
         </activity>
 
         <!-- ********************JAVA*********************** -->
+        
+        
+         <activity
+            android:name="cn.android.demo.apis.java.designmode.FlyweightPattern"
+            android:label="@string/java_designmode_flyweight_pattern"
+            android:screenOrientation="portrait" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="cn.android.demo.apis.SAMPLE_CODE" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="cn.android.demo.apis.java.designmode.SingletonActivity"
+            android:label="@string/java_designmode_singleton"
+            android:screenOrientation="portrait" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="cn.android.demo.apis.SAMPLE_CODE" />
+            </intent-filter>
+        </activity>
         <activity
             android:name="cn.android.demo.apis.java.AdbAM"
             android:label="@string/java_adb_am_call_phone"
@@ -1140,7 +1161,7 @@
 
                 <category android:name="cn.android.demo.apis.SAMPLE_CODE" />
             </intent-filter>
-        </activity>
+        </activity>
         -->
 
         <activity
@@ -1219,7 +1240,7 @@
             </intent-filter>
         </activity>
         <!-- *************** **THREAD** *************** -->
-		 <activity
+        <activity
             android:name="cn.android.demo.apis.thread.ThreadHandlerLooper"
             android:label="@string/thread_asynctask_handler_looper" >
             <intent-filter>
@@ -1228,7 +1249,6 @@
                 <category android:name="cn.android.demo.apis.SAMPLE_CODE" />
             </intent-filter>
         </activity>
-		
         <activity
             android:name="cn.android.demo.apis.thread.AsyncLoadImageListView"
             android:label="@string/thread_asynctask_load_image_list_view" >
@@ -1408,7 +1428,7 @@
                 <category android:name="cn.android.demo.apis.SAMPLE_CODE" />
             </intent-filter>
         </activity>
-		<activity
+        <activity
             android:name="cn.android.demo.apis.ui.widget.TouchAreaActivity"
             android:label="@string/ui_widget_touch_area_activity" >
             <intent-filter>
@@ -2431,7 +2451,7 @@
             <intent-filter>
                 <action android:name="android.intent.action.BATTERY_CHANGED" />
             </intent-filter>
-        </service>
+        </service>
         -->
         <receiver
             android:name="cn.android.demo.apis.app.ScheduledReceiver"

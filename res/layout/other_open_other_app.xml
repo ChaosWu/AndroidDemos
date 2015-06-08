@@ -21,6 +21,12 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="回到桌面" />
+     <Button
+        android:id="@+id/bt_open_other_3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="网页打开APP" />
+    
     
 
 </LinearLayout>

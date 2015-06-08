@@ -11,6 +11,8 @@ import android.app.PendingIntent;
 import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
+import android.graphics.Rect;
+import android.util.Log;
 
 @SuppressLint("NewApi")
 public class AlarmReceiver extends BroadcastReceiver {
@@ -19,6 +21,7 @@ public class AlarmReceiver extends BroadcastReceiver {
 	public void onReceive(Context context, Intent intent) {
 		ToastUtil.showToast(context, "Alarm Received");
 		buildNotification(context);
+
 	}
 
 	private void buildNotification(Context context) {

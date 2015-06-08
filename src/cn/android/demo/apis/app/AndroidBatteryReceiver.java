@@ -4,6 +4,7 @@ import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
+import android.graphics.Rect;
 import android.os.BatteryManager;
 import android.util.Log;
 import android.widget.Toast;
@@ -69,12 +70,12 @@ public class AndroidBatteryReceiver extends BroadcastReceiver {
 		if (chargePlug == BatteryManager.BATTERY_PLUGGED_AC) {
 			msg += "Plaugged AC\n";
 		}
-
 		Toast.makeText(
 				context,
 				"MyBatteryReceiver: " + action + "\n" + intent.toString()
 						+ strAction + "\n" + "\n" + status + " : " + msg,
 				Toast.LENGTH_LONG).show();
+
 	}
 
 }

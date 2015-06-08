@@ -289,5 +289,7 @@
     <string name="thread_asynctask_handler_looper">Thread/Handler Looper</string>
     <string name="ui_widget_fllower_anim_view">UI/Widget/FllowerView Anim </string>
     <string name="project_mvp_mainactivity">Project/MVP 架构</string>
+    <string name="java_designmode_singleton">Java/Singleton</string>
+    <string name="java_designmode_flyweight_pattern">Java/FlyWeight</string>
 
 </resources>

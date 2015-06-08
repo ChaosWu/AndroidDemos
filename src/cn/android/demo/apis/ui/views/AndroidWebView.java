@@ -22,7 +22,7 @@ public class AndroidWebView extends Activity {
 			+ "<a href=javascript:android.StartWebView()>startWebView" + "</a>";
 
 	// TODO 无法打开指定app 待思考
-	// private final String url = "file:///android_asset/www/openAndroid.html";
+	// private final String url = "file:///android_asset/www/open_app.html";
 
 	// private String urlPath = "http://whatsmyuseragent.com/";
 	private String urlPath = "http://www.baidu.com/";
