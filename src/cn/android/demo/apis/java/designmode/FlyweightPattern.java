@@ -44,6 +44,14 @@ public class FlyweightPattern extends Activity {
 		black3.display();
 		white1.display();
 		white2.display();
+		
+		
+		 //显示棋子，同时设置棋子的坐标位置  
+        black1.display(new Coordinates(1,2));  
+        black2.display(new Coordinates(3,4));  
+        black3.display(new Coordinates(1,3));  
+        white1.display(new Coordinates(2,5));  
+        white2.display(new Coordinates(2,4));  
 
 	}
 
@@ -56,6 +64,14 @@ abstract class IgoChessman {
 	public void display() {
 		FlyweightPattern.view.append("\n棋子颜色：" + this.getColor());
 		Log.v("DDD", "棋子颜色：" + this.getColor());
+	}
+
+	public void display(Coordinates coord) {
+		FlyweightPattern.view.append("\n棋子颜色：" + this.getColor() + "，棋子位置："
+				+ coord.getX() + "，" + coord.getY());
+		Log.v("DDD", "棋子颜色：" + this.getColor() + "，棋子位置：" + coord.getX() + "，"
+				+ coord.getY());
+
 	}
 }
 
@@ -99,6 +115,34 @@ class IgoChessmanFactory {
 	// 通过Key来获取存储在Hashtable 中的享元对象
 	public static IgoChessman getIgoChessman(String color) {
 		return ht.get(color);
+	}
+
+}
+
+// 坐标类：外部状态类
+class Coordinates {
+	private int x;
+	private int y;
+
+	public Coordinates(int x, int y) {
+		this.x = x;
+		this.y = y;
+	}
+
+	public int getX() {
+		return x;
+	}
+
+	public void setX(int x) {
+		this.x = x;
+	}
+
+	public int getY() {
+		return y;
+	}
+
+	public void setY(int y) {
+		this.y = y;
 	}
 
 }

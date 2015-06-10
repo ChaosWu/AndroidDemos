@@ -291,5 +291,7 @@
     <string name="project_mvp_mainactivity">Project/MVP 架构</string>
     <string name="java_designmode_singleton">Java/Singleton</string>
     <string name="java_designmode_flyweight_pattern">Java/FlyWeight</string>
+    <string name="java_annotation_demo_1">Java/Annotation</string>
+    <string name="thread_use_semaphore">Thread/Semaphore</string>
 
 </resources>

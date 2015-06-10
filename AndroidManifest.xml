@@ -498,7 +498,16 @@
 
         <!-- ********************JAVA*********************** -->
         
-        
+        <activity
+            android:name="cn.android.demo.apis.java.JavaAnnotation"
+            android:label="@string/java_annotation_demo_1"
+            android:screenOrientation="portrait" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="cn.android.demo.apis.SAMPLE_CODE" />
+            </intent-filter>
+        </activity>
          <activity
             android:name="cn.android.demo.apis.java.designmode.FlyweightPattern"
             android:label="@string/java_designmode_flyweight_pattern"
@@ -1240,9 +1249,19 @@
             </intent-filter>
         </activity>
         <!-- *************** **THREAD** *************** -->
-        <activity
+        
+         <activity
             android:name="cn.android.demo.apis.thread.ThreadHandlerLooper"
             android:label="@string/thread_asynctask_handler_looper" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="cn.android.demo.apis.SAMPLE_CODE" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="cn.android.demo.apis.thread.SemaphoreActivity"
+            android:label="@string/thread_use_semaphore" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
