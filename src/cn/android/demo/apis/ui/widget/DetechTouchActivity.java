@@ -1,9 +1,9 @@
 package cn.android.demo.apis.ui.widget;
 
 import cn.android.demo.apis.R;
-import cn.android.demo.apis.ui.widget.DetechTouchView.DetechChangeListener;
 import android.app.Activity;
 import android.os.Bundle;
+import android.view.MotionEvent;
 
 public class DetechTouchActivity extends Activity {
 	DetechTouchView detechTouchView;
@@ -19,7 +19,7 @@ public class DetechTouchActivity extends Activity {
 		infoView = (InfoView) findViewById(R.id.detech_touch_infoview);
 		//myMask = (MaskView) findViewById(R.id.detech_touch_mask);
 	}
-
+	
 	public static void notifyDetech(String touchInfo, float tX, float tY,
 			int maskColor) {
 		infoView.updateInfo(touchInfo, tX, tY, maskColor);
@@ -28,4 +28,7 @@ public class DetechTouchActivity extends Activity {
 //	public long getMaskColor(float x, float y) {
 //		return myMask.getColor(x, y);
 //	}
+	
+	
+	
 }

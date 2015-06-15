@@ -497,7 +497,6 @@
         </activity>
 
         <!-- ********************JAVA*********************** -->
-        
         <activity
             android:name="cn.android.demo.apis.java.JavaAnnotation"
             android:label="@string/java_annotation_demo_1"
@@ -508,6 +507,17 @@
                 <category android:name="cn.android.demo.apis.SAMPLE_CODE" />
             </intent-filter>
         </activity>
+        <activity
+            android:name="cn.android.demo.apis.java.designmode.ChainOfResponsibilityPattern"
+            android:label="@string/java_designmode_chain_of_responsibility_pattern"
+            android:screenOrientation="portrait" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="cn.android.demo.apis.SAMPLE_CODE" />
+            </intent-filter>
+        </activity>
+        
          <activity
             android:name="cn.android.demo.apis.java.designmode.FlyweightPattern"
             android:label="@string/java_designmode_flyweight_pattern"

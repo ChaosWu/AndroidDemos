@@ -26,7 +26,6 @@ public class ChangeSkin extends Activity {
 	private Context skinContext;
 	private Map<String, Map<String, Object>> resMap;
 	private Button change;
-
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);

@@ -1,7 +1,10 @@
 package cn.android.demo.apis.java;
 
+import java.lang.annotation.Documented;
+import java.lang.annotation.Inherited;
 import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
+import java.lang.annotation.Target;
 
 // TODO 继续学习
 /**
@@ -13,6 +16,7 @@ import java.lang.annotation.RetentionPolicy;
  * 
  */
 @Retention(RetentionPolicy.RUNTIME)
-public @interface FruitName {
-	String value() default "没有数据";
+public @interface FruitName  {
+	String date();
+
 }

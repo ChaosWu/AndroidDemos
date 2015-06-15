@@ -45,6 +45,8 @@ public class SingleTouchView extends View {
 
 	}
 
+	
+	
 	@Override
 	public boolean onTouchEvent(MotionEvent event) {
 
@@ -62,5 +64,5 @@ public class SingleTouchView extends View {
 		invalidate();
 		return true;
 	}
-
+	
 }

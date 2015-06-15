@@ -293,5 +293,6 @@
     <string name="java_designmode_flyweight_pattern">Java/FlyWeight</string>
     <string name="java_annotation_demo_1">Java/Annotation</string>
     <string name="thread_use_semaphore">Thread/Semaphore</string>
+    <string name="java_designmode_chain_of_responsibility_pattern">Java/ChainOfResponsibilityPattern</string>
 
 </resources>
