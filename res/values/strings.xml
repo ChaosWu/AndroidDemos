@@ -294,5 +294,6 @@
     <string name="java_annotation_demo_1">Java/Annotation</string>
     <string name="thread_use_semaphore">Thread/Semaphore</string>
     <string name="java_designmode_chain_of_responsibility_pattern">Java/ChainOfResponsibilityPattern</string>
+    <string name="ui_widget_listview_header_activity">UI/Widget/ListView Header</string>
 
 </resources>

@@ -1448,9 +1448,19 @@
         </activity>
 
         <!-- *************** **UI Widget** *************** -->
-        <activity
+         <activity
             android:name="cn.android.demo.apis.ui.widget.FllowerAnimationViewActivity"
             android:label="@string/ui_widget_fllower_anim_view" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="cn.android.demo.apis.SAMPLE_CODE" />
+            </intent-filter>
+        </activity>
+        
+        <activity
+            android:name="cn.android.demo.apis.ui.widget.ListViewHeaderActivity"
+            android:label="@string/ui_widget_listview_header_activity" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

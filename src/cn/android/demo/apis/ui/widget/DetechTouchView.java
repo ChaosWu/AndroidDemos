@@ -36,13 +36,12 @@ public class DetechTouchView extends ImageView {
 	}
 
 	private void init() {
-		 bm = BitmapFactory.decodeResource(getResources(),
-		 R.drawable.android);
-		
-		 mask = BitmapFactory.decodeResource(getResources(),
-		 R.drawable.android_mask);
-		 bmW = bm.getWidth();
-		 bmH = bm.getHeight();
+		bm = BitmapFactory.decodeResource(getResources(), R.drawable.android);
+
+		mask = BitmapFactory.decodeResource(getResources(),
+				R.drawable.android_mask);
+		bmW = bm.getWidth();
+		bmH = bm.getHeight();
 
 	}
 
