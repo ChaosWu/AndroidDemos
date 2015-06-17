@@ -22,7 +22,6 @@ import android.content.pm.PackageManager;
 import android.content.pm.PackageManager.NameNotFoundException;
 import android.content.pm.ResolveInfo;
 import android.graphics.Color;
-import android.graphics.Rect;
 import android.os.Build;
 import android.os.Build.VERSION_CODES;
 import android.os.Bundle;
@@ -104,8 +103,7 @@ public class MainActivity extends ListActivity {
 		getListView().setTextFilterEnabled(true);
 
 		// wakeLock();
-		
-		
+
 		// // TODO 获取icon坐标位置 无效
 		// Rect rect =this.getIntent().getSourceBounds();
 		// Log.v("DDD", "top:" + rect.top + "\n" + "right:" + rect.right + "\n"
@@ -331,9 +329,11 @@ public class MainActivity extends ListActivity {
 				.getItemAtPosition(position);
 		Intent intent = (Intent) map.get("intent");
 		startActivity(intent);
-
 		// TODO Activity 直接切换动画
-		overridePendingTransition(R.anim.flip_in, R.anim.flip_out);
+		 overridePendingTransition(R.anim.flip_in, R.anim.flip_out);
+
+		// // 增加2015/06/17
+		// overridePendingTransition(0, 0);
 
 		// Fragment切换动画
 		// fragmentTransaction.setCustomAnimations(R.anim.flip_in,

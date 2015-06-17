@@ -4,6 +4,7 @@ import java.util.ArrayList;
 
 import cn.android.demo.apis.R;
 import android.app.Activity;
+import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.text.TextUtils;
@@ -49,8 +50,19 @@ public class ListViewHeaderActivity extends Activity {
 				ListViewAdapter adapter = ((ListViewAdapter) parent
 						.getAdapter());
 				Contact data = (Contact) adapter.getItem(position);
-				Toast.makeText(ListViewHeaderActivity.this, data.toString(),
-						Toast.LENGTH_SHORT).show();
+				// Toast.makeText(ListViewHeaderActivity.this, data.toString(),
+				// Toast.LENGTH_SHORT).show();
+
+				Intent intent = new Intent(ListViewHeaderActivity.this,
+						ListViewCommentsActivity.class);
+				int[] startingLocation = new int[2];
+				view.getLocationOnScreen(startingLocation);
+				intent.putExtra(
+						ListViewCommentsActivity.ARG_DRAWING_START_LOCATION,
+						startingLocation[1]);
+				intent.putExtra(ListViewCommentsActivity.NAME, data.toString());
+				startActivity(intent);
+				overridePendingTransition(0, 0);
 			}
 		});
 

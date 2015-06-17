@@ -517,8 +517,7 @@
                 <category android:name="cn.android.demo.apis.SAMPLE_CODE" />
             </intent-filter>
         </activity>
-        
-         <activity
+        <activity
             android:name="cn.android.demo.apis.java.designmode.FlyweightPattern"
             android:label="@string/java_designmode_flyweight_pattern"
             android:screenOrientation="portrait" >
@@ -1180,7 +1179,7 @@
 
                 <category android:name="cn.android.demo.apis.SAMPLE_CODE" />
             </intent-filter>
-        </activity>
+        </activity>
         -->
 
         <activity
@@ -1259,8 +1258,8 @@
             </intent-filter>
         </activity>
         <!-- *************** **THREAD** *************** -->
-        
-         <activity
+
+        <activity
             android:name="cn.android.demo.apis.thread.ThreadHandlerLooper"
             android:label="@string/thread_asynctask_handler_looper" >
             <intent-filter>
@@ -1448,7 +1447,7 @@
         </activity>
 
         <!-- *************** **UI Widget** *************** -->
-         <activity
+        <activity
             android:name="cn.android.demo.apis.ui.widget.FllowerAnimationViewActivity"
             android:label="@string/ui_widget_fllower_anim_view" >
             <intent-filter>
@@ -1457,10 +1456,18 @@
                 <category android:name="cn.android.demo.apis.SAMPLE_CODE" />
             </intent-filter>
         </activity>
-        
         <activity
             android:name="cn.android.demo.apis.ui.widget.ListViewHeaderActivity"
             android:label="@string/ui_widget_listview_header_activity" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="cn.android.demo.apis.SAMPLE_CODE" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="cn.android.demo.apis.ui.widget.ListViewCommentsActivity"
+            android:theme="@style/AndroidDemos" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -2490,7 +2497,7 @@
             <intent-filter>
                 <action android:name="android.intent.action.BATTERY_CHANGED" />
             </intent-filter>
-        </service>
+        </service>
         -->
         <receiver
             android:name="cn.android.demo.apis.app.ScheduledReceiver"

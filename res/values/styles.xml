@@ -1,6 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
+    <style name="AndroidDemos" parent="@android:style/Theme">
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowIsTranslucent">true</item>
+    </style>
+
     <style name="DialogAnimation">
         <item name="android:windowEnterAnimation">@android:anim/slide_in_left</item>
         <item name="android:windowExitAnimation">@android:anim/slide_out_right</item>
@@ -21,7 +26,6 @@
         <item name="android:windowNoTitle">true</item>
         <item name="android:windowBackground">@drawable/ios_dialog_bg</item>
         <item name="android:backgroundDimEnabled">true</item>
-
     </style>
 
 </resources>
