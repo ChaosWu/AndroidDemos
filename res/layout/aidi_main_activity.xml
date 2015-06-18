@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <Button
+        android:id="@+id/aidl_bind"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="bind" />
+
+    <Button
+        android:id="@+id/aidl_unbind"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="unbind" />
+
+    <Button
+        android:id="@+id/aidl_call"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="call" />
+
+    <Button
+        android:id="@+id/aidl_join"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="aidl_join" />
+
+    <Button
+        android:id="@+id/aidl_get_participators"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="aidl_get_participators" />
+
+    <ListView
+        android:id="@+id/aidl_list"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+</LinearLayout>

@@ -1179,7 +1179,7 @@
 
                 <category android:name="cn.android.demo.apis.SAMPLE_CODE" />
             </intent-filter>
-        </activity>
+        </activity>
         -->
 
         <activity
@@ -1251,6 +1251,17 @@
         <activity
             android:name="cn.android.demo.apis.location.IntentActionView"
             android:label="@string/location_intent_action_view" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="cn.android.demo.apis.SAMPLE_CODE" />
+            </intent-filter>
+        </activity>
+
+        <!-- *************** **AIDL** *************** -->
+        <activity
+            android:name="cn.android.demo.apis.aidl.AIDL_Client"
+            android:label="@string/aidl_use_aidl_demo" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -2492,7 +2503,7 @@
             <intent-filter>
                 <action android:name="android.intent.action.BATTERY_CHANGED" />
             </intent-filter>
-        </service>
+        </service>
         -->
         <receiver
             android:name="cn.android.demo.apis.app.ScheduledReceiver"
@@ -2507,6 +2518,16 @@
                 android:name="android.appwidget.provider"
                 android:resource="@xml/hellowidgetproviderinfo" />
         </receiver>
+        <!-- aidl学习 -->
+        <!--
+		android:exported="true" 表示可以让其他进程绑定
+		action 这里是为了让后面的Client通过此Action来绑定
+        -->
+        <service
+            android:name="cn.android.demo.apis.aidl.RemoteService"
+            android:enabled="true"
+            android:exported="false" >
+        </service>
         <!-- 短信监听 -->
         <receiver android:name="cn.android.demo.apis.app.AndroidBroadcastReceiverSMS" >
             <intent-filter>
