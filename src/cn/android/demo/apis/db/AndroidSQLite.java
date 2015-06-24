@@ -35,8 +35,7 @@ public class AndroidSQLite extends Activity {
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
-		super.
-		onCreate(savedInstanceState);
+		super.onCreate(savedInstanceState);
 		setContentView(R.layout.db_android_sqlite);
 		// tv = (TextView) findViewById(R.id.tv_contentlist);
 		listView = (ListView) findViewById(R.id.lv_contentlist);
@@ -235,28 +234,33 @@ public class AndroidSQLite extends Activity {
 
 		}
 
-		public void updateById(int id,String v1,String v2){
-			ContentValues values=new ContentValues();
+		public void updateById(int id, String v1, String v2) {
+			ContentValues values = new ContentValues();
 			values.put(KEY_CONTENT1, v1);
 			values.put(KEY_CONTENT2, v2);
-			sqLiteDatabase.update(MYDATABASE_TABLE, values, KEY_ID+"="+id, null);
+			sqLiteDatabase.update(MYDATABASE_TABLE, values, KEY_ID + "=" + id,
+					null);
 		}
-		//排序
-		public Cursor queueAll_SortBy_CONTENT1(){
-			  String[] columns = new String[]{KEY_ID, KEY_CONTENT1, KEY_CONTENT2};
-			  Cursor cursor = sqLiteDatabase.query(MYDATABASE_TABLE, columns, 
-			    null, null, null, null, KEY_CONTENT1);
-			  
-			  return cursor;
-			 }
-			 
-			 public Cursor queueAll_SortBy_CONTENT2(){
-			  String[] columns = new String[]{KEY_ID, KEY_CONTENT1, KEY_CONTENT2};
-			  Cursor cursor = sqLiteDatabase.query(MYDATABASE_TABLE, columns, 
-			    null, null, null, null, KEY_CONTENT2);
-			  
-			  return cursor;
-			 }
+
+		// 排序
+		public Cursor queueAll_SortBy_CONTENT1() {
+			String[] columns = new String[] { KEY_ID, KEY_CONTENT1,
+					KEY_CONTENT2 };
+			Cursor cursor = sqLiteDatabase.query(MYDATABASE_TABLE, columns,
+					null, null, null, null, KEY_CONTENT1);
+
+			return cursor;
+		}
+
+		public Cursor queueAll_SortBy_CONTENT2() {
+			String[] columns = new String[] { KEY_ID, KEY_CONTENT1,
+					KEY_CONTENT2 };
+			Cursor cursor = sqLiteDatabase.query(MYDATABASE_TABLE, columns,
+					null, null, null, null, KEY_CONTENT2);
+
+			return cursor;
+		}
+
 		public class SQLiteHelper extends SQLiteOpenHelper {
 
 			public SQLiteHelper(Context context, String name,
@@ -310,3 +314,139 @@ public class AndroidSQLite extends Activity {
 	}
 
 }
+
+/*
+ * 创建数据库 自定义一个辅助类继承SQLiteOpenHelper类.
+ * 
+ * onCreate(SQLiteDatabase db): 当数据库被创建的时候，能够生成表，并创建视图跟触发器。
+ * onUpgrade(SQLiteDatabse db, int oldVersion, int newVersion):
+ * 更新的时候可以删除表和创建新的表。
+ */
+class DatabaseHelperTest extends SQLiteOpenHelper {
+
+	static final String dbName = "demoDB";
+	static final String employeeTable = "Employees";
+	static final String colID = "EmployeeID";
+	static final String colName = "EmployeeName";
+	static final String colAge = "Age";
+	static final String colDept = "Dept";
+
+	static final String deptTable = "Dept";
+	static final String colDeptID = "DeptID";
+	static final String colDeptName = "DeptName";
+
+	static final String viewEmps = "ViewEmps";
+
+	public DatabaseHelperTest(Context context) {
+		super(context, dbName, null, 33);
+	}
+
+	// 创建库中的表，视图和触发器
+	public void onCreate(SQLiteDatabase db) {  
+      db.execSQL("CREATE TABLE "+deptTable+" ("+colDeptID+ " INTEGER PRIMARY KEY , "+  
+        colDeptName+ " TEXT)");  
+ 
+      db.execSQL("CREATE TABLE "+employeeTable+"("+colID+" INTEGER PRIMARY KEY AUTOINCREMENT, "+  
+            colName+" TEXT, "+colAge+" Integer, "+colDept+"INTEGER NOT NULL ,FOREIGN KEY ("+colDept+") REFERENCES "+deptTable+" ("+colDeptID+"));");  
+ 
+      //创建触发器  
+      db.execSQL("CREATE TRIGGER fk_empdept_deptid " +  
+        " BEFORE INSERT "+  
+        " ON "+employeeTable+  
+        " FOR EACH ROW BEGIN"+  
+        " SELECT CASE WHEN ((SELECT "+colDeptID+" FROM "+deptTable+" WHERE "+colDeptID+"=new."+colDept+" ) IS NULL)"+  
+        " THEN RAISE (ABORT,'Foreign Key Violation') END;"+  
+        "  END;");  
+ 
+     //创建视图  
+      db.execSQL("CREATE VIEW "+viewEmps+  
+        " AS SELECT "+employeeTable+"."+colID+" AS _id,"+  
+        " "+employeeTable+"."+colName+","+  
+        " "+employeeTable+"."+colAge+","+  
+        " "+deptTable+"."+colDeptName+""+  
+        " FROM "+employeeTable+" JOIN "+deptTable+  
+        " ON "+employeeTable+"."+colDept+" ="+deptTable+"."+colDeptID  
+        );  
+     }
+
+	// 更新库中的表
+	public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
+		db.execSQL("DROP TABLE IF EXISTS " + employeeTable);
+		db.execSQL("DROP TABLE IF EXISTS " + deptTable);
+
+		db.execSQL("DROP TRIGGER IF EXISTS fk_empdept_deptid");
+		db.execSQL("DROP VIEW IF EXISTS " + viewEmps);
+		onCreate(db);
+	}
+	
+}
+
+
+//数据库使用方法
+/*加入数据库*/
+//	SQLiteDatabase db=this.getWritableDatabase();  
+//	ContentValues cv=new ContentValues();  
+//	   cv.put(colDeptID, 1);  
+//	   cv.put(colDeptName, "Sales");  
+//	   db.insert(deptTable, colDeptID, cv);  
+//	 
+//	   cv.put(colDeptID, 2);  
+//	   cv.put(colDeptName, "IT");  
+//	   db.insert(deptTable, colDeptID, cv);     
+//	   db.close();  
+
+
+/*更新数据*/
+//public int UpdateEmp(Employee emp)  
+//{  
+// SQLiteDatabase db=this.getWritableDatabase();  
+// ContentValues cv=new ContentValues();  
+// cv.put(colName, emp.getName());  
+// cv.put(colAge, emp.getAge());  
+// cv.put(colDept, emp.getDept());  
+// return db.update(employeeTable, cv, colID+"=?",   
+//  new String []{String.valueOf(emp.getID())});     
+//}  
+
+
+/*删除数据*/
+//public void DeleteEmp(Employee emp)  
+//{  
+// SQLiteDatabase db=this.getWritableDatabase();  
+// db.delete(employeeTable,colID+"=?", new String [] {String.valueOf(emp.getID())});  
+// db.close();  
+//}  
+
+
+/*取得所有部门信息*/
+//Cursor getAllDepts()  
+//{  
+// SQLiteDatabase db=this.getReadableDatabase();  
+// Cursor cur=db.rawQuery("SELECT "+colDeptID+" as _id,   
+//  "+colDeptName+" from "+deptTable,new String [] {});  
+//
+// return cur;  
+//}  
+
+//取得部门内雇员信息
+//public Cursor getEmpByDept(String Dept)  
+//{  
+// SQLiteDatabase db=this.getReadableDatabase();  
+// String [] columns=new String[]{"_id",colName,colAge,colDeptName};  
+// Cursor c=db.query(viewEmps, columns, colDeptName+"=?",   
+//  new String[]{Dept}, null, null, null);  
+// return c;  
+//}  
+
+
+//取得部门ID
+//public int GetDeptID(String Dept)  
+//{  
+// SQLiteDatabase db=this.getReadableDatabase();  
+// Cursor c=db.query(deptTable, new String[]{colDeptID+" as _id",colDeptName},  
+//  colDeptName+"=?", new String[]{Dept}, null, null, null);  
+// //Cursor c=db.rawQuery("SELECT "+colDeptID+" as _id FROM "+deptTable+"   
+// //WHERE "+colDeptName+"=?", new String []{Dept});  
+// c.moveToFirst();  
+// return c.getInt(c.getColumnIndex("_id"));    
+//}  

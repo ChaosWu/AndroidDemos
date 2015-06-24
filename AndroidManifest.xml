@@ -244,6 +244,16 @@
 
         <!-- ANIM -->
 
+<activity
+            android:name="cn.android.demo.apis.anim.AndroidAnimImageMove"
+            android:label="@string/anim_imageview_move" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="cn.android.demo.apis.SAMPLE_CODE" />
+            </intent-filter>
+        </activity>
+
         <activity
             android:name="cn.android.demo.apis.anim.AnimMovingBitmapAlongPath"
             android:label="@string/anim_object_anim_moving_bm_along_path" >
@@ -1467,6 +1477,7 @@
                 <category android:name="cn.android.demo.apis.SAMPLE_CODE" />
             </intent-filter>
         </activity>
+        
         <activity
             android:name="cn.android.demo.apis.ui.widget.ListViewHeaderActivity"
             android:label="@string/ui_widget_listview_header_activity" >

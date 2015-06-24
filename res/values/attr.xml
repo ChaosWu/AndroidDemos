@@ -4,5 +4,10 @@
     <declare-styleable name="SideSpinner">
         <attr name="values" format="reference" />
     </declare-styleable>
-
-</resources>
+    <!-- 自定义模糊View -->
+    <declare-styleable name="PxBlurringView">
+        <attr name="blurRadius" format="integer" />
+        <attr name="downsampleFactor" format="integer" />
+        <attr name="overlayColor" format="color" />
+    </declare-styleable>
+</resources>

@@ -22,6 +22,7 @@ public class AndroidAnimButtonTASR extends Activity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.anim_button_tasr);
 
+		
 		final Animation animTranslate = AnimationUtils.loadAnimation(this,
 				R.anim.anim_translate);
 		final Animation animAlpha = AnimationUtils.loadAnimation(this,

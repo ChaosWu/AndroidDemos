@@ -14,9 +14,9 @@ import android.widget.TextView;
  * 
  * 作用： 1、标记，用于告诉编译器一些信息
  * 
- * 		 2、编译时动态处理，如动态生成代码 
- *  
- * 		 3、运行时动态处理，如得到注解信息
+ * 2、编译时动态处理，如动态生成代码
+ * 
+ * 3、运行时动态处理，如得到注解信息
  * 
  * @author Elroy
  * 
@@ -33,7 +33,7 @@ public class JavaAnnotation extends Activity {
 		tv.setText(name);
 		Log.v("DDD", "hehe" + name);
 	}
-	
+
 	@Override
 	protected void onResume() {
 		super.onResume();
