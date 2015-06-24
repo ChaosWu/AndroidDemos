@@ -50,7 +50,6 @@ public class AndroidColor extends Activity {
 		adapter = new ArrayAdapter<String>(this,
 				android.R.layout.simple_spinner_item, color);
 		adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-
 		spinner.setAdapter(adapter);
 		spinner.setSelection(0);
 
