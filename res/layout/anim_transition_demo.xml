@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/transition_root_view"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/transition_red_500"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/red_500"
+        android:text="这是红色" />
+
+    <TextView
+        android:id="@+id/transition_green_500"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/green_500"
+        android:text="这是绿色" />
+
+    <TextView
+        android:id="@+id/transition_blue_500"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/blue_500"
+        android:text="这是蓝色" />
+
+    <TextView
+        android:id="@+id/transition_yellow_500"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/yellow_500"
+        android:text="这是黄色" />
+
+</LinearLayout>

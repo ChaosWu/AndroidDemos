@@ -243,8 +243,7 @@
         </activity>
 
         <!-- ANIM -->
-
-<activity
+        <activity
             android:name="cn.android.demo.apis.anim.AndroidAnimImageMove"
             android:label="@string/anim_imageview_move" >
             <intent-filter>
@@ -253,7 +252,15 @@
                 <category android:name="cn.android.demo.apis.SAMPLE_CODE" />
             </intent-filter>
         </activity>
+        <activity
+            android:name="cn.android.demo.apis.anim.TransitionDemo"
+            android:label="@string/anim_transition_demo" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
 
+                <category android:name="cn.android.demo.apis.SAMPLE_CODE" />
+            </intent-filter>
+        </activity>
         <activity
             android:name="cn.android.demo.apis.anim.AnimMovingBitmapAlongPath"
             android:label="@string/anim_object_anim_moving_bm_along_path" >
@@ -1189,7 +1196,7 @@
 
                 <category android:name="cn.android.demo.apis.SAMPLE_CODE" />
             </intent-filter>
-        </activity>
+        </activity>
         -->
 
         <activity
@@ -1477,7 +1484,6 @@
                 <category android:name="cn.android.demo.apis.SAMPLE_CODE" />
             </intent-filter>
         </activity>
-        
         <activity
             android:name="cn.android.demo.apis.ui.widget.ListViewHeaderActivity"
             android:label="@string/ui_widget_listview_header_activity" >
@@ -2514,7 +2520,7 @@
             <intent-filter>
                 <action android:name="android.intent.action.BATTERY_CHANGED" />
             </intent-filter>
-        </service>
+        </service>
         -->
         <receiver
             android:name="cn.android.demo.apis.app.ScheduledReceiver"
@@ -2532,7 +2538,7 @@
         <!-- aidl学习 -->
         <!--
 		android:exported="true" 表示可以让其他进程绑定
-		action 这里是为了让后面的Client通过此Action来绑定
+		action 这里是为了让后面的Client通过此Action来绑定
         -->
         <service
             android:name="cn.android.demo.apis.aidl.RemoteService"

@@ -330,7 +330,7 @@ public class MainActivity extends ListActivity {
 		Intent intent = (Intent) map.get("intent");
 		startActivity(intent);
 		// TODO Activity 直接切换动画
-		 overridePendingTransition(R.anim.flip_in, R.anim.flip_out);
+		overridePendingTransition(R.anim.flip_in, R.anim.flip_out);
 
 		// // 增加2015/06/17
 		// overridePendingTransition(0, 0);

@@ -297,5 +297,6 @@
     <string name="ui_widget_listview_header_activity">UI/Widget/ListView Header</string>
     <string name="aidl_use_aidl_demo">AIDL/Use AIDL Demo</string>
     <string name="anim_imageview_move">Anim/ImageView Move</string>
+    <string name="anim_transition_demo">Anim/TransitionDemo</string>
 
 </resources>
