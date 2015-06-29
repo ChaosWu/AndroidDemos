@@ -21,7 +21,7 @@ public class AndroidListNotExtendsListActivity extends Activity {
 	ListView listView;
 	String[] month = { "January", "February", "March", "April", "May", "June",
 			"July", "August", "September", "October", "November", "December" };
-
+	  
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);

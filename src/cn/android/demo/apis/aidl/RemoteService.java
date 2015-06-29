@@ -54,7 +54,7 @@ public class RemoteService extends Service  {
 
 		@Override
 		public List<String> getParticipators() throws RemoteException {
-			ArrayList<String> names = new ArrayList<>();
+			ArrayList<String> names = new ArrayList<String>();
 			for (Client client : mClients) {
 				names.add(client.mName);
 			}
