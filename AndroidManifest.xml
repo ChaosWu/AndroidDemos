@@ -1485,6 +1485,15 @@
             </intent-filter>
         </activity>
         <activity
+            android:name="cn.android.demo.apis.ui.widget.CircleProgressActivity"
+            android:label="@string/ui_widget_circle_progress" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="cn.android.demo.apis.SAMPLE_CODE" />
+            </intent-filter>
+        </activity>
+        <activity
             android:name="cn.android.demo.apis.ui.widget.ListViewHeaderActivity"
             android:label="@string/ui_widget_listview_header_activity" >
             <intent-filter>

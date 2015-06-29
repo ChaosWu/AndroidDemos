@@ -298,5 +298,6 @@
     <string name="aidl_use_aidl_demo">AIDL/Use AIDL Demo</string>
     <string name="anim_imageview_move">Anim/ImageView Move</string>
     <string name="anim_transition_demo">Anim/TransitionDemo</string>
+    <string name="ui_widget_circle_progress">UI/Widget/Circle_Progress</string>
 
 </resources>

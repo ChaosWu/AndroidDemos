@@ -10,4 +10,12 @@
         <attr name="downsampleFactor" format="integer" />
         <attr name="overlayColor" format="color" />
     </declare-styleable>
-</resources>
+
+    <!-- 自定义CircleProgress -->
+    <declare-styleable name="CircleProgress">
+        <attr name="color1" format="reference|color" />
+        <attr name="color2" format="reference|color" />
+        <attr name="color3" format="reference|color" />
+    </declare-styleable>
+
+</resources>
