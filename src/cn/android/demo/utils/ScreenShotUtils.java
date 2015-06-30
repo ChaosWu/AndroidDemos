@@ -45,7 +45,7 @@ public class ScreenShotUtils {
 		bitmap = Bitmap.createBitmap(bitmap, 0, stautsHeight, width, height
 				- stautsHeight);
 		return bitmap;
-	}
+	} 
 
 	/**
 	 * 保存图片到sdcard中
