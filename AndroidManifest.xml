@@ -335,6 +335,19 @@
         </activity>
 
         <!-- ********************DB*********************** -->
+        
+        
+        
+        
+         <activity
+            android:name="cn.android.demo.apis.db.AndroidSQLiteDbTutorial"
+            android:label="@string/db_android_sqlite_tutorial_contacts" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="cn.android.demo.apis.SAMPLE_CODE" />
+            </intent-filter>
+        </activity>
         <activity
             android:name="cn.android.demo.apis.db.QueryContactsDB"
             android:label="@string/db_android_query_contacts" >

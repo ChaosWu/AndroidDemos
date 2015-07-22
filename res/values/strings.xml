@@ -299,5 +299,6 @@
     <string name="anim_imageview_move">Anim/ImageView Move</string>
     <string name="anim_transition_demo">Anim/TransitionDemo</string>
     <string name="ui_widget_circle_progress">UI/Widget/Circle_Progress</string>
+    <string name="db_android_sqlite_tutorial_contacts">DB/SQLite Tutorial</string>
 
 </resources>
