@@ -4,10 +4,10 @@ import java.util.List;
 import java.util.Vector;
 
 public class RSSFeed {
-	private String title = null;
-	private String description = null;
-	private String link = null;
-	private String pubdate = null;
+	private String title = null;//标题
+	private String description = null;//详情
+	private String link = null;//链接
+	private String pubdate = null;//出版日期
 	private List<RSSItem> itemList;
 
 	// 测试反射用

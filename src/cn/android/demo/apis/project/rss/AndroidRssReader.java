@@ -150,6 +150,9 @@ public class AndroidRssReader extends ListActivity {
 			myXMLReader.parse(myInputSource);
 
 			myRssFeed = myRSSHandler.getFeed();
+			RssDatabaseHandler db = new RssDatabaseHandler(
+					getApplicationContext());
+			db.addFeed(myRssFeed);
 
 		} catch (MalformedURLException e) {
 			// TODO Auto-generated catch block
